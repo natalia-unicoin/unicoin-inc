@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const isProd = process.env.NODE_ENV === 'production';
-const repoName = 'thexcollectivebeta'; // Your GitHub repo name
+const repoName = 'unicoin-inc'; // Your GitHub repo name
 
 const nextConfig: NextConfig = {
   output: 'export',

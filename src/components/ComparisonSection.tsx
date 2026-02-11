@@ -47,7 +47,7 @@ const ComparisonSection = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: 0.1 }}
-                    style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto 40px auto', fontSize: '1.2rem', opacity: 0.8 }}
+                    className={classes.subtitle}
                 >
                     Comparing traditional leveraged models with Unicoin’s debt-free, AI-driven strategy.
                 </motion.p>
@@ -70,9 +70,11 @@ const ComparisonSection = () => {
                         <tbody>
                             {comparisonData.map((row, index) => (
                                 <tr key={index} className={classes.highlightRow}>
-                                    <td className={`${classes.td} classes.featureName`}>{row.feature}</td>
-                                    <td className={`${classes.td} classes.traditional`}>{row.traditional}</td>
-                                    <td className={`${classes.td} classes.unicoin`}>{row.unicoin}</td>
+                                    <td className={`${classes.td} ${classes.featureName}`}>{row.feature}</td>
+                                    <td className={`${classes.td} ${classes.traditional}`}>{row.traditional}</td>
+                                    <td className={`${classes.td} ${classes.unicoin} ${index === comparisonData.length - 1 ? classes.lastTdUnicoin : ''}`}>
+                                        {row.unicoin}
+                                    </td>
                                 </tr>
                             ))}
                         </tbody>
