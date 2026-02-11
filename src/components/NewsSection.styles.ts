@@ -41,7 +41,8 @@ export const useStyles = makeStyles()((theme) => ({
         gridTemplateColumns: '1fr',
         gap: theme.spacing(4),
         [theme.breakpoints.up('md')]: {
-            gridTemplateColumns: 'repeat(3, 1fr)',
+            gridTemplateColumns: 'repeat(2, 1fr)',
+            gap: theme.spacing(4),
         }
     },
     newsCard: {

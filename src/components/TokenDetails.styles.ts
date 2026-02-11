@@ -24,27 +24,24 @@ export const useStyles = makeStyles()((theme) => ({
         margin: '0 auto 60px',
     },
     title: {
-        fontSize: '40px',
-        lineHeight: '50px',
-        fontWeight: 800,
-        marginBottom: theme.spacing(3),
+        fontSize: '32px', // Apple mobile h2
+        lineHeight: '36px',
+        fontWeight: 600,
+        marginBottom: theme.spacing(2),
         letterSpacing: '-0.03em',
+        fontFamily: theme.typography.h2.fontFamily,
         [theme.breakpoints.up('md')]: {
-            fontSize: '56px',
-            lineHeight: '66px',
-        },
-        [theme.breakpoints.up('lg')]: {
-            fontSize: '64px',
-            lineHeight: '74px',
+            fontSize: '48px', // Apple desktop h2
+            lineHeight: '52px',
         }
     },
     description: {
-        fontSize: '1.25rem',
-        lineHeight: 1.6,
-        color: '#4b5563',
+        fontSize: '17px', // Apple body
+        lineHeight: '25px',
+        color: '#6E6E73', // Apple medium gray
         fontWeight: 400,
         [theme.breakpoints.up('md')]: {
-            fontSize: '1.5rem',
+            fontSize: '17px',
         }
     },
     grid: {

@@ -2,13 +2,12 @@ import { makeStyles } from 'tss-react/mui';
 
 export const useStyles = makeStyles()((theme) => ({
     section: {
-        paddingTop: theme.spacing(10), // py-20
-        paddingBottom: theme.spacing(10),
-        backgroundColor: theme.palette.grey[50],
-        borderTop: `1px solid ${theme.palette.grey[100]}`,
+        paddingTop: '60px',
+        paddingBottom: '60px',
+        backgroundColor: '#F5F5F7', // Apple light gray
         [theme.breakpoints.up('md')]: {
-            paddingTop: theme.spacing(16), // py-32
-            paddingBottom: theme.spacing(16),
+            paddingTop: '100px',
+            paddingBottom: '100px',
         }
     },
     container: {
@@ -46,14 +45,16 @@ export const useStyles = makeStyles()((theme) => ({
         }
     },
     title: {
-        fontFamily: theme.typography.h1.fontFamily,
-        fontWeight: 700, // bold
-        fontSize: '2.25rem', // text-4xl
-        marginBottom: theme.spacing(3), // mb-6
-        lineHeight: 1.25, // leading-tight
-        color: theme.palette.common.black,
+        fontSize: '32px', // Apple mobile h2
+        lineHeight: '36px',
+        fontWeight: 600,
+        marginBottom: theme.spacing(2),
+        letterSpacing: '-0.03em',
+        fontFamily: theme.typography.h2.fontFamily,
+        color: '#1D1D1F',
         [theme.breakpoints.up('md')]: {
-            fontSize: '3rem', // text-5xl
+            fontSize: '48px', // Apple desktop h2
+            lineHeight: '52px',
         }
     },
     highlight: {
@@ -65,12 +66,12 @@ export const useStyles = makeStyles()((theme) => ({
         }
     },
     description: {
-        fontSize: '1.25rem', // text-xl
-        color: theme.palette.text.secondary, // gray-500
-        lineHeight: 1.625, // leading-relaxed
-        fontWeight: 300, // font-light
+        fontSize: '17px', // Apple body
+        lineHeight: '25px',
+        color: '#6E6E73', // Apple medium gray
+        fontWeight: 400,
         [theme.breakpoints.up('md')]: {
-            fontSize: '1.5rem', // text-2xl
+            fontSize: '17px',
         }
     },
     grid: {

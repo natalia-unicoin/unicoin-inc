@@ -69,7 +69,7 @@ const HowItWorks = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8, delay: 0.1 }}
-                    style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto 40px auto', fontSize: '1.25rem' }}
+                    className={classes.subtitle}
                 >
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br />
                     Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.

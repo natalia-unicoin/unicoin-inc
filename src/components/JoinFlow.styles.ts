@@ -82,16 +82,15 @@ export const useStyles = makeStyles()((theme) => ({
         }
     },
     description: {
-        fontSize: '1.25rem', // text-xl
-        fontWeight: 500, // font-medium
+        fontSize: '17px', // Apple body
+        fontWeight: 400,
         marginBottom: theme.spacing(5), // mb-10
-        maxWidth: '48rem', // max-w-3xl
+        maxWidth: '800px',
         marginLeft: 'auto',
         marginRight: 'auto',
-        lineHeight: 1.625,
-        color: theme.palette.grey[200],
+        lineHeight: '25px',
+        color: '#E5E5E7', // Lighter gray for dark background visibility
         [theme.breakpoints.up('md')]: {
-            fontSize: '1.5rem', // text-2xl
             marginBottom: theme.spacing(6), // mb-12
         }
     },

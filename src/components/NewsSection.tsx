@@ -14,21 +14,21 @@ const NewsSection = () => {
             excerpt: "In an exclusive with Sale el Sol, Silvina Moschini shares her recommendations for launching a business with AI. \"We must not forget the role of social media as a product,\" the entrepreneur suggested.",
             tag: "Interview",
             date: "February 03, 2026",
-            image: getImagePath("assets/news-ai.jpg")
+            image: getImagePath("assets/news-1.png")
         },
         {
             title: "The Argentine PR Pro Strikes Back with a New AI Tool",
             excerpt: "The mockumentary, as a PR offensive tactic, could soon become a major trend, and the case of Moschini's crypto company might serve as a prime example.",
             tag: "Insight",
             date: "January 30, 2026",
-            image: getImagePath("assets/news-strategy.jpg")
+            image: getImagePath("assets/news-2.jpg")
         },
         {
             title: "Crypto exchanges vs banks: what's at stake in the new digital asset regulation",
             excerpt: "The bill had initial backing from the crypto industry, but the latest modifications caused divisions within the ecosystem due to increased restrictions.",
             tag: "Regulation",
             date: "January 29, 2026",
-            image: getImagePath("assets/news-updates.jpg")
+            image: getImagePath("assets/news-3.jpg")
         }
     ];
 

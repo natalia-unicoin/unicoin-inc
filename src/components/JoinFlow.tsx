@@ -41,7 +41,7 @@ const JoinFlow = () => {
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
                     >
-                        Join a curated community of visionaries. Access exclusive opportunities, governance rights, and a network that actually builds.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     </motion.p>
 
                     <motion.div

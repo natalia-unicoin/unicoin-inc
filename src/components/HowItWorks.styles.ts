@@ -46,13 +46,22 @@ export const useStyles = makeStyles()((theme) => ({
     },
     highlight: {
         color: theme.palette.secondary.main, // #fcd144
-        fontSize: '3rem',
+        fontSize: '40px',
+        display: 'block', // To put it on a new line if needed
         [theme.breakpoints.up('md')]: {
-            fontSize: '4.5rem',
+            fontSize: '56px',
         },
         [theme.breakpoints.up('lg')]: {
-            fontSize: '6rem',
+            fontSize: '64px',
         }
+    },
+    subtitle: {
+        textAlign: 'center',
+        maxWidth: '800px',
+        margin: '0 auto 40px auto',
+        fontSize: '17px', // Apple body
+        lineHeight: '25px',
+        color: '#6E6E73', // Apple medium gray
     },
     // Grid/Scroll Container
     scrollContainer: {

@@ -2,26 +2,49 @@ import { makeStyles } from 'tss-react/mui';
 
 export const useStyles = makeStyles()((theme) => ({
     section: {
-        padding: theme.spacing(15, 0),
-        backgroundColor: theme.palette.common.white,
-        color: theme.palette.common.black,
+        paddingTop: '60px',
+        paddingBottom: '60px',
+        backgroundColor: '#F5F5F7', // Apple light gray
+        [theme.breakpoints.up('md')]: {
+            paddingTop: '100px',
+            paddingBottom: '100px',
+        }
     },
     container: {
-        maxWidth: '1200px',
+        maxWidth: '980px',
         margin: '0 auto',
-        padding: theme.spacing(0, 4),
+        padding: '0 20px',
         textAlign: 'center',
     },
-    subtitle: {
-        fontFamily: theme.typography.h2.fontFamily,
-        fontSize: '1.5rem',
-        fontWeight: 700,
-        textTransform: 'uppercase',
-        letterSpacing: '0.1em',
-        color: theme.palette.secondary.main,
-        marginBottom: theme.spacing(6),
+    title: {
+        fontSize: '40px',
+        lineHeight: '50px',
+        fontWeight: 600,
+        letterSpacing: '-0.03em',
+        textAlign: 'center',
+        marginBottom: theme.spacing(2),
+        fontFamily: theme.typography.h1.fontFamily,
+        color: '#1D1D1F',
         [theme.breakpoints.up('md')]: {
-            fontSize: '2rem',
+            fontSize: '56px',
+            lineHeight: '66px',
+        },
+        [theme.breakpoints.up('lg')]: {
+            fontSize: '64px',
+            lineHeight: '74px',
+        }
+    },
+    subtitle: {
+        fontSize: '32px', // Apple mobile h2
+        lineHeight: '36px',
+        fontWeight: 600,
+        letterSpacing: '-0.03em',
+        textAlign: 'center',
+        marginBottom: theme.spacing(2),
+        fontFamily: theme.typography.h2.fontFamily,
+        [theme.breakpoints.up('md')]: {
+            fontSize: '48px', // Apple desktop h2
+            lineHeight: '52px',
         }
     },
     content: {
@@ -29,16 +52,16 @@ export const useStyles = makeStyles()((theme) => ({
         margin: '0 auto',
     },
     description: {
-        fontSize: '1.25rem',
-        lineHeight: 1.8,
+        fontSize: '17px', // Apple body
+        lineHeight: '25px',
         marginBottom: theme.spacing(4),
-        color: theme.palette.text.secondary,
+        color: '#6E6E73', // Apple medium gray
         [theme.breakpoints.up('md')]: {
-            fontSize: '1.5rem',
+            fontSize: '17px',
         },
         '& strong': {
-            color: theme.palette.common.black,
-            fontWeight: 700,
+            color: '#1D1D1F', // Apple almost black
+            fontWeight: 600,
         }
     }
 }));
