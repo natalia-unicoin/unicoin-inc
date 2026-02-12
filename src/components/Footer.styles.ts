@@ -9,11 +9,15 @@ export const useStyles = makeStyles()((theme) => ({
         borderTop: `1px solid ${theme.palette.grey[100]}`,
     },
     container: {
-        maxWidth: '1280px',
+        maxWidth: '100%',
         marginLeft: 'auto',
         marginRight: 'auto',
         paddingLeft: theme.spacing(3), // px-6
         paddingRight: theme.spacing(3),
+        [theme.breakpoints.up('lg')]: {
+            paddingLeft: '100px',
+            paddingRight: '100px',
+        }
     },
     mainGrid: {
         display: 'grid',
