@@ -11,18 +11,18 @@ export const useStyles = makeStyles()((theme) => ({
         }
     },
     container: {
-        maxWidth: '1280px',
+        maxWidth: '100%',
         marginLeft: 'auto',
         marginRight: 'auto',
-        paddingLeft: theme.spacing(2), // px-4
+        paddingLeft: theme.spacing(2),
         paddingRight: theme.spacing(2),
         [theme.breakpoints.up('md')]: {
-            paddingLeft: theme.spacing(4), // px-8
+            paddingLeft: theme.spacing(4),
             paddingRight: theme.spacing(4),
         },
         [theme.breakpoints.up('lg')]: {
-            paddingLeft: '60px',
-            paddingRight: '60px',
+            paddingLeft: '100px',
+            paddingRight: '100px',
         }
     },
     wrapper: {

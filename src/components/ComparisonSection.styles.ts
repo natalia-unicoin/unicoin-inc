@@ -12,11 +12,15 @@ export const useStyles = makeStyles()((theme) => ({
         }
     },
     container: {
-        maxWidth: '980px', // Apple max-width
+        maxWidth: '100%', // Full width
         marginLeft: 'auto',
         marginRight: 'auto',
         paddingLeft: '20px',
         paddingRight: '20px',
+        [theme.breakpoints.up('lg')]: {
+            paddingLeft: '100px',
+            paddingRight: '100px',
+        }
     },
     title: {
         fontSize: '32px', // Apple mobile h2

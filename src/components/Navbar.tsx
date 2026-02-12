@@ -72,14 +72,6 @@ const Navbar = () => {
                     </Link>
 
                     <div className={classes.controls}>
-                        {/* Join Now Button */}
-                        <button
-                            onClick={openJoinModal}
-                            className={classes.joinButton}
-                        >
-                            Join Now
-                        </button>
-
                         {/* Dummy Language Selector */}
                         <div className={classes.langSelector}>
                             <span className={classes.langActive}>EN</span>
@@ -99,6 +91,14 @@ const Navbar = () => {
                                 </svg>
                             </button>
                         </div>
+
+                        {/* Join Now Button */}
+                        <button
+                            onClick={openJoinModal}
+                            className={classes.joinButton}
+                        >
+                            Join Now
+                        </button>
                     </div>
                 </div>
             </motion.nav>

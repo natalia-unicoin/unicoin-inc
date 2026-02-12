@@ -36,12 +36,16 @@ export const useStyles = makeStyles()((theme) => ({
         position: 'relative',
         zIndex: 10,
         textAlign: 'center',
-        paddingLeft: theme.spacing(2), // px-4
+        paddingLeft: theme.spacing(2),
         paddingRight: theme.spacing(2),
-        maxWidth: '64rem', // max-w-5xl
+        maxWidth: '100%',
         marginLeft: 'auto',
         marginRight: 'auto',
-        marginTop: '5rem', // mt-20
+        marginTop: '5rem',
+        [theme.breakpoints.up('lg')]: {
+            paddingLeft: '100px',
+            paddingRight: '100px',
+        }
     },
     title: {
         fontFamily: theme.typography.h1.fontFamily, // Montserrat

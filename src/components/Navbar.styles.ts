@@ -11,20 +11,24 @@ export const useStyles = makeStyles()((theme) => ({
         borderBottom: `1px solid ${theme.palette.grey[100]}`,
     },
     container: {
-        paddingLeft: theme.spacing(3), // px-6
+        paddingLeft: theme.spacing(3),
         paddingRight: theme.spacing(3),
         paddingTop: theme.spacing(1),
         paddingBottom: theme.spacing(1),
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
-        maxWidth: '1280px', // standard container
+        maxWidth: '100%',
         margin: '0 auto',
         [theme.breakpoints.up('md')]: {
             paddingLeft: theme.spacing(6),
             paddingRight: theme.spacing(6),
-            paddingTop: theme.spacing(1.5), // Reduced from 3.5
-            paddingBottom: theme.spacing(1.5), // Reduced from 3.5
+            paddingTop: theme.spacing(1.5),
+            paddingBottom: theme.spacing(1.5),
+        },
+        [theme.breakpoints.up('lg')]: {
+            paddingLeft: '100px',
+            paddingRight: '100px',
         }
     },
     logoLink: {

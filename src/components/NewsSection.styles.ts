@@ -11,10 +11,15 @@ export const useStyles = makeStyles()((theme) => ({
         },
     },
     container: {
-        maxWidth: '980px', // Apple max-width
+        maxWidth: '100%',
         marginLeft: 'auto',
         marginRight: 'auto',
-        paddingLeft: '20px', // Apple mobile padding\n        paddingRight: '20px',
+        paddingLeft: '20px',
+        paddingRight: '20px',
+        [theme.breakpoints.up('lg')]: {
+            paddingLeft: '100px',
+            paddingRight: '100px',
+        }
     },
     title: {
         fontSize: '32px', // Apple mobile h2
@@ -43,6 +48,9 @@ export const useStyles = makeStyles()((theme) => ({
         [theme.breakpoints.up('md')]: {
             gridTemplateColumns: 'repeat(2, 1fr)',
             gap: theme.spacing(4),
+        },
+        [theme.breakpoints.up('lg')]: {
+            gridTemplateColumns: 'repeat(3, 1fr)',
         }
     },
     newsCard: {

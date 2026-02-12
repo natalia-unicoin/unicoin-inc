@@ -13,7 +13,7 @@ export const useStyles = makeStyles()((theme) => ({
         }
     },
     container: {
-        maxWidth: '1280px',
+        maxWidth: '100%',
         marginLeft: 'auto',
         marginRight: 'auto',
         paddingLeft: theme.spacing(2),
@@ -23,8 +23,8 @@ export const useStyles = makeStyles()((theme) => ({
             paddingRight: theme.spacing(4),
         },
         [theme.breakpoints.up('lg')]: {
-            paddingLeft: '60px',
-            paddingRight: '60px',
+            paddingLeft: '100px',
+            paddingRight: '100px',
         }
     },
     title: {

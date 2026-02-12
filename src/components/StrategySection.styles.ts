@@ -11,10 +11,14 @@ export const useStyles = makeStyles()((theme) => ({
         }
     },
     container: {
-        maxWidth: '980px',
+        maxWidth: '100%',
         margin: '0 auto',
         padding: '0 20px',
         textAlign: 'center',
+        [theme.breakpoints.up('lg')]: {
+            paddingLeft: '100px',
+            paddingRight: '100px',
+        }
     },
     title: {
         fontSize: '40px',
