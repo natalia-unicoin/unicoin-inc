@@ -125,6 +125,7 @@ export const useStyles = makeStyles()((theme) => ({
         overflow: 'hidden',
         boxShadow: theme.shadows[4], // shadow-lg
         backgroundColor: theme.palette.grey[50],
+        border: '1px solid #e3e3e3',
     },
     cardImage: {
         width: '100%',
