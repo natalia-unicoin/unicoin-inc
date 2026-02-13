@@ -41,7 +41,7 @@ const NewsSection = () => {
                     viewport={{ once: true }}
                     className={classes.title}
                 >
-                    Latest from<br />Unicoin
+                    Latest from<br />TransparentBusiness
                 </motion.h2>
 
                 <motion.p

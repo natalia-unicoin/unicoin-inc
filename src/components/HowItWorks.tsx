@@ -15,14 +15,14 @@ const HowItWorks = () => {
         {
             id: "01",
             title: <>A Debt-Free<br />Foundation</>,
-            description: "Traditional models rely on issuing debt. Unicoin rejects this high-liability approach, ensuring growth is built on a sustainable financial foundation rather than borrowed capital.",
+            description: "Traditional models rely on issuing debt. TransparentBusiness rejects this high-liability approach, ensuring growth is built on a sustainable financial foundation rather than borrowed capital.",
             color: "#000000",
             backgroundColor: "#f9f9f9"
         },
         {
             id: "02",
             title: <>Strategic Value<br />Creation</>,
-            description: "Instead of buying external assets at market highs, we hold our issued unicoins and actively swap them for new cryptocurrencies with strong growth potential.",
+            description: "Instead of buying external assets at market highs, we hold our issued equity and actively swap them for new cryptocurrencies with strong growth potential.",
             color: "#fcd144",
             backgroundColor: "#000000"
         },
@@ -61,7 +61,7 @@ const HowItWorks = () => {
                     transition={{ duration: 0.8 }}
                     className={classes.title}
                 >
-                    Why Unicoin Is <br /><span className={classes.highlight}>Different.</span>
+                    Why TransparentBusiness Is <br /><span className={classes.highlight}>Different.</span>
                 </motion.h2>
 
                 <motion.p

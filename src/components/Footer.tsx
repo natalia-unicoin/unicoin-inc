@@ -17,7 +17,7 @@ const Footer = () => {
                     {/* Brand Column */}
                     <div className={classes.brandColumn}>
                         <div className={classes.logoWrapper}>
-                            <img src={getImagePath("assets/unicoin-logo.png")} alt="Unicoin" className={classes.logo} />
+                            <img src={getImagePath("assets/logo-corporate-black.png")} alt="TransparentBusiness" className={classes.logo} />
                         </div>
                         <p className={classes.description}>
                             The Debt-Free Evolution of Digital Asset Treasury Strategy.
@@ -83,7 +83,7 @@ const Footer = () => {
                     </div>
 
                     <div className={classes.copyright}>
-                        &copy; 2025 <span className={classes.copyrightBrand}>Unicoin.</span> All rights reserved.
+                        &copy; 2025 <span className={classes.copyrightBrand}>TransparentBusiness Inc.</span> All rights reserved.
                     </div>
                 </div>
             </div>

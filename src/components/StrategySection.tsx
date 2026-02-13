@@ -30,7 +30,7 @@ const StrategySection = () => {
                         While pioneers like MicroStrategy proved that a Digital Asset Treasury (DAT) strategy can transform a company into a high-growth powerhouse, they did so by accumulating substantial debt to purchase assets at high market prices.
                     </p>
                     <p className={classes.description}>
-                        <strong>Unicoin Inc.</strong> is charting a different path. We have evolved the DAT model into a debt-free strategy that maximizes upside while eliminating the risks of high leverage.
+                        <strong>TransparentBusiness Inc.</strong> is charting a different path. We have evolved the DAT model into a debt-free strategy that maximizes upside while eliminating the risks of high leverage.
                     </p>
                 </motion.div>
             </div>

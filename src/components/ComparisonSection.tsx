@@ -11,22 +11,22 @@ const ComparisonSection = () => {
         {
             feature: "Financial Risk",
             traditional: "High leverage and substantial debt",
-            unicoin: "100% Debt-Free"
+            transparentBusiness: "100% Debt-Free"
         },
         {
             feature: "Asset Strategy",
             traditional: "Buying assets at market prices",
-            unicoin: "Holding issued assets and strategic swaps"
+            transparentBusiness: "Holding issued assets and strategic swaps"
         },
         {
             feature: "Management",
             traditional: "Passive \"HODL\" approach",
-            unicoin: "AI-powered active trading"
+            transparentBusiness: "AI-powered active trading"
         },
         {
             feature: "Growth Goal",
             traditional: "High-growth proxy for Bitcoin",
-            unicoin: "Diversified digital asset growth"
+            transparentBusiness: "Diversified digital asset growth"
         }
     ];
 
@@ -49,7 +49,7 @@ const ComparisonSection = () => {
                     transition={{ duration: 0.5, delay: 0.1 }}
                     className={classes.subtitle}
                 >
-                    Comparing traditional leveraged models with Unicoin’s debt-free, AI-driven strategy.
+                    Comparing traditional leveraged models with TransparentBusiness’s debt-free, AI-driven strategy.
                 </motion.p>
 
                 <motion.div
@@ -64,7 +64,7 @@ const ComparisonSection = () => {
                             <tr>
                                 <th className={classes.th}>Feature</th>
                                 <th className={classes.th}>Traditional DAT Model</th>
-                                <th className={`${classes.th} ${classes.thUnicoin}`}>The Unicoin Strategy</th>
+                                <th className={`${classes.th} ${classes.thUnicoin}`}>The TransparentBusiness Strategy</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -73,7 +73,7 @@ const ComparisonSection = () => {
                                     <td className={`${classes.td} ${classes.featureName}`}>{row.feature}</td>
                                     <td className={`${classes.td} ${classes.traditional}`}>{row.traditional}</td>
                                     <td className={`${classes.td} ${classes.unicoin} ${index === comparisonData.length - 1 ? classes.lastTdUnicoin : ''}`}>
-                                        {row.unicoin}
+                                        {row.transparentBusiness}
                                     </td>
                                 </tr>
                             ))}

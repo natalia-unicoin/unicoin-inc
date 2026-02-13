@@ -63,10 +63,10 @@ const TokenDetails = () => {
                         transition={{ delay: 0.1 }}
                         className={classes.description}
                     >
-                        Unicoin token is engineered for long-term value creation.
+                        The security token is engineered for long-term value creation.
                         Designed under the ERC-20 standard and built on the Ethereum blockchain,
                         it enables seamless integration, security, and global reach.
-                        Unicoin Foundation plans to deploy its own blockchain more scalable
+                        TransparentBusiness Foundation plans to deploy its own blockchain more scalable
                         and efficient than Bitcoin.
                     </motion.p>
                 </div>

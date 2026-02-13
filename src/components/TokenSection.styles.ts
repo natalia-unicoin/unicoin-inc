@@ -79,7 +79,7 @@ export const useStyles = makeStyles()((theme) => ({
     card: {
         backgroundColor: theme.palette.common.white,
         padding: theme.spacing(3),
-        borderRadius: '1.5rem',
+        borderRadius: '20px',
         border: `1px solid ${theme.palette.grey[100]}`,
         position: 'relative',
         overflow: 'hidden',
@@ -92,7 +92,7 @@ export const useStyles = makeStyles()((theme) => ({
         },
         [theme.breakpoints.up('md')]: {
             padding: theme.spacing(6),
-            borderRadius: '2.5rem',
+            borderRadius: '20px',
         }
     },
     blurCircle: {

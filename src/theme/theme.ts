@@ -17,27 +17,27 @@ const theme = createTheme({
     palette: {
         mode: 'light',
         primary: {
-            main: '#000000',
+            main: '#111111', // Corporate Black
         },
         secondary: {
-            main: '#fcd144', // New Accent Color
+            main: '#111111', // Corporate Black (was Navy)
         },
         success: {
-            main: '#2992A3',
+            main: '#333333', // Dark Gray (was Navy)
         },
         info: {
-            main: '#BEE3EE',
+            main: '#EEF2F7', // Light Gray
         },
         warning: {
-            main: '#E2622B',
+            main: '#666666', // Medium Gray
         },
         background: {
-            default: '#ffffff',
-            paper: '#f3f4f6',
+            default: '#FFFFFF',
+            paper: '#F8FAFC',
         },
         text: {
-            primary: '#000000',
-            secondary: '#4b5563',
+            primary: '#111111',
+            secondary: '#666666',
         }
     },
     typography: {
@@ -93,7 +93,7 @@ const theme = createTheme({
         MuiButton: {
             styleOverrides: {
                 root: {
-                    borderRadius: 9999,
+                    borderRadius: 20,
                     textTransform: 'uppercase',
                     fontWeight: 700,
                     padding: '12px 24px',

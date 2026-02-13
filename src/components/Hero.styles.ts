@@ -9,13 +9,14 @@ export const useStyles = makeStyles()((theme) => ({
         alignItems: 'center',
         justifyContent: 'center',
         overflow: 'hidden',
-        backgroundColor: theme.palette.common.black,
-        color: theme.palette.common.white,
+        backgroundColor: '#F8FAFC', // Corporate Soft
+        color: '#111111', // Corporate Black
     },
     bgWrapper: {
         position: 'absolute',
         inset: 0,
         zIndex: 0,
+        display: 'none', // Hide video background
     },
     bgImage: {
         width: '100%',
@@ -52,7 +53,8 @@ export const useStyles = makeStyles()((theme) => ({
         fontWeight: 700,
         letterSpacing: '-0.03em',
         marginBottom: theme.spacing(4),
-        filter: 'drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1))',
+        color: '#111111', // Corporate Black
+        // filter: 'drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1))', // Removed shadow for clean look
         fontSize: '40px',
         lineHeight: '50px',
         [theme.breakpoints.up('md')]: {
@@ -69,7 +71,7 @@ export const useStyles = makeStyles()((theme) => ({
         fontWeight: 600,
         textTransform: 'uppercase',
         letterSpacing: '0.1em',
-        color: 'rgba(255, 255, 255, 1)', // White
+        color: '#374151', // Corporate Gray
         marginBottom: theme.spacing(1.5), // Reduced spacing
         [theme.breakpoints.up('md')]: {
             fontSize: '1.5rem',
@@ -109,8 +111,8 @@ export const useStyles = makeStyles()((theme) => ({
         }
     },
     ctaButton: {
-        backgroundColor: theme.palette.secondary.main,
-        color: theme.palette.common.black,
+        backgroundColor: '#111111', // Corporate Black
+        color: '#FFFFFF',
         padding: '16px 32px', // px-8 py-4
         borderRadius: '9999px',
         fontSize: '0.875rem', // text-sm
@@ -122,7 +124,7 @@ export const useStyles = makeStyles()((theme) => ({
         boxShadow: theme.shadows[10], // shadow-xl approximately
         transition: 'all 0.3s',
         '&:hover': {
-            backgroundColor: '#d4cd55',
+            backgroundColor: '#374151',
             transform: 'scale(1.05)',
             boxShadow: theme.shadows[20], // shadow-2xl
         },
@@ -138,18 +140,18 @@ export const useStyles = makeStyles()((theme) => ({
         zIndex: 20,
     },
     watermarkBadge: {
-        backgroundColor: 'rgba(255, 255, 255, 0.1)',
+        backgroundColor: 'rgba(0, 0, 0, 0.05)',
         backdropFilter: 'blur(12px)',
-        border: '1px solid rgba(255, 255, 255, 0.2)',
+        border: '1px solid rgba(0, 0, 0, 0.1)',
         padding: '6px 16px', // px-4 py-1.5
         borderRadius: '9999px',
-        boxShadow: theme.shadows[4],
+        boxShadow: theme.shadows[1],
     },
     watermarkText: {
         fontSize: '0.875rem', // text-sm
         fontWeight: 700,
         letterSpacing: '0.2em',
-        color: 'rgba(255, 255, 255, 0.8)',
+        color: '#374151', // Corporate Gray
         textTransform: 'uppercase',
     }
 }));

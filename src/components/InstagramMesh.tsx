@@ -23,7 +23,7 @@ const InstagramMesh = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                     >
-                        #UnicoinLife
+                        #TransparentBusinessLife
                     </motion.h2>
                     <a
                         href="https://www.instagram.com/unicoin_news/"

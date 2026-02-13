@@ -33,14 +33,15 @@ export const useStyles = makeStyles()((theme) => ({
     },
     logoLink: {
         display: 'block',
-        width: '180px',
+        width: '80px',
         [theme.breakpoints.up('md')]: {
-            width: '240px',
+            width: '100px',
         },
     },
     logoImage: {
         width: '100%',
         height: 'auto',
+        objectFit: 'contain',
     },
     controls: {
         display: 'flex',

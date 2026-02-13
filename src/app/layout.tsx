@@ -8,9 +8,9 @@ import JoinModal from "@/components/JoinModal";
 import ManifestoModal from "@/components/ManifestoModal";
 
 export const metadata: Metadata = {
-  title: "Unicoin: The Debt-Free Evolution of Digital Asset Treasury",
-  description: "A smarter way to build digital asset value. Unicoin rejection of high-liability approach ensures growth is built on a sustainable financial foundation rather than borrowed capital.",
-  keywords: "unicoin, cryptocurrency, digital asset treasury, debt-free crypto, AI-driven finance",
+  title: "TransparentBusiness: The Debt-Free Evolution of Digital Asset Treasury",
+  description: "A smarter way to build digital asset value. TransparentBusiness rejection of high-liability approach ensures growth is built on a sustainable financial foundation rather than borrowed capital.",
+  keywords: "transparentbusiness, cryptocurrency, digital asset treasury, debt-free crypto, AI-driven finance",
 };
 
 export default function RootLayout({

@@ -68,7 +68,7 @@ const Navbar = () => {
                 <div className={classes.container}>
                     {/* Logo */}
                     <Link href="/" className={classes.logoLink}>
-                        <img src={getImagePath("assets/unicoin-logo.png")} alt="Unicoin" className={classes.logoImage} />
+                        <img src={getImagePath("assets/logo-corporate-black.png")} alt="TransparentBusiness" className={classes.logoImage} />
                     </Link>
 
                     <div className={classes.controls}>
@@ -139,7 +139,7 @@ const Navbar = () => {
                             {/* Menu Logo */}
                             <div className={classes.menuLogo}>
                                 <Link href="/" onClick={() => setIsMenuOpen(false)}>
-                                    <img src={getImagePath('assets/unicoin-logo.png')} alt="Unicoin" className="w-full" style={{ maxWidth: '240px' }} />
+                                    <img src={getImagePath('assets/logo-corporate-black.png')} alt="TransparentBusiness" className="w-full" style={{ maxWidth: '240px' }} />
                                 </Link>
                             </div>
 
