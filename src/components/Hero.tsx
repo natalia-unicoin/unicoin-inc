@@ -42,9 +42,9 @@ const Hero = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
                 >
-                    TransparentBusiness: The Debt-Free<br />
-                    Evolution of Digital<br />
-                    Asset Treasury
+                    TransparentBusiness:<br />
+                    The Debt-Free Evolution<br />
+                    of Digital Asset Treasury
                 </motion.h1>
 
 

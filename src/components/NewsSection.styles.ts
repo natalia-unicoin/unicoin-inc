@@ -123,8 +123,8 @@ export const useStyles = makeStyles()((theme) => ({
     learnMoreButton: {
         display: 'inline-block',
         padding: '16px 48px',
-        backgroundColor: theme.palette.secondary.main, // #FCD144
-        color: theme.palette.common.black,
+        backgroundColor: theme.palette.secondary.main, // #111111
+        color: theme.palette.common.white,
         fontSize: '0.875rem',
         fontWeight: 700,
         letterSpacing: '0.1em',
@@ -134,7 +134,7 @@ export const useStyles = makeStyles()((theme) => ({
         transition: 'all 0.3s',
         boxShadow: theme.shadows[4],
         '&:hover': {
-            backgroundColor: '#d4cd55',
+            backgroundColor: theme.palette.grey[800],
             transform: 'scale(1.05)',
             boxShadow: theme.shadows[8],
         },

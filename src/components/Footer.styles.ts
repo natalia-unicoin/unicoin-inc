@@ -35,7 +35,7 @@ export const useStyles = makeStyles()((theme) => ({
         }
     },
     logoWrapper: {
-        width: '120px',
+        width: '100px',
         marginBottom: theme.spacing(3), // mb-6
     },
     logo: {

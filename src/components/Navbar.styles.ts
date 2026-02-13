@@ -33,9 +33,9 @@ export const useStyles = makeStyles()((theme) => ({
     },
     logoLink: {
         display: 'block',
-        width: '80px',
+        width: '50px',
         [theme.breakpoints.up('md')]: {
-            width: '100px',
+            width: '70px',
         },
     },
     logoImage: {
@@ -52,8 +52,8 @@ export const useStyles = makeStyles()((theme) => ({
         },
     },
     joinButton: {
-        backgroundColor: theme.palette.secondary.main, // #fcd144
-        color: theme.palette.common.black,
+        backgroundColor: theme.palette.secondary.main, // #111111 (Corporate Black)
+        color: theme.palette.common.white,
         padding: '8px 20px',
         borderRadius: '9999px',
         fontSize: '0.75rem',
@@ -62,11 +62,12 @@ export const useStyles = makeStyles()((theme) => ({
         textTransform: 'uppercase',
         border: 'none',
         cursor: 'pointer',
-        transition: 'background-color 0.2s',
+        transition: 'all 0.2s', // changed from background-color to all
         marginTop: '10px',
         marginBottom: '10px',
         '&:hover': {
-            backgroundColor: '#e6bd3d',
+            backgroundColor: theme.palette.grey[800], // Dark Gray
+            transform: 'translateY(-1px)',
         },
         [theme.breakpoints.up('md')]: {
             padding: '8px 24px', // px-6 py-2
