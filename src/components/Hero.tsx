@@ -20,7 +20,7 @@ const Hero = () => {
                     playsInline
                     className={classes.bgImage}
                 >
-                    <source src={getImagePath("assets/hero-video.mp4")} type="video/mp4" />
+                    <source src={getImagePath("AdobeStock_1661291666.mov")} type="video/quicktime" />
                 </video>
                 {/* Gradient Overlay for Text Readability */}
                 <div className={classes.overlay} />
