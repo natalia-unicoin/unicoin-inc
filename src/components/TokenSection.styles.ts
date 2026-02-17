@@ -5,14 +5,14 @@ export const useStyles = makeStyles()((theme) => ({
         minHeight: '100vh',
         display: 'flex',
         alignItems: 'center',
-        paddingTop: theme.spacing(6), // py-12
-        paddingBottom: theme.spacing(6),
-        backgroundColor: '#f9f9f9',
+        paddingTop: theme.spacing(10),
+        paddingBottom: theme.spacing(10),
+        backgroundColor: theme.palette.background.default, // White
         color: theme.palette.common.black,
         overflow: 'hidden',
         [theme.breakpoints.up('md')]: {
-            paddingTop: theme.spacing(12), // py-24
-            paddingBottom: theme.spacing(12),
+            paddingTop: theme.spacing(15), // 120px
+            paddingBottom: theme.spacing(15),
         }
     },
     container: {
@@ -32,26 +32,29 @@ export const useStyles = makeStyles()((theme) => ({
     },
     header: {
         marginBottom: theme.spacing(8),
-        maxWidth: '56rem',
+        maxWidth: '68rem',
         marginLeft: 'auto',
         marginRight: 'auto',
         textAlign: 'center',
         [theme.breakpoints.up('md')]: {
-            marginBottom: theme.spacing(10),
+            marginBottom: theme.spacing(12),
         }
     },
     title: {
-        fontSize: '2rem',
+        fontSize: '48px',
+        lineHeight: '52px',
         fontFamily: theme.typography.h1.fontFamily,
         fontWeight: 700,
-        letterSpacing: '-0.05em',
+        letterSpacing: '-0.03em',
         marginBottom: theme.spacing(3),
         [theme.breakpoints.up('md')]: {
-            fontSize: '3.75rem',
+            fontSize: '64px',
+            lineHeight: '70px',
             marginBottom: theme.spacing(4),
         },
         [theme.breakpoints.up('lg')]: {
-            fontSize: '4.5rem',
+            fontSize: '80px',
+            lineHeight: '84px',
         }
     },
     description: {

@@ -52,7 +52,7 @@ export const useStyles = makeStyles()((theme) => ({
         },
     },
     joinButton: {
-        backgroundColor: theme.palette.secondary.main, // #111111 (Corporate Black)
+        backgroundColor: theme.palette.primary.main, // Obsidian Green
         color: theme.palette.common.white,
         padding: '8px 20px',
         borderRadius: '9999px',
@@ -66,7 +66,7 @@ export const useStyles = makeStyles()((theme) => ({
         marginTop: '10px',
         marginBottom: '10px',
         '&:hover': {
-            backgroundColor: theme.palette.grey[800], // Dark Gray
+            backgroundColor: '#033f33', // Lighter Obsidian
             transform: 'translateY(-1px)',
         },
         [theme.breakpoints.up('md')]: {

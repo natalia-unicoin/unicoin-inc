@@ -2,12 +2,12 @@ import { makeStyles } from 'tss-react/mui';
 
 export const useStyles = makeStyles()((theme) => ({
     section: {
-        paddingTop: '60px',
-        paddingBottom: '60px',
-        backgroundColor: '#F5F5F7', // Apple light gray
+        paddingTop: theme.spacing(10),
+        paddingBottom: theme.spacing(10),
+        backgroundColor: theme.palette.background.default, // White
         [theme.breakpoints.up('md')]: {
-            paddingTop: '100px',
-            paddingBottom: '100px',
+            paddingTop: theme.spacing(15), // 120px
+            paddingBottom: theme.spacing(15), // 120px
         }
     },
     container: {
@@ -21,21 +21,21 @@ export const useStyles = makeStyles()((theme) => ({
         }
     },
     title: {
-        fontSize: '40px',
-        lineHeight: '50px',
-        fontWeight: 600,
+        fontSize: '48px',
+        lineHeight: '52px',
+        fontWeight: 700,
         letterSpacing: '-0.03em',
         textAlign: 'center',
-        marginBottom: theme.spacing(2),
+        marginBottom: theme.spacing(3),
         fontFamily: theme.typography.h1.fontFamily,
-        color: '#1D1D1F',
+        color: theme.palette.primary.main, // Obsidian Green
         [theme.breakpoints.up('md')]: {
-            fontSize: '56px',
-            lineHeight: '66px',
+            fontSize: '64px',
+            lineHeight: '70px',
         },
         [theme.breakpoints.up('lg')]: {
-            fontSize: '64px',
-            lineHeight: '74px',
+            fontSize: '80px',
+            lineHeight: '84px',
         }
     },
     subtitle: {

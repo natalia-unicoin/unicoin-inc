@@ -2,14 +2,14 @@ import { makeStyles } from 'tss-react/mui';
 
 export const useStyles = makeStyles()((theme) => ({
     section: {
-        paddingTop: theme.spacing(6), // py-12
-        paddingBottom: theme.spacing(6),
-        backgroundColor: theme.palette.common.white,
+        paddingTop: theme.spacing(10),
+        paddingBottom: theme.spacing(10),
+        backgroundColor: theme.palette.background.paper, // Apple Gray
         color: theme.palette.common.black,
         overflow: 'hidden',
         [theme.breakpoints.up('md')]: {
-            paddingTop: theme.spacing(10), // py-20
-            paddingBottom: theme.spacing(10),
+            paddingTop: theme.spacing(15), // 120px
+            paddingBottom: theme.spacing(15), // 120px
         }
     },
     container: {
@@ -33,15 +33,15 @@ export const useStyles = makeStyles()((theme) => ({
         letterSpacing: '-0.03em',
         marginBottom: theme.spacing(2),
         textAlign: 'center',
-        fontSize: '40px',
-        lineHeight: '50px',
+        fontSize: '48px',
+        lineHeight: '52px',
         [theme.breakpoints.up('md')]: {
-            fontSize: '56px',
-            lineHeight: '66px',
+            fontSize: '64px',
+            lineHeight: '70px',
         },
         [theme.breakpoints.up('lg')]: {
-            fontSize: '64px',
-            lineHeight: '74px',
+            fontSize: '80px', // Massive Apple style
+            lineHeight: '84px',
         }
     },
     highlight: {
@@ -121,11 +121,11 @@ export const useStyles = makeStyles()((theme) => ({
         position: 'absolute',
         inset: 0,
         backfaceVisibility: 'hidden', // backface-hidden
-        borderRadius: '24px', // More square
+        borderRadius: '20px', // Updated to 20px
         overflow: 'hidden',
-        boxShadow: theme.shadows[4], // shadow-lg
-        backgroundColor: theme.palette.grey[50],
-        border: '1px solid #e3e3e3',
+        boxShadow: '0 10px 30px rgba(0,0,0,0.08)', // Soft shadow
+        backgroundColor: theme.palette.common.white,
+        border: `1px solid ${theme.palette.grey[200]}`,
     },
     cardImage: {
         width: '100%',
@@ -146,9 +146,9 @@ export const useStyles = makeStyles()((theme) => ({
         fontSize: '7rem',
         fontFamily: theme.typography.h1.fontFamily,
         fontWeight: 900,
-        opacity: 0.15,
+        opacity: 0.05, // Reduced opacity for subtle look on white
         zIndex: 10,
-        color: theme.palette.common.white,
+        color: theme.palette.common.black,
         lineHeight: 1,
         pointerEvents: 'none',
         [theme.breakpoints.up('md')]: {
@@ -166,7 +166,7 @@ export const useStyles = makeStyles()((theme) => ({
         fontSize: '30px', // max 30px
         fontFamily: theme.typography.h1.fontFamily, // Switched to Montserrat for consistency
         fontWeight: 700,
-        color: theme.palette.common.white,
+        color: theme.palette.primary.main, // Obsidian Green
         letterSpacing: '-0.03em',
         lineHeight: 1.1, // Adjusted for multi-line
         padding: theme.spacing(0, 2),
@@ -184,7 +184,7 @@ export const useStyles = makeStyles()((theme) => ({
         inset: 0,
         backfaceVisibility: 'hidden',
         transform: 'rotateY(180deg)',
-        borderRadius: '24px',
+        borderRadius: '20px', // Updated to 20px
         padding: theme.spacing(4, 3), // Reduced padding for more space
         display: 'flex',
         flexDirection: 'column',
@@ -192,8 +192,8 @@ export const useStyles = makeStyles()((theme) => ({
         alignItems: 'center',
         textAlign: 'center',
         backgroundColor: theme.palette.common.white,
-        borderWidth: '2px', // border-2
-        borderStyle: 'solid',
+        border: `1px solid ${theme.palette.grey[200]}`, // Consistent border
+        boxShadow: '0 10px 30px rgba(0,0,0,0.08)', // Consistent shadow
     },
     backStepId: {
         fontSize: '3.75rem', // text-6xl

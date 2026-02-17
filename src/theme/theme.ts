@@ -17,27 +17,27 @@ const theme = createTheme({
     palette: {
         mode: 'light',
         primary: {
-            main: '#111111', // Corporate Black
+            main: '#02251E', // Obsidian Green
         },
         secondary: {
-            main: '#111111', // Corporate Black (was Navy)
+            main: '#FCD144', // Unicoin Yellow
         },
         success: {
-            main: '#333333', // Dark Gray (was Navy)
+            main: '#02251E', // Obsidian Green
         },
         info: {
-            main: '#EEF2F7', // Light Gray
+            main: '#89C9C9', // Soft Aquamarine
         },
         warning: {
-            main: '#666666', // Medium Gray
+            main: '#FCD144', // Unicoin Yellow
         },
         background: {
             default: '#FFFFFF',
-            paper: '#F8FAFC',
+            paper: '#F5F5F7', // Apple Light Gray
         },
         text: {
-            primary: '#111111',
-            secondary: '#666666',
+            primary: '#02251E', // Obsidian Green
+            secondary: '#374151', // Corporate Gray
         }
     },
     typography: {

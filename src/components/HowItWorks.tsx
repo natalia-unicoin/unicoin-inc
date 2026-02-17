@@ -17,14 +17,14 @@ const HowItWorks = () => {
             title: <>A Debt-Free<br />Foundation</>,
             description: "Traditional models rely on issuing debt. TransparentBusiness rejects this high-liability approach, ensuring growth is built on a sustainable financial foundation rather than borrowed capital.",
             color: "#000000",
-            backgroundColor: "#f9f9f9"
+            backgroundColor: "#ffffff"
         },
         {
             id: "02",
             title: <>Strategic Value<br />Creation</>,
             description: "Instead of buying external assets at market highs, we hold our issued equity and actively swap them for new cryptocurrencies with strong growth potential.",
-            color: "#fcd144",
-            backgroundColor: "#000000"
+            color: "#000000",
+            backgroundColor: "#ffffff"
         },
         {
             id: "03",
@@ -38,7 +38,7 @@ const HowItWorks = () => {
             title: <>Modern Investor<br />Optimized</>,
             description: "We offer asymmetric upside and an inflation hedge without the volatility associated with massive debt obligations found in early DAT pioneers.",
             color: "#000000",
-            backgroundColor: "#fcd144"
+            backgroundColor: "#ffffff"
         }
     ];
 

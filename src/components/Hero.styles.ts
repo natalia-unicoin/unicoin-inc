@@ -111,7 +111,7 @@ export const useStyles = makeStyles()((theme) => ({
         }
     },
     ctaButton: {
-        backgroundColor: '#111111', // Corporate Black
+        backgroundColor: theme.palette.primary.main, // Obsidian Green
         color: '#FFFFFF',
         padding: '16px 32px', // px-8 py-4
         borderRadius: '9999px',
@@ -124,7 +124,7 @@ export const useStyles = makeStyles()((theme) => ({
         boxShadow: theme.shadows[10], // shadow-xl approximately
         transition: 'all 0.3s',
         '&:hover': {
-            backgroundColor: '#374151',
+            backgroundColor: '#033f33', // Lighter Obsidian
             transform: 'scale(1.05)',
             boxShadow: theme.shadows[20], // shadow-2xl
         },

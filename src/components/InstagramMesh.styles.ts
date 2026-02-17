@@ -66,7 +66,7 @@ export const useStyles = makeStyles()((theme) => ({
         position: 'relative',
         aspectRatio: '4 / 1', // Wide composite images
         overflow: 'hidden',
-        borderRadius: '24px', // Apple-style radius
+        borderRadius: '20px', // Adjusted to 20px
         cursor: 'pointer',
         '&:hover $overlay': {
             opacity: 1,

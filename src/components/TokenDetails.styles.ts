@@ -58,7 +58,7 @@ export const useStyles = makeStyles()((theme) => ({
     card: {
         backgroundColor: '#ffffff',
         border: '1px solid #f3f4f6',
-        borderRadius: '24px',
+        borderRadius: '20px', // Adjusted to 20px
         padding: theme.spacing(4),
         textAlign: 'center',
         display: 'flex',

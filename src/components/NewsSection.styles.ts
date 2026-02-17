@@ -2,12 +2,12 @@ import { makeStyles } from 'tss-react/mui';
 
 export const useStyles = makeStyles()((theme) => ({
     section: {
-        paddingTop: '60px',
-        paddingBottom: '60px',
-        backgroundColor: '#F5F5F7', // Apple light gray
+        paddingTop: theme.spacing(10),
+        paddingBottom: theme.spacing(10),
+        backgroundColor: theme.palette.background.paper, // Apple Gray
         [theme.breakpoints.up('md')]: {
-            paddingTop: '100px',
-            paddingBottom: '100px',
+            paddingTop: theme.spacing(15), // 120px
+            paddingBottom: theme.spacing(15), // 120px
         },
     },
     container: {
@@ -22,15 +22,20 @@ export const useStyles = makeStyles()((theme) => ({
         }
     },
     title: {
-        fontSize: '32px', // Apple mobile h2
-        lineHeight: '36px',
-        fontWeight: 600, // Apple weight
+        fontSize: '48px',
+        lineHeight: '52px',
+        fontWeight: 700,
         textAlign: 'center',
         letterSpacing: '-0.03em',
         fontFamily: theme.typography.h2.fontFamily,
+        marginBottom: theme.spacing(2),
         [theme.breakpoints.up('md')]: {
-            fontSize: '48px', // Apple desktop h2
-            lineHeight: '52px',
+            fontSize: '64px',
+            lineHeight: '70px',
+        },
+        [theme.breakpoints.up('lg')]: {
+            fontSize: '80px',
+            lineHeight: '84px',
         }
     },
     subtitle: {
@@ -53,7 +58,7 @@ export const useStyles = makeStyles()((theme) => ({
     newsCard: {
         display: 'flex',
         flexDirection: 'column',
-        borderRadius: '24px',
+        borderRadius: '20px', // Adjusted to 20px
         overflow: 'hidden',
         backgroundColor: '#FFFFFF', // Apple white
         border: '1px solid #D2D2D7', // Apple border
@@ -123,7 +128,7 @@ export const useStyles = makeStyles()((theme) => ({
     learnMoreButton: {
         display: 'inline-block',
         padding: '16px 48px',
-        backgroundColor: theme.palette.secondary.main, // #111111
+        backgroundColor: theme.palette.primary.main, // Obsidian Green
         color: theme.palette.common.white,
         fontSize: '0.875rem',
         fontWeight: 700,
@@ -134,7 +139,7 @@ export const useStyles = makeStyles()((theme) => ({
         transition: 'all 0.3s',
         boxShadow: theme.shadows[4],
         '&:hover': {
-            backgroundColor: theme.palette.grey[800],
+            backgroundColor: '#033f33', // Lighter Obsidian
             transform: 'scale(1.05)',
             boxShadow: theme.shadows[8],
         },
