@@ -61,7 +61,7 @@ export const useStyles = makeStyles()((theme) => ({
         margin: '0 auto 40px auto',
         fontSize: '17px', // Apple body
         lineHeight: '25px',
-        color: '#6E6E73', // Apple medium gray
+        color: '#000000', // Black
     },
     // Grid/Scroll Container
     scrollContainer: {

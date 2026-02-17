@@ -38,7 +38,7 @@ export const useStyles = makeStyles()((theme) => ({
     description: {
         fontSize: '17px', // Apple body
         lineHeight: '25px',
-        color: '#6E6E73', // Apple medium gray
+        color: '#000000', // Black
         fontWeight: 400,
         [theme.breakpoints.up('md')]: {
             fontSize: '17px',

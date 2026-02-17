@@ -71,7 +71,7 @@ export const useStyles = makeStyles()((theme) => ({
         fontWeight: 600,
         textTransform: 'uppercase',
         letterSpacing: '0.1em',
-        color: '#374151', // Corporate Gray
+        color: '#000000', // Black
         marginBottom: theme.spacing(1.5), // Reduced spacing
         [theme.breakpoints.up('md')]: {
             fontSize: '1.5rem',
@@ -85,7 +85,7 @@ export const useStyles = makeStyles()((theme) => ({
         marginLeft: 'auto',
         marginRight: 'auto',
         marginBottom: theme.spacing(6),
-        color: 'rgba(255, 255, 255, 0.9)',
+        color: '#000000', // Black
         [theme.breakpoints.up('md')]: {
             fontSize: '1.35rem',
         }

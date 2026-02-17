@@ -46,6 +46,7 @@ export const useStyles = makeStyles()((theme) => ({
         textAlign: 'center',
         marginBottom: theme.spacing(2),
         fontFamily: theme.typography.h2.fontFamily,
+        color: '#000000', // Black
         [theme.breakpoints.up('md')]: {
             fontSize: '48px', // Apple desktop h2
             lineHeight: '52px',
@@ -59,7 +60,7 @@ export const useStyles = makeStyles()((theme) => ({
         fontSize: '17px', // Apple body
         lineHeight: '25px',
         marginBottom: theme.spacing(4),
-        color: '#6E6E73', // Apple medium gray
+        color: '#000000', // Black
         [theme.breakpoints.up('md')]: {
             fontSize: '17px',
         },

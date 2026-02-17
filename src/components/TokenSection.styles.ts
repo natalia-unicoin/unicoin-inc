@@ -61,7 +61,7 @@ export const useStyles = makeStyles()((theme) => ({
         fontSize: '1rem',
         fontWeight: 300,
         lineHeight: 1.5,
-        color: '#464243',
+        color: '#000000', // Black
         maxWidth: '42rem',
         marginLeft: 'auto',
         marginRight: 'auto',

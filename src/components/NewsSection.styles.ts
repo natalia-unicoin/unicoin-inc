@@ -44,7 +44,7 @@ export const useStyles = makeStyles()((theme) => ({
         margin: '0 auto 60px auto',
         fontSize: '17px', // Apple body text
         lineHeight: '25px',
-        color: '#6E6E73', // Apple medium gray
+        color: '#000000', // Black
     },
     grid: {
         display: 'grid',
