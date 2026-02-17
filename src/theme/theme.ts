@@ -20,7 +20,7 @@ const theme = createTheme({
             main: '#02251E', // Obsidian Green
         },
         secondary: {
-            main: '#FCD144', // Unicoin Yellow
+            main: '#FCD144', // Accent Yellow
         },
         success: {
             main: '#02251E', // Obsidian Green
@@ -29,7 +29,7 @@ const theme = createTheme({
             main: '#89C9C9', // Soft Aquamarine
         },
         warning: {
-            main: '#FCD144', // Unicoin Yellow
+            main: '#FCD144', // Accent Yellow
         },
         background: {
             default: '#FFFFFF',

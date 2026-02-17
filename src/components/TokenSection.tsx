@@ -67,7 +67,7 @@ const TokenSection = () => {
                         </ul>
 
                         <a
-                            href="https://unicoin.com"
+                            href="https://transparentbusiness.com"
                             target="_blank"
                             rel="noopener noreferrer"
                             className={classes.button}
@@ -107,7 +107,7 @@ const TokenSection = () => {
                         </ul>
 
                         <a
-                            href="https://unicoinx.io"
+                            href="https://transparentbusiness.com"
                             target="_blank"
                             rel="noopener noreferrer"
                             className={classes.button}

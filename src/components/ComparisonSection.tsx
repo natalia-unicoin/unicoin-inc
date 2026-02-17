@@ -64,7 +64,7 @@ const ComparisonSection = () => {
                             <tr>
                                 <th className={classes.th}>Feature</th>
                                 <th className={classes.th}>Traditional DAT Model</th>
-                                <th className={`${classes.th} ${classes.thUnicoin}`}>The TransparentBusiness Strategy</th>
+                                <th className={`${classes.th} ${classes.thBrand}`}>The TransparentBusiness Strategy</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -72,7 +72,7 @@ const ComparisonSection = () => {
                                 <tr key={index} className={classes.highlightRow}>
                                     <td className={`${classes.td} ${classes.featureName}`}>{row.feature}</td>
                                     <td className={`${classes.td} ${classes.traditional}`}>{row.traditional}</td>
-                                    <td className={`${classes.td} ${classes.unicoin} ${index === comparisonData.length - 1 ? classes.lastTdUnicoin : ''}`}>
+                                    <td className={`${classes.td} ${classes.brandHighlight} ${index === comparisonData.length - 1 ? classes.lastTdBrand : ''}`}>
                                         {row.transparentBusiness}
                                     </td>
                                 </tr>

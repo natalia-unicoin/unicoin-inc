@@ -85,7 +85,7 @@ const NewsSection = () => {
                     className={classes.buttonWrapper}
                 >
                     <a
-                        href="https://unicoin.com/news"
+                        href="https://transparentbusiness.com/news"
                         target="_blank"
                         rel="noopener noreferrer"
                         className={classes.learnMoreButton}

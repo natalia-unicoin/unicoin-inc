@@ -11,7 +11,7 @@ const TokenDetails = () => {
     const details = [
         {
             label: "Token Name",
-            value: "Unicoin",
+            value: "TransparentBusiness",
             type: "text"
         },
         {
@@ -22,7 +22,7 @@ const TokenDetails = () => {
         },
         {
             label: "Ticker",
-            value: "UNCN",
+            value: "TB",
             type: "text"
         },
         {

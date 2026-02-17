@@ -9,8 +9,8 @@ const InstagramMesh = () => {
     const { classes } = useStyles();
 
     const posts = [
-        { id: 1, image: getImagePath("assets/instagram-1.png"), alt: "Unicoin Instagram Posts" },
-        { id: 2, image: getImagePath("assets/instagram-2.png"), alt: "Unicoin Instagram Posts" },
+        { id: 1, image: getImagePath("assets/instagram-1.png"), alt: "TransparentBusiness Instagram Posts" },
+        { id: 2, image: getImagePath("assets/instagram-2.png"), alt: "TransparentBusiness Instagram Posts" },
     ];
 
     return (

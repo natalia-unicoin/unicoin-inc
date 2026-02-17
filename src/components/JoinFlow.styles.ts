@@ -107,7 +107,7 @@ export const useStyles = makeStyles()((theme) => ({
     },
     primaryButton: {
         width: '100%',
-        backgroundColor: '#FCD144', // Unicoin Yellow
+        backgroundColor: '#FCD144', // Brand Yellow
         color: theme.palette.common.black,
         padding: '16px 32px', // px-8 py-4
         fontSize: '0.875rem', // text-sm

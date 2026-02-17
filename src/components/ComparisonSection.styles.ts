@@ -86,7 +86,7 @@ export const useStyles = makeStyles()((theme) => ({
         width: '35%',
         backgroundColor: 'rgba(255, 255, 255, 0.5)',
     },
-    unicoin: {
+    brandHighlight: {
         backgroundColor: '#FFFFFF',
         width: '35%',
         boxShadow: '0 10px 30px rgba(0,0,0,0.08)',
@@ -94,7 +94,7 @@ export const useStyles = makeStyles()((theme) => ({
         borderRight: '1px solid #E5E5E7',
         zIndex: 1,
     },
-    thUnicoin: {
+    thBrand: {
         backgroundColor: '#FFFFFF',
         color: '#1D1D1F', // Dark text for readability
         borderTop: '4px solid #FCD144',
@@ -108,13 +108,13 @@ export const useStyles = makeStyles()((theme) => ({
         '&:hover td': {
             backgroundColor: 'rgba(255, 255, 255, 0.8)',
         },
-        '&:hover td.unicoin': {
+        '&:hover td.brandHighlight': {
             backgroundColor: '#FFFFFF',
             transform: 'scale(1.02)',
             transition: 'all 0.3s ease',
         }
     },
-    lastTdUnicoin: {
+    lastTdBrand: {
         borderBottomLeftRadius: '24px',
         borderBottomRightRadius: '24px',
         borderBottom: 'none !important',

@@ -15,7 +15,7 @@ const JoinFlow = () => {
             <div className={classes.bgWrapper}>
                 <img
                     src={getImagePath("assets/unicoin-cta.png")}
-                    alt="Unicoin"
+                    alt="TransparentBusiness"
                     className={classes.bgImage}
                 />
                 {/* Gradient Overlay for Text Readability - Lighter */}
