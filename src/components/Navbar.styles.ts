@@ -59,7 +59,7 @@ export const useStyles = makeStyles()((theme) => ({
         fontSize: '0.75rem',
         fontWeight: 700,
         letterSpacing: '0.1em',
-        textTransform: 'uppercase',
+        textTransform: 'none',
         border: 'none',
         cursor: 'pointer',
         transition: 'all 0.2s', // changed from background-color to all
@@ -108,7 +108,7 @@ export const useStyles = makeStyles()((theme) => ({
         fontSize: '0.75rem',
         fontWeight: 700,
         letterSpacing: '0.1em',
-        textTransform: 'uppercase',
+        textTransform: 'none',
         display: 'flex',
         alignItems: 'center',
         gap: theme.spacing(1),
@@ -197,7 +197,7 @@ export const useStyles = makeStyles()((theme) => ({
         textAlign: 'left',
         fontFamily: theme.typography.h1.fontFamily, // Inter
         fontWeight: 700, // bold
-        textTransform: 'uppercase',
+        textTransform: 'none',
         letterSpacing: '-0.05em', // tracking-tighter
         color: theme.palette.common.black,
         lineHeight: 0.9,
@@ -235,7 +235,7 @@ export const useStyles = makeStyles()((theme) => ({
     subItem: {
         fontSize: '1.125rem', // text-lg
         fontWeight: 700,
-        textTransform: 'uppercase',
+        textTransform: 'none',
         letterSpacing: '0.1em', // tracking-widest
         color: theme.palette.grey[300],
         cursor: 'not-allowed',
@@ -275,7 +275,7 @@ export const useStyles = makeStyles()((theme) => ({
     contactLink: {
         fontSize: '0.875rem',
         fontWeight: 700,
-        textTransform: 'uppercase',
+        textTransform: 'none',
         letterSpacing: '0.1em',
         color: theme.palette.grey[500],
         textDecoration: 'none',

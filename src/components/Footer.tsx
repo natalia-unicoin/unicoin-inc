@@ -67,11 +67,11 @@ const Footer = () => {
                 {/* Brand Strip / Bottom Bar */}
                 <div className={classes.bottomBar}>
                     <div className={classes.tagline}>
-                        <span>Built On Stability</span>
+                        <span>Built on Stability</span>
                         <span className={classes.separator}>|</span>
-                        <span>Powered By Innovation</span>
+                        <span>Powered by Innovation</span>
                         <span className={classes.separator}>|</span>
-                        <span>Designed For The Modern Investor</span>
+                        <span>Designed for the Modern Investor</span>
                     </div>
 
                     <div className={classes.copyright}>

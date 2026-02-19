@@ -133,7 +133,7 @@ export const useStyles = makeStyles()((theme) => ({
         fontSize: '10px', // text-[10px]
         fontWeight: 700,
         letterSpacing: '0.2em', // tracking-[0.2em]
-        textTransform: 'uppercase',
+        textTransform: 'none',
         color: theme.palette.grey[400], // gray-400
         [theme.breakpoints.up('md')]: {
             flexDirection: 'row',

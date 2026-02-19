@@ -18,7 +18,7 @@ const FinalCTA = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                 >
-                    Join The Next Chapter<br />Of Transparent Finance
+                    Join the Next Chapter<br />of Transparent Finance
                 </motion.h2>
 
                 <motion.p
@@ -38,7 +38,7 @@ const FinalCTA = () => {
                     transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
                 >
                     <a href="#" className={classes.button}>
-                        Join The Transition
+                        Join the Transition
                     </a>
                 </motion.div>
             </div>

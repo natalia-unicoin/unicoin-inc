@@ -26,7 +26,7 @@ const LeadershipPositioning = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.8 }}
                 >
-                    Why We Were Poised To Lead
+                    Why We Were Poised to Lead
                 </motion.h2>
 
                 <div className={classes.grid}>

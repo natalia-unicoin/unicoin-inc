@@ -18,7 +18,7 @@ const StorySection = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
                     >
-                        The Story Behind The Evolution
+                        The Story Behind the Evolution
                     </motion.h2>
                     <motion.p
                         className={classes.subtitle}

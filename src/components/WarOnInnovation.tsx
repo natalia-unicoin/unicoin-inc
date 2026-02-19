@@ -17,7 +17,7 @@ const WarOnInnovation = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.8 }}
                 >
-                    The War On Innovation
+                    The War on Innovation
                 </motion.h2>
 
                 <div className={classes.contentGrid}>

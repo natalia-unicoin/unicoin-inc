@@ -68,7 +68,7 @@ const Hero = () => {
                         onClick={openJoinModal}
                         className={classes.ctaButton}
                     >
-                        DISCOVER THE TRANSITION
+                        Discover the Transition
                     </button>
                 </motion.div>
             </div>
