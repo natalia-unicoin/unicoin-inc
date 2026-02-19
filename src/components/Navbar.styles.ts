@@ -1,30 +1,33 @@
 import { makeStyles } from 'tss-react/mui';
 
-export const useStyles = makeStyles()((theme) => ({
+export const useStyles = makeStyles<{ isScrolled: boolean }>()((theme, { isScrolled }) => ({
     nav: {
         position: 'fixed',
         top: 0,
         left: 0,
         right: 0,
         zIndex: 50,
-        backgroundColor: theme.palette.common.white,
-        borderBottom: `1px solid ${theme.palette.grey[100]}`,
+        backgroundColor: isScrolled ? 'rgba(255, 255, 255, 0.9)' : 'transparent',
+        backdropFilter: isScrolled ? 'blur(10px)' : 'none',
+        borderBottom: isScrolled ? `1px solid ${theme.palette.grey[100]}` : 'none',
+        transition: 'all 0.3s ease-in-out',
     },
     container: {
         paddingLeft: theme.spacing(3),
         paddingRight: theme.spacing(3),
-        paddingTop: theme.spacing(1),
-        paddingBottom: theme.spacing(1),
+        paddingTop: isScrolled ? theme.spacing(1) : theme.spacing(2),
+        paddingBottom: isScrolled ? theme.spacing(1) : theme.spacing(2),
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
         maxWidth: '100%',
         margin: '0 auto',
+        transition: 'all 0.3s ease-in-out',
         [theme.breakpoints.up('md')]: {
             paddingLeft: theme.spacing(6),
             paddingRight: theme.spacing(6),
-            paddingTop: theme.spacing(1.5),
-            paddingBottom: theme.spacing(1.5),
+            paddingTop: isScrolled ? theme.spacing(1.5) : theme.spacing(3),
+            paddingBottom: isScrolled ? theme.spacing(1.5) : theme.spacing(3),
         },
         [theme.breakpoints.up('lg')]: {
             paddingLeft: '100px',
@@ -33,9 +36,10 @@ export const useStyles = makeStyles()((theme) => ({
     },
     logoLink: {
         display: 'block',
-        width: '50px',
+        width: isScrolled ? '50px' : '65px',
+        transition: 'all 0.3s ease-in-out',
         [theme.breakpoints.up('md')]: {
-            width: '70px',
+            width: isScrolled ? '70px' : '90px',
         },
     },
     logoImage: {
@@ -52,7 +56,8 @@ export const useStyles = makeStyles()((theme) => ({
         },
     },
     joinButton: {
-        backgroundColor: theme.palette.primary.main, // Obsidian Green
+        backgroundColor: isScrolled ? theme.palette.primary.main : 'rgba(255,255,255,0.2)', // Glassy on transparent
+        backdropFilter: 'blur(5px)',
         color: theme.palette.common.white,
         padding: '8px 20px',
         borderRadius: '9999px',
@@ -60,18 +65,16 @@ export const useStyles = makeStyles()((theme) => ({
         fontWeight: 700,
         letterSpacing: '0.1em',
         textTransform: 'uppercase',
-        border: 'none',
+        border: isScrolled ? 'none' : '1px solid rgba(255,255,255,0.3)',
         cursor: 'pointer',
-        transition: 'all 0.2s', // changed from background-color to all
-        marginTop: '10px',
-        marginBottom: '10px',
+        transition: 'all 0.2s',
         '&:hover': {
-            backgroundColor: '#033f33', // Lighter Obsidian
+            backgroundColor: isScrolled ? '#033f33' : 'rgba(255,255,255,0.4)',
             transform: 'translateY(-1px)',
         },
         [theme.breakpoints.up('md')]: {
-            padding: '8px 24px', // px-6 py-2
-            fontSize: '0.875rem', // text-sm
+            padding: '8px 24px',
+            fontSize: '0.875rem',
         },
     },
     langSelector: {
@@ -82,18 +85,20 @@ export const useStyles = makeStyles()((theme) => ({
             gap: theme.spacing(1),
             fontSize: '0.875rem',
             fontWeight: 500,
+            color: isScrolled ? theme.palette.text.primary : '#FFFFFF',
         },
     },
     langActive: {
-        color: theme.palette.common.black,
+        color: isScrolled ? theme.palette.common.black : '#FFFFFF',
         fontWeight: 700,
         cursor: 'pointer',
     },
     langInactive: {
-        color: theme.palette.text.secondary, // gray-400 equivalent
+        color: isScrolled ? theme.palette.text.secondary : 'rgba(255,255,255,0.7)',
         cursor: 'pointer',
+        transition: 'color 0.2s',
         '&:hover': {
-            color: theme.palette.common.black,
+            color: isScrolled ? theme.palette.common.black : '#FFFFFF',
         }
     },
     menuButtonWrapper: {
@@ -104,7 +109,7 @@ export const useStyles = makeStyles()((theme) => ({
         background: 'none',
         border: 'none',
         cursor: 'pointer',
-        color: theme.palette.common.black,
+        color: isScrolled ? theme.palette.common.black : '#FFFFFF',
         fontSize: '0.75rem',
         fontWeight: 700,
         letterSpacing: '0.1em',
@@ -112,8 +117,9 @@ export const useStyles = makeStyles()((theme) => ({
         display: 'flex',
         alignItems: 'center',
         gap: theme.spacing(1),
+        transition: 'color 0.2s',
         '&:hover': {
-            color: theme.palette.grey[600],
+            color: isScrolled ? theme.palette.grey[600] : 'rgba(255,255,255,0.7)',
         },
         [theme.breakpoints.up('md')]: {
             fontSize: '0.875rem',
@@ -130,7 +136,7 @@ export const useStyles = makeStyles()((theme) => ({
         [theme.breakpoints.up('md')]: {
             display: 'none',
         },
-        fill: '#1f1f1f',
+        fill: isScrolled ? '#1f1f1f' : '#FFFFFF',
     },
     // DRAWER STYLES
     backdrop: {

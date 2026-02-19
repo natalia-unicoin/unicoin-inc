@@ -8,14 +8,24 @@ import { useModal } from '@/context/ModalContext';
 import { useStyles } from './Navbar.styles';
 
 const Navbar = () => {
-    const { classes, cx } = useStyles();
-    const { openJoinModal } = useModal();
     const { scrollY } = useScroll();
+    const [isScrolled, setIsScrolled] = useState(false);
+    const { classes, cx } = useStyles({ isScrolled });
+    const { openJoinModal } = useModal();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [hidden, setHidden] = useState(false);
 
     useMotionValueEvent(scrollY, "change", (latest) => {
         const previous = scrollY.getPrevious();
+
+        // Handle scroll state for transparency
+        if (latest > 50) {
+            setIsScrolled(true);
+        } else {
+            setIsScrolled(false);
+        }
+
+        // Handle hidden/visible state for nav bar behavior
         if (previous && latest > previous && latest > 150) {
             setHidden(true);
         } else {
@@ -68,14 +78,18 @@ const Navbar = () => {
                 <div className={classes.container}>
                     {/* Logo */}
                     <Link href="/" className={classes.logoLink}>
-                        <img src={getImagePath("assets/logo-corporate-black.png")} alt="TransparentBusiness" className={classes.logoImage} />
+                        <img
+                            src={getImagePath(isScrolled ? "assets/logo-corporate-black.png" : "assets/logo-corporate-white.png")}
+                            alt="TransparentBusiness"
+                            className={classes.logoImage}
+                        />
                     </Link>
 
                     <div className={classes.controls}>
                         {/* Dummy Language Selector */}
                         <div className={classes.langSelector}>
                             <span className={classes.langActive}>EN</span>
-                            <span className="text-gray-300">|</span>
+                            <span style={{ color: isScrolled ? '#DDD' : 'rgba(255,255,255,0.3)' }}>|</span>
                             <span className={classes.langInactive}>ES</span>
                         </div>
 

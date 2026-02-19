@@ -9,29 +9,26 @@ export const useStyles = makeStyles()((theme) => ({
         alignItems: 'center',
         justifyContent: 'center',
         overflow: 'hidden',
-        backgroundColor: '#F8FAFC', // Corporate Soft
-        color: '#111111', // Corporate Black
+        backgroundColor: '#000000', // Fallback for video
+        color: '#FFFFFF', // White for video context
     },
     bgWrapper: {
         position: 'absolute',
         inset: 0,
         zIndex: 0,
-        display: 'none', // Hide video background for clean institutional look
+        // Re-enabled video background
     },
     bgImage: {
         width: '100%',
         height: '100%',
         objectFit: 'cover',
         objectPosition: 'center',
-        [theme.breakpoints.up('md')]: {
-            objectPosition: '80% 30%',
-        },
     },
     overlay: {
         position: 'absolute',
         inset: 0,
-        zIndex: 10,
-        background: 'linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.3), rgba(0,0,0,0.7))',
+        zIndex: 1, // Changed from 10 to 1 to stay behind content
+        background: 'linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.4), rgba(0,0,0,0.8))', // Darker for readability
     },
     content: {
         position: 'relative',
@@ -42,7 +39,7 @@ export const useStyles = makeStyles()((theme) => ({
         maxWidth: '100%',
         marginLeft: 'auto',
         marginRight: 'auto',
-        marginTop: '5rem',
+        marginTop: '0', // Adjusted from 5rem
         [theme.breakpoints.up('lg')]: {
             paddingLeft: '100px',
             paddingRight: '100px',
@@ -52,26 +49,26 @@ export const useStyles = makeStyles()((theme) => ({
         fontFamily: theme.typography.h1.fontFamily, // Montserrat
         fontWeight: 700,
         letterSpacing: '-0.02em',
-        marginBottom: theme.spacing(1), // Reduced from spacing(4)
-        color: '#111111', // Corporate Black
-        fontSize: '52px', // Increased from 44px
-        lineHeight: '1', // Tighter line height
+        marginBottom: theme.spacing(1),
+        color: '#FFFFFF', // White for video
+        fontSize: '52px',
+        lineHeight: '1',
         [theme.breakpoints.up('md')]: {
-            fontSize: '90px', // Increased from 64px
+            fontSize: '90px',
         },
         [theme.breakpoints.up('lg')]: {
-            fontSize: '110px', // Increased from 72px
+            fontSize: '110px',
         }
     },
     subtitle: {
-        fontSize: '1.5rem', // Increased from 1.25rem
+        fontSize: '1.5rem',
         fontWeight: 600,
-        letterSpacing: '0', // Removed from 0.1em
-        color: '#000000', // Black
-        marginBottom: theme.spacing(4), // Increased gap to description
+        letterSpacing: '0',
+        color: '#FFFFFF', // White for video
+        marginBottom: theme.spacing(4),
         lineHeight: 1.2,
         [theme.breakpoints.up('md')]: {
-            fontSize: '2.25rem', // Increased from 1.5rem
+            fontSize: '2.25rem',
         }
     },
     description: {
@@ -82,7 +79,7 @@ export const useStyles = makeStyles()((theme) => ({
         marginLeft: 'auto',
         marginRight: 'auto',
         marginBottom: theme.spacing(6),
-        color: '#000000', // Black
+        color: 'rgba(255, 255, 255, 0.9)', // Semi-transparent white
         [theme.breakpoints.up('md')]: {
             fontSize: '1.35rem',
         }
