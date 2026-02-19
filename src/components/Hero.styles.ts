@@ -16,7 +16,7 @@ export const useStyles = makeStyles()((theme) => ({
         position: 'absolute',
         inset: 0,
         zIndex: 0,
-        display: 'none', // Hide video background
+        display: 'none', // Hide video background for clean institutional look
     },
     bgImage: {
         width: '100%',
@@ -51,28 +51,26 @@ export const useStyles = makeStyles()((theme) => ({
     title: {
         fontFamily: theme.typography.h1.fontFamily, // Montserrat
         fontWeight: 700,
-        letterSpacing: '-0.03em',
+        letterSpacing: '-0.04em',
         marginBottom: theme.spacing(4),
         color: '#111111', // Corporate Black
-        // filter: 'drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1))', // Removed shadow for clean look
-        fontSize: '40px',
-        lineHeight: '50px',
+        fontSize: '48px',
+        lineHeight: '58px',
         [theme.breakpoints.up('md')]: {
-            fontSize: '56px',
-            lineHeight: '66px',
+            fontSize: '72px',
+            lineHeight: '82px',
         },
         [theme.breakpoints.up('lg')]: {
-            fontSize: '64px',
-            lineHeight: '74px',
+            fontSize: '84px',
+            lineHeight: '94px',
         }
     },
     subtitle: {
         fontSize: '1.25rem',
         fontWeight: 600,
-        textTransform: 'uppercase',
         letterSpacing: '0.1em',
         color: '#000000', // Black
-        marginBottom: theme.spacing(1.5), // Reduced spacing
+        marginBottom: theme.spacing(3),
         [theme.breakpoints.up('md')]: {
             fontSize: '1.5rem',
         }
@@ -88,17 +86,6 @@ export const useStyles = makeStyles()((theme) => ({
         color: '#000000', // Black
         [theme.breakpoints.up('md')]: {
             fontSize: '1.35rem',
-        }
-    },
-    highlight: {
-        color: theme.palette.secondary.main, // #fcd144
-        paddingRight: theme.spacing(1.5),
-        fontSize: '3rem',
-        [theme.breakpoints.up('md')]: {
-            fontSize: '3.75rem',
-        },
-        [theme.breakpoints.up('lg')]: {
-            fontSize: '6rem',
         }
     },
     ctaContainer: {
@@ -138,20 +125,6 @@ export const useStyles = makeStyles()((theme) => ({
         bottom: theme.spacing(4), // bottom-8
         right: theme.spacing(4), // right-8
         zIndex: 20,
-    },
-    watermarkBadge: {
-        backgroundColor: 'rgba(0, 0, 0, 0.05)',
-        backdropFilter: 'blur(12px)',
-        border: '1px solid rgba(0, 0, 0, 0.1)',
-        padding: '6px 16px', // px-4 py-1.5
-        borderRadius: '9999px',
-        boxShadow: theme.shadows[1],
-    },
-    watermarkText: {
-        fontSize: '0.875rem', // text-sm
-        fontWeight: 700,
-        letterSpacing: '0.2em',
-        color: '#374151', // Corporate Gray
-        textTransform: 'uppercase',
+        display: 'none', // Hidden as per requirement
     }
 }));

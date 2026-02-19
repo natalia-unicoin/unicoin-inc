@@ -28,48 +28,49 @@ const Hero = () => {
 
             {/* Content */}
             <div className={classes.content}>
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                >
-                    <p className={classes.subtitle}>Redefining the Future of Corporate Reserves</p>
-                </motion.div>
-
                 <motion.h1
                     className={classes.title}
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
                 >
-                    TransparentBusiness:<br />
-                    The Debt-Free Evolution<br />
-                    of Digital Asset Treasury
+                    TransparentBusiness<br />is Evolving.
                 </motion.h1>
 
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+                >
+                    <p className={classes.subtitle}>
+                        From Unicoin to TBIZ.<br />
+                        A new chapter built on transparency, resilience, and leadership.
+                    </p>
+                </motion.div>
+
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+                >
+                    <p className={classes.description}>
+                        We are transitioning from Unicoin to TBIZ to better align with the evolving global regulatory landscape and our core commitment to absolute financial transparency. This strategic pivot ensures a resilient foundation for long-term growth, positioning us to lead with integrity in the next era of digital asset management.
+                    </p>
+                </motion.div>
 
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+                    transition={{ duration: 0.8, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
                     className={classes.ctaContainer}
                 >
                     <button
                         onClick={openJoinModal}
                         className={classes.ctaButton}
                     >
-                        Learn More
+                        DISCOVER THE TRANSITION
                     </button>
                 </motion.div>
-            </div>
-
-            {/* Beta Watermark */}
-            <div className={classes.watermark}>
-                <div className={classes.watermarkBadge}>
-                    <span className={classes.watermarkText}>
-                        Beta v1.0
-                    </span>
-                </div>
             </div>
         </section>
     );

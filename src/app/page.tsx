@@ -1,5 +1,5 @@
-import Home from '@/components/Home';
+import TransparentBusiness from '@/components/TransparentBusiness';
 
 export default function HomePage() {
-  return <Home />;
+  return <TransparentBusiness />;
 }
