@@ -103,7 +103,7 @@ export const useStyles = makeStyles()((theme) => ({
         fontSize: '0.875rem', // text-sm
         fontWeight: 700,
         letterSpacing: '0.1em', // tracking-widest
-        textTransform: 'none',
+        textTransform: 'uppercase',
         border: 'none',
         cursor: 'pointer',
         boxShadow: theme.shadows[10], // shadow-xl approximately

@@ -94,7 +94,7 @@ const theme = createTheme({
             styleOverrides: {
                 root: {
                     borderRadius: 20,
-                    textTransform: 'none',
+                    textTransform: 'uppercase',
                     fontWeight: 700,
                     padding: '12px 24px',
                 },
