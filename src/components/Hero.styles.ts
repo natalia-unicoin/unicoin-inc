@@ -54,13 +54,13 @@ export const useStyles = makeStyles()((theme) => ({
         letterSpacing: '-0.02em',
         marginBottom: theme.spacing(1), // Reduced from spacing(4)
         color: '#111111', // Corporate Black
-        fontSize: '44px',
-        lineHeight: '1.1',
+        fontSize: '52px', // Increased from 44px
+        lineHeight: '1', // Tighter line height
         [theme.breakpoints.up('md')]: {
-            fontSize: '64px',
+            fontSize: '90px', // Increased from 64px
         },
         [theme.breakpoints.up('lg')]: {
-            fontSize: '72px',
+            fontSize: '110px', // Increased from 72px
         }
     },
     subtitle: {
