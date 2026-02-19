@@ -88,14 +88,24 @@ export const useStyles = makeStyles()((theme) => ({
         gridColumn: 'span 1 / span 1',
         [theme.breakpoints.up('md')]: {
             gridColumn: 'span 2 / span 2',
-            gridColumnStart: 6,
+            gridColumnStart: 5, // Moved from 6
         }
     },
     linksColumnSecond: {
         gridColumn: 'span 1 / span 1',
         [theme.breakpoints.up('md')]: {
             gridColumn: 'span 2 / span 2',
-            gridColumnStart: 9,
+            gridColumnStart: 7, // Moved from 9
+        }
+    },
+    socialColumn: {
+        gridColumn: 'span 1 / span 1',
+        [theme.breakpoints.up('md')]: {
+            gridColumn: 'span 3 / span 3',
+            gridColumnStart: 10,
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'flex-end',
         }
     },
     columnTitle: {
