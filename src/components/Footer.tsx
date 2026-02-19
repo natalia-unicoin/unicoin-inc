@@ -46,17 +46,20 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    {/* Navigation Column */}
+                    {/* Navigation Columns */}
                     <div className={classes.linksColumnFirst}>
-                        <h4 className={classes.columnTitle}>Quick Links</h4>
+                        <h4 className={classes.columnTitle}>Platform</h4>
                         <ul className={classes.linkList}>
-                            {navItems.map((item, i) => (
-                                <li key={i}>
-                                    <a href={item.href} className={classes.linkItem}>
-                                        {item.label}
-                                    </a>
-                                </li>
-                            ))}
+                            <li><a href="#strategy" className={classes.linkItem}>Strategy</a></li>
+                            <li><a href="#media" className={classes.linkItem}>Media</a></li>
+                        </ul>
+                    </div>
+
+                    <div className={classes.linksColumnSecond}>
+                        <h4 className={classes.columnTitle}>Company</h4>
+                        <ul className={classes.linkList}>
+                            <li><a href="#legal" className={classes.linkItem}>Legal</a></li>
+                            <li><a href="#contact" className={classes.linkItem}>Contact</a></li>
                         </ul>
                     </div>
                 </div>
@@ -64,11 +67,11 @@ const Footer = () => {
                 {/* Brand Strip / Bottom Bar */}
                 <div className={classes.bottomBar}>
                     <div className={classes.tagline}>
-                        <span>Built on Stability</span>
+                        <span>Built On Stability</span>
                         <span className={classes.separator}>|</span>
-                        <span>Powered by Innovation</span>
+                        <span>Powered By Innovation</span>
                         <span className={classes.separator}>|</span>
-                        <span>Designed for the Modern Investor.</span>
+                        <span>Designed For The Modern Investor</span>
                     </div>
 
                     <div className={classes.copyright}>

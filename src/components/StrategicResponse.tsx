@@ -10,7 +10,7 @@ const StrategicResponse = () => {
     const comparisonData = [
         {
             feature: "Leverage",
-            traditional: "High-risk debt dependency",
+            traditional: "High-Risk Debt Dependency",
             tbiz: "Debt-Free Institutional Model"
         },
         {
@@ -25,7 +25,7 @@ const StrategicResponse = () => {
         },
         {
             feature: "Sustainability",
-            traditional: "Speculative treasury",
+            traditional: "Speculative Treasury",
             tbiz: "Sustainable Growth Model"
         }
     ];

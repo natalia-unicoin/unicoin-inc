@@ -38,7 +38,7 @@ const FinalCTA = () => {
                     transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
                 >
                     <a href="#" className={classes.button}>
-                        Join the Transition
+                        Join The Transition
                     </a>
                 </motion.div>
             </div>

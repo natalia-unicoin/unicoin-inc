@@ -21,11 +21,14 @@ export const useStyles = makeStyles()((theme) => ({
     },
     mainGrid: {
         display: 'grid',
-        gridTemplateColumns: 'repeat(1, minmax(0, 1fr))', // grid-cols-1
-        gap: theme.spacing(6), // gap-12 = 48px -> use spacing(6) ~48px
-        marginBottom: theme.spacing(10), // mb-20
+        gridTemplateColumns: 'repeat(1, minmax(0, 1fr))',
+        gap: theme.spacing(6),
+        marginBottom: theme.spacing(10),
+        [theme.breakpoints.up('sm')]: {
+            gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
+        },
         [theme.breakpoints.up('md')]: {
-            gridTemplateColumns: 'repeat(12, minmax(0, 1fr))', // md:grid-cols-12
+            gridTemplateColumns: 'repeat(12, minmax(0, 1fr))',
         }
     },
     brandColumn: {
@@ -85,7 +88,14 @@ export const useStyles = makeStyles()((theme) => ({
         gridColumn: 'span 1 / span 1',
         [theme.breakpoints.up('md')]: {
             gridColumn: 'span 2 / span 2',
-            gridColumnStart: 7, // md:col-start-7
+            gridColumnStart: 6,
+        }
+    },
+    linksColumnSecond: {
+        gridColumn: 'span 1 / span 1',
+        [theme.breakpoints.up('md')]: {
+            gridColumn: 'span 2 / span 2',
+            gridColumnStart: 9,
         }
     },
     columnTitle: {
