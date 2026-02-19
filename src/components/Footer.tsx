@@ -6,9 +6,12 @@ import { useStyles } from './Footer.styles';
 
 const Footer = () => {
     const { classes } = useStyles();
-    const platformItems = ["Advantages", "Comparison", "Strategy"];
-    const communityItems = ["Latest Updates", "Partners", "Contact"];
-    const legalItems = ["Privacy Policy", "Terms of Service"];
+    const navItems = [
+        { label: "Strategy", href: "#strategy" },
+        { label: "Media", href: "#media" },
+        { label: "Legal", href: "#legal" },
+        { label: "Contact", href: "#contact" }
+    ];
 
     return (
         <footer className={classes.footer}>
@@ -43,30 +46,16 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    {/* Links Columns */}
+                    {/* Navigation Column */}
                     <div className={classes.linksColumnFirst}>
-                        <h4 className={classes.columnTitle}>Platform</h4>
+                        <h4 className={classes.columnTitle}>Quick Links</h4>
                         <ul className={classes.linkList}>
-                            {platformItems.map((item, i) => (
-                                <li key={i}><a href="#" className={classes.linkItem}>{item}</a></li>
-                            ))}
-                        </ul>
-                    </div>
-
-                    <div className={classes.linksColumn}>
-                        <h4 className={classes.columnTitle}>Community</h4>
-                        <ul className={classes.linkList}>
-                            {communityItems.map((item, i) => (
-                                <li key={i}><a href="#" className={classes.linkItem}>{item}</a></li>
-                            ))}
-                        </ul>
-                    </div>
-
-                    <div className={classes.linksColumn}>
-                        <h4 className={classes.columnTitle}>Legal</h4>
-                        <ul className={classes.linkList}>
-                            {legalItems.map((item, i) => (
-                                <li key={i}><a href="#" className={classes.linkItem}>{item}</a></li>
+                            {navItems.map((item, i) => (
+                                <li key={i}>
+                                    <a href={item.href} className={classes.linkItem}>
+                                        {item.label}
+                                    </a>
+                                </li>
                             ))}
                         </ul>
                     </div>

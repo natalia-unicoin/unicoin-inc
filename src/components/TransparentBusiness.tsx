@@ -7,6 +7,7 @@ import WarOnInnovation from '@/components/WarOnInnovation';
 import StrategicResponse from '@/components/StrategicResponse';
 import LeadershipPositioning from '@/components/LeadershipPositioning';
 import InTheMedia from '@/components/InTheMedia';
+import FinalCTA from '@/components/FinalCTA';
 
 const TransparentBusiness = () => {
     return (
@@ -17,7 +18,7 @@ const TransparentBusiness = () => {
             <StrategicResponse />
             <LeadershipPositioning />
             <InTheMedia />
-            {/* Additional sections will be added here as provided by the user */}
+            <FinalCTA />
         </>
     );
 };
