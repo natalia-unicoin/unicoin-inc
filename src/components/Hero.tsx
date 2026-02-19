@@ -54,7 +54,7 @@ const Hero = () => {
                     transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
                 >
                     <p className={classes.description}>
-                        Evolving Unicoin into TBIZ: A strategic shift toward absolute financial transparency and long-term institutional growth.
+                        We are evolving our institutional model to navigate the shifting regulatory landscape. This transition reinforces our commitment to absolute financial transparency and establishes a resilient foundation for the next era of strategic growth.
                     </p>
                 </motion.div>
 

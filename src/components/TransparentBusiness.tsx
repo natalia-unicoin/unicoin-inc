@@ -6,6 +6,7 @@ import StorySection from '@/components/StorySection';
 import WarOnInnovation from '@/components/WarOnInnovation';
 import StrategicResponse from '@/components/StrategicResponse';
 import LeadershipPositioning from '@/components/LeadershipPositioning';
+import InTheMedia from '@/components/InTheMedia';
 
 const TransparentBusiness = () => {
     return (
@@ -15,6 +16,7 @@ const TransparentBusiness = () => {
             <WarOnInnovation />
             <StrategicResponse />
             <LeadershipPositioning />
+            <InTheMedia />
             {/* Additional sections will be added here as provided by the user */}
         </>
     );

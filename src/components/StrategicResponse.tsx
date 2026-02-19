@@ -14,19 +14,19 @@ const StrategicResponse = () => {
             tbiz: "Debt-Free Institutional Model"
         },
         {
-            feature: "Equity",
-            traditional: "Linear asset acquisition",
+            feature: "Asset Acquisition",
+            traditional: "Linear Asset Acquisition",
             tbiz: "Strategic Equity Swaps"
         },
         {
             feature: "Intelligence",
-            traditional: "Traditional analysis",
-            tbiz: "AI-Powered Intelligence"
+            traditional: "Manual Analysis",
+            tbiz: "AI-Powered Strategy"
         },
         {
             feature: "Sustainability",
             traditional: "Speculative treasury",
-            tbiz: "Sustainable Treasury Model"
+            tbiz: "Sustainable Growth Model"
         }
     ];
 

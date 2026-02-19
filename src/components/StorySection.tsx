@@ -39,9 +39,9 @@ const StorySection = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
                     >
-                        <h3 className={classes.cardTitle}>Vision Meets Reality</h3>
+                        <h3 className={classes.cardTitle}>The Path to NYSE</h3>
                         <p className={classes.cardText}>
-                            TransparentBusiness began with an ambitious roadmap: to become the first publicly traded digital asset company on the NYSE, bringing absolute transparency to emerging markets.
+                            TransparentBusiness was engineered with a clear institutional objective: to become the first publicly traded digital asset company on the New York Stock Exchange (NYSE), establishing a high standard for transparency in emerging markets.
                         </p>
                     </motion.div>
 
@@ -52,9 +52,9 @@ const StorySection = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
                     >
-                        <h3 className={classes.cardTitle}>The Regulatory Shift</h3>
+                        <h3 className={classes.cardTitle}>Regulatory Realignment</h3>
                         <p className={classes.cardText}>
-                            The emergence of a global "War on Crypto" created an environment of unprecedented uncertainty. Defensive evolution became a strategic necessity to protect company integrity and investor value.
+                            The intensification of the "War on Crypto" and specific targeting by the SEC forced a critical decision. Evolution was not a choice, but a strategic imperative to protect investor interests and maintain company integrity in a shifting landscape.
                         </p>
                     </motion.div>
                 </div>

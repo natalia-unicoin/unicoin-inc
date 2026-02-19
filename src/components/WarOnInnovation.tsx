@@ -29,10 +29,10 @@ const WarOnInnovation = () => {
                         transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
                     >
                         <p className={classes.statement}>
-                            The industry faced an <span className={classes.accent}>unprecedented offensive</span> that disrupted the path of innovation.
+                            The path of innovation faced an <span className={classes.accent}>unprecedented offensive</span> by regulatory authorities.
                         </p>
                         <p className={classes.statement} style={{ fontSize: '1.25rem', fontWeight: 400, color: '#6E6E73' }}>
-                            Regulatory actions created a trillion-dollar vacuum in market value, impacting millions of participants globally.
+                            The vacuum created by targeted actions erased trillions in market value globally.
                         </p>
                     </motion.div>
 
@@ -44,10 +44,10 @@ const WarOnInnovation = () => {
                         transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
                     >
                         <p className={classes.supportingText}>
-                            The aggressive stance taken by the SEC under Gary Gensler's leadership represents a historical shift in financial oversight. This "War on Crypto" directly affected companies like NICO, obstructing legitimate growth paths and causing significant institutional friction.
+                            Specific regulatory maneuvers under the SEC leadership restricted legitimate paths for emerging companies. This institutional pressure directly impacted NICO, obstructing planned growth and causing significant friction for thousands of investors.
                         </p>
                         <p className={classes.supportingText}>
-                            The consequences were not merely abstract. Billions in potential market value were erased, and thousands of dedicated investors found their interests caught in the crossfire of this regulatory conflict.
+                            The consequences reached beyond a single company, impacting the entire ecosystem. Billions in market value were disrupted, leaving investors to navigate a landscape of high uncertainty created by Gary Gensler's regulatory stance.
                         </p>
 
                         <div className={classes.metricGrid}>
