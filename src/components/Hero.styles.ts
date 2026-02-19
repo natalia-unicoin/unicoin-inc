@@ -51,18 +51,16 @@ export const useStyles = makeStyles()((theme) => ({
     title: {
         fontFamily: theme.typography.h1.fontFamily, // Montserrat
         fontWeight: 700,
-        letterSpacing: '-0.04em',
+        letterSpacing: '-0.02em',
         marginBottom: theme.spacing(4),
         color: '#111111', // Corporate Black
-        fontSize: '48px',
-        lineHeight: '58px',
+        fontSize: '44px',
+        lineHeight: '1.1',
         [theme.breakpoints.up('md')]: {
-            fontSize: '72px',
-            lineHeight: '82px',
+            fontSize: '64px',
         },
         [theme.breakpoints.up('lg')]: {
-            fontSize: '84px',
-            lineHeight: '94px',
+            fontSize: '72px',
         }
     },
     subtitle: {

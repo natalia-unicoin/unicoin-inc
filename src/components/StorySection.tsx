@@ -13,12 +13,12 @@ const StorySection = () => {
                 <div className={classes.header}>
                     <motion.h2
                         className={classes.title}
-                        initial={{ opacity: 0, y: 40 }}
+                        initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                        transition={{ duration: 0.8 }}
                     >
-                        The Story Behind the Evolution
+                        The Story Behind The Evolution
                     </motion.h2>
                     <motion.p
                         className={classes.subtitle}

@@ -12,12 +12,12 @@ const WarOnInnovation = () => {
             <div className={classes.container}>
                 <motion.h2
                     className={classes.title}
-                    initial={{ opacity: 0, y: 40 }}
+                    initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                    transition={{ duration: 0.8 }}
                 >
-                    The War on Innovation
+                    The War On Innovation
                 </motion.h2>
 
                 <div className={classes.contentGrid}>

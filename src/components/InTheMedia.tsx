@@ -38,7 +38,7 @@ const InTheMedia = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.8 }}
                 >
-                    In the Media
+                    In The Media
                 </motion.h2>
 
                 <div className={classes.grid}>

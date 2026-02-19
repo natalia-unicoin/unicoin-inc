@@ -27,12 +27,16 @@ export const useStyles = makeStyles()((theme) => ({
     },
     title: {
         fontFamily: theme.typography.h1.fontFamily,
-        fontSize: '40px',
         fontWeight: 700,
+        letterSpacing: '-0.02em',
         marginBottom: theme.spacing(2),
-        letterSpacing: '-0.03em',
+        lineHeight: 1.1,
+        fontSize: '44px',
         [theme.breakpoints.up('md')]: {
-            fontSize: '56px',
+            fontSize: '64px',
+        },
+        [theme.breakpoints.up('lg')]: {
+            fontSize: '72px',
         }
     },
     subtitle: {

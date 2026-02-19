@@ -2,17 +2,13 @@ import { makeStyles } from 'tss-react/mui';
 
 export const useStyles = makeStyles()((theme) => ({
     section: {
-        paddingTop: theme.spacing(12),
-        paddingBottom: theme.spacing(12),
+        paddingTop: '160px',
+        paddingBottom: '160px',
         backgroundColor: '#000000', // Institutional Deep Black
         color: '#FFFFFF',
         textAlign: 'center',
         position: 'relative',
         overflow: 'hidden',
-        [theme.breakpoints.up('lg')]: {
-            paddingTop: '200px',
-            paddingBottom: '200px',
-        }
     },
     container: {
         maxWidth: '1200px',
@@ -23,13 +19,16 @@ export const useStyles = makeStyles()((theme) => ({
         zIndex: 2,
     },
     title: {
-        fontSize: '40px',
         lineHeight: '1.1',
         fontWeight: 700,
         marginBottom: theme.spacing(3),
-        letterSpacing: '-0.04em',
+        letterSpacing: '-0.02em',
         fontFamily: theme.typography.h1.fontFamily,
+        fontSize: '44px',
         [theme.breakpoints.up('md')]: {
+            fontSize: '64px',
+        },
+        [theme.breakpoints.up('lg')]: {
             fontSize: '72px',
         }
     },

@@ -2,14 +2,10 @@ import { makeStyles } from 'tss-react/mui';
 
 export const useStyles = makeStyles()((theme) => ({
     section: {
-        paddingTop: theme.spacing(10),
-        paddingBottom: theme.spacing(10),
+        paddingTop: '160px',
+        paddingBottom: '160px',
         backgroundColor: '#FFFFFF',
         color: '#000000',
-        [theme.breakpoints.up('md')]: {
-            paddingTop: '120px',
-            paddingBottom: '120px',
-        },
     },
     container: {
         maxWidth: '100%',
@@ -23,17 +19,20 @@ export const useStyles = makeStyles()((theme) => ({
         }
     },
     title: {
-        fontSize: '40px',
+        fontSize: '44px',
         lineHeight: '1.1',
         fontWeight: 700,
         textAlign: 'center',
         letterSpacing: '-0.02em',
         fontFamily: theme.typography.h1.fontFamily,
         marginBottom: '60px',
-        textTransform: 'uppercase',
+        textTransform: 'none',
         [theme.breakpoints.up('md')]: {
             fontSize: '64px',
             marginBottom: '80px',
+        },
+        [theme.breakpoints.up('lg')]: {
+            fontSize: '72px',
         }
     },
     grid: {

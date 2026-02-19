@@ -18,7 +18,7 @@ const FinalCTA = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                 >
-                    Join the Next Chapter<br />of Transparent Finance
+                    Join The Next Chapter<br />Of Transparent Finance
                 </motion.h2>
 
                 <motion.p

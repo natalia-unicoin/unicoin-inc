@@ -7,8 +7,8 @@ export const useStyles = makeStyles()((theme) => ({
         backgroundColor: '#FFFFFF',
         color: '#111111',
         [theme.breakpoints.up('lg')]: {
-            paddingTop: '200px',
-            paddingBottom: '200px',
+            paddingTop: '160px',
+            paddingBottom: '160px',
         }
     },
     container: {
@@ -30,16 +30,16 @@ export const useStyles = makeStyles()((theme) => ({
     },
     title: {
         fontFamily: theme.typography.h1.fontFamily,
-        fontSize: '40px',
         fontWeight: 700,
+        letterSpacing: '-0.02em',
         marginBottom: theme.spacing(3),
-        letterSpacing: '-0.04em',
         lineHeight: 1.1,
+        fontSize: '44px',
         [theme.breakpoints.up('md')]: {
-            fontSize: '56px',
+            fontSize: '64px',
         },
         [theme.breakpoints.up('lg')]: {
-            fontSize: '64px',
+            fontSize: '72px',
         }
     },
     subtitle: {
