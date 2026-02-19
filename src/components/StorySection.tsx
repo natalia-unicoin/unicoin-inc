@@ -10,60 +10,67 @@ const StorySection = () => {
     return (
         <section id="story" className={classes.section}>
             <div className={classes.container}>
-                <motion.h2
-                    className={classes.title}
-                    initial={{ opacity: 0, y: 40 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                >
-                    The Story Behind the Evolution
-                </motion.h2>
-
-                <div className={classes.contentGrid}>
-                    <motion.div
-                        className={classes.textBlock}
-                        initial={{ opacity: 0, x: -30 }}
-                        whileInView={{ opacity: 1, x: 0 }}
+                <div className={classes.header}>
+                    <motion.h2
+                        className={classes.title}
+                        initial={{ opacity: 0, y: 40 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                    >
+                        The Story Behind the Evolution
+                    </motion.h2>
+                    <motion.p
+                        className={classes.subtitle}
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
                     >
-                        <p>
-                            TransparentBusiness was conceived with a clear mission: to bring absolute financial transparency to the world of emerging assets. Our roadmap was ambitious, targeting a historic listing on the New York Stock Exchange to become the first publicly traded digital asset company on a major platform.
+                        Navigating the transition from Unicoin to TBIZ through transparency and strategic resilience.
+                    </motion.p>
+                </div>
+
+                <div className={classes.contentGrid}>
+                    <motion.div
+                        className={classes.card}
+                        initial={{ opacity: 0, y: 40 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+                    >
+                        <h3 className={classes.cardTitle}>Vision Meets Reality</h3>
+                        <p className={classes.cardText}>
+                            TransparentBusiness began with an ambitious roadmap: to become the first publicly traded digital asset company on the NYSE, bringing absolute transparency to emerging markets.
                         </p>
                     </motion.div>
 
                     <motion.div
-                        className={classes.textBlock}
-                        initial={{ opacity: 0, x: 30 }}
-                        whileInView={{ opacity: 1, x: 0 }}
+                        className={classes.card}
+                        initial={{ opacity: 0, y: 40 }}
+                        whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+                        transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
                     >
-                        <p>
-                            However, the landscape shifted. The intensifying regulatory offensive, often described as the "War on Crypto," targeted industry innovators, creating an environment of unprecedented uncertainty. In this context, defending investor value and the company's integrity required a definitive structural evolution.
+                        <h3 className={classes.cardTitle}>The Regulatory Shift</h3>
+                        <p className={classes.cardText}>
+                            The emergence of a global "War on Crypto" created an environment of unprecedented uncertainty. Defensive evolution became a strategic necessity to protect company integrity and investor value.
                         </p>
                     </motion.div>
                 </div>
 
                 <motion.div
                     className={classes.highlightRow}
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+                    transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
                 >
-                    <div>
-                        <span className={classes.imperativeLabel}>Strategic Imperative</span>
-                        <p style={{ fontSize: '1.5rem', fontWeight: 500, marginTop: '8px' }}>
-                            Protecting Value through Resilience.
-                        </p>
-                    </div>
-                    <div style={{ maxWidth: '400px' }}>
-                        <p style={{ color: '#6B7280', fontSize: '1rem' }}>
-                            The transition to TBIZ is not merely a name change, but a strategic repositioning designed to navigate regulatory challenges while maintaining our leadership in transparent finance.
-                        </p>
-                    </div>
+                    <span className={classes.imperativeLabel}>Strategic Imperative</span>
+                    <h3 className={classes.imperativeTitle}>Protecting Value through Resilience</h3>
+                    <p className={classes.imperativeDescription}>
+                        TBIZ represents more than a name change; it is a structural pivot designed to lead with high-standard transparency in the next era of institutional digital asset management.
+                    </p>
                 </motion.div>
             </div>
         </section>
