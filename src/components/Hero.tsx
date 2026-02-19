@@ -43,8 +43,7 @@ const Hero = () => {
                     transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
                 >
                     <p className={classes.subtitle}>
-                        From Unicoin to TBIZ.<br />
-                        A new chapter built on transparency, resilience, and leadership.
+                        From Unicoin to TBIZ. A new chapter built on transparency, resilience, and leadership.
                     </p>
                 </motion.div>
 
