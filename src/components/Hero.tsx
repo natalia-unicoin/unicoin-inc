@@ -54,8 +54,7 @@ const Hero = () => {
                     transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
                 >
                     <p className={classes.description}>
-                        Evolving our institutional model to navigate the shifting regulatory landscape.<br />
-                        Reinforcing our commitment to absolute financial transparency and strategic growth.
+                        Evolving our institutional model to navigate the shifting regulatory landscape.
                     </p>
                 </motion.div>
 
