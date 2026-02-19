@@ -3,7 +3,7 @@ import { makeStyles } from 'tss-react/mui';
 export const useStyles = makeStyles()((theme) => ({
     section: {
         paddingTop: '160px',
-        paddingBottom: '160px',
+        paddingBottom: '80px',
         backgroundColor: '#FFFFFF',
         borderTop: '1px solid #E5E5E7',
     },

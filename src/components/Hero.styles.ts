@@ -94,8 +94,8 @@ export const useStyles = makeStyles()((theme) => ({
         }
     },
     ctaButton: {
-        backgroundColor: theme.palette.primary.main, // Obsidian Green
-        color: '#FFFFFF',
+        backgroundColor: '#FCD144', // Brand Yellow
+        color: '#000000',
         padding: '16px 32px', // px-8 py-4
         borderRadius: '9999px',
         fontSize: '0.875rem', // text-sm
@@ -107,7 +107,7 @@ export const useStyles = makeStyles()((theme) => ({
         boxShadow: theme.shadows[10], // shadow-xl approximately
         transition: 'all 0.3s',
         '&:hover': {
-            backgroundColor: '#033f33', // Lighter Obsidian
+            backgroundColor: '#e5bc3d', // Darker Yellow
             transform: 'scale(1.05)',
             boxShadow: theme.shadows[20], // shadow-2xl
         },

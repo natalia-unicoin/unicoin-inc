@@ -56,9 +56,9 @@ export const useStyles = makeStyles<{ isScrolled: boolean }>()((theme, { isScrol
         },
     },
     joinButton: {
-        backgroundColor: isScrolled ? theme.palette.primary.main : 'rgba(255,255,255,0.2)', // Glassy on transparent
+        backgroundColor: '#FCD144',
         backdropFilter: 'blur(5px)',
-        color: theme.palette.common.white,
+        color: '#000000',
         padding: '8px 20px',
         borderRadius: '9999px',
         fontSize: '0.75rem',
@@ -69,7 +69,7 @@ export const useStyles = makeStyles<{ isScrolled: boolean }>()((theme, { isScrol
         cursor: 'pointer',
         transition: 'all 0.2s',
         '&:hover': {
-            backgroundColor: isScrolled ? '#033f33' : 'rgba(255,255,255,0.4)',
+            backgroundColor: '#e5bc3d',
             transform: 'translateY(-1px)',
         },
         [theme.breakpoints.up('md')]: {
