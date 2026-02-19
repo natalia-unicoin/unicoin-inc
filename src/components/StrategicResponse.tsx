@@ -50,7 +50,7 @@ const StrategicResponse = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
                     >
-                        Pivoting from high-liability models to a resilient, debt-free institutional standard.
+                        Pivoting from High-Liability Models to a Resilient, Debt-Free Institutional Standard
                     </motion.p>
                 </div>
 
