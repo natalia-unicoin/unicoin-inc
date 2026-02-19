@@ -60,7 +60,7 @@ export const useStyles = makeStyles<{ isScrolled: boolean }>()((theme, { isScrol
         backdropFilter: 'blur(5px)',
         color: '#000000',
         padding: '8px 20px',
-        borderRadius: '5px',
+        borderRadius: '9999px', // Pill shape
         fontSize: '0.75rem',
         fontWeight: 700,
         letterSpacing: '0.1em',

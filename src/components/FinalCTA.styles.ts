@@ -9,6 +9,7 @@ export const useStyles = makeStyles()((theme) => ({
         textAlign: 'center',
         position: 'relative',
         overflow: 'hidden',
+        borderTop: '1px solid #333333', // Subtle separator for dark section
     },
     container: {
         maxWidth: '1200px',
@@ -49,7 +50,7 @@ export const useStyles = makeStyles()((theme) => ({
         backgroundColor: '#FFFFFF',
         color: '#000000',
         padding: '20px 48px',
-        borderRadius: '9999px',
+        borderRadius: '9999px', // Pill shape
         fontSize: '16px',
         fontWeight: 700,
         letterSpacing: '0.1em',

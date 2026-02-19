@@ -22,6 +22,7 @@ export const useStyles = makeStyles()((theme) => ({
         fontSize: '44px',
         lineHeight: '1.1',
         fontWeight: 700,
+        color: '#1D1D1F', // Apple Black
         textAlign: 'center',
         letterSpacing: '-0.02em',
         fontFamily: theme.typography.h1.fontFamily,
@@ -48,8 +49,8 @@ export const useStyles = makeStyles()((theme) => ({
         display: 'flex',
         flexDirection: 'column',
         padding: '40px',
-        borderRadius: '5px',
-        border: '1px solid #E5E5E7',
+        borderRadius: '30px',
+        border: '1px solid #D2D2D7', // Apple Light Gray
         backgroundColor: '#FBFBFB',
         transition: 'all 0.3s ease',
         '&:hover': {

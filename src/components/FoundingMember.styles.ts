@@ -52,7 +52,7 @@ export const useStyles = makeStyles()((theme) => ({
     imageWrapper: {
         position: 'relative',
         aspectRatio: '4 / 5',
-        borderRadius: '1.5rem', // rounded-3xl
+        borderRadius: '30px',
         overflow: 'hidden',
     },
     image: {

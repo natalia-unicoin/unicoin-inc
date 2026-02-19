@@ -25,7 +25,7 @@ export const useStyles = makeStyles()((theme) => ({
         marginBottom: '60px',
         letterSpacing: '-0.02em',
         fontFamily: theme.typography.h1.fontFamily,
-        color: '#000000',
+        color: '#1D1D1F',
         textAlign: 'center',
         textTransform: 'none',
         [theme.breakpoints.up('md')]: {
@@ -39,8 +39,8 @@ export const useStyles = makeStyles()((theme) => ({
     grid: {
         display: 'grid',
         gridTemplateColumns: 'repeat(2, 1fr)',
-        borderTop: '1px solid #E5E5E7',
-        borderLeft: '1px solid #E5E5E7',
+        // borderTop: '1px solid #E5E5E7', // Removed for individual item borders
+        // borderLeft: '1px solid #E5E5E7', // Removed for individual item borders
         [theme.breakpoints.up('md')]: {
             gridTemplateColumns: 'repeat(3, 1fr)',
             gap: '20px',
@@ -52,8 +52,8 @@ export const useStyles = makeStyles()((theme) => ({
         alignItems: 'flex-start',
         textAlign: 'left',
         padding: '32px',
-        border: '1px solid #E5E5E7',
-        borderRadius: '5px',
+        border: '1px solid #D2D2D7',
+        borderRadius: '30px',
         transition: 'background-color 0.3s ease',
         '&:hover': {
             backgroundColor: '#F9F9FB',
@@ -64,7 +64,7 @@ export const useStyles = makeStyles()((theme) => ({
         fontWeight: 700,
         lineHeight: '1',
         marginBottom: '8px',
-        color: '#000000',
+        color: '#1D1D1F',
         fontFamily: theme.typography.h1.fontFamily,
         [theme.breakpoints.up('md')]: {
             fontSize: '48px',

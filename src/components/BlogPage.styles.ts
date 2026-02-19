@@ -57,7 +57,7 @@ export const useStyles = makeStyles()((theme) => ({
         display: 'block',
         position: 'relative',
         height: '70vh',
-        borderRadius: '1.5rem', // rounded-3xl
+        borderRadius: '30px',
         overflow: 'hidden',
     },
     featuredImage: {
@@ -155,7 +155,7 @@ export const useStyles = makeStyles()((theme) => ({
     },
     postImageWrapper: {
         aspectRatio: '4 / 3',
-        borderRadius: '1rem', // rounded-2xl
+        borderRadius: '30px',
         overflow: 'hidden',
         marginBottom: theme.spacing(4), // mb-8
         backgroundColor: theme.palette.grey[100],
@@ -237,7 +237,7 @@ export const useStyles = makeStyles()((theme) => ({
     newsletter: {
         marginTop: theme.spacing(16), // mt-32
         backgroundColor: theme.palette.grey[50],
-        borderRadius: '1.5rem', // rounded-3xl
+        borderRadius: '30px',
         padding: theme.spacing(6), // p-12
         textAlign: 'center',
         [theme.breakpoints.up('md')]: {
