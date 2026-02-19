@@ -38,41 +38,43 @@ export const useStyles = makeStyles()((theme) => ({
     },
     grid: {
         display: 'grid',
-        gridTemplateColumns: '1fr',
-        gap: '40px',
-        [theme.breakpoints.up('sm')]: {
-            gridTemplateColumns: 'repeat(2, 1fr)',
-        },
+        gridTemplateColumns: 'repeat(2, 1fr)',
+        borderTop: '1px solid #E5E5E7',
+        borderLeft: '1px solid #E5E5E7',
         [theme.breakpoints.up('md')]: {
             gridTemplateColumns: 'repeat(3, 1fr)',
-            gap: '60px 40px',
         }
     },
     statItem: {
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'center',
-        textAlign: 'center',
-        padding: '20px',
+        alignItems: 'flex-start',
+        textAlign: 'left',
+        padding: '32px',
+        borderRight: '1px solid #E5E5E7',
+        borderBottom: '1px solid #E5E5E7',
+        transition: 'background-color 0.3s ease',
+        '&:hover': {
+            backgroundColor: '#F9F9FB',
+        }
     },
     statValue: {
-        fontSize: '48px',
-        fontWeight: 800,
+        fontSize: '32px',
+        fontWeight: 700,
         lineHeight: '1',
-        marginBottom: '12px',
+        marginBottom: '8px',
         color: '#000000',
         fontFamily: theme.typography.h1.fontFamily,
         [theme.breakpoints.up('md')]: {
-            fontSize: '72px',
+            fontSize: '48px',
         }
     },
     statLabel: {
-        fontSize: '14px',
+        fontSize: '12px',
         fontWeight: 600,
-        color: '#666666',
+        color: '#6E6E73', // Apple gray
         textTransform: 'uppercase',
-        letterSpacing: '0.1em',
-        maxWidth: '200px',
+        letterSpacing: '0.05em', // Reduced from 0.1em
         lineHeight: '1.4',
         fontFamily: theme.typography.body1.fontFamily,
     }
