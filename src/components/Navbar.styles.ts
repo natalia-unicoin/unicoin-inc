@@ -36,10 +36,10 @@ export const useStyles = makeStyles<{ isScrolled: boolean }>()((theme, { isScrol
     },
     logoLink: {
         display: 'block',
-        width: isScrolled ? '50px' : '65px',
+        width: isScrolled ? '42px' : '55px', // Reduced from 50/65
         transition: 'all 0.3s ease-in-out',
         [theme.breakpoints.up('md')]: {
-            width: isScrolled ? '70px' : '90px',
+            width: isScrolled ? '60px' : '75px', // Reduced from 70/90
         },
     },
     logoImage: {
