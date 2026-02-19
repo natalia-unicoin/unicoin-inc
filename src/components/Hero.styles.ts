@@ -52,7 +52,7 @@ export const useStyles = makeStyles()((theme) => ({
         fontFamily: theme.typography.h1.fontFamily, // Montserrat
         fontWeight: 700,
         letterSpacing: '-0.02em',
-        marginBottom: theme.spacing(4),
+        marginBottom: theme.spacing(1), // Reduced from spacing(4)
         color: '#111111', // Corporate Black
         fontSize: '44px',
         lineHeight: '1.1',
@@ -64,13 +64,14 @@ export const useStyles = makeStyles()((theme) => ({
         }
     },
     subtitle: {
-        fontSize: '1.25rem',
+        fontSize: '1.5rem', // Increased from 1.25rem
         fontWeight: 600,
-        letterSpacing: '0.1em',
+        letterSpacing: '0', // Removed from 0.1em
         color: '#000000', // Black
-        marginBottom: theme.spacing(3),
+        marginBottom: theme.spacing(4), // Increased gap to description
+        lineHeight: 1.2,
         [theme.breakpoints.up('md')]: {
-            fontSize: '1.5rem',
+            fontSize: '2.25rem', // Increased from 1.5rem
         }
     },
     description: {
