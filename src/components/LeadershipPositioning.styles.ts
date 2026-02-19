@@ -43,6 +43,7 @@ export const useStyles = makeStyles()((theme) => ({
         borderLeft: '1px solid #E5E5E7',
         [theme.breakpoints.up('md')]: {
             gridTemplateColumns: 'repeat(3, 1fr)',
+            gap: '20px',
         }
     },
     statItem: {
@@ -51,8 +52,8 @@ export const useStyles = makeStyles()((theme) => ({
         alignItems: 'flex-start',
         textAlign: 'left',
         padding: '32px',
-        borderRight: '1px solid #E5E5E7',
-        borderBottom: '1px solid #E5E5E7',
+        border: '1px solid #E5E5E7',
+        borderRadius: '5px',
         transition: 'background-color 0.3s ease',
         '&:hover': {
             backgroundColor: '#F9F9FB',

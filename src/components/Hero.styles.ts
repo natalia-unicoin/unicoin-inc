@@ -97,7 +97,7 @@ export const useStyles = makeStyles()((theme) => ({
         backgroundColor: '#FCD144', // Brand Yellow
         color: '#000000',
         padding: '16px 32px', // px-8 py-4
-        borderRadius: '9999px',
+        borderRadius: '5px',
         fontSize: '0.875rem', // text-sm
         fontWeight: 700,
         letterSpacing: '0.1em', // tracking-widest

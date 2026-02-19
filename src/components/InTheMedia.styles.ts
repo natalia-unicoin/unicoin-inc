@@ -48,6 +48,7 @@ export const useStyles = makeStyles()((theme) => ({
         display: 'flex',
         flexDirection: 'column',
         padding: '40px',
+        borderRadius: '5px',
         border: '1px solid #E5E5E7',
         backgroundColor: '#FBFBFB',
         transition: 'all 0.3s ease',
