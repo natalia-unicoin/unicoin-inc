@@ -72,6 +72,19 @@ const StorySection = () => {
                         TBIZ represents more than a name change; it is a structural pivot designed to lead with high-standard transparency in the next era of institutional digital asset management.
                     </p>
                 </motion.div>
+
+                <motion.div
+                    className={classes.transparencyBlock}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                >
+                    <h3 className={classes.transparencyTitle}>A Commitment to Institutional Transparency</h3>
+                    <p className={classes.transparencyText}>
+                        Transparency is not a narrative device; it is an operational principle. TBIZ is structured around clear governance standards, responsible capital management, and measurable accountability. Our evolution reinforces a commitment to institutional discipline, long-term sustainability, and proactive regulatory alignment.
+                    </p>
+                </motion.div>
             </div>
         </section>
     );

@@ -122,5 +122,34 @@ export const useStyles = makeStyles()((theme) => ({
         maxWidth: '700px',
         margin: '0 auto',
         lineHeight: 1.6,
+    },
+    transparencyBlock: {
+        marginTop: theme.spacing(12),
+        textAlign: 'center',
+        maxWidth: '900px',
+        margin: '120px auto 0',
+        padding: theme.spacing(0, 3),
+        [theme.breakpoints.up('lg')]: {
+            marginTop: '160px',
+        }
+    },
+    transparencyTitle: {
+        fontSize: '1.5rem',
+        fontWeight: 600,
+        marginBottom: theme.spacing(3),
+        letterSpacing: '-0.02em',
+        color: '#1d1d1f',
+        [theme.breakpoints.up('md')]: {
+            fontSize: '2rem',
+        }
+    },
+    transparencyText: {
+        fontSize: '1.125rem',
+        lineHeight: 1.8,
+        color: '#6e6e73',
+        fontWeight: 400,
+        [theme.breakpoints.up('md')]: {
+            fontSize: '1.25rem',
+        }
     }
 }));
