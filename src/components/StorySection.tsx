@@ -31,59 +31,60 @@ const StorySection = () => {
                     </motion.p>
                 </div>
 
-                <div className={classes.grid}>
+                <div className={classes.contentGrid}>
                     <motion.div
-                        className={classes.box}
-                        initial={{ opacity: 0, y: 30 }}
+                        className={classes.card}
+                        initial={{ opacity: 0, y: 40 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
                     >
-                        <h4 className={classes.boxTitle}>The Path to NYSE</h4>
-                        <p className={classes.boxText}>
-                            Engineered with a clear institutional objective to become the first publicly traded digital asset company on the New York Stock Exchange, establishing a standard for transparency.
+                        <h3 className={classes.cardTitle}>The Path to NYSE</h3>
+                        <p className={classes.cardText}>
+                            TransparentBusiness was engineered with a clear institutional objective: to become the first publicly traded digital asset company on the New York Stock Exchange (NYSE), establishing a high standard for transparency in emerging markets.
                         </p>
                     </motion.div>
 
                     <motion.div
-                        className={classes.box}
-                        initial={{ opacity: 0, y: 30 }}
+                        className={classes.card}
+                        initial={{ opacity: 0, y: 40 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
                     >
-                        <h4 className={classes.boxTitle}>Strategic Realignment</h4>
-                        <p className={classes.boxText}>
-                            Evolving to protect value, ensure regulatory clarity, and maintain integrity in a shifting landscape. A structural pivot designed to lead in the next era of digital asset management.
-                        </p>
-                    </motion.div>
-
-                    <motion.div
-                        className={classes.box}
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-                    >
-                        <h4 className={classes.boxTitle}>Institutional Discipline</h4>
-                        <p className={classes.boxText}>
-                            Our evolution reinforces a commitment to clear governance frameworks, long-term sustainability, responsible capital management, and proactive regulatory alignment.
-                        </p>
-                    </motion.div>
-
-                    <motion.div
-                        className={classes.box}
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
-                    >
-                        <h4 className={classes.boxTitle}>A Commitment to Transparency</h4>
-                        <p className={classes.boxText}>
-                            Transparency is not a narrative device; it is an operational principle structured around clear governance standards, financial controls, and measurable accountability.
+                        <h3 className={classes.cardTitle}>Regulatory Realignment</h3>
+                        <p className={classes.cardText}>
+                            The intensification of the "War on Crypto" and specific targeting by the SEC forced a critical decision. Evolution was not a choice, but a strategic imperative to protect investor interests and maintain company integrity in a shifting landscape.
                         </p>
                     </motion.div>
                 </div>
+
+                <motion.div
+                    className={classes.highlightRow}
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+                >
+                    <span className={classes.imperativeLabel}>Strategic Imperative</span>
+                    <h3 className={classes.imperativeTitle}>Protecting Value through Resilience</h3>
+                    <p className={classes.imperativeDescription}>
+                        TBIZ represents more than a name change; it is a structural pivot designed to lead with high-standard transparency in the next era of institutional digital asset management.
+                    </p>
+                </motion.div>
+
+                <motion.div
+                    className={classes.transparencyBlock}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                >
+                    <h3 className={classes.transparencyTitle}>A Commitment to Institutional Transparency</h3>
+                    <p className={classes.transparencyText}>
+                        Transparency is not a narrative device; it is an operational principle. TBIZ is structured around clear governance standards, responsible capital management, and measurable accountability. Our evolution reinforces a commitment to institutional discipline, long-term sustainability, and proactive regulatory alignment.
+                    </p>
+                </motion.div>
             </div>
         </section>
     );
