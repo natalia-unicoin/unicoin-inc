@@ -29,10 +29,7 @@ const WarOnInnovation = () => {
                         transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
                     >
                         <p className={classes.statement}>
-                            The path of innovation faced an <span className={classes.accent}>unprecedented offensive</span> by regulatory authorities.
-                        </p>
-                        <p className={classes.statement} style={{ fontSize: '1.25rem', fontWeight: 400, color: '#6E6E73' }}>
-                            The vacuum created by targeted actions erased trillions in market value globally.
+                            The <span className={classes.accent}>regulatory environment</span> created significant volatility across the global digital asset ecosystem, contributing to trillions in market value disruption and heightened uncertainty for investors and emerging companies alike.
                         </p>
                     </motion.div>
 
@@ -44,10 +41,7 @@ const WarOnInnovation = () => {
                         transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
                     >
                         <p className={classes.supportingText}>
-                            Specific regulatory maneuvers under the SEC leadership restricted legitimate paths for emerging companies. This institutional pressure directly impacted NICO, obstructing planned growth and causing significant friction for thousands of investors.
-                        </p>
-                        <p className={classes.supportingText}>
-                            The consequences reached beyond a single company, impacting the entire ecosystem. Billions in market value were disrupted, leaving investors to navigate a landscape of high uncertainty created by Gary Gensler's regulatory stance.
+                            For many participants, this period represented not only financial instability but also a loss of strategic momentum. Our response was guided by one priority: protecting stakeholders while preserving long-term institutional viability.
                         </p>
 
                         <div className={classes.metricGrid}>
