@@ -71,6 +71,19 @@ const Hero = () => {
                         Discover the Transition
                     </button>
                 </motion.div>
+
+                {/* Institutional Clarification */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                    className={classes.clarificationContainer}
+                >
+                    <h3 className={classes.clarificationTitle}>Institutional Clarification</h3>
+                    <p className={classes.clarificationText}>
+                        TBIZ is not merely a rebrand. It represents a structural evolution of TransparentBusiness' institutional framework. The transition reflects a strategic realignment designed to ensure regulatory clarity, protect investor interests, and strengthen long-term governance standards. This evolution positions TBIZ as a forward-facing institutional platform built for transparency, resilience, and compliance in a shifting global regulatory environment.
+                    </p>
+                </motion.div>
             </div>
         </section>
     );
