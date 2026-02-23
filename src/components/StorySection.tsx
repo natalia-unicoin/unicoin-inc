@@ -80,10 +80,31 @@ const StorySection = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.8, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
                 >
-                    <h3 className={classes.transparencyTitle}>A Commitment to Institutional Transparency</h3>
-                    <p className={classes.transparencyText}>
-                        Transparency is not a narrative device; it is an operational principle. TBIZ is structured around clear governance standards, responsible capital management, and measurable accountability. Our evolution reinforces a commitment to institutional discipline, long-term sustainability, and proactive regulatory alignment.
-                    </p>
+                    <div className={classes.transparencyHeader}>
+                        <h3 className={classes.transparencyTitle}>A Commitment to Institutional Transparency</h3>
+                        <p className={classes.transparencyIntro}>
+                            Transparency is not a narrative device; it is an operational principle. TBIZ is structured around core pillars that reinforce our evolution.
+                        </p>
+                    </div>
+
+                    <div className={classes.transparencyGrid}>
+                        <div className={classes.transparencyBox}>
+                            <h4 className={classes.boxTitle}>Governance Standards</h4>
+                            <p className={classes.boxText}>Clear frameworks ensuring responsible decision-making and ethical leadership.</p>
+                        </div>
+                        <div className={classes.transparencyBox}>
+                            <h4 className={classes.boxTitle}>Capital Management</h4>
+                            <p className={classes.boxText}>Responsible allocation and structured financial controls for sustainable growth.</p>
+                        </div>
+                        <div className={classes.transparencyBox}>
+                            <h4 className={classes.boxTitle}>Accountability</h4>
+                            <p className={classes.boxText}>Measurable actions, transparent reporting, and direct alignment with investor interests.</p>
+                        </div>
+                        <div className={classes.transparencyBox}>
+                            <h4 className={classes.boxTitle}>Regulatory Alignment</h4>
+                            <p className={classes.boxText}>Proactive adaptation to global shifts, ensuring compliance and long-term resilience.</p>
+                        </div>
+                    </div>
                 </motion.div>
             </div>
         </section>

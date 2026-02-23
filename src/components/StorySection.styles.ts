@@ -125,13 +125,18 @@ export const useStyles = makeStyles()((theme) => ({
     },
     transparencyBlock: {
         marginTop: theme.spacing(12),
-        textAlign: 'center',
-        maxWidth: '900px',
+        maxWidth: '1200px',
         margin: '120px auto 0',
-        padding: theme.spacing(0, 3),
         [theme.breakpoints.up('lg')]: {
             marginTop: '160px',
         }
+    },
+    transparencyHeader: {
+        textAlign: 'center',
+        maxWidth: '900px',
+        margin: '0 auto',
+        marginBottom: theme.spacing(8),
+        padding: theme.spacing(0, 3),
     },
     transparencyTitle: {
         fontSize: '1.5rem',
@@ -143,7 +148,7 @@ export const useStyles = makeStyles()((theme) => ({
             fontSize: '2rem',
         }
     },
-    transparencyText: {
+    transparencyIntro: {
         fontSize: '1.125rem',
         lineHeight: 1.8,
         color: '#6e6e73',
@@ -151,5 +156,44 @@ export const useStyles = makeStyles()((theme) => ({
         [theme.breakpoints.up('md')]: {
             fontSize: '1.25rem',
         }
+    },
+    transparencyGrid: {
+        display: 'grid',
+        gridTemplateColumns: '1fr',
+        gap: theme.spacing(4),
+        padding: theme.spacing(0, 3),
+        [theme.breakpoints.up('sm')]: {
+            gridTemplateColumns: 'repeat(2, 1fr)',
+        },
+        [theme.breakpoints.up('lg')]: {
+            gridTemplateColumns: 'repeat(4, 1fr)',
+        }
+    },
+    transparencyBox: {
+        backgroundColor: '#ffffff',
+        border: '1px solid #e5e5ea', // subtle Apple-style border
+        borderRadius: '20px',
+        padding: theme.spacing(4),
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'flex-start',
+        transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+        '&:hover': {
+            transform: 'translateY(-5px)',
+            boxShadow: theme.shadows[4],
+        }
+    },
+    boxTitle: {
+        fontSize: '1.25rem',
+        fontWeight: 600,
+        color: '#1d1d1f',
+        marginBottom: theme.spacing(2),
+        letterSpacing: '-0.01em',
+    },
+    boxText: {
+        fontSize: '1rem',
+        color: '#6e6e73',
+        lineHeight: 1.6,
+        fontWeight: 400,
     }
 }));
