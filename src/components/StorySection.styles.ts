@@ -118,7 +118,7 @@ export const useStyles = makeStyles()((theme) => ({
     },
     imperativeDescription: {
         fontSize: '1.125rem',
-        color: '#000000', // Apple description gray
+        color: '#a1a1a6', // Apple description gray
         maxWidth: '700px',
         margin: '0 auto',
         lineHeight: 1.6,
