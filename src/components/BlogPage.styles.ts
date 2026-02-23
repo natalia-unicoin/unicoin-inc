@@ -13,11 +13,15 @@ export const useStyles = makeStyles()((theme) => ({
         }
     },
     container: {
-        maxWidth: '1280px',
+        maxWidth: '100%',
         marginLeft: 'auto',
         marginRight: 'auto',
         paddingLeft: theme.spacing(3), // px-6
         paddingRight: theme.spacing(3),
+        [theme.breakpoints.up('lg')]: {
+            paddingLeft: '150px',
+            paddingRight: '150px',
+        }
     },
     header: {
         maxWidth: '56rem', // max-w-4xl

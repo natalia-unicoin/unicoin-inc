@@ -12,13 +12,13 @@ export const useStyles = makeStyles()((theme) => ({
         }
     },
     container: {
-        maxWidth: '1200px',
+        maxWidth: '100%',
         margin: '0 auto',
         paddingLeft: theme.spacing(3),
         paddingRight: theme.spacing(3),
         [theme.breakpoints.up('lg')]: {
-            paddingLeft: '100px',
-            paddingRight: '100px',
+            paddingLeft: '150px',
+            paddingRight: '150px',
         }
     },
     header: {
@@ -45,7 +45,7 @@ export const useStyles = makeStyles()((theme) => ({
     subtitle: {
         fontSize: '1.25rem',
         fontWeight: 400,
-        color: '#6e6e73', // Apple gray
+        color: '#000000', // Apple gray
         maxWidth: '800px',
         margin: '0 auto',
         lineHeight: 1.5,
@@ -118,7 +118,7 @@ export const useStyles = makeStyles()((theme) => ({
     },
     imperativeDescription: {
         fontSize: '1.125rem',
-        color: '#a1a1a6', // Apple description gray
+        color: '#000000', // Apple description gray
         maxWidth: '700px',
         margin: '0 auto',
         lineHeight: 1.6,
@@ -129,7 +129,7 @@ export const useStyles = makeStyles()((theme) => ({
         borderRadius: '30px',
         padding: '60px 40px',
         textAlign: 'center',
-        maxWidth: '1200px',
+        maxWidth: '100%',
         margin: '40px auto 0',
         transition: 'transform 0.4s ease-out',
         '&:hover': {

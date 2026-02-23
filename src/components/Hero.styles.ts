@@ -41,8 +41,8 @@ export const useStyles = makeStyles()((theme) => ({
         marginRight: 'auto',
         marginTop: '0', // Adjusted from 5rem
         [theme.breakpoints.up('lg')]: {
-            paddingLeft: '100px',
-            paddingRight: '100px',
+            paddingLeft: '150px',
+            paddingRight: '150px',
         }
     },
     title: {

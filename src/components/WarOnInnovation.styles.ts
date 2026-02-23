@@ -14,15 +14,15 @@ export const useStyles = makeStyles()((theme) => ({
         }
     },
     container: {
-        maxWidth: '1200px',
+        maxWidth: '100%',
         margin: '0 auto',
         paddingLeft: theme.spacing(3),
         paddingRight: theme.spacing(3),
         position: 'relative',
         zIndex: 10,
         [theme.breakpoints.up('lg')]: {
-            paddingLeft: '100px',
-            paddingRight: '100px',
+            paddingLeft: '150px',
+            paddingRight: '150px',
         }
     },
     title: {

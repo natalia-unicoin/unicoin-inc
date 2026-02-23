@@ -12,11 +12,15 @@ export const useStyles = makeStyles()((theme) => ({
         }
     },
     container: {
-        maxWidth: '1280px',
+        maxWidth: '100%',
         marginLeft: 'auto',
         marginRight: 'auto',
         paddingLeft: theme.spacing(3), // px-6
         paddingRight: theme.spacing(3),
+        [theme.breakpoints.up('lg')]: {
+            paddingLeft: '150px',
+            paddingRight: '150px',
+        }
     },
     heroSection: {
         height: '100vh',
@@ -226,7 +230,7 @@ export const useStyles = makeStyles()((theme) => ({
         overflow: 'hidden',
     },
     storiesHeader: {
-        maxWidth: '1280px',
+        maxWidth: '100%',
         marginLeft: 'auto',
         marginRight: 'auto',
         paddingLeft: theme.spacing(3),
@@ -399,7 +403,7 @@ export const useStyles = makeStyles()((theme) => ({
         display: 'grid',
         gridTemplateColumns: '1fr',
         gap: theme.spacing(3), // gap-6
-        maxWidth: '1280px',
+        maxWidth: '100%',
         marginLeft: 'auto',
         marginRight: 'auto',
         paddingLeft: theme.spacing(3),

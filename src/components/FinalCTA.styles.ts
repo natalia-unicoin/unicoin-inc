@@ -12,12 +12,16 @@ export const useStyles = makeStyles()((theme) => ({
         borderTop: '1px solid #333333', // Subtle separator for dark section
     },
     container: {
-        maxWidth: '1200px',
+        maxWidth: '100%',
         margin: '0 auto',
         paddingLeft: '20px',
         paddingRight: '20px',
         position: 'relative',
         zIndex: 2,
+        [theme.breakpoints.up('lg')]: {
+            paddingLeft: '150px',
+            paddingRight: '150px',
+        }
     },
     title: {
         lineHeight: '1.1',

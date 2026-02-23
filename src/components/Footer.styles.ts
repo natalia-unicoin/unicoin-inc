@@ -15,8 +15,8 @@ export const useStyles = makeStyles()((theme) => ({
         paddingLeft: theme.spacing(3), // px-6
         paddingRight: theme.spacing(3),
         [theme.breakpoints.up('lg')]: {
-            paddingLeft: '100px',
-            paddingRight: '100px',
+            paddingLeft: '150px',
+            paddingRight: '150px',
         }
     },
     mainGrid: {

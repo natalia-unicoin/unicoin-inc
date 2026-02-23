@@ -26,8 +26,8 @@ export const useStyles = makeStyles()((theme) => ({
             paddingRight: theme.spacing(4),
         },
         [theme.breakpoints.up('lg')]: {
-            paddingLeft: '100px',
-            paddingRight: '100px',
+            paddingLeft: '150px',
+            paddingRight: '150px',
         }
     },
     header: {

@@ -14,8 +14,12 @@ export const useStyles = makeStyles()((theme) => ({
         paddingLeft: theme.spacing(2),
         paddingRight: theme.spacing(2),
         [theme.breakpoints.up('md')]: {
-            paddingLeft: '100px',
-            paddingRight: '100px',
+            paddingLeft: '150px',
+            paddingRight: '150px',
+        },
+        [theme.breakpoints.up('lg')]: {
+            paddingLeft: '150px',
+            paddingRight: '150px',
         }
     },
     title: {

@@ -14,7 +14,7 @@ export const useStyles = makeStyles()((theme) => ({
         }
     },
     container: {
-        maxWidth: '1280px',
+        maxWidth: '100%',
         marginLeft: 'auto',
         marginRight: 'auto',
         paddingLeft: theme.spacing(2),

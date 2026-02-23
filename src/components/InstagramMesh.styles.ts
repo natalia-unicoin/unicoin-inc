@@ -12,7 +12,7 @@ export const useStyles = makeStyles()((theme) => ({
         margin: '0 auto',
         padding: theme.spacing(0, 3),
         [theme.breakpoints.up('lg')]: {
-            padding: '0 100px',
+            padding: '0 150px',
         }
     },
     header: {
