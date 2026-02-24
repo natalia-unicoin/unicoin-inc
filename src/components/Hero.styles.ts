@@ -123,34 +123,72 @@ export const useStyles = makeStyles()((theme) => ({
         zIndex: 20,
         display: 'none', // Hidden as per requirement
     },
-    clarificationContainer: {
-        marginTop: theme.spacing(4),
-        marginBottom: theme.spacing(2),
-        maxWidth: '900px',
-        marginLeft: 'auto',
-        marginRight: 'auto',
-        textAlign: 'center',
-        padding: theme.spacing(0, 2),
+    modalBackdrop: {
+        position: 'fixed',
+        inset: 0,
+        backgroundColor: 'rgba(0, 0, 0, 0.6)',
+        zIndex: 100,
+        backdropFilter: 'blur(8px)', // Apple-style frost
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: theme.spacing(3),
     },
-    clarificationTitle: {
-        fontFamily: theme.typography.h3.fontFamily,
-        fontSize: '1rem',
-        fontWeight: 600,
-        letterSpacing: '0.05em',
-        textTransform: 'uppercase',
-        marginBottom: theme.spacing(1.5),
-        color: '#FFFFFF',
+    modalContent: {
+        backgroundColor: '#FFFFFF', // High contrast institutional look
+        borderRadius: '30px', // Match the rest of the cards
+        padding: theme.spacing(5),
+        maxWidth: '700px',
+        width: '100%',
+        position: 'relative',
+        boxShadow: theme.shadows[24],
+        textAlign: 'left',
         [theme.breakpoints.up('md')]: {
-            fontSize: '1.25rem',
+            padding: theme.spacing(8),
         }
     },
-    clarificationText: {
-        fontSize: '0.875rem',
-        lineHeight: 1.8,
-        fontWeight: 300,
-        color: 'rgba(255, 255, 255, 0.85)',
+    modalCloseButton: {
+        position: 'absolute',
+        top: theme.spacing(3),
+        right: theme.spacing(3),
+        background: 'none',
+        border: 'none',
+        cursor: 'pointer',
+        padding: theme.spacing(1),
+        borderRadius: '50%',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        color: theme.palette.grey[500],
+        transition: 'all 0.2s',
+        '&:hover': {
+            backgroundColor: theme.palette.grey[100],
+            color: theme.palette.common.black,
+        },
         [theme.breakpoints.up('md')]: {
-            fontSize: '1rem',
+            top: theme.spacing(4),
+            right: theme.spacing(4),
+        }
+    },
+    modalTitle: {
+        fontFamily: theme.typography.h1.fontFamily,
+        fontSize: '1.5rem',
+        fontWeight: 700,
+        letterSpacing: '-0.03em', // Typical Apple formatting
+        marginBottom: theme.spacing(3),
+        color: theme.palette.common.black,
+        [theme.breakpoints.up('md')]: {
+            fontSize: '2rem',
+        }
+    },
+    modalText: {
+        fontFamily: "'Inter', sans-serif",
+        fontSize: '1rem',
+        lineHeight: 1.8,
+        fontWeight: 400,
+        color: theme.palette.grey[800],
+        [theme.breakpoints.up('md')]: {
+            fontSize: '1.125rem',
         }
     }
 }));
