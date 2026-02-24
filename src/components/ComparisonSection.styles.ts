@@ -4,7 +4,7 @@ export const useStyles = makeStyles()((theme) => ({
     section: {
         paddingTop: '60px',
         paddingBottom: '60px',
-        backgroundColor: '#F5F5F7', // Apple light gray
+        backgroundColor: '#F5F5F7', // Apple Light Gray background
         color: '#1D1D1F',
         [theme.breakpoints.up('md')]: {
             paddingTop: '100px',
@@ -12,7 +12,7 @@ export const useStyles = makeStyles()((theme) => ({
         }
     },
     container: {
-        maxWidth: '100%', // Full width
+        maxWidth: '100%',
         marginLeft: 'auto',
         marginRight: 'auto',
         paddingLeft: '20px',
@@ -22,101 +22,156 @@ export const useStyles = makeStyles()((theme) => ({
             paddingRight: '150px',
         }
     },
+    header: {
+        textAlign: 'center',
+        marginBottom: '60px',
+    },
     title: {
-        fontSize: '32px', // Apple mobile h2
+        fontSize: '32px',
         lineHeight: '36px',
         fontWeight: 600,
         letterSpacing: '-0.03em',
-        textAlign: 'center',
         marginBottom: theme.spacing(2),
         fontFamily: theme.typography.h2.fontFamily,
         [theme.breakpoints.up('md')]: {
-            fontSize: '48px', // Apple desktop h2
+            fontSize: '48px',
             lineHeight: '52px',
+        },
+        [theme.breakpoints.up('lg')]: {
+            fontSize: '64px',
+            lineHeight: '68px',
         }
     },
     subtitle: {
-        textAlign: 'center',
         maxWidth: '800px',
-        margin: '0 auto 60px auto',
-        fontSize: '17px', // Apple body
+        margin: '0 auto',
+        fontSize: '17px',
         lineHeight: '25px',
-        color: '#000000', // Apple medium gray
-    },
-    tableWrapper: {
-        overflowX: 'auto',
-        backgroundColor: 'transparent',
-        borderRadius: '24px',
-        padding: '1px', // For shadow not to cut
-    },
-    table: {
-        width: '100%',
-        borderCollapse: 'separate',
-        borderSpacing: '10px 0', // Spacing for columns to look like cards
-        minWidth: '800px',
-    },
-    th: {
-        padding: theme.spacing(3, 4),
-        textAlign: 'center',
-        fontSize: '14px',
-        textTransform: 'uppercase',
-        letterSpacing: '0.1em',
-        fontWeight: 700,
-        color: '#000000',
-        border: 'none',
-    },
-    td: {
-        padding: theme.spacing(4, 4),
-        fontSize: '16px',
-        fontWeight: 400,
-        lineHeight: 1.5,
-        borderBottom: '1px solid #E5E5E7',
-        color: '#1D1D1F',
-        textAlign: 'center',
-    },
-    featureName: {
-        fontWeight: 600,
-        color: '#1D1D1F',
-        width: '30%',
-        textAlign: 'left',
-        borderBottom: 'none',
-    },
-    traditional: {
-        color: '#000000',
-        width: '35%',
-        backgroundColor: 'rgba(255, 255, 255, 0.5)',
-    },
-    brandHighlight: {
-        backgroundColor: '#FFFFFF',
-        width: '35%',
-        boxShadow: '0 10px 30px rgba(0,0,0,0.08)',
-        borderLeft: '1px solid #E5E5E7',
-        borderRight: '1px solid #E5E5E7',
-        zIndex: 1,
-    },
-    thBrand: {
-        backgroundColor: '#FFFFFF',
-        color: '#1D1D1F', // Dark text for readability
-        borderTop: '4px solid #FCD144',
-        borderTopLeftRadius: '24px',
-        borderTopRightRadius: '24px',
-        boxShadow: '0 10px 30px rgba(0,0,0,0.04)',
-        padding: theme.spacing(4, 4), // More vertical padding
-        fontSize: '16px', // Slightly larger than other headers
-    },
-    highlightRow: {
-        '&:hover td': {
-            backgroundColor: 'rgba(255, 255, 255, 0.8)',
-        },
-        '&:hover td.brandHighlight': {
-            backgroundColor: '#FFFFFF',
-            transform: 'scale(1.02)',
-            transition: 'all 0.3s ease',
+        color: '#86868B', // Apple Gray Text
+        [theme.breakpoints.up('md')]: {
+            fontSize: '21px',
+            lineHeight: '31px',
         }
     },
-    lastTdBrand: {
-        borderBottomLeftRadius: '24px',
-        borderBottomRightRadius: '24px',
-        borderBottom: 'none !important',
+    cardsContainer: {
+        display: 'flex',
+        flexDirection: 'column',
+        gap: theme.spacing(3),
+        [theme.breakpoints.up('md')]: {
+            flexDirection: 'row',
+            alignItems: 'stretch',
+            gap: theme.spacing(4),
+        }
+    },
+    traditionalCard: {
+        flex: 1,
+        backgroundColor: '#E5E5EA', // Very dim gray to imply older tech
+        borderRadius: '32px',
+        padding: theme.spacing(4),
+        display: 'flex',
+        flexDirection: 'column',
+        opacity: 0.8,
+        transition: 'opacity 0.3s ease',
+        cursor: 'default',
+        '&:hover': {
+            opacity: 1,
+        },
+        [theme.breakpoints.up('md')]: {
+            padding: theme.spacing(6),
+        }
+    },
+    brandCard: {
+        flex: 1,
+        backgroundColor: '#FFFFFF',
+        borderRadius: '32px',
+        padding: theme.spacing(4),
+        display: 'flex',
+        flexDirection: 'column',
+        boxShadow: '0 20px 40px rgba(0,0,0,0.08)',
+        border: `1px solid ${theme.palette.grey[200]}`,
+        position: 'relative',
+        cursor: 'default',
+        transform: 'translateY(0)',
+        transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+        '&::before': {
+            content: '""',
+            position: 'absolute',
+            top: 0,
+            left: '10%',
+            right: '10%',
+            height: '4px',
+            backgroundColor: '#FCD144', // Brand yellow accent on top
+            borderBottomLeftRadius: '4px',
+            borderBottomRightRadius: '4px',
+        },
+        '&:hover': {
+            transform: 'translateY(-8px)',
+            boxShadow: '0 30px 60px rgba(0,0,0,0.12)',
+        },
+        [theme.breakpoints.up('md')]: {
+            padding: theme.spacing(6),
+        }
+    },
+    cardHeader: {
+        borderBottom: '1px solid #D1D1D6',
+        paddingBottom: theme.spacing(3),
+        marginBottom: theme.spacing(3),
+    },
+    cardHeaderBrand: {
+        borderBottom: '1px solid #E5E5EA',
+        paddingBottom: theme.spacing(3),
+        marginBottom: theme.spacing(3),
+    },
+    cardTitle: {
+        fontSize: '24px',
+        fontWeight: 600,
+        color: '#86868B', // Muted
+        fontFamily: theme.typography.h2.fontFamily,
+    },
+    cardTitleBrand: {
+        fontSize: '28px',
+        fontWeight: 700,
+        color: '#1D1D1F', // High contrast
+        fontFamily: theme.typography.h2.fontFamily,
+    },
+    featureList: {
+        listStyle: 'none',
+        padding: 0,
+        margin: 0,
+        display: 'flex',
+        flexDirection: 'column',
+        gap: theme.spacing(4),
+    },
+    featureItem: {
+        display: 'flex',
+        flexDirection: 'column',
+    },
+    featureLabel: {
+        fontSize: '12px',
+        textTransform: 'uppercase',
+        letterSpacing: '0.05em',
+        fontWeight: 700,
+        color: '#86868B',
+        marginBottom: '4px',
+    },
+    featureLabelBrand: {
+        fontSize: '12px',
+        textTransform: 'uppercase',
+        letterSpacing: '0.05em',
+        fontWeight: 700,
+        color: '#1D1D1F',
+        marginBottom: '4px',
+    },
+    traditionalValue: {
+        fontSize: '18px',
+        color: '#1D1D1F',
+        fontWeight: 400,
+        lineHeight: 1.4,
+    },
+    brandValue: {
+        fontSize: '20px', // Slightly larger to emphasize
+        color: '#1D1D1F',
+        fontWeight: 600, // Bolder
+        lineHeight: 1.4,
     }
 }));

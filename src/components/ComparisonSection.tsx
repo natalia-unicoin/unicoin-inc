@@ -33,53 +33,64 @@ const ComparisonSection = () => {
     return (
         <section id="comparison" className={classes.section}>
             <div className={classes.container}>
-                <motion.h2
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    className={classes.title}
-                >
-                    A Smarter Way to<br />Build Digital Asset Value
-                </motion.h2>
-
-                <motion.p
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: 0.1 }}
-                    className={classes.subtitle}
-                >
-                    Comparing traditional leveraged models with TransparentBusiness’s debt-free, AI-driven strategy.
-                </motion.p>
-
                 <motion.div
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.5 }}
-                    className={classes.tableWrapper}
+                    transition={{ duration: 0.8 }}
+                    className={classes.header}
                 >
-                    <table className={classes.table}>
-                        <thead>
-                            <tr>
-                                <th className={classes.th}>Feature</th>
-                                <th className={classes.th}>Traditional DAT Model</th>
-                                <th className={`${classes.th} ${classes.thBrand}`}>The TransparentBusiness Strategy</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {comparisonData.map((row, index) => (
-                                <tr key={index} className={classes.highlightRow}>
-                                    <td className={`${classes.td} ${classes.featureName}`}>{row.feature}</td>
-                                    <td className={`${classes.td} ${classes.traditional}`}>{row.traditional}</td>
-                                    <td className={`${classes.td} ${classes.brandHighlight} ${index === comparisonData.length - 1 ? classes.lastTdBrand : ''}`}>
-                                        {row.transparentBusiness}
-                                    </td>
-                                </tr>
-                            ))}
-                        </tbody>
-                    </table>
+                    <h2 className={classes.title}>
+                        A Smarter Way to<br />Build Digital Asset Value
+                    </h2>
+                    <p className={classes.subtitle}>
+                        Comparing traditional leveraged models with TransparentBusiness’s debt-free, AI-driven strategy.
+                    </p>
                 </motion.div>
+
+                <div className={classes.cardsContainer}>
+                    {/* Traditional Model Card */}
+                    <motion.div
+                        initial={{ opacity: 0, x: -30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6, delay: 0.2 }}
+                        className={classes.traditionalCard}
+                    >
+                        <div className={classes.cardHeader}>
+                            <h3 className={classes.cardTitle}>Traditional DAT Model</h3>
+                        </div>
+                        <ul className={classes.featureList}>
+                            {comparisonData.map((row, index) => (
+                                <li key={index} className={classes.featureItem}>
+                                    <span className={classes.featureLabel}>{row.feature}</span>
+                                    <span className={classes.traditionalValue}>{row.traditional}</span>
+                                </li>
+                            ))}
+                        </ul>
+                    </motion.div>
+
+                    {/* TransparentBusiness Strategy Card */}
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.95, y: 30 }}
+                        whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8, delay: 0.3 }}
+                        className={classes.brandCard}
+                    >
+                        <div className={classes.cardHeaderBrand}>
+                            <h3 className={classes.cardTitleBrand}>The TransparentBusiness Strategy</h3>
+                        </div>
+                        <ul className={classes.featureList}>
+                            {comparisonData.map((row, index) => (
+                                <li key={index} className={classes.featureItem}>
+                                    <span className={classes.featureLabelBrand}>{row.feature}</span>
+                                    <span className={classes.brandValue}>{row.transparentBusiness}</span>
+                                </li>
+                            ))}
+                        </ul>
+                    </motion.div>
+                </div>
             </div>
         </section>
     );

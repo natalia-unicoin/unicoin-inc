@@ -4,12 +4,12 @@ export const useStyles = makeStyles()((theme) => ({
     section: {
         paddingTop: theme.spacing(10),
         paddingBottom: theme.spacing(10),
-        backgroundColor: theme.palette.background.paper, // Apple Gray
+        backgroundColor: '#F5F5F7', // Apple Light Gray background
         color: theme.palette.common.black,
         overflow: 'hidden',
         [theme.breakpoints.up('md')]: {
-            paddingTop: theme.spacing(15), // 120px
-            paddingBottom: theme.spacing(15), // 120px
+            paddingTop: theme.spacing(15),
+            paddingBottom: theme.spacing(15),
         }
     },
     container: {
@@ -47,7 +47,7 @@ export const useStyles = makeStyles()((theme) => ({
     highlight: {
         color: theme.palette.secondary.main, // #fcd144
         fontSize: '40px',
-        display: 'block', // To put it on a new line if needed
+        display: 'block',
         [theme.breakpoints.up('md')]: {
             fontSize: '56px',
         },
@@ -58,167 +58,84 @@ export const useStyles = makeStyles()((theme) => ({
     subtitle: {
         textAlign: 'center',
         maxWidth: '800px',
-        margin: '0 auto 40px auto',
+        margin: '0 auto 60px auto',
         fontSize: '17px', // Apple body
         lineHeight: '25px',
         color: '#000000', // Black
     },
-    // Grid/Scroll Container
-    scrollContainer: {
+    bentoGrid: {
         display: 'flex',
+        flexDirection: 'column',
         gap: theme.spacing(2),
-        overflowX: 'auto',
-        scrollSnapType: 'x mandatory',
-        paddingBottom: theme.spacing(4),
-        marginLeft: theme.spacing(-2),
-        paddingLeft: theme.spacing(2),
-        paddingRight: theme.spacing(2),
-        scrollbarWidth: 'none',
-        '&::-webkit-scrollbar': {
-            display: 'none',
-        },
         [theme.breakpoints.up('md')]: {
             display: 'grid',
-            gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
-            gap: '15px', // Reduced gap
-            overflow: 'visible',
-            scrollSnapType: 'none',
-            paddingBottom: 0,
-            margin: 0,
-            padding: 0,
-        },
-        [theme.breakpoints.up('lg')]: {
-            gridTemplateColumns: 'repeat(4, minmax(0, 1fr))',
-            gap: '15px', // Reduced gap
+            gridTemplateColumns: 'repeat(3, 1fr)',
+            gap: theme.spacing(3),
         }
     },
-    cardWrapper: {
-        display: 'block',
-        minWidth: '85vw',
-        scrollSnapAlign: 'center',
-        [theme.breakpoints.up('md')]: {
-            minWidth: 0,
-        }
-    },
-    cardInner: {
-        position: 'relative',
-        height: '420px', // Shorter
-        width: '100%',
-        cursor: 'pointer',
-        perspective: '1000px',
-        [theme.breakpoints.up('md')]: {
-            height: '480px', // Shorter
-        }
-    },
-    cardFlipper: {
-        position: 'relative',
-        width: '100%',
-        height: '100%',
-        transition: 'transform 0.7s',
-        transformStyle: 'preserve-3d', // preserve-3d
-    },
-    cardFront: {
-        position: 'absolute',
-        inset: 0,
-        backfaceVisibility: 'hidden', // backface-hidden
-        borderRadius: '20px', // Updated to 20px
-        overflow: 'hidden',
-        boxShadow: '0 10px 30px rgba(0,0,0,0.08)', // Soft shadow
-        backgroundColor: theme.palette.common.white,
+    bentoItem: {
+        backgroundColor: '#FFFFFF',
+        borderRadius: '32px',
+        padding: theme.spacing(4),
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+        boxShadow: '0 4px 24px rgba(0,0,0,0.04)',
         border: `1px solid ${theme.palette.grey[200]}`,
+        transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+        cursor: 'default',
+        '&:hover': {
+            transform: 'translateY(-4px)',
+            boxShadow: '0 12px 32px rgba(0,0,0,0.08)',
+        },
+        [theme.breakpoints.up('md')]: {
+            padding: theme.spacing(6),
+        }
     },
-    cardImage: {
-        width: '100%',
-        height: '100%',
-        objectFit: 'cover',
-        transition: 'transform 0.7s',
+    bentoItem1: {
+        [theme.breakpoints.up('md')]: { gridColumn: 'span 2' }
     },
-    overlay: {
-        position: 'absolute',
-        inset: 0,
-        backgroundColor: 'rgba(0, 0, 0, 0.4)', // Darker by default for readability
-        transition: 'background-color 0.3s',
+    bentoItem2: {
+        [theme.breakpoints.up('md')]: { gridColumn: 'span 1' }
     },
-    stepIdLarge: {
-        position: 'absolute',
-        top: theme.spacing(2),
-        right: theme.spacing(3),
-        fontSize: '7rem',
+    bentoItem3: {
+        [theme.breakpoints.up('md')]: { gridColumn: 'span 1' }
+    },
+    bentoItem4: {
+        [theme.breakpoints.up('md')]: { gridColumn: 'span 2' }
+    },
+    stepNumber: {
+        fontSize: '4rem',
         fontFamily: theme.typography.h1.fontFamily,
-        fontWeight: 900,
-        opacity: 0.05, // Reduced opacity for subtle look on white
-        zIndex: 10,
-        color: theme.palette.common.black,
+        fontWeight: 700,
+        color: 'rgba(0,0,0,0.05)',
         lineHeight: 1,
-        pointerEvents: 'none',
+        marginBottom: theme.spacing(4),
         [theme.breakpoints.up('md')]: {
-            fontSize: '9rem',
+            fontSize: '5rem',
         }
     },
-    frontTitleWrapper: {
-        position: 'absolute',
-        inset: 0, // Fill the whole card so title can be centered
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
+    textContent: {
+        marginTop: 'auto',
     },
-    frontTitle: {
-        fontSize: '30px', // max 30px
-        fontFamily: theme.typography.h1.fontFamily, // Switched to Montserrat for consistency
+    itemTitle: {
+        fontSize: '1.5rem',
         fontWeight: 700,
-        color: theme.palette.primary.main, // Obsidian Green
+        fontFamily: theme.typography.h1.fontFamily,
         letterSpacing: '-0.03em',
-        lineHeight: 1.1, // Adjusted for multi-line
-        padding: theme.spacing(0, 2),
-        textAlign: 'center',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        height: '100%',
+        marginBottom: theme.spacing(2),
+        color: '#1D1D1F',
         [theme.breakpoints.up('md')]: {
-            fontSize: '30px',
+            fontSize: '1.75rem',
         }
     },
-    cardBack: {
-        position: 'absolute',
-        inset: 0,
-        backfaceVisibility: 'hidden',
-        transform: 'rotateY(180deg)',
-        borderRadius: '20px', // Updated to 20px
-        padding: theme.spacing(4, 3), // Reduced padding for more space
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-        textAlign: 'center',
-        backgroundColor: theme.palette.common.white,
-        border: `1px solid ${theme.palette.grey[200]}`, // Consistent border
-        boxShadow: '0 10px 30px rgba(0,0,0,0.08)', // Consistent shadow
-    },
-    backStepId: {
-        fontSize: '3.75rem', // text-6xl
-        fontFamily: theme.typography.h1.fontFamily,
-        fontWeight: 700,
-        marginBottom: theme.spacing(4), // mb-8
-        opacity: 0.2,
-    },
-    backTitle: {
-        fontSize: '30px', // max 30px
-        fontFamily: theme.typography.h1.fontFamily,
-        fontWeight: 700,
-        marginBottom: theme.spacing(3),
-    },
-    backDescription: {
-        fontSize: '1.125rem', // slightly smaller text-lg
-        color: '#000000', // Explanatory text in black
-        lineHeight: 1.5,
+    itemDescription: {
+        fontSize: '1rem',
+        color: '#1D1D1F',
+        lineHeight: 1.6,
         fontWeight: 400,
-        padding: theme.spacing(0, 2),
-    },
-    mobileIndicators: {
-        display: 'none',
-    },
-    indicatorDot: {
-        display: 'none',
+        [theme.breakpoints.up('md')]: {
+            fontSize: '1.125rem',
+        }
     }
 }));
