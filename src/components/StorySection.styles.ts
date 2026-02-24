@@ -21,18 +21,40 @@ export const useStyles = makeStyles()((theme) => ({
             paddingRight: '150px',
         }
     },
-    header: {
-        textAlign: 'center',
-        marginBottom: theme.spacing(10),
+    innerFlex: {
+        display: 'flex',
+        flexDirection: 'column',
+        gap: theme.spacing(8),
         [theme.breakpoints.up('lg')]: {
-            marginBottom: '120px',
+            flexDirection: 'row',
+            alignItems: 'flex-start',
+            gap: theme.spacing(12),
+        }
+    },
+    stickyColumn: {
+        flex: 1,
+        [theme.breakpoints.up('lg')]: {
+            position: 'sticky',
+            top: '160px', /* Stays anchored near the top */
+            maxWidth: '500px',
+            paddingRight: theme.spacing(6),
+        }
+    },
+    scrollColumn: {
+        flex: 1.5,
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '120px', // Massive gap to force scrolling and focus
+        [theme.breakpoints.up('lg')]: {
+            paddingTop: '320px', // Starts low so user scrolls into it
+            paddingBottom: '160px',
         }
     },
     title: {
         fontFamily: theme.typography.h1.fontFamily,
         fontWeight: 700,
         letterSpacing: '-0.03em',
-        marginBottom: theme.spacing(3),
+        marginBottom: theme.spacing(4),
         lineHeight: 1.1,
         fontSize: '44px',
         [theme.breakpoints.up('md')]: {
@@ -45,66 +67,60 @@ export const useStyles = makeStyles()((theme) => ({
     subtitle: {
         fontSize: '1.25rem',
         fontWeight: 700,
-        color: '#0E1A2B', // Apple gray
-        maxWidth: '800px',
-        margin: '0 auto',
+        color: '#0E1A2B', // Dark Navy
         lineHeight: 1.5,
         [theme.breakpoints.up('md')]: {
             fontSize: '1.5rem',
         }
     },
-    contentGrid: {
-        display: 'grid',
-        gridTemplateColumns: '1fr',
-        gap: theme.spacing(6),
-        [theme.breakpoints.up('md')]: {
-            gridTemplateColumns: 'repeat(2, 1fr)',
-            gap: theme.spacing(12),
-        }
-    },
-    card: {
-        backgroundColor: '#f5f5f7', // Apple light gray card
-        borderRadius: '30px',
+    storyBlock: {
+        backgroundColor: '#E6E8EB', // Neutro Medio
+        borderRadius: '32px',
         padding: '60px 40px',
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'space-between',
-        height: '100%',
-        transition: 'transform 0.4s ease-out',
-        '&:hover': {
-            transform: 'scale(1.02)',
-        }
+        justifyContent: 'center',
+        minHeight: '400px', // Ensures big scrolling area
+    },
+    chapterLabel: {
+        fontSize: '0.875rem',
+        fontWeight: 700,
+        textTransform: 'uppercase',
+        letterSpacing: '0.2em',
+        color: '#2A4B6A', // Complementary Blue
+        marginBottom: theme.spacing(3),
+        display: 'block',
     },
     cardTitle: {
-        fontSize: '1.5rem',
+        fontSize: '2rem',
         fontWeight: 700,
-        marginBottom: theme.spacing(2),
+        marginBottom: theme.spacing(3),
         letterSpacing: '-0.03em',
+        color: '#0E1A2B',
+        [theme.breakpoints.up('md')]: {
+            fontSize: '2.5rem',
+        }
     },
     cardText: {
         fontSize: '1.125rem',
-        lineHeight: 1.6,
-        color: '#1d1d1f',
+        lineHeight: 1.7,
+        color: '#0E1A2B',
         fontWeight: 400,
-    },
-    highlightRow: {
-        marginTop: theme.spacing(12),
-        padding: '80px 40px',
-        backgroundColor: '#0E1A2B',
-        borderRadius: '30px',
-        color: '#FAFBFC',
-        textAlign: 'center',
-        [theme.breakpoints.up('lg')]: {
-            marginTop: '160px',
+        [theme.breakpoints.up('md')]: {
+            fontSize: '1.25rem',
         }
+    },
+    highlightBlock: {
+        backgroundColor: '#0E1A2B', // Neutro Oscuro
+        color: '#FAFBFC', // Neutro Claro
     },
     imperativeLabel: {
         fontSize: '0.875rem',
         fontWeight: 700,
         textTransform: 'uppercase',
         letterSpacing: '0.2em',
-        color: '#fcd144', // Secondary yellow/gold highlight
-        marginBottom: theme.spacing(2),
+        color: '#FCD144', // Brand Accent Yellow
+        marginBottom: theme.spacing(3),
         display: 'block',
     },
     imperativeTitle: {
@@ -112,50 +128,16 @@ export const useStyles = makeStyles()((theme) => ({
         fontWeight: 700,
         marginBottom: theme.spacing(3),
         letterSpacing: '-0.03em',
+        color: '#FAFBFC',
         [theme.breakpoints.up('md')]: {
-            fontSize: '3rem',
+            fontSize: '2.5rem',
         }
     },
     imperativeDescription: {
         fontSize: '1.125rem',
-        color: '#FAFBFC', // Apple description gray
-        maxWidth: '700px',
-        margin: '0 auto',
-        lineHeight: 1.6,
-    },
-    transparencyBlock: {
-        marginTop: theme.spacing(6),
-        backgroundColor: '#f5f5f7',
-        borderRadius: '30px',
-        padding: '60px 40px',
-        textAlign: 'center',
-        maxWidth: '100%',
-        margin: '40px auto 0',
-        transition: 'transform 0.4s ease-out',
-        '&:hover': {
-            transform: 'scale(1.02)',
-        },
-        [theme.breakpoints.up('lg')]: {
-            marginTop: '60px',
-        }
-    },
-    transparencyTitle: {
-        fontSize: '1.5rem',
-        fontWeight: 700,
-        marginBottom: theme.spacing(3),
-        letterSpacing: '-0.03em',
-        color: '#1d1d1f',
-        [theme.breakpoints.up('md')]: {
-            fontSize: '2rem',
-        }
-    },
-    transparencyText: {
-        fontSize: '1.125rem',
-        lineHeight: 1.6,
-        color: '#1d1d1f',
+        color: '#FAFBFC',
+        lineHeight: 1.7,
         fontWeight: 400,
-        maxWidth: '900px',
-        margin: '0 auto',
         [theme.breakpoints.up('md')]: {
             fontSize: '1.25rem',
         }
