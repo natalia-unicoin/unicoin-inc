@@ -20,7 +20,8 @@ const Footer = () => {
                     {/* Brand Column */}
                     <div className={classes.brandColumn}>
                         <div className={classes.logoWrapper}>
-                            <img src={getImagePath("assets/logo-corporate-black.png")} alt="TransparentBusiness" className={classes.logo} />
+                            <img src={getImagePath("assets/isotype-black.png")} alt="Unicoin Inc. Logo" className={classes.isotypeImage} />
+                            <span className={classes.brandText}>Unicoin Inc.</span>
                         </div>
                         <p className={classes.description}>
                             A Transparent Institutional Platform for the Next Era of Digital Asset Governance.

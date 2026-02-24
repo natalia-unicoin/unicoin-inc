@@ -35,17 +35,34 @@ export const useStyles = makeStyles<{ isScrolled: boolean }>()((theme, { isScrol
         }
     },
     logoLink: {
-        display: 'block',
-        width: isScrolled ? '42px' : '55px', // Reduced from 50/65
-        transition: 'all 0.3s ease-in-out',
+        display: 'flex',
+        alignItems: 'center',
+        gap: theme.spacing(1.5),
+        textDecoration: 'none',
         [theme.breakpoints.up('md')]: {
-            width: isScrolled ? '60px' : '75px', // Reduced from 70/90
+            gap: theme.spacing(2),
         },
     },
-    logoImage: {
-        width: '100%',
-        height: 'auto',
+    isotypeImage: {
+        height: isScrolled ? '32px' : '40px',
+        width: 'auto',
         objectFit: 'contain',
+        transition: 'all 0.3s ease-in-out',
+        [theme.breakpoints.up('md')]: {
+            height: isScrolled ? '40px' : '48px',
+        },
+    },
+    brandText: {
+        fontFamily: theme.typography.h1.fontFamily, // Montserrat
+        fontWeight: 700,
+        fontSize: '18px',
+        letterSpacing: '-0.03em',
+        color: isScrolled ? theme.palette.common.black : '#FFFFFF',
+        whiteSpace: 'nowrap',
+        transition: 'all 0.3s ease-in-out',
+        [theme.breakpoints.up('md')]: {
+            fontSize: '24px',
+        },
     },
     controls: {
         display: 'flex',
@@ -181,11 +198,22 @@ export const useStyles = makeStyles<{ isScrolled: boolean }>()((theme, { isScrol
         }
     },
     menuLogo: {
-        width: '120px', // w-32 (was 160px)
         marginBottom: theme.spacing(4),
         [theme.breakpoints.up('md')]: {
             marginBottom: theme.spacing(5),
         }
+    },
+    isotypeImageMobile: {
+        height: '40px',
+        width: 'auto',
+        objectFit: 'contain',
+    },
+    brandTextMobile: {
+        fontFamily: theme.typography.h1.fontFamily,
+        fontWeight: 700,
+        fontSize: '24px',
+        letterSpacing: '-0.03em',
+        color: theme.palette.common.black,
     },
     linksContainer: {
         display: 'flex',

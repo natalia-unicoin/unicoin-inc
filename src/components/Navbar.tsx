@@ -79,10 +79,11 @@ const Navbar = () => {
                     {/* Logo */}
                     <Link href="/" className={classes.logoLink}>
                         <img
-                            src={getImagePath(isScrolled ? "assets/logo-corporate-black.png" : "assets/logo-corporate-white.png")}
-                            alt="TransparentBusiness"
-                            className={classes.logoImage}
+                            src={getImagePath(isScrolled ? "assets/isotype-black.png" : "assets/isotype-white.png")}
+                            alt="TransparentBusiness Logo"
+                            className={classes.isotypeImage}
                         />
+                        <span className={classes.brandText}>Unicoin Inc.</span>
                     </Link>
 
                     <div className={classes.controls}>
@@ -150,10 +151,10 @@ const Navbar = () => {
                                 </button>
                             </div>
 
-                            {/* Menu Logo */}
                             <div className={classes.menuLogo}>
-                                <Link href="/" onClick={() => setIsMenuOpen(false)}>
-                                    <img src={getImagePath('assets/logo-corporate-black.png')} alt="TransparentBusiness" className="w-full" style={{ maxWidth: '240px' }} />
+                                <Link href="/" onClick={() => setIsMenuOpen(false)} className={classes.logoLink}>
+                                    <img src={getImagePath('assets/isotype-black.png')} alt="TransparentBusiness" className={classes.isotypeImageMobile} />
+                                    <span className={classes.brandTextMobile}>Unicoin Inc.</span>
                                 </Link>
                             </div>
 

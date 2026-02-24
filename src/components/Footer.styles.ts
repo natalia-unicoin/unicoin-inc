@@ -38,12 +38,23 @@ export const useStyles = makeStyles()((theme) => ({
         }
     },
     logoWrapper: {
-        width: '100px',
-        marginBottom: theme.spacing(3), // mb-6
+        display: 'flex',
+        alignItems: 'center',
+        gap: theme.spacing(1.5),
+        marginBottom: theme.spacing(4), // mb-8
     },
-    logo: {
-        width: '100%',
-        height: 'auto',
+    isotypeImage: {
+        height: '40px',
+        width: 'auto',
+        objectFit: 'contain',
+    },
+    brandText: {
+        fontFamily: theme.typography.h1.fontFamily,
+        fontWeight: 700,
+        fontSize: '24px',
+        letterSpacing: '-0.03em',
+        color: theme.palette.common.black,
+        whiteSpace: 'nowrap',
     },
     description: {
         color: theme.palette.common.black, // Changed from gray-500
