@@ -46,10 +46,11 @@ export const useStyles = makeStyles()((theme) => ({
         flexDirection: 'row', // Horizontal on mobile
         gap: theme.spacing(2),
         overflowX: 'auto',
-        overflowY: 'hidden',
+        overflowY: 'visible', // Must be visible to allow cards to cast shadows or just breathe vertically
         scrollSnapType: 'x mandatory',
         WebkitOverflowScrolling: 'touch',
-        paddingBottom: theme.spacing(4),
+        paddingTop: theme.spacing(2), // Give space top
+        paddingBottom: theme.spacing(4), // Give space bottom
         scrollbarWidth: 'none',
         '&::-webkit-scrollbar': {
             display: 'none'
@@ -58,8 +59,8 @@ export const useStyles = makeStyles()((theme) => ({
             flexDirection: 'column', // Back to vertical on desktop
             overflowX: 'visible',
             scrollSnapType: 'none',
-            paddingBottom: '160px',
             paddingTop: '320px', // Starts low so user scrolls into it
+            paddingBottom: '160px',
             gap: '120px', // Massive gap on desktop
         }
     },
@@ -89,16 +90,18 @@ export const useStyles = makeStyles()((theme) => ({
     storyBlock: {
         backgroundColor: '#E6E8EB', // Neutro Medio
         borderRadius: '32px',
-        padding: '40px 24px', // Tighter padding for mobile
+        padding: '32px 20px', // Even tighter padding for iPhones
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
-        minHeight: '400px', // Ensures big scrolling area
+        minHeight: '380px', // Reduced from 400 to prevent edge clipping on smaller iPhones
         minWidth: '85vw', // Take up most of screen on mobile
         scrollSnapAlign: 'start',
         scrollMarginLeft: '20px',
+        boxSizing: 'border-box', // Ensure padding doesn't push width out
         [theme.breakpoints.up('md')]: {
             padding: '60px 40px',
+            minHeight: '400px',
         },
         [theme.breakpoints.up('lg')]: {
             minWidth: 'auto', // Reset on desktop

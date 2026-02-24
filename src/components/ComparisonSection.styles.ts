@@ -62,10 +62,11 @@ export const useStyles = makeStyles()((theme) => ({
         flexDirection: 'row',
         gap: theme.spacing(3),
         overflowX: 'auto',
-        overflowY: 'hidden',
+        overflowY: 'visible', // Changed from hidden to avoid clipping drop shadows
         scrollSnapType: 'x mandatory',
         WebkitOverflowScrolling: 'touch',
-        paddingBottom: theme.spacing(4), // Space for scrollbar or indicators
+        paddingTop: theme.spacing(2), // Space for top borders/shadows
+        paddingBottom: theme.spacing(6), // Large space for scrollbar or indicators and bottom shadows
         scrollbarWidth: 'none', // Hide standard scrollbar
         '&::-webkit-scrollbar': {
             display: 'none'
@@ -73,6 +74,7 @@ export const useStyles = makeStyles()((theme) => ({
         [theme.breakpoints.up('md')]: {
             overflowX: 'visible',
             scrollSnapType: 'none',
+            paddingTop: 0,
             paddingBottom: 0,
             gap: theme.spacing(4),
             alignItems: 'stretch',
