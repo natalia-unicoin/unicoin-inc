@@ -39,7 +39,7 @@ export const useStyles = makeStyles()((theme) => ({
         letterSpacing: '-0.03em',
         marginBottom: theme.spacing(1),
         color: '#FFFFFF', // White for video
-        fontSize: '40px',
+        fontSize: '48px', // Increased per user request
         lineHeight: '1',
         [theme.breakpoints.up('md')]: {
             fontSize: '64px',

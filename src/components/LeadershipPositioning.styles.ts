@@ -43,8 +43,7 @@ export const useStyles = makeStyles()((theme) => ({
     grid: {
         display: 'grid',
         gridTemplateColumns: 'repeat(2, 1fr)',
-        // borderTop: '1px solid #E5E5E7', // Removed for individual item borders
-        // borderLeft: '1px solid #E5E5E7', // Removed for individual item borders
+        gap: '12px', // Added gap for mobile
         [theme.breakpoints.up('md')]: {
             gridTemplateColumns: 'repeat(3, 1fr)',
             gap: '20px',
@@ -55,12 +54,16 @@ export const useStyles = makeStyles()((theme) => ({
         flexDirection: 'column',
         alignItems: 'flex-start',
         textAlign: 'left',
-        padding: '32px',
+        padding: '24px', // Tighter padding on mobile
         border: '1px solid #D2D2D7',
-        borderRadius: '30px',
+        borderRadius: '24px', // Scaled border radius
         transition: 'background-color 0.3s ease',
         '&:hover': {
             backgroundColor: '#F9F9FB',
+        },
+        [theme.breakpoints.up('md')]: {
+            padding: '32px',
+            borderRadius: '30px',
         }
     },
     statValue: {

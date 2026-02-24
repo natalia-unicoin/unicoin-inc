@@ -80,12 +80,14 @@ export const useStyles = makeStyles()((theme) => ({
         justifyContent: 'center',
     },
     statement: {
-        fontSize: '2.5rem',
+        fontSize: '1.75rem',
         fontWeight: 700,
         lineHeight: 1.1,
         letterSpacing: '-0.03em',
+        padding: '0 10px',
         [theme.breakpoints.up('md')]: {
             fontSize: '4rem',
+            padding: 0,
         },
         [theme.breakpoints.up('lg')]: {
             fontSize: '5rem', // Cinematic size
@@ -95,14 +97,17 @@ export const useStyles = makeStyles()((theme) => ({
         color: '#fcd144', // Highlight color
     },
     supportingText: {
-        fontSize: '1.25rem',
-        lineHeight: 1.7,
+        fontSize: '1rem',
+        lineHeight: 1.6,
         color: 'rgba(250, 251, 252, 0.8)',
         fontWeight: 400,
         maxWidth: '800px',
         margin: '0 auto',
+        padding: '0 10px',
         [theme.breakpoints.up('md')]: {
             fontSize: '1.5rem',
+            lineHeight: 1.7,
+            padding: 0,
         }
     },
     metricGrid: {
@@ -137,7 +142,7 @@ export const useStyles = makeStyles()((theme) => ({
         }
     },
     metricValue: {
-        fontSize: '4rem', // Massive metrics
+        fontSize: '3rem', // Scaled down for mobile stack
         fontWeight: 700,
         color: '#FAFBFC',
         lineHeight: 1,

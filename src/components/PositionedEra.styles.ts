@@ -38,7 +38,7 @@ export const useStyles = makeStyles()((theme) => ({
         letterSpacing: '-0.03em',
         marginBottom: theme.spacing(4),
         lineHeight: 1.1,
-        fontSize: '44px',
+        fontSize: '32px', // Smaller for mobile header
         [theme.breakpoints.up('md')]: {
             fontSize: '64px',
         },
@@ -47,16 +47,18 @@ export const useStyles = makeStyles()((theme) => ({
         }
     },
     description: {
-        fontSize: '24px', // Increased size for the text reveal effect
-        lineHeight: 1.5,
+        fontSize: '18px', // Safe size for 100vh mobile sticky containers
+        lineHeight: 1.4,
         color: '#0E1A2B',
-        maxWidth: '1000px', // Wider since it's the main focus
+        maxWidth: '1000px',
         margin: '0 auto',
-        fontWeight: 600, // Make it bold and confident
-        letterSpacing: '-0.02em',
+        fontWeight: 500, // Slightly lighter on mobile
+        letterSpacing: '-0.01em',
         [theme.breakpoints.up('md')]: {
             fontSize: '32px',
             lineHeight: 1.6,
+            fontWeight: 600,
+            letterSpacing: '-0.02em',
         },
         [theme.breakpoints.up('lg')]: {
             fontSize: '40px',

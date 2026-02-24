@@ -44,10 +44,11 @@ export const useStyles = makeStyles()((theme) => ({
         flex: 1.5,
         display: 'flex',
         flexDirection: 'column',
-        gap: '120px', // Massive gap to force scrolling and focus
+        gap: '60px', // Standard gap for mobile
         [theme.breakpoints.up('lg')]: {
             paddingTop: '320px', // Starts low so user scrolls into it
             paddingBottom: '160px',
+            gap: '120px', // Massive gap on desktop
         }
     },
     title: {
@@ -76,11 +77,14 @@ export const useStyles = makeStyles()((theme) => ({
     storyBlock: {
         backgroundColor: '#E6E8EB', // Neutro Medio
         borderRadius: '32px',
-        padding: '60px 40px',
+        padding: '40px 24px', // Tighter padding for mobile
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
         minHeight: '400px', // Ensures big scrolling area
+        [theme.breakpoints.up('md')]: {
+            padding: '60px 40px',
+        }
     },
     chapterLabel: {
         fontSize: '0.875rem',
