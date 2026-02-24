@@ -2,15 +2,24 @@ import { makeStyles } from 'tss-react/mui';
 
 export const useStyles = makeStyles()((theme) => ({
     section: {
-        paddingTop: '160px',
-        paddingBottom: '160px',
         backgroundColor: '#FAFBFC',
         color: '#0E1A2B',
         borderTop: '1px solid #f5f5f7',
+        position: 'relative',
+        minHeight: '150vh', // Extended for scroll duration
         [theme.breakpoints.up('lg')]: {
-            paddingTop: '200px',
-            paddingBottom: '200px',
+            minHeight: '200vh',
         }
+    },
+    stickyWrapper: {
+        position: 'sticky',
+        top: 0,
+        height: '100vh',
+        display: 'flex',
+        alignItems: 'center',
+        paddingTop: theme.spacing(12),
+        paddingBottom: theme.spacing(12),
+        overflow: 'hidden',
     },
     container: {
         maxWidth: '100%',
@@ -38,15 +47,20 @@ export const useStyles = makeStyles()((theme) => ({
         }
     },
     description: {
-        fontSize: '1.25rem',
-        lineHeight: 1.6,
+        fontSize: '24px', // Increased size for the text reveal effect
+        lineHeight: 1.5,
         color: '#0E1A2B',
-        maxWidth: '800px',
+        maxWidth: '1000px', // Wider since it's the main focus
         margin: '0 auto',
-        fontWeight: 400,
+        fontWeight: 600, // Make it bold and confident
+        letterSpacing: '-0.02em',
         [theme.breakpoints.up('md')]: {
-            fontSize: '1.5rem',
-            lineHeight: 1.8,
+            fontSize: '32px',
+            lineHeight: 1.6,
+        },
+        [theme.breakpoints.up('lg')]: {
+            fontSize: '40px',
+            lineHeight: 1.4,
         }
     }
 }));
