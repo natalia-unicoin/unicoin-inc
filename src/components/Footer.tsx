@@ -23,7 +23,7 @@ const Footer = () => {
                             <img src={getImagePath("assets/logo-corporate-black.png")} alt="TransparentBusiness" className={classes.logo} />
                         </div>
                         <p className={classes.description}>
-                            The Debt-Free Evolution of Digital Asset Treasury Strategy.
+                            A Transparent Institutional Platform for the Next Era of Digital Asset Governance.
                         </p>
                     </div>
 
