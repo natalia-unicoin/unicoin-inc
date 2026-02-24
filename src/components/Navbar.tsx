@@ -79,11 +79,10 @@ const Navbar = () => {
                     {/* Logo */}
                     <Link href="/" className={classes.logoLink}>
                         <img
-                            src={getImagePath(isScrolled ? "assets/isotype-black.png" : "assets/isotype-white.png")}
+                            src={getImagePath("assets/logo-tb-white.png")}
                             alt="TransparentBusiness Logo"
                             className={classes.isotypeImage}
                         />
-                        <span className={classes.brandText}>Unicoin Inc.</span>
                     </Link>
 
                     <div className={classes.controls}>
@@ -153,8 +152,7 @@ const Navbar = () => {
 
                             <div className={classes.menuLogo}>
                                 <Link href="/" onClick={() => setIsMenuOpen(false)} className={classes.logoLink}>
-                                    <img src={getImagePath('assets/isotype-black.png')} alt="TransparentBusiness" className={classes.isotypeImageMobile} />
-                                    <span className={classes.brandTextMobile}>Unicoin Inc.</span>
+                                    <img src={getImagePath('assets/logo-tb-white.png')} alt="TransparentBusiness" className={classes.isotypeImageMobile} />
                                 </Link>
                             </div>
 

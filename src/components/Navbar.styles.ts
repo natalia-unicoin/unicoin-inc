@@ -48,20 +48,9 @@ export const useStyles = makeStyles<{ isScrolled: boolean }>()((theme, { isScrol
         width: 'auto',
         objectFit: 'contain',
         transition: 'all 0.3s ease-in-out',
+        filter: isScrolled ? 'brightness(0)' : 'none',
         [theme.breakpoints.up('md')]: {
             height: isScrolled ? '40px' : '48px',
-        },
-    },
-    brandText: {
-        fontFamily: theme.typography.h1.fontFamily, // Montserrat
-        fontWeight: 700,
-        fontSize: '18px',
-        letterSpacing: '-0.03em',
-        color: isScrolled ? theme.palette.common.black : '#FFFFFF',
-        whiteSpace: 'nowrap',
-        transition: 'all 0.3s ease-in-out',
-        [theme.breakpoints.up('md')]: {
-            fontSize: '24px',
         },
     },
     controls: {
@@ -207,13 +196,7 @@ export const useStyles = makeStyles<{ isScrolled: boolean }>()((theme, { isScrol
         height: '40px',
         width: 'auto',
         objectFit: 'contain',
-    },
-    brandTextMobile: {
-        fontFamily: theme.typography.h1.fontFamily,
-        fontWeight: 700,
-        fontSize: '24px',
-        letterSpacing: '-0.03em',
-        color: theme.palette.common.black,
+        filter: 'brightness(0)',
     },
     linksContainer: {
         display: 'flex',
