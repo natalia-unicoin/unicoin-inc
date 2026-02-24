@@ -78,7 +78,7 @@ const Footer = () => {
                     </div>
 
                     <div className={classes.copyright}>
-                        &copy; 2025 <span className={classes.copyrightBrand}>TransparentBusiness Inc.</span> All rights reserved.
+                        &copy; 2026 <span className={classes.copyrightBrand}>TransparentBusiness Inc.</span> All rights reserved.
                     </div>
                 </div>
             </div>
