@@ -43,11 +43,23 @@ export const useStyles = makeStyles()((theme) => ({
     scrollColumn: {
         flex: 1.5,
         display: 'flex',
-        flexDirection: 'column',
-        gap: '60px', // Standard gap for mobile
+        flexDirection: 'row', // Horizontal on mobile
+        gap: theme.spacing(2),
+        overflowX: 'auto',
+        overflowY: 'hidden',
+        scrollSnapType: 'x mandatory',
+        WebkitOverflowScrolling: 'touch',
+        paddingBottom: theme.spacing(4),
+        scrollbarWidth: 'none',
+        '&::-webkit-scrollbar': {
+            display: 'none'
+        },
         [theme.breakpoints.up('lg')]: {
-            paddingTop: '320px', // Starts low so user scrolls into it
+            flexDirection: 'column', // Back to vertical on desktop
+            overflowX: 'visible',
+            scrollSnapType: 'none',
             paddingBottom: '160px',
+            paddingTop: '320px', // Starts low so user scrolls into it
             gap: '120px', // Massive gap on desktop
         }
     },
@@ -82,8 +94,15 @@ export const useStyles = makeStyles()((theme) => ({
         flexDirection: 'column',
         justifyContent: 'center',
         minHeight: '400px', // Ensures big scrolling area
+        minWidth: '85vw', // Take up most of screen on mobile
+        scrollSnapAlign: 'start',
+        scrollMarginLeft: '20px',
         [theme.breakpoints.up('md')]: {
             padding: '60px 40px',
+        },
+        [theme.breakpoints.up('lg')]: {
+            minWidth: 'auto', // Reset on desktop
+            scrollMarginLeft: 0,
         }
     },
     chapterLabel: {
@@ -145,5 +164,26 @@ export const useStyles = makeStyles()((theme) => ({
         [theme.breakpoints.up('md')]: {
             fontSize: '1.25rem',
         }
+    },
+    scrollIndicator: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        gap: '8px',
+        marginTop: theme.spacing(2),
+        [theme.breakpoints.up('lg')]: {
+            display: 'none', // Hide on desktop where it's vertical
+        }
+    },
+    dot: {
+        height: '8px',
+        width: '8px',
+        borderRadius: '4px',
+        backgroundColor: '#D1D1D6', // Light gray for inactive
+        transition: 'all 0.3s ease',
+    },
+    activeDot: {
+        width: '32px', // Elongated for active
+        backgroundColor: '#0E1A2B', // Dark for active
     }
 }));

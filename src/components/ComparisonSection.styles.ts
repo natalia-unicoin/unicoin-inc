@@ -53,18 +53,36 @@ export const useStyles = makeStyles()((theme) => ({
             lineHeight: '31px',
         }
     },
+    cardsContainerWrapper: {
+        position: 'relative',
+        width: '100%',
+    },
     cardsContainer: {
         display: 'flex',
-        flexDirection: 'column',
+        flexDirection: 'row',
         gap: theme.spacing(3),
+        overflowX: 'auto',
+        overflowY: 'hidden',
+        scrollSnapType: 'x mandatory',
+        WebkitOverflowScrolling: 'touch',
+        paddingBottom: theme.spacing(4), // Space for scrollbar or indicators
+        scrollbarWidth: 'none', // Hide standard scrollbar
+        '&::-webkit-scrollbar': {
+            display: 'none'
+        },
         [theme.breakpoints.up('md')]: {
-            flexDirection: 'row',
-            alignItems: 'stretch',
+            overflowX: 'visible',
+            scrollSnapType: 'none',
+            paddingBottom: 0,
             gap: theme.spacing(4),
+            alignItems: 'stretch',
         }
     },
     traditionalCard: {
         flex: 1,
+        minWidth: '85vw', // Take up most of screen on mobile
+        scrollSnapAlign: 'start',
+        scrollMarginLeft: '20px',
         backgroundColor: '#E5E5EA', // Very dim gray to imply older tech
         borderRadius: '32px',
         padding: theme.spacing(4),
@@ -77,11 +95,15 @@ export const useStyles = makeStyles()((theme) => ({
             opacity: 1,
         },
         [theme.breakpoints.up('md')]: {
+            minWidth: 'auto',
             padding: theme.spacing(6),
         }
     },
     brandCard: {
         flex: 1,
+        minWidth: '85vw', // Take up most of screen on mobile to hint at next card
+        scrollSnapAlign: 'start',
+        scrollMarginLeft: '20px',
         backgroundColor: '#FAFBFC',
         borderRadius: '32px',
         padding: theme.spacing(4),
@@ -105,11 +127,15 @@ export const useStyles = makeStyles()((theme) => ({
             borderBottomRightRadius: '4px',
         },
         '&:hover': {
-            transform: 'translateY(-8px)',
+            transform: 'none',
             boxShadow: '0 30px 60px rgba(0,0,0,0.12)',
         },
         [theme.breakpoints.up('md')]: {
+            minWidth: 'auto',
             padding: theme.spacing(6),
+            '&:hover': {
+                transform: 'translateY(-8px)',
+            }
         }
     },
     cardHeader: {
@@ -173,5 +199,26 @@ export const useStyles = makeStyles()((theme) => ({
         color: '#0E1A2B',
         fontWeight: 600, // Bolder
         lineHeight: 1.4,
+    },
+    scrollIndicator: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        gap: '8px', // Spacing between dots
+        marginTop: theme.spacing(2),
+        [theme.breakpoints.up('md')]: {
+            display: 'none', // Hide on desktop
+        }
+    },
+    dot: {
+        height: '8px',
+        width: '8px',
+        borderRadius: '4px',
+        backgroundColor: '#D1D1D6', // Light gray for inactive
+        transition: 'all 0.3s ease',
+    },
+    activeDot: {
+        width: '32px', // Elongated for active
+        backgroundColor: '#0E1A2B', // Dark for active
     }
 }));

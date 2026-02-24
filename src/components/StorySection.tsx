@@ -1,11 +1,29 @@
 'use client';
 
-import React from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useStyles } from './StorySection.styles';
 
 const StorySection = () => {
     const { classes, cx } = useStyles();
+    const scrollContainerRef = useRef<HTMLDivElement>(null);
+    const [activeIndex, setActiveIndex] = useState(0);
+
+    const handleScroll = () => {
+        if (!scrollContainerRef.current) return;
+        const scrollPosition = scrollContainerRef.current.scrollLeft;
+        const cardWidth = scrollContainerRef.current.offsetWidth * 0.85; // match CSS minWidth: 85vw
+        const newIndex = Math.round(scrollPosition / cardWidth);
+        setActiveIndex(newIndex);
+    };
+
+    useEffect(() => {
+        const container = scrollContainerRef.current;
+        if (container) {
+            container.addEventListener('scroll', handleScroll);
+            return () => container.removeEventListener('scroll', handleScroll);
+        }
+    }, []);
 
     return (
         <section id="story" className={classes.section}>
@@ -34,7 +52,7 @@ const StorySection = () => {
                     </div>
 
                     {/* Right Scrolling Column */}
-                    <div className={classes.scrollColumn}>
+                    <div className={classes.scrollColumn} ref={scrollContainerRef}>
 
                         <motion.div
                             className={classes.storyBlock}
@@ -93,6 +111,25 @@ const StorySection = () => {
                         </motion.div>
 
                     </div>
+                </div>
+
+                {/* Mobile Scroll Indicator */}
+                <div className={classes.scrollIndicator}>
+                    {[0, 1, 2, 3].map((index) => ( // 4 story phases/cards
+                        <div
+                            key={index}
+                            className={`${classes.dot} ${activeIndex === index ? classes.activeDot : ''}`}
+                            onClick={() => {
+                                if (scrollContainerRef.current) {
+                                    const cardWidth = scrollContainerRef.current.offsetWidth * 0.85;
+                                    scrollContainerRef.current.scrollTo({
+                                        left: index * cardWidth,
+                                        behavior: 'smooth'
+                                    });
+                                }
+                            }}
+                        />
+                    ))}
                 </div>
             </div>
         </section>

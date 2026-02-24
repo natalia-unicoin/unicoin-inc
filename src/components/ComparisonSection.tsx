@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useStyles } from './ComparisonSection.styles';
 
@@ -29,6 +29,25 @@ const ComparisonSection = () => {
             transparentBusiness: "Diversified digital asset growth"
         }
     ];
+
+    const scrollContainerRef = useRef<HTMLDivElement>(null);
+    const [activeIndex, setActiveIndex] = useState(0);
+
+    const handleScroll = () => {
+        if (!scrollContainerRef.current) return;
+        const scrollPosition = scrollContainerRef.current.scrollLeft;
+        const cardWidth = scrollContainerRef.current.offsetWidth * 0.85; // Approximate width of one card
+        const newIndex = Math.round(scrollPosition / cardWidth);
+        setActiveIndex(newIndex);
+    };
+
+    useEffect(() => {
+        const container = scrollContainerRef.current;
+        if (container) {
+            container.addEventListener('scroll', handleScroll);
+            return () => container.removeEventListener('scroll', handleScroll);
+        }
+    }, []);
 
     return (
         <section id="comparison" className={classes.section}>
@@ -90,6 +109,25 @@ const ComparisonSection = () => {
                             ))}
                         </ul>
                     </motion.div>
+                </div>
+
+                {/* Mobile Scroll Indicator */}
+                <div className={classes.scrollIndicator}>
+                    {[0, 1].map((index) => ( // 2 cards total
+                        <div
+                            key={index}
+                            className={`${classes.dot} ${activeIndex === index ? classes.activeDot : ''}`}
+                            onClick={() => {
+                                if (scrollContainerRef.current) {
+                                    const cardWidth = scrollContainerRef.current.offsetWidth * 0.85;
+                                    scrollContainerRef.current.scrollTo({
+                                        left: index * cardWidth,
+                                        behavior: 'smooth'
+                                    });
+                                }
+                            }}
+                        />
+                    ))}
                 </div>
             </div>
         </section>
