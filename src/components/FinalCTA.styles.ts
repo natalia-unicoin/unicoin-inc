@@ -51,7 +51,7 @@ export const useStyles = makeStyles()((theme) => ({
     },
     button: {
         display: 'inline-block',
-        backgroundColor: '#FAFBFC',
+        backgroundColor: '#FCD144',
         color: '#0E1A2B',
         padding: '20px 48px',
         borderRadius: '9999px', // Pill shape

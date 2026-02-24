@@ -4,8 +4,8 @@ export const useStyles = makeStyles()((theme) => ({
     section: {
         paddingTop: theme.spacing(12),
         paddingBottom: theme.spacing(12),
-        backgroundColor: '#000000',
-        color: '#FFFFFF',
+        backgroundColor: '#2A4B6A',
+        color: '#FAFBFC',
         position: 'relative',
         overflow: 'hidden',
         [theme.breakpoints.up('lg')]: {
@@ -76,7 +76,7 @@ export const useStyles = makeStyles()((theme) => ({
     supportingText: {
         fontSize: '1.125rem',
         lineHeight: 1.8,
-        color: '#FFFFFF',
+        color: '#FAFBFC',
         fontWeight: 400,
         [theme.breakpoints.up('md')]: {
             fontSize: '1.25rem',
@@ -97,13 +97,13 @@ export const useStyles = makeStyles()((theme) => ({
     metricValue: {
         fontSize: '2rem',
         fontWeight: 700,
-        color: '#FFFFFF',
+        color: '#FAFBFC',
     },
     metricLabel: {
         fontSize: '0.875rem',
         textTransform: 'uppercase',
         letterSpacing: '0.1em',
-        color: '#FFFFFF',
+        color: '#FAFBFC',
         marginTop: theme.spacing(1),
     }
 }));
