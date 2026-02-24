@@ -8,9 +8,13 @@ export const useStyles = makeStyles()((theme) => ({
         color: '#FAFBFC',
         position: 'relative',
         overflow: 'hidden',
+        minHeight: '150vh', // Extend height to allow long scroll interactions
+        display: 'flex',
+        flexDirection: 'column',
         [theme.breakpoints.up('lg')]: {
             paddingTop: '160px',
             paddingBottom: '160px',
+            minHeight: '200vh', // Massive scroll area on desktop
         }
     },
     container: {
@@ -20,6 +24,9 @@ export const useStyles = makeStyles()((theme) => ({
         paddingRight: theme.spacing(3),
         position: 'relative',
         zIndex: 10,
+        height: '100%',
+        display: 'flex',
+        flexDirection: 'column',
         [theme.breakpoints.up('lg')]: {
             paddingLeft: '150px',
             paddingRight: '150px',
@@ -32,15 +39,17 @@ export const useStyles = makeStyles()((theme) => ({
         marginBottom: theme.spacing(12),
         lineHeight: 1.1,
         textAlign: 'center',
-        fontSize: '24px', // Smaller so it doesn't compete with the main statement
+        fontSize: '24px',
         textTransform: 'uppercase',
-        color: 'rgba(250, 251, 252, 0.6)', // Faded
+        color: 'rgba(250, 251, 252, 0.6)',
+        position: 'sticky', // Ensure title stays visible
+        top: '100px',
+        zIndex: 20,
         [theme.breakpoints.up('md')]: {
             fontSize: '28px',
         },
         [theme.breakpoints.up('lg')]: {
             fontSize: '32px',
-            marginBottom: '160px',
         }
     },
     contentWrapper: {
@@ -50,7 +59,25 @@ export const useStyles = makeStyles()((theme) => ({
         textAlign: 'center',
         maxWidth: '1200px',
         margin: '0 auto',
-        gap: theme.spacing(10),
+        position: 'relative',
+        flex: 1, // Take up remaining space
+        width: '100%',
+    },
+    statementContainer: {
+        position: 'sticky',
+        top: '25vh', // Lock in upper middle of screen
+        width: '100%',
+        zIndex: 15,
+        display: 'flex',
+        justifyContent: 'center',
+    },
+    supportContainer: {
+        position: 'sticky',
+        top: '35vh',
+        width: '100%',
+        zIndex: 16,
+        display: 'flex',
+        justifyContent: 'center',
     },
     statement: {
         fontSize: '2.5rem',
@@ -79,13 +106,17 @@ export const useStyles = makeStyles()((theme) => ({
         }
     },
     metricGrid: {
-        marginTop: theme.spacing(8),
+        position: 'sticky',
+        top: '40vh',
+        zIndex: 17,
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
         gap: theme.spacing(8),
         width: '100%',
+        backgroundColor: '#2A4B6A', // Ensure it obscures elements behind it if needed
+        padding: '40px 0',
         [theme.breakpoints.up('md')]: {
             flexDirection: 'row',
             gap: theme.spacing(16),
