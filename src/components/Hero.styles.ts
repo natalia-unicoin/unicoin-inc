@@ -48,7 +48,7 @@ export const useStyles = makeStyles()((theme) => ({
     title: {
         fontFamily: theme.typography.h1.fontFamily, // Montserrat
         fontWeight: 700,
-        letterSpacing: '-0.02em',
+        letterSpacing: '-0.03em',
         marginBottom: theme.spacing(1),
         color: '#FFFFFF', // White for video
         fontSize: '40px',

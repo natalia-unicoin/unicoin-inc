@@ -28,7 +28,7 @@ export const useStyles = makeStyles()((theme) => ({
     title: {
         fontFamily: theme.typography.h1.fontFamily,
         fontWeight: 700,
-        letterSpacing: '-0.02em',
+        letterSpacing: '-0.03em',
         marginBottom: theme.spacing(2),
         lineHeight: 1.1,
         fontSize: '44px',
@@ -41,10 +41,10 @@ export const useStyles = makeStyles()((theme) => ({
     },
     subtitle: {
         fontSize: '1.25rem',
-        color: '#86868B',
+        color: '#1D1D1F',
         maxWidth: '700px',
         margin: '0 auto',
-        fontWeight: 400,
+        fontWeight: 700,
     },
     tableContainer: {
         marginTop: theme.spacing(8),
@@ -59,10 +59,10 @@ export const useStyles = makeStyles()((theme) => ({
         textAlign: 'left',
         padding: '24px',
         fontSize: '0.875rem',
-        fontWeight: 600,
+        fontWeight: 700,
         textTransform: 'uppercase',
         letterSpacing: '0.1em',
-        color: '#86868B',
+        color: '#1D1D1F',
     },
     thBrand: {
         color: '#000000',
@@ -93,11 +93,12 @@ export const useStyles = makeStyles()((theme) => ({
         }
     },
     traditionalValue: {
-        color: '#86868B',
+        color: '#1D1D1F',
         width: '35%',
+        fontWeight: 400,
     },
     brandValue: {
-        fontWeight: 600,
+        fontWeight: 700,
         color: '#1D1D1F',
     }
 }));

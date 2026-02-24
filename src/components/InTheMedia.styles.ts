@@ -24,7 +24,7 @@ export const useStyles = makeStyles()((theme) => ({
         fontWeight: 700,
         color: '#1D1D1F', // Apple Black
         textAlign: 'center',
-        letterSpacing: '-0.02em',
+        letterSpacing: '-0.03em',
         fontFamily: theme.typography.h1.fontFamily,
         marginBottom: '60px',
         textTransform: 'none',
@@ -64,7 +64,7 @@ export const useStyles = makeStyles()((theme) => ({
         fontWeight: 700,
         textTransform: 'uppercase',
         letterSpacing: '0.1em',
-        color: '#86868B',
+        color: '#1D1D1F',
         marginBottom: '20px',
     },
     mediaTitle: {
@@ -77,13 +77,13 @@ export const useStyles = makeStyles()((theme) => ({
     excerpt: {
         fontSize: '16px',
         lineHeight: 1.6,
-        color: '#6E6E73',
+        color: '#000000',
         marginBottom: '25px',
         flexGrow: 1,
     },
     source: {
         fontSize: '14px',
-        fontWeight: 600,
+        fontWeight: 700,
         color: '#000000',
         display: 'flex',
         alignItems: 'center',

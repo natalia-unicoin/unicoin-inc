@@ -27,7 +27,7 @@ export const useStyles = makeStyles()((theme) => ({
         lineHeight: '1.1',
         fontWeight: 700,
         marginBottom: '60px',
-        letterSpacing: '-0.02em',
+        letterSpacing: '-0.03em',
         fontFamily: theme.typography.h1.fontFamily,
         color: '#1D1D1F',
         textAlign: 'center',
@@ -76,8 +76,8 @@ export const useStyles = makeStyles()((theme) => ({
     },
     statLabel: {
         fontSize: '12px',
-        fontWeight: 600,
-        color: '#6E6E73', // Apple gray
+        fontWeight: 700,
+        color: '#1D1D1F', // High contrast
         textTransform: 'uppercase',
         letterSpacing: '0.05em', // Reduced from 0.1em
         lineHeight: '1.4',

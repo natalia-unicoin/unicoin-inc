@@ -27,7 +27,7 @@ export const useStyles = makeStyles()((theme) => ({
         lineHeight: '1.1',
         fontWeight: 700,
         marginBottom: theme.spacing(3),
-        letterSpacing: '-0.02em',
+        letterSpacing: '-0.03em',
         fontFamily: theme.typography.h1.fontFamily,
         fontSize: '44px',
         [theme.breakpoints.up('md')]: {
@@ -40,11 +40,11 @@ export const useStyles = makeStyles()((theme) => ({
     subtitle: {
         fontSize: '18px',
         lineHeight: '1.6',
-        color: '#A1A1A6', // Apple Secondary Gray
+        color: '#FFFFFF', // Apple Secondary Gray
         maxWidth: '700px',
         margin: '0 auto',
         marginBottom: theme.spacing(8),
-        fontWeight: 400,
+        fontWeight: 700,
         [theme.breakpoints.up('md')]: {
             fontSize: '24px',
         }

@@ -28,7 +28,7 @@ export const useStyles = makeStyles()((theme) => ({
     title: {
         fontFamily: theme.typography.h1.fontFamily,
         fontWeight: 700,
-        letterSpacing: '-0.02em',
+        letterSpacing: '-0.03em',
         marginBottom: theme.spacing(8),
         lineHeight: 1.1,
         textAlign: 'center',
@@ -60,7 +60,7 @@ export const useStyles = makeStyles()((theme) => ({
         fontSize: '1.75rem',
         fontWeight: 700,
         lineHeight: 1.2,
-        letterSpacing: '-0.02em',
+        letterSpacing: '-0.03em',
         [theme.breakpoints.up('md')]: {
             fontSize: '2.5rem',
         }
@@ -76,8 +76,8 @@ export const useStyles = makeStyles()((theme) => ({
     supportingText: {
         fontSize: '1.125rem',
         lineHeight: 1.8,
-        color: '#A1A1A6',
-        fontWeight: 300,
+        color: '#FFFFFF',
+        fontWeight: 400,
         [theme.breakpoints.up('md')]: {
             fontSize: '1.25rem',
         }
@@ -103,7 +103,7 @@ export const useStyles = makeStyles()((theme) => ({
         fontSize: '0.875rem',
         textTransform: 'uppercase',
         letterSpacing: '0.1em',
-        color: '#6E6E73',
+        color: '#FFFFFF',
         marginTop: theme.spacing(1),
     }
 }));

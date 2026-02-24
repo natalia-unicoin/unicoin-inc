@@ -86,7 +86,7 @@ const theme = createTheme({
                 h1, h2, h3, h4, h5, h6 {
                     font-family: ${montserrat.style.fontFamily} !important;
                     font-weight: 700 !important;
-                    letter-spacing: -0.02em !important;
+                    letter-spacing: -0.03em !important;
                 }
             `,
         },

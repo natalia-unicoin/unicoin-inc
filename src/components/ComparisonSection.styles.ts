@@ -41,7 +41,7 @@ export const useStyles = makeStyles()((theme) => ({
         margin: '0 auto 60px auto',
         fontSize: '17px', // Apple body
         lineHeight: '25px',
-        color: '#6E6E73', // Apple medium gray
+        color: '#000000', // Apple medium gray
     },
     tableWrapper: {
         overflowX: 'auto',
@@ -62,7 +62,7 @@ export const useStyles = makeStyles()((theme) => ({
         textTransform: 'uppercase',
         letterSpacing: '0.1em',
         fontWeight: 700,
-        color: '#6E6E73',
+        color: '#000000',
         border: 'none',
     },
     td: {
@@ -82,7 +82,7 @@ export const useStyles = makeStyles()((theme) => ({
         borderBottom: 'none',
     },
     traditional: {
-        color: '#6E6E73',
+        color: '#000000',
         width: '35%',
         backgroundColor: 'rgba(255, 255, 255, 0.5)',
     },

@@ -31,7 +31,7 @@ export const useStyles = makeStyles()((theme) => ({
     title: {
         fontFamily: theme.typography.h1.fontFamily,
         fontWeight: 700,
-        letterSpacing: '-0.02em',
+        letterSpacing: '-0.03em',
         marginBottom: theme.spacing(3),
         lineHeight: 1.1,
         fontSize: '44px',
@@ -44,7 +44,7 @@ export const useStyles = makeStyles()((theme) => ({
     },
     subtitle: {
         fontSize: '1.25rem',
-        fontWeight: 400,
+        fontWeight: 700,
         color: '#000000', // Apple gray
         maxWidth: '800px',
         margin: '0 auto',
@@ -77,9 +77,9 @@ export const useStyles = makeStyles()((theme) => ({
     },
     cardTitle: {
         fontSize: '1.5rem',
-        fontWeight: 600,
+        fontWeight: 700,
         marginBottom: theme.spacing(2),
-        letterSpacing: '-0.02em',
+        letterSpacing: '-0.03em',
     },
     cardText: {
         fontSize: '1.125rem',
@@ -118,7 +118,7 @@ export const useStyles = makeStyles()((theme) => ({
     },
     imperativeDescription: {
         fontSize: '1.125rem',
-        color: '#a1a1a6', // Apple description gray
+        color: '#FFFFFF', // Apple description gray
         maxWidth: '700px',
         margin: '0 auto',
         lineHeight: 1.6,
@@ -141,9 +141,9 @@ export const useStyles = makeStyles()((theme) => ({
     },
     transparencyTitle: {
         fontSize: '1.5rem',
-        fontWeight: 600,
+        fontWeight: 700,
         marginBottom: theme.spacing(3),
-        letterSpacing: '-0.02em',
+        letterSpacing: '-0.03em',
         color: '#1d1d1f',
         [theme.breakpoints.up('md')]: {
             fontSize: '2rem',
