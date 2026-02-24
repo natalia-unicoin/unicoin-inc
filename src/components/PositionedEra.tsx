@@ -27,7 +27,7 @@ const PositionedEra = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
                 >
-                    The transition to TBIZ marks a deliberate move toward institutional maturity. Built on a debt-free model, strategic asset alignment, and disciplined governance, TBIZ is structured to operate within evolving regulatory frameworks while maintaining strategic independence. This is not a reactionary shift, but a forward-looking institutional recalibration designed for longevity.
+                    The transition to TransparentBusiness marks a deliberate move toward institutional maturity. Built on a debt-free model, strategic asset alignment, and disciplined governance, TransparentBusiness is structured to operate within evolving regulatory frameworks while maintaining strategic independence. This is not a reactionary shift, but a forward-looking institutional recalibration designed for longevity.
                 </motion.p>
             </div>
         </section>

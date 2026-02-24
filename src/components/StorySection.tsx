@@ -27,7 +27,7 @@ const StorySection = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
                     >
-                        Navigating the transition from Unicoin to TBIZ through transparency and strategic resilience.
+                        Navigating the transition from Unicoin to TransparentBusiness through transparency and strategic resilience.
                     </motion.p>
                 </div>
 
@@ -69,7 +69,7 @@ const StorySection = () => {
                     <span className={classes.imperativeLabel}>Strategic Imperative</span>
                     <h3 className={classes.imperativeTitle}>Protecting Value through Resilience</h3>
                     <p className={classes.imperativeDescription}>
-                        TBIZ represents more than a name change; it is a structural pivot designed to lead with high-standard transparency in the next era of institutional digital asset management.
+                        TransparentBusiness represents more than a name change; it is a structural pivot designed to lead with high-standard transparency in the next era of institutional digital asset management.
                     </p>
                 </motion.div>
 
@@ -82,7 +82,7 @@ const StorySection = () => {
                 >
                     <h3 className={classes.transparencyTitle}>A Commitment to Institutional Transparency</h3>
                     <p className={classes.transparencyText}>
-                        Transparency is not a narrative device; it is an operational principle. TBIZ is structured around clear governance standards, responsible capital management, and measurable accountability. Our evolution reinforces a commitment to institutional discipline, long-term sustainability, and proactive regulatory alignment.
+                        Transparency is not a narrative device; it is an operational principle. TransparentBusiness is structured around clear governance standards, responsible capital management, and measurable accountability. Our evolution reinforces a commitment to institutional discipline, long-term sustainability, and proactive regulatory alignment.
                     </p>
                 </motion.div>
             </div>

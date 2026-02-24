@@ -66,7 +66,7 @@ const StrategicResponse = () => {
                             <tr>
                                 <th className={classes.th}>Metric</th>
                                 <th className={classes.th}>Traditional Model</th>
-                                <th className={`${classes.th} ${classes.thBrand}`}>TBIZ Strategy</th>
+                                <th className={`${classes.th} ${classes.thBrand}`}>TransparentBusiness Strategy</th>
                             </tr>
                         </thead>
                         <tbody>

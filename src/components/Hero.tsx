@@ -43,7 +43,7 @@ const Hero = () => {
                     transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
                 >
                     <p className={classes.subtitle}>
-                        From Unicoin to TBIZ. A new chapter built on.<br />
+                        From Unicoin to TransparentBusiness. A new chapter built on.<br />
                         transparency, resilience, and leadership.
                     </p>
                 </motion.div>
@@ -81,7 +81,7 @@ const Hero = () => {
                 >
                     <h3 className={classes.clarificationTitle}>Institutional Clarification</h3>
                     <p className={classes.clarificationText}>
-                        TBIZ is not merely a rebrand. It represents a structural evolution of TransparentBusiness' institutional framework. The transition reflects a strategic realignment designed to ensure regulatory clarity, protect investor interests, and strengthen long-term governance standards. This evolution positions TBIZ as a forward-facing institutional platform built for transparency, resilience, and compliance in a shifting global regulatory environment.
+                        TransparentBusiness is not merely a rebrand. It represents a structural evolution of TransparentBusiness' institutional framework. The transition reflects a strategic realignment designed to ensure regulatory clarity, protect investor interests, and strengthen long-term governance standards. This evolution positions TransparentBusiness as a forward-facing institutional platform built for transparency, resilience, and compliance in a shifting global regulatory environment.
                     </p>
                 </motion.div>
             </div>
