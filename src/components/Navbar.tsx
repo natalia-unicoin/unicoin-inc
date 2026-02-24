@@ -59,8 +59,10 @@ const Navbar = () => {
 
     const menuLinks = [
         { title: "Home", href: "/" },
+        { title: "Transition", href: "#story" },
         { title: "Different", href: "#how-it-works" },
         { title: "Comparison", href: "#comparison" },
+        { title: "Media", href: "#media" },
         { title: "Contact", href: "#footer" },
     ];
 
@@ -173,7 +175,6 @@ const Navbar = () => {
                                             >
                                                 <span className={classes.mainLinkTextWrapper}>
                                                     {link.title}
-                                                    <span className={`${classes.linkUnderline} underline`}></span>
                                                 </span>
                                             </motion.div>
                                         </Link>

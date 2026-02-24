@@ -192,7 +192,7 @@ export const useStyles = makeStyles<{ isScrolled: boolean }>()((theme, { isScrol
         }
     },
     isotypeImageMobile: {
-        height: '40px',
+        height: '64px',
         width: 'auto',
         objectFit: 'contain',
     },
@@ -220,17 +220,14 @@ export const useStyles = makeStyles<{ isScrolled: boolean }>()((theme, { isScrol
         alignItems: 'center',
         gap: theme.spacing(2),
         width: '100%',
-        fontSize: '1.25rem', // text-xl
+        fontSize: '1.125rem', // text-lg
         [theme.breakpoints.up('md')]: {
-            fontSize: '1.875rem', // text-3xl
+            fontSize: '1.5rem', // text-2xl
         },
         transition: 'color 0.2s',
         '&:hover': {
             color: theme.palette.success.main, // Teal
         }
-    },
-    linkUnderline: {
-        display: 'none',
     },
     mainLinkTextWrapper: {
         position: 'relative',
