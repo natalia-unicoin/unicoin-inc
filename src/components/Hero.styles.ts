@@ -51,37 +51,37 @@ export const useStyles = makeStyles()((theme) => ({
         letterSpacing: '-0.02em',
         marginBottom: theme.spacing(1),
         color: '#FFFFFF', // White for video
-        fontSize: '52px',
+        fontSize: '40px',
         lineHeight: '1',
         [theme.breakpoints.up('md')]: {
-            fontSize: '90px',
+            fontSize: '64px',
         },
         [theme.breakpoints.up('lg')]: {
-            fontSize: '110px',
+            fontSize: '84px',
         }
     },
     subtitle: {
-        fontSize: '1.5rem',
+        fontSize: '1.25rem',
         fontWeight: 600,
         letterSpacing: '0',
         color: '#FFFFFF', // White for video
-        marginBottom: theme.spacing(4),
+        marginBottom: theme.spacing(2),
         lineHeight: 1.2,
         [theme.breakpoints.up('md')]: {
-            fontSize: '2.25rem',
+            fontSize: '1.75rem',
         }
     },
     description: {
-        fontSize: '1.125rem',
+        fontSize: '1rem',
         fontWeight: 300,
         lineHeight: 1.6,
         maxWidth: '800px',
         marginLeft: 'auto',
         marginRight: 'auto',
-        marginBottom: theme.spacing(6),
+        marginBottom: theme.spacing(4),
         color: 'rgba(255, 255, 255, 0.9)', // Semi-transparent white
         [theme.breakpoints.up('md')]: {
-            fontSize: '1.35rem',
+            fontSize: '1.25rem',
         }
     },
     ctaContainer: {
@@ -124,8 +124,8 @@ export const useStyles = makeStyles()((theme) => ({
         display: 'none', // Hidden as per requirement
     },
     clarificationContainer: {
-        marginTop: theme.spacing(12),
-        marginBottom: theme.spacing(12),
+        marginTop: theme.spacing(4),
+        marginBottom: theme.spacing(2),
         maxWidth: '900px',
         marginLeft: 'auto',
         marginRight: 'auto',
@@ -134,23 +134,23 @@ export const useStyles = makeStyles()((theme) => ({
     },
     clarificationTitle: {
         fontFamily: theme.typography.h3.fontFamily,
-        fontSize: '1.5rem',
+        fontSize: '1rem',
         fontWeight: 600,
         letterSpacing: '0.05em',
         textTransform: 'uppercase',
-        marginBottom: theme.spacing(4),
+        marginBottom: theme.spacing(1.5),
         color: '#FFFFFF',
         [theme.breakpoints.up('md')]: {
-            fontSize: '1.75rem',
+            fontSize: '1.25rem',
         }
     },
     clarificationText: {
-        fontSize: '1.25rem',
+        fontSize: '0.875rem',
         lineHeight: 1.8,
         fontWeight: 300,
         color: 'rgba(255, 255, 255, 0.85)',
         [theme.breakpoints.up('md')]: {
-            fontSize: '1.5rem',
+            fontSize: '1rem',
         }
     }
 }));
