@@ -29,81 +29,101 @@ export const useStyles = makeStyles()((theme) => ({
         fontFamily: theme.typography.h1.fontFamily,
         fontWeight: 700,
         letterSpacing: '-0.03em',
-        marginBottom: theme.spacing(8),
+        marginBottom: theme.spacing(12),
         lineHeight: 1.1,
         textAlign: 'center',
-        fontSize: '44px',
+        fontSize: '24px', // Smaller so it doesn't compete with the main statement
+        textTransform: 'uppercase',
+        color: 'rgba(250, 251, 252, 0.6)', // Faded
         [theme.breakpoints.up('md')]: {
-            fontSize: '64px',
+            fontSize: '28px',
         },
         [theme.breakpoints.up('lg')]: {
-            fontSize: '72px',
-            marginBottom: '120px',
+            fontSize: '32px',
+            marginBottom: '160px',
         }
     },
-    contentGrid: {
-        display: 'grid',
-        gridTemplateColumns: '1fr',
-        gap: theme.spacing(6),
-        [theme.breakpoints.up('md')]: {
-            gridTemplateColumns: 'repeat(2, 1fr)',
-            gap: theme.spacing(12),
-        },
-        alignItems: 'start'
-    },
-    leftColumn: {
+    contentWrapper: {
         display: 'flex',
         flexDirection: 'column',
-        gap: theme.spacing(4),
+        alignItems: 'center',
+        textAlign: 'center',
+        maxWidth: '1200px',
+        margin: '0 auto',
+        gap: theme.spacing(10),
     },
     statement: {
-        fontSize: '1.75rem',
+        fontSize: '2.5rem',
         fontWeight: 700,
-        lineHeight: 1.2,
+        lineHeight: 1.1,
         letterSpacing: '-0.03em',
         [theme.breakpoints.up('md')]: {
-            fontSize: '2.5rem',
+            fontSize: '4rem',
+        },
+        [theme.breakpoints.up('lg')]: {
+            fontSize: '5rem', // Cinematic size
         }
     },
     accent: {
         color: '#fcd144', // Highlight color
     },
-    rightColumn: {
-        display: 'flex',
-        flexDirection: 'column',
-        gap: theme.spacing(4),
-    },
     supportingText: {
-        fontSize: '1.125rem',
-        lineHeight: 1.8,
-        color: '#FAFBFC',
+        fontSize: '1.25rem',
+        lineHeight: 1.7,
+        color: 'rgba(250, 251, 252, 0.8)',
         fontWeight: 400,
+        maxWidth: '800px',
+        margin: '0 auto',
         [theme.breakpoints.up('md')]: {
-            fontSize: '1.25rem',
+            fontSize: '1.5rem',
         }
     },
     metricGrid: {
         marginTop: theme.spacing(8),
-        display: 'grid',
-        gridTemplateColumns: 'repeat(2, 1fr)',
-        gap: theme.spacing(4),
-        borderTop: '1px solid rgba(255,255,255,0.1)',
-        paddingTop: theme.spacing(6),
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        gap: theme.spacing(8),
+        width: '100%',
+        [theme.breakpoints.up('md')]: {
+            flexDirection: 'row',
+            gap: theme.spacing(16),
+        }
     },
     metricItem: {
         display: 'flex',
         flexDirection: 'column',
+        alignItems: 'center',
+    },
+    metricDivider: {
+        display: 'none',
+        [theme.breakpoints.up('md')]: {
+            display: 'block',
+            width: '1px',
+            height: '100px',
+            backgroundColor: 'rgba(250, 251, 252, 0.2)',
+        }
     },
     metricValue: {
-        fontSize: '2rem',
+        fontSize: '4rem', // Massive metrics
         fontWeight: 700,
         color: '#FAFBFC',
+        lineHeight: 1,
+        letterSpacing: '-0.04em',
+        [theme.breakpoints.up('md')]: {
+            fontSize: '6rem',
+        },
+        [theme.breakpoints.up('lg')]: {
+            fontSize: '7rem',
+        }
     },
     metricLabel: {
-        fontSize: '0.875rem',
+        fontSize: '1rem',
         textTransform: 'uppercase',
-        letterSpacing: '0.1em',
-        color: '#FAFBFC',
-        marginTop: theme.spacing(1),
+        letterSpacing: '0.2em',
+        color: '#FCD144', // Accent yellow for labels
+        marginTop: theme.spacing(3),
+        fontWeight: 600,
     }
 }));
