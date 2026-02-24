@@ -16,10 +16,10 @@ const TransparentBusiness = () => {
             <Hero />
             <StorySection />
             <WarOnInnovation />
+            <PositionedEra />
             <StrategicResponse />
             <LeadershipPositioning />
             <InTheMedia />
-            <PositionedEra />
             <FinalCTA />
         </>
     );
