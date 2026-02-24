@@ -4,8 +4,8 @@ export const useStyles = makeStyles()((theme) => ({
     section: {
         paddingTop: '60px',
         paddingBottom: '60px',
-        backgroundColor: '#F5F5F7', // Apple Light Gray background
-        color: '#1D1D1F',
+        backgroundColor: '#E6E8EB', // Apple Light Gray background
+        color: '#0E1A2B',
         [theme.breakpoints.up('md')]: {
             paddingTop: '100px',
             paddingBottom: '100px',
@@ -82,7 +82,7 @@ export const useStyles = makeStyles()((theme) => ({
     },
     brandCard: {
         flex: 1,
-        backgroundColor: '#FFFFFF',
+        backgroundColor: '#FAFBFC',
         borderRadius: '32px',
         padding: theme.spacing(4),
         display: 'flex',
@@ -131,7 +131,7 @@ export const useStyles = makeStyles()((theme) => ({
     cardTitleBrand: {
         fontSize: '28px',
         fontWeight: 700,
-        color: '#1D1D1F', // High contrast
+        color: '#0E1A2B', // High contrast
         fontFamily: theme.typography.h2.fontFamily,
     },
     featureList: {
@@ -159,18 +159,18 @@ export const useStyles = makeStyles()((theme) => ({
         textTransform: 'uppercase',
         letterSpacing: '0.05em',
         fontWeight: 700,
-        color: '#1D1D1F',
+        color: '#0E1A2B',
         marginBottom: '4px',
     },
     traditionalValue: {
         fontSize: '18px',
-        color: '#1D1D1F',
+        color: '#0E1A2B',
         fontWeight: 400,
         lineHeight: 1.4,
     },
     brandValue: {
         fontSize: '20px', // Slightly larger to emphasize
-        color: '#1D1D1F',
+        color: '#0E1A2B',
         fontWeight: 600, // Bolder
         lineHeight: 1.4,
     }

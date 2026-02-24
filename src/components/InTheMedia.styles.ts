@@ -4,8 +4,8 @@ export const useStyles = makeStyles()((theme) => ({
     section: {
         paddingTop: '80px',
         paddingBottom: '160px',
-        backgroundColor: '#FFFFFF',
-        color: '#000000',
+        backgroundColor: '#FAFBFC',
+        color: '#0E1A2B',
     },
     container: {
         maxWidth: '100%',
@@ -22,7 +22,7 @@ export const useStyles = makeStyles()((theme) => ({
         fontSize: '44px',
         lineHeight: '1.1',
         fontWeight: 700,
-        color: '#1D1D1F', // Apple Black
+        color: '#0E1A2B', // Apple Black
         textAlign: 'center',
         letterSpacing: '-0.03em',
         fontFamily: theme.typography.h1.fontFamily,
@@ -54,7 +54,7 @@ export const useStyles = makeStyles()((theme) => ({
         backgroundColor: '#FBFBFB',
         transition: 'all 0.3s ease',
         '&:hover': {
-            backgroundColor: '#FFFFFF',
+            backgroundColor: '#FAFBFC',
             boxShadow: '0 20px 40px rgba(0,0,0,0.05)',
             transform: 'translateY(-5px)',
         }
@@ -64,7 +64,7 @@ export const useStyles = makeStyles()((theme) => ({
         fontWeight: 700,
         textTransform: 'uppercase',
         letterSpacing: '0.1em',
-        color: '#1D1D1F',
+        color: '#0E1A2B',
         marginBottom: '20px',
     },
     mediaTitle: {
@@ -72,19 +72,19 @@ export const useStyles = makeStyles()((theme) => ({
         fontWeight: 700,
         lineHeight: 1.3,
         marginBottom: '15px',
-        color: '#000000',
+        color: '#0E1A2B',
     },
     excerpt: {
         fontSize: '16px',
         lineHeight: 1.6,
-        color: '#000000',
+        color: '#0E1A2B',
         marginBottom: '25px',
         flexGrow: 1,
     },
     source: {
         fontSize: '14px',
         fontWeight: 700,
-        color: '#000000',
+        color: '#0E1A2B',
         display: 'flex',
         alignItems: 'center',
         gap: '8px',

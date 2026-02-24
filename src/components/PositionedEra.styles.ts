@@ -4,8 +4,8 @@ export const useStyles = makeStyles()((theme) => ({
     section: {
         paddingTop: '160px',
         paddingBottom: '160px',
-        backgroundColor: '#FFFFFF',
-        color: '#1D1D1F',
+        backgroundColor: '#FAFBFC',
+        color: '#0E1A2B',
         borderTop: '1px solid #f5f5f7',
         [theme.breakpoints.up('lg')]: {
             paddingTop: '200px',
@@ -40,7 +40,7 @@ export const useStyles = makeStyles()((theme) => ({
     description: {
         fontSize: '1.25rem',
         lineHeight: 1.6,
-        color: '#1D1D1F',
+        color: '#0E1A2B',
         maxWidth: '800px',
         margin: '0 auto',
         fontWeight: 400,

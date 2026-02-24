@@ -38,7 +38,7 @@ export const useStyles = makeStyles()((theme) => ({
     description: {
         fontSize: '17px', // Apple body
         lineHeight: '25px',
-        color: '#000000', // Black
+        color: '#0E1A2B', // Black
         fontWeight: 400,
         [theme.breakpoints.up('md')]: {
             fontSize: '17px',
@@ -83,7 +83,7 @@ export const useStyles = makeStyles()((theme) => ({
     value: {
         fontSize: '1.75rem',
         fontWeight: 700,
-        color: '#000000',
+        color: '#0E1A2B',
         wordBreak: 'break-all',
         [theme.breakpoints.up('md')]: {
             fontSize: '2rem',
@@ -92,7 +92,7 @@ export const useStyles = makeStyles()((theme) => ({
     address: {
         fontSize: '1rem',
         fontWeight: 600,
-        color: '#000000',
+        color: '#0E1A2B',
         wordBreak: 'break-all',
         lineHeight: 1.4,
     },

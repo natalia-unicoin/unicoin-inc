@@ -17,27 +17,27 @@ const theme = createTheme({
     palette: {
         mode: 'light',
         primary: {
-            main: '#02251E', // Obsidian Green
+            main: '#0E1A2B', // Neutro 3 (Oscuro)
         },
         secondary: {
-            main: '#FCD144', // Accent Yellow
+            main: '#FCD144', // Acento (Amarillo)
         },
         success: {
-            main: '#02251E', // Obsidian Green
+            main: '#0E1A2B', // Neutro 3
         },
         info: {
-            main: '#89C9C9', // Soft Aquamarine
+            main: '#2A4B6A', // Complemento (Azul Naval)
         },
         warning: {
-            main: '#FCD144', // Accent Yellow
+            main: '#FCD144', // Acento
         },
         background: {
-            default: '#FFFFFF',
-            paper: '#F5F5F7', // Apple Light Gray
+            default: '#FAFBFC', // Neutro 1 (Claro - Blanco Humo)
+            paper: '#E6E8EB', // Neutro 2 (Medio / Gris Tenue)
         },
         text: {
-            primary: '#02251E', // Obsidian Green
-            secondary: '#374151', // Corporate Gray
+            primary: '#0E1A2B', // Neutro 3
+            secondary: '#2A4B6A', // Complemento
         }
     },
     typography: {

@@ -4,7 +4,7 @@ export const useStyles = makeStyles()((theme) => ({
     section: {
         paddingTop: theme.spacing(12),
         paddingBottom: theme.spacing(12),
-        backgroundColor: '#FFFFFF',
+        backgroundColor: '#FAFBFC',
         color: '#111111',
         [theme.breakpoints.up('lg')]: {
             paddingTop: '160px',
@@ -45,7 +45,7 @@ export const useStyles = makeStyles()((theme) => ({
     subtitle: {
         fontSize: '1.25rem',
         fontWeight: 700,
-        color: '#000000', // Apple gray
+        color: '#0E1A2B', // Apple gray
         maxWidth: '800px',
         margin: '0 auto',
         lineHeight: 1.5,
@@ -90,9 +90,9 @@ export const useStyles = makeStyles()((theme) => ({
     highlightRow: {
         marginTop: theme.spacing(12),
         padding: '80px 40px',
-        backgroundColor: '#000000',
+        backgroundColor: '#0E1A2B',
         borderRadius: '30px',
-        color: '#FFFFFF',
+        color: '#FAFBFC',
         textAlign: 'center',
         [theme.breakpoints.up('lg')]: {
             marginTop: '160px',
@@ -118,7 +118,7 @@ export const useStyles = makeStyles()((theme) => ({
     },
     imperativeDescription: {
         fontSize: '1.125rem',
-        color: '#FFFFFF', // Apple description gray
+        color: '#FAFBFC', // Apple description gray
         maxWidth: '700px',
         margin: '0 auto',
         lineHeight: 1.6,

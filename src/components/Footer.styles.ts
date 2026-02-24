@@ -2,8 +2,8 @@ import { makeStyles } from 'tss-react/mui';
 
 export const useStyles = makeStyles()((theme) => ({
     footer: {
-        backgroundColor: theme.palette.common.white,
-        color: theme.palette.common.black,
+        backgroundColor: '#FAFBFC',
+        color: '#0E1A2B',
         paddingTop: theme.spacing(10), // py-20 (approx 80px)
         paddingBottom: theme.spacing(10),
         borderTop: `1px solid ${theme.palette.grey[100]}`,
@@ -49,7 +49,7 @@ export const useStyles = makeStyles()((theme) => ({
         objectFit: 'contain',
     },
     description: {
-        color: theme.palette.common.black, // Changed from gray-500
+        color: '#0E1A2B', // Changed from gray-500
         lineHeight: 1.625, // leading-relaxed
         maxWidth: '24rem', // max-w-sm
         marginBottom: theme.spacing(4), // mb-8
@@ -67,11 +67,11 @@ export const useStyles = makeStyles()((theme) => ({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        color: theme.palette.common.black,
+        color: '#0E1A2B',
         transition: 'all 0.3s',
         '&:hover': {
-            backgroundColor: theme.palette.common.black,
-            color: theme.palette.common.white,
+            backgroundColor: '#0E1A2B',
+            color: '#FAFBFC',
         }
     },
     socialSvg: {
@@ -122,14 +122,14 @@ export const useStyles = makeStyles()((theme) => ({
         display: 'flex',
         flexDirection: 'column',
         gap: theme.spacing(2), // space-y-4
-        color: theme.palette.common.black, // Changed from gray-500
+        color: '#0E1A2B', // Changed from gray-500
     },
     linkItem: {
         color: 'inherit',
         textDecoration: 'none',
         transition: 'color 0.2s',
         '&:hover': {
-            color: theme.palette.common.black,
+            color: '#0E1A2B',
         }
     },
     // Bottom Bar

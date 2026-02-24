@@ -4,7 +4,7 @@ export const useStyles = makeStyles()((theme) => ({
     section: {
         paddingTop: '60px',
         paddingBottom: '60px',
-        backgroundColor: '#F5F5F7', // Apple light gray
+        backgroundColor: '#E6E8EB', // Apple light gray
         [theme.breakpoints.up('md')]: {
             paddingTop: '100px',
             paddingBottom: '100px',
@@ -51,7 +51,7 @@ export const useStyles = makeStyles()((theme) => ({
         marginBottom: theme.spacing(2),
         letterSpacing: '-0.03em',
         fontFamily: theme.typography.h2.fontFamily,
-        color: '#1D1D1F',
+        color: '#0E1A2B',
         [theme.breakpoints.up('md')]: {
             fontSize: '48px', // Apple desktop h2
             lineHeight: '52px',
@@ -68,7 +68,7 @@ export const useStyles = makeStyles()((theme) => ({
     description: {
         fontSize: '17px', // Apple body
         lineHeight: '25px',
-        color: '#000000', // Apple medium gray
+        color: '#0E1A2B', // Apple medium gray
         fontWeight: 400,
         [theme.breakpoints.up('md')]: {
             fontSize: '17px',

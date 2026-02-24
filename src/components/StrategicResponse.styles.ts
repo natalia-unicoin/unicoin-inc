@@ -5,7 +5,7 @@ export const useStyles = makeStyles()((theme) => ({
         paddingTop: theme.spacing(12),
         paddingBottom: theme.spacing(12),
         backgroundColor: '#FBFBFD', // Apple very light gray
-        color: '#1D1D1F',
+        color: '#0E1A2B',
         [theme.breakpoints.up('lg')]: {
             paddingTop: '160px',
             paddingBottom: '160px',
@@ -41,7 +41,7 @@ export const useStyles = makeStyles()((theme) => ({
     },
     subtitle: {
         fontSize: '1.25rem',
-        color: '#1D1D1F',
+        color: '#0E1A2B',
         maxWidth: '700px',
         margin: '0 auto',
         fontWeight: 700,
@@ -62,13 +62,13 @@ export const useStyles = makeStyles()((theme) => ({
         fontWeight: 700,
         textTransform: 'uppercase',
         letterSpacing: '0.1em',
-        color: '#1D1D1F',
+        color: '#0E1A2B',
     },
     thBrand: {
-        color: '#000000',
+        color: '#0E1A2B',
     },
     tr: {
-        backgroundColor: '#FFFFFF',
+        backgroundColor: '#FAFBFC',
         '&:hover': {
             transform: 'scale(1.01)',
             transition: 'transform 0.3s ease',
@@ -77,28 +77,28 @@ export const useStyles = makeStyles()((theme) => ({
     td: {
         padding: '32px 24px',
         fontSize: '1.125rem',
-        borderTop: '1px solid #F5F5F7',
-        borderBottom: '1px solid #F5F5F7',
+        borderTop: '1px solid #E6E8EB',
+        borderBottom: '1px solid #E6E8EB',
         '&:first-of-type': {
-            borderLeft: '1px solid #F5F5F7',
+            borderLeft: '1px solid #E6E8EB',
             borderRadius: '20px 0 0 20px',
             fontWeight: 600,
             width: '25%',
         },
         '&:last-of-type': {
-            borderRight: '1px solid #F5F5F7',
+            borderRight: '1px solid #E6E8EB',
             borderRadius: '0 20px 20px 0',
-            backgroundColor: '#F5F5F7', // Highlight for the brand
+            backgroundColor: '#E6E8EB', // Highlight for the brand
             width: '40%',
         }
     },
     traditionalValue: {
-        color: '#1D1D1F',
+        color: '#0E1A2B',
         width: '35%',
         fontWeight: 400,
     },
     brandValue: {
         fontWeight: 700,
-        color: '#1D1D1F',
+        color: '#0E1A2B',
     }
 }));
