@@ -48,7 +48,6 @@ export const useStyles = makeStyles<{ isScrolled: boolean }>()((theme, { isScrol
         width: 'auto',
         objectFit: 'contain',
         transition: 'all 0.3s ease-in-out',
-        filter: isScrolled ? 'brightness(0)' : 'none',
         [theme.breakpoints.up('md')]: {
             height: isScrolled ? '40px' : '48px',
         },
@@ -196,7 +195,6 @@ export const useStyles = makeStyles<{ isScrolled: boolean }>()((theme, { isScrol
         height: '40px',
         width: 'auto',
         objectFit: 'contain',
-        filter: 'brightness(0)',
     },
     linksContainer: {
         display: 'flex',
