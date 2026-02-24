@@ -16,19 +16,7 @@ export const useStyles = makeStyles()((theme) => ({
         position: 'absolute',
         inset: 0,
         zIndex: 0,
-        // Re-enabled video background
-    },
-    bgImage: {
-        width: '100%',
-        height: '100%',
-        objectFit: 'cover',
-        objectPosition: 'center',
-    },
-    overlay: {
-        position: 'absolute',
-        inset: 0,
-        zIndex: 1, // Changed from 10 to 1 to stay behind content
-        background: 'linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.4), rgba(0,0,0,0.8))', // Darker for readability
+        backgroundColor: '#000000',
     },
     content: {
         position: 'relative',
