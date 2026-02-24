@@ -124,7 +124,8 @@ export const useStyles = makeStyles()((theme) => ({
         display: 'none', // Hidden as per requirement
     },
     clarificationContainer: {
-        marginTop: theme.spacing(8),
+        marginTop: theme.spacing(12),
+        marginBottom: theme.spacing(12),
         maxWidth: '900px',
         marginLeft: 'auto',
         marginRight: 'auto',
@@ -133,20 +134,23 @@ export const useStyles = makeStyles()((theme) => ({
     },
     clarificationTitle: {
         fontFamily: theme.typography.h3.fontFamily,
-        fontSize: '1.25rem',
+        fontSize: '1.5rem',
         fontWeight: 600,
         letterSpacing: '0.05em',
         textTransform: 'uppercase',
-        marginBottom: theme.spacing(2),
+        marginBottom: theme.spacing(4),
         color: '#FFFFFF',
+        [theme.breakpoints.up('md')]: {
+            fontSize: '1.75rem',
+        }
     },
     clarificationText: {
-        fontSize: '1.125rem',
+        fontSize: '1.25rem',
         lineHeight: 1.8,
         fontWeight: 300,
         color: 'rgba(255, 255, 255, 0.85)',
         [theme.breakpoints.up('md')]: {
-            fontSize: '1.25rem',
+            fontSize: '1.5rem',
         }
     }
 }));
