@@ -29,11 +29,6 @@ const StorySection = () => {
     return (
         <section id="story" className={classes.section}>
             <div className={classes.container}>
-                {/* Watermark Background Element */}
-                <div
-                    className={classes.watermarkWrapper}
-                    style={{ backgroundImage: `url(${getImagePath('/bg-white.png')})` }}
-                />
 
                 <div className={classes.innerFlex}>
                     {/* Left Sticky Column */}
