@@ -199,13 +199,26 @@ export const useStyles = makeStyles()((theme) => ({
         height: '100%',
         zIndex: 0, // Behind innerFlex content
         pointerEvents: 'none',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'left bottom',
-        backgroundSize: '80%', // Escala el SVG del fondo para que no invada la derecha
+        overflow: 'hidden', // Prevent image from spilling out of section
         opacity: 0.8, // Subtle integration
+    },
+    watermarkImage: {
+        position: 'absolute',
+        bottom: '-10%', // Tucked slightly below frame
+        left: '-15%', // Tucked slightly outwards
+        width: '120%', // Massive on mobile to act as background texture
+        height: 'auto',
+        objectFit: 'contain',
         [theme.breakpoints.up('md')]: {
-            backgroundSize: '50%', // Half screen on desktop
-            backgroundPosition: 'left 15%', // Adjusted vertical position
+            bottom: '0',
+            left: '0',
+            width: '60%', // Half screen on desktop
+            maxWidth: '600px',
+        },
+        [theme.breakpoints.up('lg')]: {
+            top: '50%', // Centered vertically relative to the sticky text
+            transform: 'translateY(-50%)',
+            left: '-5%',
         }
     }
 }));
