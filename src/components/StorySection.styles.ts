@@ -199,7 +199,6 @@ export const useStyles = makeStyles()((theme) => ({
         height: '100%',
         zIndex: 0, // Behind innerFlex content
         pointerEvents: 'none',
-        backgroundImage: `url(${process.env.NEXT_PUBLIC_BASE_PATH || ''}/bg-white.png)`,
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'left bottom',
         backgroundSize: '80%', // Escala el SVG del fondo para que no invada la derecha

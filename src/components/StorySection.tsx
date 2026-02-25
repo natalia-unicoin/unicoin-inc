@@ -2,6 +2,7 @@
 
 import React, { useRef, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { getImagePath } from '@/utils/image';
 import { useStyles } from './StorySection.styles';
 
 const StorySection = () => {
@@ -29,7 +30,10 @@ const StorySection = () => {
         <section id="story" className={classes.section}>
             <div className={classes.container}>
                 {/* Watermark Background Element */}
-                <div className={classes.watermarkWrapper} />
+                <div
+                    className={classes.watermarkWrapper}
+                    style={{ backgroundImage: `url(${getImagePath('/bg-white.png')})` }}
+                />
 
                 <div className={classes.innerFlex}>
                     {/* Left Sticky Column */}
