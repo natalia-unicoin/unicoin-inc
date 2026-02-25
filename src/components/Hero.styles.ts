@@ -18,6 +18,19 @@ export const useStyles = makeStyles()((theme) => ({
         zIndex: 0,
         backgroundColor: '#0E1A2B',
     },
+    videoBackground: {
+        width: '100%',
+        height: '100%',
+        objectFit: 'cover',
+        position: 'absolute',
+        inset: 0,
+    },
+    videoOverlay: {
+        position: 'absolute',
+        inset: 0,
+        backgroundColor: 'rgba(14, 26, 43, 0.65)', // Dark blue-ish overlay for text readability
+        zIndex: 1,
+    },
     content: {
         position: 'relative',
         zIndex: 10,

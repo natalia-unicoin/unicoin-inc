@@ -11,8 +11,19 @@ const Hero = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     return (
         <section className={classes.section}>
-            {/* Solid Black Background */}
-            <div className={classes.bgWrapper} />
+            {/* Background Video */}
+            <div className={classes.bgWrapper}>
+                <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className={classes.videoBackground}
+                >
+                    <source src="/assets/AdobeStock_1897137541.mov" />
+                </video>
+                <div className={classes.videoOverlay} />
+            </div>
 
             {/* Content */}
             <div className={classes.content}>
