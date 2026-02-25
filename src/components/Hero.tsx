@@ -20,7 +20,7 @@ const Hero = () => {
                     playsInline
                     className={classes.videoBackground}
                 >
-                    <source src="/assets/AdobeStock_1897137541.mov" />
+                    <source src={getImagePath('/assets/AdobeStock_1897137541.mov')} />
                 </video>
                 <div className={classes.videoOverlay} />
             </div>
