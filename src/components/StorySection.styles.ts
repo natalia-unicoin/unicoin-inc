@@ -16,8 +16,6 @@ export const useStyles = makeStyles()((theme) => ({
         margin: '0 auto',
         paddingLeft: theme.spacing(3),
         paddingRight: theme.spacing(3),
-        position: 'relative', // Added for absolute watermark position
-        zIndex: 1, // Protects from dark bg below
         [theme.breakpoints.up('lg')]: {
             paddingLeft: '150px',
             paddingRight: '150px',
@@ -190,35 +188,5 @@ export const useStyles = makeStyles()((theme) => ({
     activeDot: {
         width: '32px', // Elongated for active
         backgroundColor: '#0E1A2B', // Dark for active
-    },
-    watermarkWrapper: {
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        width: '100%',
-        height: '100%',
-        zIndex: 0, // Behind innerFlex content
-        pointerEvents: 'none',
-        overflow: 'hidden', // Prevent image from spilling out of section
-        opacity: 0.8, // Subtle integration
-    },
-    watermarkImage: {
-        position: 'absolute',
-        bottom: '-10%', // Tucked slightly below frame
-        left: '-15%', // Tucked slightly outwards
-        width: '120%', // Massive on mobile to act as background texture
-        height: 'auto',
-        objectFit: 'contain',
-        [theme.breakpoints.up('md')]: {
-            bottom: '0',
-            left: '0',
-            width: '60%', // Half screen on desktop
-            maxWidth: '600px',
-        },
-        [theme.breakpoints.up('lg')]: {
-            top: '50%', // Centered vertically relative to the sticky text
-            transform: 'translateY(-50%)',
-            left: '-5%',
-        }
     }
 }));
