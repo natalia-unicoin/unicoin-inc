@@ -16,6 +16,8 @@ export const useStyles = makeStyles()((theme) => ({
         margin: '0 auto',
         paddingLeft: theme.spacing(3),
         paddingRight: theme.spacing(3),
+        position: 'relative', // Added for absolute watermark position
+        zIndex: 1, // Protects from dark bg below
         [theme.breakpoints.up('lg')]: {
             paddingLeft: '150px',
             paddingRight: '150px',
@@ -188,5 +190,23 @@ export const useStyles = makeStyles()((theme) => ({
     activeDot: {
         width: '32px', // Elongated for active
         backgroundColor: '#0E1A2B', // Dark for active
+    },
+    watermarkWrapper: {
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        zIndex: 0, // Behind innerFlex content
+        pointerEvents: 'none',
+        backgroundImage: 'url(/bg-white.png)',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'left bottom',
+        backgroundSize: '80%', // Escala el SVG del fondo para que no invada la derecha
+        opacity: 0.8, // Subtle integration
+        [theme.breakpoints.up('md')]: {
+            backgroundSize: '50%', // Half screen on desktop
+            backgroundPosition: 'left 15%', // Adjusted vertical position
+        }
     }
 }));
