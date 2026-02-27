@@ -85,20 +85,6 @@ const StorySection = () => {
                         </motion.div>
 
                         <motion.div
-                            className={cx(classes.storyBlock, classes.highlightBlock)}
-                            initial={{ opacity: 0, y: 60 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, margin: "-100px" }}
-                            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                        >
-                            <span className={classes.imperativeLabel}>Strategic Imperative</span>
-                            <h3 className={classes.imperativeTitle}>Protecting Value through Resilience</h3>
-                            <p className={classes.imperativeDescription}>
-                                TransparentBusiness represents more than a name change; it is a structural pivot designed to lead with high-standard transparency in the next era of institutional digital asset management.
-                            </p>
-                        </motion.div>
-
-                        <motion.div
                             className={classes.storyBlock}
                             initial={{ opacity: 0, y: 60 }}
                             whileInView={{ opacity: 1, y: 0 }}
@@ -109,6 +95,20 @@ const StorySection = () => {
                             <h3 className={classes.cardTitle}>A Commitment to Institutional Transparency</h3>
                             <p className={classes.cardText}>
                                 Transparency is not a narrative device; it is an operational principle. TransparentBusiness is structured around clear governance standards, responsible capital management, and measurable accountability. Our evolution reinforces a commitment to institutional discipline, long-term sustainability, and proactive regulatory alignment.
+                            </p>
+                        </motion.div>
+
+                        <motion.div
+                            className={cx(classes.storyBlock, classes.highlightBlock)}
+                            initial={{ opacity: 0, y: 60 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: "-100px" }}
+                            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                        >
+                            <span className={classes.imperativeLabel}>Strategic Imperative</span>
+                            <h3 className={classes.imperativeTitle}>Protecting Value through Resilience</h3>
+                            <p className={classes.imperativeDescription}>
+                                TransparentBusiness represents more than a name change; it is a structural pivot designed to lead with high-standard transparency in the next era of institutional digital asset management.
                             </p>
                         </motion.div>
 
