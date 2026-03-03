@@ -17,17 +17,6 @@ import { ThemeMode } from '@/context/ThemeContext';
 
 const getPalette = (mode: ThemeMode) => {
     switch (mode) {
-        case 'light':
-            return {
-                mode: 'light' as const,
-                primary: { main: '#02251E' }, // Obsidian Green
-                secondary: { main: '#DBFC93' }, // Acid Lime
-                success: { main: '#02251E' },
-                info: { main: '#89C9C9' }, // Soft Aqua-Marine
-                warning: { main: '#DBFC93' },
-                background: { default: '#F2F7FA', paper: '#FFFFFF' }, // Frost White and pure white
-                text: { primary: '#02251E', secondary: '#89C9C9' },
-            };
         case 'safebets':
             return {
                 mode: 'light' as const,
@@ -38,6 +27,17 @@ const getPalette = (mode: ThemeMode) => {
                 warning: { main: '#BBFF71' },
                 background: { default: '#FFFFFF', paper: '#FAFBFC' },
                 text: { primary: '#232733', secondary: '#575A65' },
+            };
+        case 'glass':
+            return {
+                mode: 'dark' as const,
+                primary: { main: '#FAFBFC' }, // Light primary for dark backgrounds
+                secondary: { main: '#06b6d4' }, // Luminous Cyan
+                success: { main: '#FAFBFC' },
+                info: { main: '#38bdf8' }, // Light Blue
+                warning: { main: '#a78bfa' }, // Soft Purple
+                background: { default: '#0B1120', paper: 'rgba(16, 23, 42, 0.4)' }, // Translucent dark
+                text: { primary: '#FFFFFF', secondary: '#94a3b8' }, // High contrast text
             };
         case 'tbiz':
         default:

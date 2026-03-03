@@ -52,8 +52,10 @@ export const useStyles = makeStyles()((theme) => ({
         }
     },
     card: {
-        backgroundColor: theme.palette.primary.main, // Slightly lighter dark for contrast against #1D1D1F
-        border: `1px solid rgba(255, 255, 255, 0.08)`, // Extremely subtle stroke
+        backgroundColor: theme.palette.mode === 'dark' ? theme.palette.background.paper : theme.palette.primary.main, // Translucent in dark mode
+        border: theme.palette.mode === 'dark' ? '1px solid rgba(255, 255, 255, 0.15)' : `1px solid rgba(255, 255, 255, 0.08)`,
+        backdropFilter: theme.palette.mode === 'dark' ? 'blur(24px) saturate(150%)' : 'none',
+        WebkitBackdropFilter: theme.palette.mode === 'dark' ? 'blur(24px) saturate(150%)' : 'none', // Safari support
         borderRadius: '24px',
         padding: theme.spacing(4), // Slightly tighter on mobile
         display: 'flex',

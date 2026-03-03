@@ -2,7 +2,7 @@
 
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
-export type ThemeMode = 'tbiz' | 'light' | 'safebets';
+export type ThemeMode = 'tbiz' | 'light' | 'safebets' | 'glass';
 
 interface ThemeContextType {
     activeTheme: ThemeMode;
@@ -21,7 +21,7 @@ export const ThemeProviderWrapper = ({ children }: { children: ReactNode }) => {
         setMounted(true);
         // Intentar recuperar el tema guardado
         const savedTheme = localStorage.getItem('UNIC_APP_THEME') as ThemeMode;
-        if (savedTheme && ['tbiz', 'light', 'safebets'].includes(savedTheme)) {
+        if (savedTheme && ['tbiz', 'light', 'safebets', 'glass'].includes(savedTheme)) {
             setActiveThemeState(savedTheme);
         }
     }, []);

@@ -2,7 +2,7 @@ import { makeStyles } from 'tss-react/mui';
 
 export const useStyles = makeStyles()((theme) => ({
     section: {
-        backgroundColor: '#F5F5F7', // Slightly gray background to distinguish from Financials
+        backgroundColor: theme.palette.mode === 'dark' ? '#0B1120' : '#F5F5F7', // Deep dark or light gray
         color: theme.palette.text.primary,
         padding: theme.spacing(8, 0),
         width: '100%',
@@ -55,8 +55,10 @@ export const useStyles = makeStyles()((theme) => ({
         }
     },
     card: {
-        backgroundColor: theme.palette.background.paper, // Clean white card against light gray background
-        border: `1px solid ${theme.palette.grey[200]}`,
+        backgroundColor: theme.palette.mode === 'dark' ? 'rgba(30, 41, 59, 0.4)' : theme.palette.background.paper, // Glass translucent
+        border: theme.palette.mode === 'dark' ? '1px solid rgba(255, 255, 255, 0.1)' : `1px solid ${theme.palette.grey[200]}`,
+        backdropFilter: theme.palette.mode === 'dark' ? 'blur(16px) saturate(180%)' : 'none',
+        WebkitBackdropFilter: theme.palette.mode === 'dark' ? 'blur(16px) saturate(180%)' : 'none',
         borderRadius: '16px',
         padding: theme.spacing(4),
         display: 'flex',

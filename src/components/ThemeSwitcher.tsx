@@ -9,8 +9,8 @@ const ThemeSwitcher = () => {
 
     const themes: { id: ThemeMode; label: string; color: string }[] = [
         { id: 'tbiz', label: 'PALETA 1', color: '#FCD144' },
-        { id: 'light', label: 'PALETA 2', color: '#DBFC93' },
         { id: 'safebets', label: 'PALETA 3', color: '#BBFF71' },
+        { id: 'glass', label: 'APPLE GLASS', color: '#06b6d4' } // Cyan dot
     ];
 
     return (

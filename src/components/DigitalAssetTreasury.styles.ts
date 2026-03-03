@@ -79,19 +79,22 @@ export const useStyles = makeStyles()((theme) => ({
     },
     bentoCard: {
         position: 'relative',
-        backgroundColor: '#FAFBFC', // Very subtle off-white Apple style
-        border: `1px solid ${theme.palette.grey[200]}`,
+        backgroundColor: theme.palette.mode === 'dark' ? theme.palette.background.paper : '#FAFBFC', // Translucent in dark mode
+        border: theme.palette.mode === 'dark' ? '1px solid rgba(255, 255, 255, 0.2)' : `1px solid ${theme.palette.grey[200]}`,
+        backdropFilter: theme.palette.mode === 'dark' ? 'blur(30px) saturate(180%)' : 'none',
+        WebkitBackdropFilter: theme.palette.mode === 'dark' ? 'blur(30px) saturate(180%)' : 'none',
         borderRadius: '24px',
         padding: theme.spacing(5),
         display: 'flex',
         flexDirection: 'column',
         gap: theme.spacing(4),
         overflow: 'hidden',
-        transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+        transition: 'transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3sease',
         '&:hover': {
             transform: 'translateY(-4px)',
-            boxShadow: '0 20px 40px rgba(0,0,0,0.04)',
-            backgroundColor: theme.palette.background.paper,
+            boxShadow: theme.palette.mode === 'dark' ? '0 10px 40px rgba(0, 0, 0, 0.5)' : '0 20px 40px rgba(0,0,0,0.04)',
+            backgroundColor: theme.palette.mode === 'dark' ? 'rgba(30, 41, 59, 0.6)' : theme.palette.background.paper,
+            borderColor: theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.3)' : undefined,
         },
         [theme.breakpoints.up('md')]: {
             padding: theme.spacing(6),
