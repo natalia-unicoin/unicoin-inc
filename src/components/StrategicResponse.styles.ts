@@ -4,7 +4,7 @@ export const useStyles = makeStyles()((theme) => ({
     section: {
         paddingTop: theme.spacing(8),
         paddingBottom: theme.spacing(8),
-        backgroundColor: '#FBFBFD', // Apple very light gray
+        backgroundColor: theme.palette.mode === 'dark' ? theme.palette.background.default : '#FBFBFD', // Apple very light gray in light, dark background in dark
         color: theme.palette.text.primary,
         [theme.breakpoints.up('lg')]: {
             paddingTop: '160px',
@@ -68,7 +68,8 @@ export const useStyles = makeStyles()((theme) => ({
         color: theme.palette.text.primary,
     },
     tr: {
-        backgroundColor: theme.palette.background.paper,
+        backgroundColor: theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.05)' : theme.palette.background.paper,
+        backdropFilter: theme.palette.mode === 'dark' ? 'blur(10px)' : 'none',
         '&:hover': {
             transform: 'scale(1.01)',
             transition: 'transform 0.3s ease',
@@ -77,18 +78,18 @@ export const useStyles = makeStyles()((theme) => ({
     td: {
         padding: '32px 24px',
         fontSize: '1.125rem',
-        borderTop: '1px solid #F5F5F7',
-        borderBottom: '1px solid #F5F5F7',
+        borderTop: theme.palette.mode === 'dark' ? '1px solid rgba(255, 255, 255, 0.1)' : '1px solid #F5F5F7',
+        borderBottom: theme.palette.mode === 'dark' ? '1px solid rgba(255, 255, 255, 0.1)' : '1px solid #F5F5F7',
         '&:first-of-type': {
-            borderLeft: '1px solid #F5F5F7',
+            borderLeft: theme.palette.mode === 'dark' ? '1px solid rgba(255, 255, 255, 0.1)' : '1px solid #F5F5F7',
             borderRadius: '20px 0 0 20px',
             fontWeight: 600,
             width: '25%',
         },
         '&:last-of-type': {
-            borderRight: '1px solid #F5F5F7',
+            borderRight: theme.palette.mode === 'dark' ? '1px solid rgba(255, 255, 255, 0.1)' : '1px solid #F5F5F7',
             borderRadius: '0 20px 20px 0',
-            backgroundColor: '#F5F5F7', // Highlight for the brand
+            backgroundColor: theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.1)' : '#F5F5F7', // Highlight for the brand
             width: '40%',
         }
     },

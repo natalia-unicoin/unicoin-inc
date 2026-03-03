@@ -66,8 +66,11 @@ export const useStyles = makeStyles()((theme) => ({
     },
     button: {
         display: 'inline-block',
-        backgroundColor: theme.palette.secondary.main,
-        color: theme.palette.primary.main,
+        backgroundColor: theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.1)' : theme.palette.secondary.main,
+        color: theme.palette.mode === 'dark' ? '#FFFFFF' : theme.palette.primary.main,
+        border: theme.palette.mode === 'dark' ? '1px solid rgba(255, 255, 255, 0.3)' : 'none',
+        backdropFilter: theme.palette.mode === 'dark' ? 'blur(16px)' : 'none',
+        WebkitBackdropFilter: theme.palette.mode === 'dark' ? 'blur(16px)' : 'none',
         padding: '20px 48px',
         borderRadius: '9999px', // Pill shape
         fontSize: '16px',
@@ -78,7 +81,8 @@ export const useStyles = makeStyles()((theme) => ({
         transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
         '&:hover': {
             transform: 'scale(1.05)',
-            boxShadow: '0 0 30px rgba(255,255,255,0.3)',
+            boxShadow: theme.palette.mode === 'dark' ? '0 0 30px rgba(6, 182, 212, 0.4)' : '0 0 30px rgba(255,255,255,0.3)',
+            backgroundColor: theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.2)' : undefined,
         }
     },
     bgAccent: {

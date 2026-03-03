@@ -2,12 +2,11 @@ import { makeStyles } from 'tss-react/mui';
 
 export const useStyles = makeStyles()((theme) => ({
     footer: {
-        backgroundColor: theme.palette.mode === 'dark' ? 'rgba(11, 17, 32, 0.6)' : theme.palette.background.paper,
-        backdropFilter: theme.palette.mode === 'dark' ? 'blur(20px)' : 'none',
-        color: theme.palette.text.primary,
+        backgroundColor: '#FFFFFF', // Forzar siempre blanco
+        color: '#1D1D1F', // Forzar siempre oscuro
         paddingTop: theme.spacing(10), // py-20 (approx 80px)
         paddingBottom: theme.spacing(10),
-        borderTop: theme.palette.mode === 'dark' ? '1px solid rgba(255,255,255,0.1)' : `1px solid ${theme.palette.grey[100]}`,
+        borderTop: '1px solid #E5E5E7',
     },
     container: {
         maxWidth: '100%',
@@ -50,7 +49,7 @@ export const useStyles = makeStyles()((theme) => ({
         objectFit: 'contain',
     },
     description: {
-        color: theme.palette.text.secondary, // Changed from gray-500
+        color: '#6E6E73', // Apple gray for secondary text
         lineHeight: 1.625, // leading-relaxed
         maxWidth: '24rem', // max-w-sm
         marginBottom: theme.spacing(4), // mb-8
@@ -64,16 +63,16 @@ export const useStyles = makeStyles()((theme) => ({
         width: '48px', // w-12
         height: '48px', // h-12
         borderRadius: '50%',
-        backgroundColor: theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.05)' : theme.palette.grey[50], // gray-50
+        backgroundColor: '#F5F5F7', // Always light gray
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        color: theme.palette.text.primary,
+        color: '#1D1D1F', // Always dark
         transition: 'all 0.3s',
         '&:hover': {
-            backgroundColor: theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.2)' : theme.palette.primary.main,
+            backgroundColor: '#1D1D1F',
             color: '#FFFFFF',
-            boxShadow: theme.palette.mode === 'dark' ? '0 0 15px rgba(255,255,255,0.2)' : 'none',
+            boxShadow: 'none',
         }
     },
     socialSvg: {
@@ -124,20 +123,20 @@ export const useStyles = makeStyles()((theme) => ({
         display: 'flex',
         flexDirection: 'column',
         gap: theme.spacing(2), // space-y-4
-        color: theme.palette.text.secondary, // Changed from gray-500
+        color: '#6E6E73', // Changed from gray-500
     },
     linkItem: {
         color: 'inherit',
         textDecoration: 'none',
         transition: 'color 0.2s',
         '&:hover': {
-            color: theme.palette.text.primary,
+            color: '#1D1D1F',
         }
     },
     // Bottom Bar
     bottomBar: {
         paddingTop: theme.spacing(4), // pt-8
-        borderTop: `1px solid ${theme.palette.grey[100]}`,
+        borderTop: '1px solid #E5E5E7',
     },
     tagline: {
         display: 'flex',
@@ -150,7 +149,7 @@ export const useStyles = makeStyles()((theme) => ({
         fontWeight: 700,
         letterSpacing: '0.2em', // tracking-[0.2em]
         textTransform: 'none',
-        color: theme.palette.grey[400], // gray-400
+        color: '#86868B', // gray-400 equivalent for white bg
         [theme.breakpoints.up('md')]: {
             flexDirection: 'row',
             fontSize: '0.75rem', // md:text-xs
@@ -158,7 +157,7 @@ export const useStyles = makeStyles()((theme) => ({
     },
     separator: {
         display: 'none',
-        color: theme.palette.grey[300],
+        color: '#D2D2D7',
         [theme.breakpoints.up('md')]: {
             display: 'block',
         }
@@ -175,16 +174,16 @@ export const useStyles = makeStyles()((theme) => ({
         }
     },
     bottomLegalLink: {
-        color: theme.palette.grey[500],
+        color: '#86868B',
         fontSize: '0.75rem', // 12px
         textDecoration: 'none',
         transition: 'color 0.2s',
         '&:hover': {
-            color: theme.palette.primary.main,
+            color: '#1D1D1F',
         }
     },
     legalSeparator: {
-        color: theme.palette.grey[300],
+        color: '#D2D2D7',
         fontSize: '0.75rem',
     },
     copyright: {
@@ -192,7 +191,7 @@ export const useStyles = makeStyles()((theme) => ({
         display: 'flex',
         justifyContent: 'center',
         fontSize: '0.75rem',
-        color: theme.palette.grey[400],
+        color: '#86868B',
     },
     copyrightBrand: {
         whiteSpace: 'nowrap',

@@ -4,7 +4,7 @@ export const useStyles = makeStyles()((theme) => ({
     section: {
         paddingTop: '80px',
         paddingBottom: '160px',
-        backgroundColor: theme.palette.background.paper,
+        backgroundColor: theme.palette.mode === 'dark' ? 'transparent' : theme.palette.background.paper,
         color: theme.palette.text.primary,
     },
     container: {
@@ -50,13 +50,15 @@ export const useStyles = makeStyles()((theme) => ({
         flexDirection: 'column',
         padding: '40px',
         borderRadius: '30px',
-        border: '1px solid #D2D2D7', // Apple Light Gray
-        backgroundColor: '#FBFBFB',
-        transition: 'all 0.3s ease',
+        border: theme.palette.mode === 'dark' ? '1px solid rgba(255, 255, 255, 0.1)' : '1px solid #D2D2D7', // Apple Light Gray
+        backgroundColor: theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.05)' : '#FBFBFB',
+        backdropFilter: theme.palette.mode === 'dark' ? 'blur(10px)' : 'none',
+        transition: 'all 0.4s ease',
         '&:hover': {
-            backgroundColor: theme.palette.background.paper,
-            boxShadow: '0 20px 40px rgba(0,0,0,0.05)',
+            backgroundColor: theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.1)' : theme.palette.background.paper,
+            boxShadow: theme.palette.mode === 'dark' ? '0 0 30px rgba(6, 182, 212, 0.3)' : '0 20px 40px rgba(0,0,0,0.05)',
             transform: 'translateY(-5px)',
+            borderColor: theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.3)' : undefined,
         }
     },
     tag: {
