@@ -159,14 +159,17 @@ export const useStyles = makeStyles<{ isScrolled: boolean }>()((theme, { isScrol
         height: '100%',
         backgroundColor: theme.palette.common.white,
         zIndex: 60,
-        padding: theme.spacing(3), // slightly reduced padding
+        paddingTop: theme.spacing(3),
+        paddingBottom: theme.spacing(3),
+        paddingLeft: theme.spacing(5), // Increased from 3 (40px)
+        paddingRight: theme.spacing(5), // Increased from 3 (40px)
         display: 'flex',
         flexDirection: 'column',
         boxShadow: theme.shadows[24],
         overflowY: 'auto',
         [theme.breakpoints.up('md')]: {
             width: '500px',
-            padding: theme.spacing(4), // reduced padding
+            padding: theme.spacing(6), // 48px on md
         }
     },
     closeButtonWrapper: {
