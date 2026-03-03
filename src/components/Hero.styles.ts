@@ -108,7 +108,6 @@ export const useStyles = makeStyles()((theme) => ({
         boxShadow: theme.shadows[10], // shadow-xl approximately
         transition: 'all 0.3s',
         '&:hover': {
-            backgroundColor: '#e5bc3d', // Darker Yellow
             transform: 'scale(1.05)',
             boxShadow: theme.shadows[20], // shadow-2xl
         },

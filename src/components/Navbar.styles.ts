@@ -74,7 +74,6 @@ export const useStyles = makeStyles<{ isScrolled: boolean }>()((theme, { isScrol
         cursor: 'pointer',
         transition: 'all 0.2s',
         '&:hover': {
-            backgroundColor: '#e5bc3d',
             transform: 'translateY(-1px)',
         },
         [theme.breakpoints.up('md')]: {

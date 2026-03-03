@@ -83,7 +83,7 @@ const JoinModal = () => {
                                             required
                                             value={formData.name}
                                             onChange={handleChange}
-                                            className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:border-[#EBE563] focus:ring-2 focus:ring-[#EBE563]/20 outline-none transition-all"
+                                            className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:border-[#BBFF71] focus:ring-2 focus:ring-[#BBFF71]/20 outline-none transition-all"
                                             placeholder="Jane Doe"
                                         />
                                     </div>
@@ -98,7 +98,7 @@ const JoinModal = () => {
                                             required
                                             value={formData.email}
                                             onChange={handleChange}
-                                            className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:border-[#EBE563] focus:ring-2 focus:ring-[#EBE563]/20 outline-none transition-all"
+                                            className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:border-[#BBFF71] focus:ring-2 focus:ring-[#BBFF71]/20 outline-none transition-all"
                                             placeholder="jane@example.com"
                                         />
                                     </div>
@@ -141,7 +141,7 @@ const JoinModal = () => {
                                                     name="socialHandle"
                                                     value={formData.socialHandle || ''}
                                                     onChange={handleChange}
-                                                    className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:border-[#EBE563] focus:ring-2 focus:ring-[#EBE563]/20 outline-none transition-all"
+                                                    className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:border-[#BBFF71] focus:ring-2 focus:ring-[#BBFF71]/20 outline-none transition-all"
                                                     placeholder="@username or portfolio.com"
                                                 />
                                             </motion.div>
@@ -162,7 +162,7 @@ const JoinModal = () => {
                                                     name="company"
                                                     value={formData.company || ''}
                                                     onChange={handleChange}
-                                                    className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:border-[#EBE563] focus:ring-2 focus:ring-[#EBE563]/20 outline-none transition-all"
+                                                    className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:border-[#BBFF71] focus:ring-2 focus:ring-[#BBFF71]/20 outline-none transition-all"
                                                     placeholder="Company Name"
                                                 />
                                             </motion.div>
@@ -178,14 +178,14 @@ const JoinModal = () => {
                                             rows={3}
                                             value={formData.reason}
                                             onChange={handleChange}
-                                            className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:border-[#EBE563] focus:ring-2 focus:ring-[#EBE563]/20 outline-none transition-all resize-none"
+                                            className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:border-[#BBFF71] focus:ring-2 focus:ring-[#BBFF71]/20 outline-none transition-all resize-none"
                                             placeholder="Tell us briefly about your vision..."
                                         />
                                     </div>
 
                                     <button
                                         type="submit"
-                                        className="w-full bg-[#EBE563] text-black font-bold py-4 rounded-xl uppercase tracking-widest hover:bg-[#d4cd55] transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                                        className="w-full bg-[#BBFF71] text-black font-bold py-4 rounded-xl uppercase tracking-widest hover:opacity-90 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
                                     >
                                         Submit Application
                                     </button>
