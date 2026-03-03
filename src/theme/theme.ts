@@ -20,13 +20,13 @@ const getPalette = (mode: ThemeMode) => {
         case 'light':
             return {
                 mode: 'light' as const,
-                primary: { main: '#000000' }, // Apple black
-                secondary: { main: '#0071E3' }, // Apple blue
-                success: { main: '#000000' },
-                info: { main: '#0071E3' },
-                warning: { main: '#F56300' },
-                background: { default: '#FFFFFF', paper: '#F5F5F7' },
-                text: { primary: '#1D1D1F', secondary: '#86868B' },
+                primary: { main: '#02251E' }, // Obsidian Green
+                secondary: { main: '#DBFC93' }, // Acid Lime
+                success: { main: '#02251E' },
+                info: { main: '#89C9C9' }, // Soft Aqua-Marine
+                warning: { main: '#DBFC93' },
+                background: { default: '#F2F7FA', paper: '#FFFFFF' }, // Frost White and pure white
+                text: { primary: '#02251E', secondary: '#89C9C9' },
             };
         case 'safebets':
             return {
