@@ -32,11 +32,11 @@ const getPalette = (mode: ThemeMode) => {
             return {
                 mode: 'dark' as const,
                 primary: { main: '#FAFBFC' }, // Light primary for dark backgrounds
-                secondary: { main: '#06b6d4' }, // Luminous Cyan
+                secondary: { main: '#009EE3' }, // TBIZ Azure for active elements
                 success: { main: '#FAFBFC' },
-                info: { main: '#38bdf8' }, // Light Blue
-                warning: { main: '#a78bfa' }, // Soft Purple
-                background: { default: '#0B1120', paper: 'rgba(16, 23, 42, 0.4)' }, // Translucent dark
+                info: { main: '#FCD144' }, // TBIZ Yellow
+                warning: { main: '#0A337C' }, // TBIZ Deep Blue
+                background: { default: '#0B1426', paper: 'rgba(14, 26, 43, 0.4)' }, // Translucent TBIZ Dark Navy
                 text: { primary: '#FFFFFF', secondary: '#94a3b8' }, // High contrast text
             };
         case 'tbiz':
