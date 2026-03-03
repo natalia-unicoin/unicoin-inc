@@ -78,7 +78,7 @@ export const useStyles = makeStyles()((theme) => ({
         color: '#FFFFFF',
         fontFamily: theme.typography.h1.fontFamily,
         lineHeight: 1,
-        marginBottom: theme.spacing(1),
+        marginBottom: theme.spacing(2),
         letterSpacing: '-0.03em',
         [theme.breakpoints.up('md')]: {
             fontSize: '4rem',
