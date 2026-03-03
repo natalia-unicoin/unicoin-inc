@@ -21,7 +21,7 @@ const getPalette = (mode: ThemeMode) => {
             return {
                 mode: 'light' as const,
                 primary: { main: '#10141E' }, // Darkest Navy/Black from image
-                secondary: { main: '#009EE3' }, // Azure CTA
+                secondary: { main: '#009EE3', contrastText: '#FFFFFF' }, // Azure CTA
                 success: { main: '#10141E' },
                 info: { main: '#FCD144' }, // Requested Gold/Yellow mapped to UI accents
                 warning: { main: '#0A337C' }, // Deep Blue from image
@@ -44,7 +44,7 @@ const getPalette = (mode: ThemeMode) => {
             return {
                 mode: 'light' as const,
                 primary: { main: '#0E1A2B' }, // Darkest Blue/Black (assumed from first card background)
-                secondary: { main: '#FCD144' }, // Yellow Accent
+                secondary: { main: '#FCD144', contrastText: '#0E1A2B' }, // Yellow Accent with forced dark text
                 success: { main: '#0E1A2B' },
                 info: { main: '#2A4B6A' }, // Dark Blue Complement
                 warning: { main: '#FCD144' },

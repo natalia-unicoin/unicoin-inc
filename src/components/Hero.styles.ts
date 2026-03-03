@@ -95,15 +95,17 @@ export const useStyles = makeStyles()((theme) => ({
         }
     },
     ctaButton: {
-        backgroundColor: theme.palette.secondary.main, // Brand Yellow or Azure
-        color: theme.palette.getContrastText(theme.palette.secondary.main), // True responsive text color based on background luminance
+        backgroundColor: theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.1)' : theme.palette.secondary.main,
+        color: theme.palette.mode === 'dark' ? '#FFFFFF' : theme.palette.secondary.contrastText,
+        border: theme.palette.mode === 'dark' ? '1px solid rgba(255, 255, 255, 0.3)' : 'none',
+        backdropFilter: theme.palette.mode === 'dark' ? 'blur(16px)' : 'none',
+        WebkitBackdropFilter: theme.palette.mode === 'dark' ? 'blur(16px)' : 'none',
         padding: '16px 32px', // px-8 py-4
         borderRadius: '9999px', // Pill shape
         fontSize: '0.875rem', // text-sm
         fontWeight: 700,
         letterSpacing: '0.1em', // tracking-widest
         textTransform: 'uppercase',
-        border: 'none',
         cursor: 'pointer',
         boxShadow: theme.shadows[10], // shadow-xl approximately
         transition: 'all 0.3s',

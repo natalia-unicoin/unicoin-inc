@@ -61,16 +61,17 @@ export const useStyles = makeStyles<{ isScrolled: boolean }>()((theme, { isScrol
         },
     },
     joinButton: {
-        backgroundColor: theme.palette.secondary.main,
-        backdropFilter: 'blur(5px)',
-        color: theme.palette.getContrastText(theme.palette.secondary.main), // True responsive text color based on background luminance
+        backgroundColor: theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.1)' : theme.palette.secondary.main,
+        backdropFilter: theme.palette.mode === 'dark' ? 'blur(16px)' : 'blur(5px)',
+        WebkitBackdropFilter: theme.palette.mode === 'dark' ? 'blur(16px)' : 'blur(5px)',
+        color: theme.palette.mode === 'dark' ? '#FFFFFF' : theme.palette.secondary.contrastText,
         padding: '8px 20px',
         borderRadius: '9999px', // Pill shape
         fontSize: '0.75rem',
         fontWeight: 700,
         letterSpacing: '0.1em',
         textTransform: 'uppercase',
-        border: isScrolled ? 'none' : '1px solid rgba(255,255,255,0.3)',
+        border: theme.palette.mode === 'dark' ? '1px solid rgba(255, 255, 255, 0.3)' : (isScrolled ? 'none' : '1px solid rgba(255,255,255,0.3)'),
         cursor: 'pointer',
         transition: 'all 0.2s',
         '&:hover': {
