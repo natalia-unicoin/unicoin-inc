@@ -9,6 +9,7 @@ import LeadershipPositioning from '@/components/LeadershipPositioning';
 import InTheMedia from '@/components/InTheMedia';
 import PositionedEra from '@/components/PositionedEra';
 import FinalCTA from '@/components/FinalCTA';
+import DigitalAssetTreasury from '@/components/DigitalAssetTreasury';
 
 const TransparentBusiness = () => {
     return (
@@ -18,6 +19,7 @@ const TransparentBusiness = () => {
             <WarOnInnovation />
             <PositionedEra />
             <StrategicResponse />
+            <DigitalAssetTreasury />
             <LeadershipPositioning />
             <InTheMedia />
             <FinalCTA />
