@@ -186,7 +186,8 @@ export const useStyles = makeStyles<{ isScrolled: boolean }>()((theme, { isScrol
         }
     },
     menuLogo: {
-        marginBottom: theme.spacing(2), // reduced from 4
+        marginBottom: theme.spacing(2),
+        // No extra padding/margin-left to ensure straight alignment
         [theme.breakpoints.up('md')]: {
             marginBottom: theme.spacing(4),
         }
@@ -267,17 +268,14 @@ export const useStyles = makeStyles<{ isScrolled: boolean }>()((theme, { isScrol
     },
 
     menuFooter: {
-        position: 'absolute',
-        bottom: '32px', // bottom-8 (was 48px/12)
-        left: '24px', // left-6 (was 32px/8)
-        right: '24px',
+        marginTop: 'auto',
         borderTop: `1px solid ${theme.palette.grey[100]}`,
         paddingTop: theme.spacing(3),
+        paddingBottom: theme.spacing(3),
+        width: '100%', // Take full width matching parent's padding
         [theme.breakpoints.up('md')]: {
-            bottom: '80px', // bottom-20
-            left: '80px', // left-20
-            right: '80px',
             paddingTop: theme.spacing(4),
+            paddingBottom: theme.spacing(4),
         }
     },
     footerContent: {
