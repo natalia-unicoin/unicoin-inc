@@ -23,7 +23,7 @@ export const useStyles = makeStyles()((theme) => ({
         position: 'absolute',
         inset: 0,
         zIndex: 1,
-        backgroundColor: 'rgba(14, 26, 43, 0.75)', // Deep corporate overlay to guarantee text legibility
+        backgroundColor: 'rgba(14, 26, 43, 0.5)', // Reduced overlay opacity to make image more visible
     },
     container: {
         maxWidth: '100%',
