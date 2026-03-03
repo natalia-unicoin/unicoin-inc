@@ -3,7 +3,7 @@ import { makeStyles } from 'tss-react/mui';
 export const useStyles = makeStyles()((theme) => ({
     section: {
         backgroundColor: theme.palette.background.paper, // Clean institutional white
-        color: theme.palette.primary.main, // Dark text for contrast
+        color: theme.palette.text.primary, // Dark text for contrast
         padding: theme.spacing(12, 0),
         width: '100%',
         [theme.breakpoints.up('md')]: {
@@ -35,7 +35,7 @@ export const useStyles = makeStyles()((theme) => ({
         letterSpacing: '-0.03em',
         lineHeight: 1.1,
         marginBottom: theme.spacing(3),
-        color: theme.palette.primary.main,
+        color: theme.palette.text.primary,
         [theme.breakpoints.up('md')]: {
             fontSize: '3.5rem',
         },
@@ -102,7 +102,7 @@ export const useStyles = makeStyles()((theme) => ({
     colTitle: {
         fontSize: '1.25rem',
         fontWeight: 700,
-        color: theme.palette.primary.main,
+        color: theme.palette.text.primary,
         textTransform: 'capitalize',
         letterSpacing: '0.02em',
         fontFamily: theme.typography.h1.fontFamily,
@@ -121,7 +121,7 @@ export const useStyles = makeStyles()((theme) => ({
     },
     listItem: {
         fontSize: '1rem', // Increased readability
-        color: theme.palette.primary.main,
+        color: theme.palette.text.primary,
         fontWeight: 500, // Medium weight for institutional feel
         lineHeight: 1.5,
         display: 'flex',

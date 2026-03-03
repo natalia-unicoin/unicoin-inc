@@ -138,7 +138,7 @@ export const useStyles = makeStyles()((theme) => ({
     },
     highlightBlock: {
         backgroundColor: theme.palette.primary.main, // Neutro Oscuro
-        color: theme.palette.text.primary, // Neutro Claro
+        color: '#FFFFFF', // Neutro Claro
     },
     imperativeLabel: {
         fontSize: '0.875rem',
@@ -154,14 +154,14 @@ export const useStyles = makeStyles()((theme) => ({
         fontWeight: 700,
         marginBottom: theme.spacing(3),
         letterSpacing: '-0.03em',
-        color: theme.palette.text.primary,
+        color: '#FFFFFF',
         [theme.breakpoints.up('md')]: {
             fontSize: '2.5rem',
         }
     },
     imperativeDescription: {
         fontSize: '1.125rem',
-        color: theme.palette.text.primary,
+        color: '#FFFFFF',
         lineHeight: 1.7,
         fontWeight: 400,
         [theme.breakpoints.up('md')]: {

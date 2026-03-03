@@ -3,7 +3,7 @@ import { makeStyles } from 'tss-react/mui';
 export const useStyles = makeStyles()((theme) => ({
     section: {
         backgroundColor: theme.palette.primary.main, // Deep corporate dark
-        color: theme.palette.text.primary,
+        color: '#FFFFFF',
         padding: theme.spacing(12, 0),
         width: '100%',
         [theme.breakpoints.up('md')]: {
@@ -34,7 +34,7 @@ export const useStyles = makeStyles()((theme) => ({
         fontWeight: 700,
         letterSpacing: '-0.03em',
         lineHeight: 1.1,
-        color: theme.palette.text.primary,
+        color: '#FFFFFF',
         [theme.breakpoints.up('md')]: {
             fontSize: '3.5rem',
         },
@@ -75,7 +75,7 @@ export const useStyles = makeStyles()((theme) => ({
     statValue: {
         fontSize: '3rem',
         fontWeight: 800,
-        color: theme.palette.text.primary,
+        color: '#FFFFFF',
         fontFamily: theme.typography.h1.fontFamily,
         lineHeight: 1,
         marginBottom: theme.spacing(2),
@@ -95,7 +95,7 @@ export const useStyles = makeStyles()((theme) => ({
     cardTitle: {
         fontSize: '1.25rem',
         fontWeight: 600,
-        color: theme.palette.text.primary,
+        color: '#FFFFFF',
         fontFamily: theme.typography.h1.fontFamily,
         lineHeight: 1.4,
         marginBottom: theme.spacing(4),
@@ -107,7 +107,7 @@ export const useStyles = makeStyles()((theme) => ({
     cardAction: {
         fontSize: '0.875rem',
         fontWeight: 600,
-        color: theme.palette.text.primary,
+        color: '#FFFFFF',
         textTransform: 'uppercase',
         letterSpacing: '0.05em',
         display: 'flex',

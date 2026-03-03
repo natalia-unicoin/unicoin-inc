@@ -93,16 +93,16 @@ export const useStyles = makeStyles<{ isScrolled: boolean }>()((theme, { isScrol
         },
     },
     langActive: {
-        color: isScrolled ? theme.palette.text.primary : theme.palette.background.paper,
+        color: isScrolled ? '#FFFFFF' : theme.palette.background.paper,
         fontWeight: 700,
         cursor: 'pointer',
     },
     langInactive: {
-        color: isScrolled ? theme.palette.text.secondary : 'rgba(255,255,255,0.7)',
+        color: isScrolled ? 'rgba(255,255,255,0.7)' : 'rgba(255,255,255,0.7)',
         cursor: 'pointer',
         transition: 'color 0.2s',
         '&:hover': {
-            color: isScrolled ? theme.palette.text.primary : theme.palette.background.paper,
+            color: isScrolled ? '#FFFFFF' : theme.palette.background.paper,
         }
     },
     menuButtonWrapper: {
@@ -113,7 +113,7 @@ export const useStyles = makeStyles<{ isScrolled: boolean }>()((theme, { isScrol
         background: 'none',
         border: 'none',
         cursor: 'pointer',
-        color: isScrolled ? theme.palette.text.primary : theme.palette.background.paper,
+        color: isScrolled ? '#FFFFFF' : theme.palette.background.paper,
         fontSize: '0.75rem',
         fontWeight: 700,
         letterSpacing: '0.1em',
@@ -140,7 +140,7 @@ export const useStyles = makeStyles<{ isScrolled: boolean }>()((theme, { isScrol
         [theme.breakpoints.up('md')]: {
             display: 'none',
         },
-        fill: isScrolled ? theme.palette.text.primary : theme.palette.background.paper,
+        fill: isScrolled ? '#FFFFFF' : theme.palette.background.paper,
     },
     // DRAWER STYLES
     backdrop: {

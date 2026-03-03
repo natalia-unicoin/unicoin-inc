@@ -5,7 +5,7 @@ export const useStyles = makeStyles()((theme) => ({
         paddingTop: '160px',
         paddingBottom: '160px',
         backgroundColor: theme.palette.primary.main, // Institutional Deep Black
-        color: theme.palette.text.primary,
+        color: '#FFFFFF',
         textAlign: 'center',
         position: 'relative',
         overflow: 'hidden',
@@ -40,7 +40,7 @@ export const useStyles = makeStyles()((theme) => ({
     subtitle: {
         fontSize: '18px',
         lineHeight: '1.6',
-        color: theme.palette.text.primary, // Apple Secondary Gray
+        color: '#FFFFFF', // Apple Secondary Gray equivalent in white
         maxWidth: '700px',
         margin: '0 auto',
         marginBottom: theme.spacing(8),

@@ -10,7 +10,7 @@ export const useStyles = makeStyles()((theme) => ({
         justifyContent: 'center',
         overflow: 'hidden',
         backgroundColor: theme.palette.primary.main, // Fallback for video
-        color: theme.palette.text.primary, // White for video context
+        color: '#FFFFFF', // White for video context
     },
     bgWrapper: {
         position: 'absolute',
@@ -51,7 +51,7 @@ export const useStyles = makeStyles()((theme) => ({
         fontWeight: 700,
         letterSpacing: '-0.03em',
         marginBottom: theme.spacing(1),
-        color: theme.palette.text.primary, // White for video
+        color: '#FFFFFF', // White for video
         fontSize: '48px', // Increased per user request
         lineHeight: '1',
         [theme.breakpoints.up('md')]: {
@@ -65,7 +65,7 @@ export const useStyles = makeStyles()((theme) => ({
         fontSize: '1.25rem',
         fontWeight: 600,
         letterSpacing: '0',
-        color: theme.palette.text.primary, // White for video
+        color: '#FFFFFF', // White for video
         marginBottom: theme.spacing(2),
         lineHeight: 1.2,
         [theme.breakpoints.up('md')]: {
