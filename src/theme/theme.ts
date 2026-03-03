@@ -21,10 +21,10 @@ const getPalette = (mode: ThemeMode) => {
             return {
                 mode: 'light' as const,
                 primary: { main: '#10141E' }, // Darkest Navy/Black from image
-                secondary: { main: '#009EE3' }, // Bright Azure from image replaces Lime Green
+                secondary: { main: '#009EE3', contrastText: '#FFFFFF' }, // Azure CTA with forced white text
                 success: { main: '#10141E' },
-                info: { main: '#0A337C' }, // Deep Blue from image
-                warning: { main: '#FCD144' }, // Requested Gold/Yellow from brand manual
+                info: { main: '#FCD144' }, // Requested Gold/Yellow mapped to UI accents
+                warning: { main: '#0A337C' }, // Deep Blue from image
                 background: { default: '#FFFFFF', paper: '#E6E7E8' }, // Light Gray from palette
                 text: { primary: '#10141E', secondary: '#0A337C' }, // Deep blue for secondary text
             };
