@@ -20,9 +20,12 @@ export const useStyles = makeStyles()((theme) => ({
         }
     },
     header: {
-        marginBottom: theme.spacing(6),
+        marginBottom: theme.spacing(8),
+        textAlign: 'center',
+        margin: '0 auto',
+        maxWidth: '900px',
         [theme.breakpoints.up('md')]: {
-            marginBottom: theme.spacing(8),
+            marginBottom: theme.spacing(12),
         }
     },
     title: {
@@ -40,42 +43,46 @@ export const useStyles = makeStyles()((theme) => ({
         }
     },
     grid: {
-        display: 'grid',
-        gridTemplateColumns: '1fr',
-        gap: theme.spacing(3),
-        [theme.breakpoints.up('sm')]: {
-            gridTemplateColumns: 'repeat(2, 1fr)',
-        },
-        [theme.breakpoints.up('md')]: {
-            gridTemplateColumns: 'repeat(4, 1fr)',
-            gap: theme.spacing(4),
-        }
+        display: 'flex',
+        flexDirection: 'column',
+        gap: 0,
+        maxWidth: '1000px',
+        margin: '0 auto',
     },
     card: {
-        backgroundColor: '#FAFBFC', // Light neutral for cards
-        border: `1px solid ${theme.palette.grey[200]}`,
-        borderRadius: '16px', // Clean but not overly rounded
-        padding: theme.spacing(4),
+        backgroundColor: 'transparent',
+        borderBottom: `1px solid ${theme.palette.grey[200]}`,
+        padding: theme.spacing(4, 2),
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-between',
-        height: '100%',
-        minHeight: '200px',
-        transition: 'transform 0.2s ease, box-shadow 0.2s ease',
+        alignItems: 'flex-start',
+        transition: 'background-color 0.2s ease, padding-left 0.2s ease',
+        '&:first-of-type': {
+            borderTop: `1px solid ${theme.palette.grey[200]}`,
+        },
+        [theme.breakpoints.up('sm')]: {
+            flexDirection: 'row',
+            alignItems: 'center',
+            padding: theme.spacing(5, 4),
+        },
         '&:hover': {
-            transform: 'translateY(-4px)',
-            boxShadow: '0 12px 24px rgba(0,0,0,0.05)',
-            borderColor: '#E6E8EB',
+            backgroundColor: '#FAFBFC',
+            paddingLeft: theme.spacing(6),
         }
     },
     cardTitle: {
         fontSize: '1.25rem',
-        fontWeight: 700,
+        fontWeight: 600,
         color: '#232733',
         fontFamily: theme.typography.h1.fontFamily,
         lineHeight: 1.3,
         letterSpacing: '-0.01em',
-        marginBottom: theme.spacing(4)
+        marginBottom: theme.spacing(2),
+        [theme.breakpoints.up('sm')]: {
+            marginBottom: 0,
+            fontSize: '1.5rem',
+        }
     },
     cardAction: {
         fontSize: '0.875rem',
@@ -86,8 +93,8 @@ export const useStyles = makeStyles()((theme) => ({
         display: 'flex',
         alignItems: 'center',
         gap: theme.spacing(1),
-        marginTop: 'auto',
         textDecoration: 'none',
+        whiteSpace: 'nowrap',
         '&::after': {
             content: '"→"',
             transition: 'transform 0.2s',

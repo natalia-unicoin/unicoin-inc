@@ -21,7 +21,13 @@ export const useStyles = makeStyles()((theme) => ({
         }
     },
     header: {
-        marginBottom: theme.spacing(5),
+        marginBottom: theme.spacing(4),
+        textAlign: 'center',
+        margin: '0 auto',
+        maxWidth: '900px',
+        [theme.breakpoints.up('md')]: {
+            marginBottom: theme.spacing(6),
+        }
     },
     title: {
         fontFamily: theme.typography.h1.fontFamily, // Inter

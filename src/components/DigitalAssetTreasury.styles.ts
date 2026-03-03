@@ -21,6 +21,9 @@ export const useStyles = makeStyles()((theme) => ({
     },
     header: {
         marginBottom: theme.spacing(8),
+        textAlign: 'center',
+        margin: '0 auto',
+        maxWidth: '900px',
         [theme.breakpoints.up('md')]: {
             marginBottom: theme.spacing(12),
         }
@@ -45,7 +48,8 @@ export const useStyles = makeStyles()((theme) => ({
         lineHeight: 1.5,
         color: theme.palette.grey[700],
         maxWidth: '800px',
-        fontWeight: 400,
+        margin: '0 auto',
+        fontWeight: 700,
         [theme.breakpoints.up('md')]: {
             fontSize: '1.5rem',
         }

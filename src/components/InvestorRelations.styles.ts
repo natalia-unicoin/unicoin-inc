@@ -21,6 +21,9 @@ export const useStyles = makeStyles()((theme) => ({
     },
     header: {
         marginBottom: theme.spacing(6),
+        textAlign: 'center',
+        margin: '0 auto',
+        maxWidth: '900px',
         [theme.breakpoints.up('md')]: {
             marginBottom: theme.spacing(8),
         }
