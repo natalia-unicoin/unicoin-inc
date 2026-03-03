@@ -146,8 +146,9 @@ export const useStyles = makeStyles()((theme) => ({
         }
     },
     highlightBlock: {
-        backgroundColor: theme.palette.primary.main, // Neutro Oscuro
-        color: '#FFFFFF', // Neutro Claro
+        backgroundColor: theme.palette.mode === 'dark' ? 'rgba(6, 182, 212, 0.15)' : theme.palette.primary.main, // Cyan tint for dark mode, dark navy for light
+        border: theme.palette.mode === 'dark' ? '1px solid rgba(6, 182, 212, 0.3)' : 'none',
+        color: '#FFFFFF', // Always white text
     },
     imperativeLabel: {
         fontSize: '0.875rem',
