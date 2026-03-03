@@ -57,29 +57,68 @@ export const useStyles = makeStyles()((theme) => ({
     grid: {
         display: 'grid',
         gridTemplateColumns: '1fr',
-        gap: theme.spacing(6),
-        [theme.breakpoints.up('sm')]: {
+        gap: theme.spacing(3),
+        [theme.breakpoints.up('md')]: {
             gridTemplateColumns: 'repeat(2, 1fr)',
-        },
-        [theme.breakpoints.up('lg')]: {
-            gridTemplateColumns: 'repeat(4, 1fr)',
             gap: theme.spacing(4),
         }
     },
-    column: {
+    bentoCard: {
+        position: 'relative',
+        backgroundColor: '#FAFBFC', // Very subtle off-white Apple style
+        border: `1px solid ${theme.palette.grey[200]}`,
+        borderRadius: '24px',
+        padding: theme.spacing(5),
         display: 'flex',
         flexDirection: 'column',
-        gap: theme.spacing(3),
+        gap: theme.spacing(4),
+        overflow: 'hidden',
+        transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+        '&:hover': {
+            transform: 'translateY(-4px)',
+            boxShadow: '0 20px 40px rgba(0,0,0,0.04)',
+            backgroundColor: '#FFFFFF',
+        },
+        [theme.breakpoints.up('md')]: {
+            padding: theme.spacing(6),
+        }
+    },
+    cardNumber: {
+        position: 'absolute',
+        top: theme.spacing(2),
+        right: theme.spacing(3),
+        fontSize: '4rem',
+        fontWeight: 800,
+        color: 'rgba(35, 39, 51, 0.03)', // Very faint structural number
+        fontFamily: theme.typography.h1.fontFamily,
+        pointerEvents: 'none',
+        lineHeight: 1,
+        [theme.breakpoints.up('md')]: {
+            fontSize: '6rem',
+            top: theme.spacing(3),
+            right: theme.spacing(4),
+        }
     },
     colTitle: {
         fontSize: '1.25rem',
         fontWeight: 700,
         color: '#232733',
-        borderBottom: `2px solid #BBFF71`, // Accent underline
-        paddingBottom: theme.spacing(2),
         textTransform: 'uppercase',
         letterSpacing: '0.05em',
         fontFamily: theme.typography.h1.fontFamily,
+        position: 'relative',
+        zIndex: 2,
+        display: 'inline-flex',
+        alignItems: 'center',
+        gap: theme.spacing(1.5),
+        '&::before': {
+            content: '""',
+            display: 'block',
+            width: '12px',
+            height: '12px',
+            backgroundColor: '#BBFF71', // Brand accent
+            borderRadius: '2px', // Slight rounding
+        }
     },
     list: {
         listStyle: 'none',
@@ -87,24 +126,27 @@ export const useStyles = makeStyles()((theme) => ({
         margin: 0,
         display: 'flex',
         flexDirection: 'column',
-        gap: theme.spacing(2),
+        gap: theme.spacing(2.5),
+        position: 'relative',
+        zIndex: 2,
     },
     listItem: {
-        fontSize: '0.9375rem',
-        color: theme.palette.grey[800],
-        lineHeight: 1.6,
+        fontSize: '1rem', // Increased readability
+        color: '#232733',
+        fontWeight: 500, // Medium weight for institutional feel
+        lineHeight: 1.5,
         display: 'flex',
-        alignItems: 'baseline',
-        gap: theme.spacing(1.5),
+        alignItems: 'flex-start',
+        gap: theme.spacing(2),
         '&::before': {
             content: '""',
             display: 'inline-block',
-            width: '4px',
-            height: '4px',
+            width: '6px',
+            height: '6px',
             backgroundColor: '#0966FF', // Action color dot
             borderRadius: '50%',
             flexShrink: 0,
-            transform: 'translateY(-3px)'
+            marginTop: '10px', // Aligns with first line of text
         }
     }
 }));

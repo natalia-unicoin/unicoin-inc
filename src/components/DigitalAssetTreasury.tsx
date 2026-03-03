@@ -68,12 +68,15 @@ const DigitalAssetTreasury = () => {
                     {columnsData.map((col, index) => (
                         <motion.div
                             key={index}
-                            className={classes.column}
+                            className={classes.bentoCard}
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, margin: "-50px" }}
                             transition={{ duration: 0.6, delay: 0.1 + (index * 0.1) }}
                         >
+                            <span className={classes.cardNumber}>
+                                {String(index + 1).padStart(2, '0')}
+                            </span>
                             <h3 className={classes.colTitle}>{col.title}</h3>
                             <ul className={classes.list}>
                                 {col.items.map((item, idx) => (
