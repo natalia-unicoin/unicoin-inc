@@ -12,6 +12,7 @@ import FinalCTA from '@/components/FinalCTA';
 import DigitalAssetTreasury from '@/components/DigitalAssetTreasury';
 import Financials from '@/components/Financials';
 import InvestorRelations from '@/components/InvestorRelations';
+import LegalCompliance from '@/components/LegalCompliance';
 
 const TransparentBusiness = () => {
     return (
@@ -26,6 +27,7 @@ const TransparentBusiness = () => {
             <InvestorRelations />
             <LeadershipPositioning />
             <InTheMedia />
+            <LegalCompliance />
             <FinalCTA />
         </>
     );
