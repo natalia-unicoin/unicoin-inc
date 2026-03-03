@@ -4,8 +4,8 @@ export const useStyles = makeStyles()((theme) => ({
     section: {
         paddingTop: '160px',
         paddingBottom: '160px',
-        backgroundColor: '#0E1A2B', // Institutional Deep Black
-        color: '#FAFBFC',
+        backgroundColor: '#232733', // Institutional Deep Black
+        color: '#FFFFFF',
         textAlign: 'center',
         position: 'relative',
         overflow: 'hidden',
@@ -40,7 +40,7 @@ export const useStyles = makeStyles()((theme) => ({
     subtitle: {
         fontSize: '18px',
         lineHeight: '1.6',
-        color: '#FAFBFC', // Apple Secondary Gray
+        color: '#FFFFFF', // Apple Secondary Gray
         maxWidth: '700px',
         margin: '0 auto',
         marginBottom: theme.spacing(8),
@@ -51,8 +51,8 @@ export const useStyles = makeStyles()((theme) => ({
     },
     button: {
         display: 'inline-block',
-        backgroundColor: '#FCD144',
-        color: '#0E1A2B',
+        backgroundColor: '#BBFF71',
+        color: '#232733',
         padding: '20px 48px',
         borderRadius: '9999px', // Pill shape
         fontSize: '16px',

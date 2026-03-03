@@ -9,14 +9,14 @@ export const useStyles = makeStyles()((theme) => ({
         alignItems: 'center',
         justifyContent: 'center',
         overflow: 'hidden',
-        backgroundColor: '#0E1A2B', // Fallback for video
+        backgroundColor: '#232733', // Fallback for video
         color: '#FFFFFF', // White for video context
     },
     bgWrapper: {
         position: 'absolute',
         inset: 0,
         zIndex: 0,
-        backgroundColor: '#0E1A2B',
+        backgroundColor: '#232733',
     },
     videoBackground: {
         width: '100%',
@@ -95,8 +95,8 @@ export const useStyles = makeStyles()((theme) => ({
         }
     },
     ctaButton: {
-        backgroundColor: '#FCD144', // Brand Yellow
-        color: '#0E1A2B',
+        backgroundColor: '#BBFF71', // Brand Yellow
+        color: '#232733',
         padding: '16px 32px', // px-8 py-4
         borderRadius: '9999px', // Pill shape
         fontSize: '0.875rem', // text-sm

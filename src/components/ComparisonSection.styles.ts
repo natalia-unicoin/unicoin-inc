@@ -4,8 +4,8 @@ export const useStyles = makeStyles()((theme) => ({
     section: {
         paddingTop: '60px',
         paddingBottom: '60px',
-        backgroundColor: '#E6E8EB', // Apple Light Gray background
-        color: '#0E1A2B',
+        backgroundColor: '#F5F5F7', // Apple Light Gray background
+        color: '#232733',
         [theme.breakpoints.up('md')]: {
             paddingTop: '100px',
             paddingBottom: '100px',
@@ -106,7 +106,7 @@ export const useStyles = makeStyles()((theme) => ({
         minWidth: '85vw', // Take up most of screen on mobile to hint at next card
         scrollSnapAlign: 'start',
         scrollMarginLeft: '20px',
-        backgroundColor: '#FAFBFC',
+        backgroundColor: '#FFFFFF',
         borderRadius: '32px',
         padding: theme.spacing(4),
         display: 'flex',
@@ -124,7 +124,7 @@ export const useStyles = makeStyles()((theme) => ({
             left: '10%',
             right: '10%',
             height: '4px',
-            backgroundColor: '#FCD144', // Brand yellow accent on top
+            backgroundColor: '#BBFF71', // Brand yellow accent on top
             borderBottomLeftRadius: '4px',
             borderBottomRightRadius: '4px',
         },
@@ -159,7 +159,7 @@ export const useStyles = makeStyles()((theme) => ({
     cardTitleBrand: {
         fontSize: '28px',
         fontWeight: 700,
-        color: '#0E1A2B', // High contrast
+        color: '#232733', // High contrast
         fontFamily: theme.typography.h2.fontFamily,
     },
     featureList: {
@@ -187,18 +187,18 @@ export const useStyles = makeStyles()((theme) => ({
         textTransform: 'uppercase',
         letterSpacing: '0.05em',
         fontWeight: 700,
-        color: '#0E1A2B',
+        color: '#232733',
         marginBottom: '4px',
     },
     traditionalValue: {
         fontSize: '18px',
-        color: '#0E1A2B',
+        color: '#232733',
         fontWeight: 400,
         lineHeight: 1.4,
     },
     brandValue: {
         fontSize: '20px', // Slightly larger to emphasize
-        color: '#0E1A2B',
+        color: '#232733',
         fontWeight: 600, // Bolder
         lineHeight: 1.4,
     },
@@ -221,6 +221,6 @@ export const useStyles = makeStyles()((theme) => ({
     },
     activeDot: {
         width: '32px', // Elongated for active
-        backgroundColor: '#0E1A2B', // Dark for active
+        backgroundColor: '#232733', // Dark for active
     }
 }));

@@ -61,9 +61,9 @@ export const useStyles = makeStyles<{ isScrolled: boolean }>()((theme, { isScrol
         },
     },
     joinButton: {
-        backgroundColor: '#FCD144',
+        backgroundColor: '#BBFF71',
         backdropFilter: 'blur(5px)',
-        color: '#0E1A2B',
+        color: '#232733',
         padding: '8px 20px',
         borderRadius: '9999px', // Pill shape
         fontSize: '0.75rem',
@@ -141,7 +141,7 @@ export const useStyles = makeStyles<{ isScrolled: boolean }>()((theme, { isScrol
         [theme.breakpoints.up('md')]: {
             display: 'none',
         },
-        fill: isScrolled ? '#0E1A2B' : '#FFFFFF',
+        fill: isScrolled ? '#232733' : '#FFFFFF',
     },
     // DRAWER STYLES
     backdrop: {

@@ -46,11 +46,11 @@ export const useStyles = makeStyles()((theme) => ({
         letterSpacing: '0.1em',
         color: '#000000',
         textDecoration: 'none',
-        borderBottom: '2px solid #FCD144',
+        borderBottom: '2px solid #BBFF71',
         paddingBottom: '4px',
         transition: 'all 0.3s ease',
         '&:hover': {
-            color: '#FCD144',
+            color: '#BBFF71',
         }
     },
     meshGrid: {

@@ -2,8 +2,8 @@ import { makeStyles } from 'tss-react/mui';
 
 export const useStyles = makeStyles()((theme) => ({
     section: {
-        backgroundColor: '#FAFBFC',
-        color: '#0E1A2B',
+        backgroundColor: '#FFFFFF',
+        color: '#232733',
         borderTop: '1px solid #f5f5f7',
         position: 'relative',
         minHeight: '150vh', // Extended for scroll duration
@@ -49,7 +49,7 @@ export const useStyles = makeStyles()((theme) => ({
     description: {
         fontSize: '18px', // Safe size for 100vh mobile sticky containers
         lineHeight: 1.4,
-        color: '#0E1A2B',
+        color: '#232733',
         maxWidth: '1000px',
         margin: '0 auto',
         fontWeight: 500, // Slightly lighter on mobile

@@ -14,7 +14,7 @@ export const APPLE_COLORS = {
     systemBlue: '#0071E3',
 
     // Brand accent
-    accentYellow: '#FCD144',
+    accentYellow: '#BBFF71',
 };
 
 // Typography scale (Apple Watch reference)

@@ -4,7 +4,7 @@ export const useStyles = makeStyles()((theme) => ({
     section: {
         paddingTop: theme.spacing(12),
         paddingBottom: theme.spacing(12),
-        backgroundColor: '#FAFBFC',
+        backgroundColor: '#FFFFFF',
         color: '#111111',
         [theme.breakpoints.up('lg')]: {
             paddingTop: '160px',
@@ -81,14 +81,14 @@ export const useStyles = makeStyles()((theme) => ({
     subtitle: {
         fontSize: '1.25rem',
         fontWeight: 700,
-        color: '#0E1A2B', // Dark Navy
+        color: '#232733', // Dark Navy
         lineHeight: 1.5,
         [theme.breakpoints.up('md')]: {
             fontSize: '1.5rem',
         }
     },
     storyBlock: {
-        backgroundColor: '#E6E8EB', // Neutro Medio
+        backgroundColor: '#F5F5F7', // Neutro Medio
         borderRadius: '32px',
         padding: '32px 20px', // Even tighter padding for iPhones
         display: 'flex',
@@ -113,7 +113,7 @@ export const useStyles = makeStyles()((theme) => ({
         fontWeight: 700,
         textTransform: 'uppercase',
         letterSpacing: '0.2em',
-        color: '#2A4B6A', // Complementary Blue
+        color: '#0966FF', // Complementary Blue
         marginBottom: theme.spacing(3),
         display: 'block',
     },
@@ -122,7 +122,7 @@ export const useStyles = makeStyles()((theme) => ({
         fontWeight: 700,
         marginBottom: theme.spacing(3),
         letterSpacing: '-0.03em',
-        color: '#0E1A2B',
+        color: '#232733',
         [theme.breakpoints.up('md')]: {
             fontSize: '2.5rem',
         }
@@ -130,22 +130,22 @@ export const useStyles = makeStyles()((theme) => ({
     cardText: {
         fontSize: '1.125rem',
         lineHeight: 1.7,
-        color: '#0E1A2B',
+        color: '#232733',
         fontWeight: 400,
         [theme.breakpoints.up('md')]: {
             fontSize: '1.25rem',
         }
     },
     highlightBlock: {
-        backgroundColor: '#0E1A2B', // Neutro Oscuro
-        color: '#FAFBFC', // Neutro Claro
+        backgroundColor: '#232733', // Neutro Oscuro
+        color: '#FFFFFF', // Neutro Claro
     },
     imperativeLabel: {
         fontSize: '0.875rem',
         fontWeight: 700,
         textTransform: 'uppercase',
         letterSpacing: '0.2em',
-        color: '#FCD144', // Brand Accent Yellow
+        color: '#BBFF71', // Brand Accent Yellow
         marginBottom: theme.spacing(3),
         display: 'block',
     },
@@ -154,14 +154,14 @@ export const useStyles = makeStyles()((theme) => ({
         fontWeight: 700,
         marginBottom: theme.spacing(3),
         letterSpacing: '-0.03em',
-        color: '#FAFBFC',
+        color: '#FFFFFF',
         [theme.breakpoints.up('md')]: {
             fontSize: '2.5rem',
         }
     },
     imperativeDescription: {
         fontSize: '1.125rem',
-        color: '#FAFBFC',
+        color: '#FFFFFF',
         lineHeight: 1.7,
         fontWeight: 400,
         [theme.breakpoints.up('md')]: {
@@ -187,6 +187,6 @@ export const useStyles = makeStyles()((theme) => ({
     },
     activeDot: {
         width: '32px', // Elongated for active
-        backgroundColor: '#0E1A2B', // Dark for active
+        backgroundColor: '#232733', // Dark for active
     }
 }));

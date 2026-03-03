@@ -17,27 +17,27 @@ const theme = createTheme({
     palette: {
         mode: 'light',
         primary: {
-            main: '#0E1A2B', // Neutro 3 (Oscuro)
+            main: '#232733', // Neutro 3 (Oscuro)
         },
         secondary: {
-            main: '#FCD144', // Acento (Amarillo)
+            main: '#BBFF71', // Acento (Amarillo)
         },
         success: {
-            main: '#0E1A2B', // Neutro 3
+            main: '#232733', // Neutro 3
         },
         info: {
-            main: '#2A4B6A', // Complemento (Azul Naval)
+            main: '#0966FF', // Complemento (Azul Naval)
         },
         warning: {
-            main: '#FCD144', // Acento
+            main: '#BBFF71', // Acento
         },
         background: {
-            default: '#FAFBFC', // Neutro 1 (Claro - Blanco Humo)
-            paper: '#E6E8EB', // Neutro 2 (Medio / Gris Tenue)
+            default: '#FFFFFF', // Neutro 1 (Claro - Blanco Humo)
+            paper: '#F5F5F7', // Neutro 2 (Medio / Gris Tenue)
         },
         text: {
-            primary: '#0E1A2B', // Neutro 3
-            secondary: '#2A4B6A', // Complemento
+            primary: '#232733', // Neutro 3
+            secondary: '#0966FF', // Complemento
         }
     },
     typography: {
