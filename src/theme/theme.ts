@@ -30,14 +30,14 @@ const getPalette = (mode: ThemeMode) => {
             };
         case 'safebets':
             return {
-                mode: 'dark' as const,
+                mode: 'light' as const,
                 primary: { main: '#232733' }, // Dark Navy
                 secondary: { main: '#BBFF71' }, // Lime Green
                 success: { main: '#232733' },
                 info: { main: '#0966FF' }, // Bright Blue
                 warning: { main: '#BBFF71' },
-                background: { default: '#232733', paper: '#1D1D1F' },
-                text: { primary: '#FFFFFF', secondary: '#A1A1A6' },
+                background: { default: '#FFFFFF', paper: '#FAFBFC' },
+                text: { primary: '#232733', secondary: '#575A65' },
             };
         case 'tbiz':
         default:
