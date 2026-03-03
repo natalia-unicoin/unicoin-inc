@@ -81,7 +81,7 @@ export const useStyles = makeStyles()((theme) => ({
     subtitle: {
         fontSize: '1.25rem',
         fontWeight: 700,
-        color: theme.palette.primary.main, // Dark Navy
+        color: theme.palette.text.primary, // Dark Navy
         lineHeight: 1.5,
         [theme.breakpoints.up('md')]: {
             fontSize: '1.5rem',
@@ -122,7 +122,7 @@ export const useStyles = makeStyles()((theme) => ({
         fontWeight: 700,
         marginBottom: theme.spacing(3),
         letterSpacing: '-0.03em',
-        color: theme.palette.primary.main,
+        color: theme.palette.text.primary,
         [theme.breakpoints.up('md')]: {
             fontSize: '2.5rem',
         }
@@ -130,7 +130,7 @@ export const useStyles = makeStyles()((theme) => ({
     cardText: {
         fontSize: '1.125rem',
         lineHeight: 1.7,
-        color: theme.palette.primary.main,
+        color: theme.palette.text.primary,
         fontWeight: 400,
         [theme.breakpoints.up('md')]: {
             fontSize: '1.25rem',

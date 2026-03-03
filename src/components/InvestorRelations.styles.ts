@@ -3,7 +3,7 @@ import { makeStyles } from 'tss-react/mui';
 export const useStyles = makeStyles()((theme) => ({
     section: {
         backgroundColor: '#F5F5F7', // Slightly gray background to distinguish from Financials
-        color: theme.palette.primary.main,
+        color: theme.palette.text.primary,
         padding: theme.spacing(12, 0),
         width: '100%',
         [theme.breakpoints.up('md')]: {
@@ -34,7 +34,7 @@ export const useStyles = makeStyles()((theme) => ({
         fontWeight: 700,
         letterSpacing: '-0.03em',
         lineHeight: 1.1,
-        color: theme.palette.primary.main,
+        color: theme.palette.text.primary,
         [theme.breakpoints.up('md')]: {
             fontSize: '3.5rem',
         },
@@ -74,7 +74,7 @@ export const useStyles = makeStyles()((theme) => ({
     cardTitle: {
         fontSize: '1.25rem',
         fontWeight: 700,
-        color: theme.palette.primary.main,
+        color: theme.palette.text.primary,
         fontFamily: theme.typography.h1.fontFamily,
         lineHeight: 1.3,
         letterSpacing: '-0.01em',

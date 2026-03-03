@@ -51,7 +51,7 @@ export const useStyles = makeStyles()((theme) => ({
         marginBottom: theme.spacing(2),
         letterSpacing: '-0.03em',
         fontFamily: theme.typography.h2.fontFamily,
-        color: theme.palette.primary.main,
+        color: theme.palette.text.primary,
         [theme.breakpoints.up('md')]: {
             fontSize: '48px', // Apple desktop h2
             lineHeight: '52px',
@@ -68,7 +68,7 @@ export const useStyles = makeStyles()((theme) => ({
     description: {
         fontSize: '17px', // Apple body
         lineHeight: '25px',
-        color: theme.palette.primary.main, // Apple medium gray
+        color: theme.palette.text.primary, // Apple medium gray
         fontWeight: 400,
         [theme.breakpoints.up('md')]: {
             fontSize: '17px',

@@ -5,7 +5,7 @@ export const useStyles = makeStyles()((theme) => ({
         paddingTop: '60px',
         paddingBottom: '60px',
         backgroundColor: '#F5F5F7', // Apple Light Gray background
-        color: theme.palette.primary.main,
+        color: theme.palette.text.primary,
         [theme.breakpoints.up('md')]: {
             paddingTop: '100px',
             paddingBottom: '100px',
@@ -159,7 +159,7 @@ export const useStyles = makeStyles()((theme) => ({
     cardTitleBrand: {
         fontSize: '28px',
         fontWeight: 700,
-        color: theme.palette.primary.main, // High contrast
+        color: theme.palette.text.primary, // High contrast
         fontFamily: theme.typography.h2.fontFamily,
     },
     featureList: {
@@ -187,18 +187,18 @@ export const useStyles = makeStyles()((theme) => ({
         textTransform: 'uppercase',
         letterSpacing: '0.05em',
         fontWeight: 700,
-        color: theme.palette.primary.main,
+        color: theme.palette.text.primary,
         marginBottom: '4px',
     },
     traditionalValue: {
         fontSize: '18px',
-        color: theme.palette.primary.main,
+        color: theme.palette.text.primary,
         fontWeight: 400,
         lineHeight: 1.4,
     },
     brandValue: {
         fontSize: '20px', // Slightly larger to emphasize
-        color: theme.palette.primary.main,
+        color: theme.palette.text.primary,
         fontWeight: 600, // Bolder
         lineHeight: 1.4,
     },

@@ -5,7 +5,7 @@ export const useStyles = makeStyles()((theme) => ({
         paddingTop: theme.spacing(12),
         paddingBottom: theme.spacing(12),
         backgroundColor: '#FBFBFD', // Apple very light gray
-        color: theme.palette.primary.main,
+        color: theme.palette.text.primary,
         [theme.breakpoints.up('lg')]: {
             paddingTop: '160px',
             paddingBottom: '160px',
@@ -41,7 +41,7 @@ export const useStyles = makeStyles()((theme) => ({
     },
     subtitle: {
         fontSize: '1.25rem',
-        color: theme.palette.primary.main,
+        color: theme.palette.text.primary,
         maxWidth: '700px',
         margin: '0 auto',
         fontWeight: 700,
@@ -62,10 +62,10 @@ export const useStyles = makeStyles()((theme) => ({
         fontWeight: 700,
         textTransform: 'uppercase',
         letterSpacing: '0.1em',
-        color: theme.palette.primary.main,
+        color: theme.palette.text.primary,
     },
     thBrand: {
-        color: theme.palette.primary.main,
+        color: theme.palette.text.primary,
     },
     tr: {
         backgroundColor: theme.palette.background.paper,
@@ -93,12 +93,12 @@ export const useStyles = makeStyles()((theme) => ({
         }
     },
     traditionalValue: {
-        color: theme.palette.primary.main,
+        color: theme.palette.text.primary,
         width: '35%',
         fontWeight: 400,
     },
     brandValue: {
         fontWeight: 700,
-        color: theme.palette.primary.main,
+        color: theme.palette.text.primary,
     }
 }));

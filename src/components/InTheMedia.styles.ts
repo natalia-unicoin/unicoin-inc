@@ -5,7 +5,7 @@ export const useStyles = makeStyles()((theme) => ({
         paddingTop: '80px',
         paddingBottom: '160px',
         backgroundColor: theme.palette.background.paper,
-        color: theme.palette.primary.main,
+        color: theme.palette.text.primary,
     },
     container: {
         maxWidth: '100%',
@@ -22,7 +22,7 @@ export const useStyles = makeStyles()((theme) => ({
         fontSize: '44px',
         lineHeight: '1.1',
         fontWeight: 700,
-        color: theme.palette.primary.main, // Apple Black
+        color: theme.palette.text.primary, // Apple Black
         textAlign: 'center',
         letterSpacing: '-0.03em',
         fontFamily: theme.typography.h1.fontFamily,
@@ -64,7 +64,7 @@ export const useStyles = makeStyles()((theme) => ({
         fontWeight: 700,
         textTransform: 'uppercase',
         letterSpacing: '0.1em',
-        color: theme.palette.primary.main,
+        color: theme.palette.text.primary,
         marginBottom: '20px',
     },
     mediaTitle: {
@@ -72,19 +72,19 @@ export const useStyles = makeStyles()((theme) => ({
         fontWeight: 700,
         lineHeight: 1.3,
         marginBottom: '15px',
-        color: theme.palette.primary.main,
+        color: theme.palette.text.primary,
     },
     excerpt: {
         fontSize: '16px',
         lineHeight: 1.6,
-        color: theme.palette.primary.main,
+        color: theme.palette.text.primary,
         marginBottom: '25px',
         flexGrow: 1,
     },
     source: {
         fontSize: '14px',
         fontWeight: 700,
-        color: theme.palette.primary.main,
+        color: theme.palette.text.primary,
         display: 'flex',
         alignItems: 'center',
         gap: '8px',

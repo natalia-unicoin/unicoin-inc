@@ -61,7 +61,7 @@ export const useStyles = makeStyles()((theme) => ({
         margin: '0 auto 60px auto',
         fontSize: '17px', // Apple body
         lineHeight: '25px',
-        color: theme.palette.primary.main, // Black
+        color: theme.palette.text.primary, // Black
     },
     bentoGrid: {
         display: 'flex',
@@ -124,14 +124,14 @@ export const useStyles = makeStyles()((theme) => ({
         fontFamily: theme.typography.h1.fontFamily,
         letterSpacing: '-0.03em',
         marginBottom: theme.spacing(2),
-        color: theme.palette.primary.main,
+        color: theme.palette.text.primary,
         [theme.breakpoints.up('md')]: {
             fontSize: '1.75rem',
         }
     },
     itemDescription: {
         fontSize: '1rem',
-        color: theme.palette.primary.main,
+        color: theme.palette.text.primary,
         lineHeight: 1.6,
         fontWeight: 400,
         [theme.breakpoints.up('md')]: {
