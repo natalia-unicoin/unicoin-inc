@@ -2,7 +2,7 @@ import { makeStyles } from 'tss-react/mui';
 
 export const useStyles = makeStyles()((theme) => ({
     section: {
-        backgroundColor: theme.palette.mode === 'dark' ? '#0B1120' : '#F5F5F7', // Deep dark or light gray
+        backgroundColor: theme.palette.mode === 'dark' ? 'transparent' : '#F5F5F7', // Transparent in dark mode to reveal mesh
         color: theme.palette.text.primary,
         padding: theme.spacing(8, 0),
         width: '100%',

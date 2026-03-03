@@ -2,9 +2,9 @@ import { makeStyles } from 'tss-react/mui';
 
 export const useStyles = makeStyles()((theme) => ({
     section: {
-        backgroundColor: theme.palette.background.paper,
+        backgroundColor: theme.palette.mode === 'dark' ? 'transparent' : theme.palette.background.paper,
         color: theme.palette.text.primary,
-        borderTop: '1px solid #f5f5f7',
+        borderTop: theme.palette.mode === 'dark' ? 'none' : '1px solid #f5f5f7',
         position: 'relative',
         minHeight: '150vh', // Extended for scroll duration
         [theme.breakpoints.up('lg')]: {

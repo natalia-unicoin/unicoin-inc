@@ -4,7 +4,7 @@ export const useStyles = makeStyles()((theme) => ({
     section: {
         position: 'relative',
         overflow: 'hidden',
-        backgroundColor: theme.palette.background.paper, // Fallback color
+        backgroundColor: theme.palette.mode === 'dark' ? 'transparent' : theme.palette.background.paper, // Transparent for mesh gradient
         color: theme.palette.text.primary, // Dark text for contrast
         padding: theme.spacing(8, 0),
         width: '100%',

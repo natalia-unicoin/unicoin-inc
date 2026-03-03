@@ -8,6 +8,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import JoinModal from "@/components/JoinModal";
 import ManifestoModal from "@/components/ManifestoModal";
+import GlassBackground from "@/components/GlassBackground";
 
 export const metadata: Metadata = {
   title: "TransparentBusiness: The Debt-Free Evolution of Digital Asset Treasury",
@@ -27,6 +28,7 @@ export default function RootLayout({
           <ThemeRegistry>
             <ModalProvider>
               <ThemeSwitcher />
+              <GlassBackground />
               <Navbar />
               {children}
               <Footer />

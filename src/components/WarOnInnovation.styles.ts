@@ -4,7 +4,7 @@ export const useStyles = makeStyles()((theme) => ({
     section: {
         paddingTop: theme.spacing(8),
         paddingBottom: theme.spacing(8),
-        backgroundColor: theme.palette.info.main,
+        backgroundColor: theme.palette.mode === 'dark' ? 'transparent' : theme.palette.info.main,
         color: '#FFFFFF',
         position: 'relative',
         overflow: 'hidden',
@@ -120,7 +120,7 @@ export const useStyles = makeStyles()((theme) => ({
         justifyContent: 'center',
         gap: theme.spacing(8),
         width: '100%',
-        backgroundColor: theme.palette.info.main, // Ensure it obscures elements behind it if needed
+        backgroundColor: theme.palette.mode === 'dark' ? 'transparent' : theme.palette.info.main, // Transparent for mesh
         padding: '40px 0',
         [theme.breakpoints.up('md')]: {
             flexDirection: 'row',

@@ -2,7 +2,7 @@ import { makeStyles } from 'tss-react/mui';
 
 export const useStyles = makeStyles()((theme) => ({
     section: {
-        backgroundColor: theme.palette.primary.main, // Deep corporate dark
+        backgroundColor: theme.palette.mode === 'dark' ? 'transparent' : theme.palette.primary.main, // Transparent to show global glass mesh
         color: '#FFFFFF',
         padding: theme.spacing(8, 0), // Mobile 64px
         width: '100%',
