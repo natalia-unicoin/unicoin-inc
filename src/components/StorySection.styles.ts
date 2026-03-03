@@ -99,9 +99,15 @@ export const useStyles = makeStyles()((theme) => ({
         justifyContent: 'center',
         minHeight: '380px', // Reduced from 400 to prevent edge clipping on smaller iPhones
         minWidth: '85vw', // Take up most of screen on mobile
-        scrollSnapAlign: 'start',
         scrollMarginLeft: '20px',
         boxSizing: 'border-box', // Ensure padding doesn't push width out
+        transition: 'all 0.4s ease',
+        '&:hover': {
+            transform: 'translateY(-4px)',
+            backgroundColor: theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.08)' : undefined,
+            borderColor: theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.3)' : undefined,
+            boxShadow: theme.palette.mode === 'dark' ? '0 0 30px rgba(6, 182, 212, 0.3)' : '0 10px 30px rgba(0,0,0,0.05)',
+        },
         [theme.breakpoints.up('md')]: {
             padding: '60px 40px',
             minHeight: '400px',

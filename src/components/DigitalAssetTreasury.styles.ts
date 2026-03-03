@@ -89,12 +89,12 @@ export const useStyles = makeStyles()((theme) => ({
         flexDirection: 'column',
         gap: theme.spacing(4),
         overflow: 'hidden',
-        transition: 'transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3sease',
+        transition: 'all 0.4s ease',
         '&:hover': {
             transform: 'translateY(-4px)',
-            boxShadow: theme.palette.mode === 'dark' ? '0 10px 40px rgba(0, 0, 0, 0.5)' : '0 20px 40px rgba(0,0,0,0.04)',
-            backgroundColor: theme.palette.mode === 'dark' ? 'rgba(30, 41, 59, 0.6)' : theme.palette.background.paper,
-            borderColor: theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.3)' : undefined,
+            boxShadow: theme.palette.mode === 'dark' ? '0 0 30px rgba(6, 182, 212, 0.4)' : '0 20px 40px rgba(0,0,0,0.04)',
+            backgroundColor: theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.1)' : theme.palette.background.paper,
+            borderColor: theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.5)' : undefined,
         },
         [theme.breakpoints.up('md')]: {
             padding: theme.spacing(6),

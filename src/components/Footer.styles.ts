@@ -2,11 +2,12 @@ import { makeStyles } from 'tss-react/mui';
 
 export const useStyles = makeStyles()((theme) => ({
     footer: {
-        backgroundColor: theme.palette.background.paper,
+        backgroundColor: theme.palette.mode === 'dark' ? 'rgba(11, 17, 32, 0.6)' : theme.palette.background.paper,
+        backdropFilter: theme.palette.mode === 'dark' ? 'blur(20px)' : 'none',
         color: theme.palette.text.primary,
         paddingTop: theme.spacing(10), // py-20 (approx 80px)
         paddingBottom: theme.spacing(10),
-        borderTop: `1px solid ${theme.palette.grey[100]}`,
+        borderTop: theme.palette.mode === 'dark' ? '1px solid rgba(255,255,255,0.1)' : `1px solid ${theme.palette.grey[100]}`,
     },
     container: {
         maxWidth: '100%',
@@ -63,15 +64,16 @@ export const useStyles = makeStyles()((theme) => ({
         width: '48px', // w-12
         height: '48px', // h-12
         borderRadius: '50%',
-        backgroundColor: theme.palette.grey[50], // gray-50
+        backgroundColor: theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.05)' : theme.palette.grey[50], // gray-50
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         color: theme.palette.text.primary,
         transition: 'all 0.3s',
         '&:hover': {
-            backgroundColor: theme.palette.primary.main,
+            backgroundColor: theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.2)' : theme.palette.primary.main,
             color: '#FFFFFF',
+            boxShadow: theme.palette.mode === 'dark' ? '0 0 15px rgba(255,255,255,0.2)' : 'none',
         }
     },
     socialSvg: {

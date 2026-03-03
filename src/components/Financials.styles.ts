@@ -65,13 +65,15 @@ export const useStyles = makeStyles()((theme) => ({
         position: 'relative',
         overflow: 'hidden',
         minHeight: '260px', // slightly smaller
-        transition: 'transform 0.3s ease, border-color 0.3s ease',
+        transition: 'all 0.4s ease',
         [theme.breakpoints.up('md')]: {
             padding: theme.spacing(6),
         },
         '&:hover': {
             transform: 'translateY(-4px)',
-            borderColor: 'rgba(255, 255, 255, 0.2)',
+            borderColor: theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.4)' : 'rgba(255, 255, 255, 0.2)',
+            backgroundColor: theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.08)' : undefined,
+            boxShadow: theme.palette.mode === 'dark' ? '0 0 30px rgba(6, 182, 212, 0.3)' : 'inherit',
         }
     },
     statValue: {
@@ -118,14 +120,14 @@ export const useStyles = makeStyles()((theme) => ({
         textDecoration: 'none',
         whiteSpace: 'nowrap',
         opacity: 0.8,
-        transition: 'opacity 0.2s, color 0.2s',
+        transition: 'opacity 0.3s, color 0.3s',
         '&::after': {
             content: '"→"',
-            transition: 'transform 0.2s',
+            transition: 'transform 0.3s',
         },
         '&:hover': {
             opacity: 1,
-            color: theme.palette.secondary.main,
+            color: theme.palette.mode === 'dark' ? '#06b6d4' : theme.palette.secondary.main,
         },
         '&:hover::after': {
             transform: 'translateX(4px)',
