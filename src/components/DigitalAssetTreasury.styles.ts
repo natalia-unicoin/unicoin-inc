@@ -21,6 +21,7 @@ export const useStyles = makeStyles()((theme) => ({
         objectFit: 'cover',
         objectPosition: 'center',
         pointerEvents: 'none',
+        display: theme.palette.mode === 'dark' ? 'none' : 'block',
     },
     container: {
         position: 'relative',
@@ -60,7 +61,7 @@ export const useStyles = makeStyles()((theme) => ({
     subtitle: {
         fontSize: '1.25rem',
         lineHeight: 1.5,
-        color: theme.palette.grey[700],
+        color: theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.7)' : theme.palette.grey[700],
         maxWidth: '800px',
         margin: '0 auto',
         fontWeight: 700,
@@ -106,7 +107,7 @@ export const useStyles = makeStyles()((theme) => ({
         right: theme.spacing(3),
         fontSize: '4rem',
         fontWeight: 800,
-        color: 'rgba(35, 39, 51, 0.03)', // Very faint structural number
+        color: theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.05)' : 'rgba(35, 39, 51, 0.03)', // Lighten in dark mode
         fontFamily: theme.typography.h1.fontFamily,
         pointerEvents: 'none',
         lineHeight: 1,
