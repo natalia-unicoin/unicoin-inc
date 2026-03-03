@@ -160,6 +160,30 @@ export const useStyles = makeStyles()((theme) => ({
             display: 'block',
         }
     },
+    legalLinksBar: {
+        display: 'flex',
+        flexWrap: 'wrap',
+        justifyContent: 'center',
+        alignItems: 'center',
+        gap: theme.spacing(2),
+        marginTop: theme.spacing(6),
+        [theme.breakpoints.up('md')]: {
+            gap: theme.spacing(3),
+        }
+    },
+    bottomLegalLink: {
+        color: theme.palette.grey[500],
+        fontSize: '0.75rem', // 12px
+        textDecoration: 'none',
+        transition: 'color 0.2s',
+        '&:hover': {
+            color: '#232733',
+        }
+    },
+    legalSeparator: {
+        color: theme.palette.grey[300],
+        fontSize: '0.75rem',
+    },
     copyright: {
         marginTop: theme.spacing(4),
         display: 'flex',

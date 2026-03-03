@@ -13,7 +13,6 @@ import DigitalAssetTreasury from '@/components/DigitalAssetTreasury';
 import Financials from '@/components/Financials';
 import InvestorRelations from '@/components/InvestorRelations';
 import LegalCompliance from '@/components/LegalCompliance';
-
 const TransparentBusiness = () => {
     return (
         <>
@@ -28,7 +27,6 @@ const TransparentBusiness = () => {
             <LeadershipPositioning />
             <InTheMedia />
             <FinalCTA />
-            <LegalCompliance />
         </>
     );
 };

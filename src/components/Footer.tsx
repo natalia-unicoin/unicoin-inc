@@ -13,6 +13,14 @@ const Footer = () => {
         { label: "Contact", href: "#contact" }
     ];
 
+    const legalLinks = [
+        "Privacy Policy",
+        "Terms of Use",
+        "Forward-Looking Statements",
+        "Risk Disclosures",
+        "Compliance Statements"
+    ];
+
     return (
         <footer className={classes.footer}>
             <div className={classes.container}>
@@ -75,6 +83,17 @@ const Footer = () => {
                         <span>Powered by Innovation</span>
                         <span className={classes.separator}>|</span>
                         <span>Designed for the Modern Investor</span>
+                    </div>
+
+                    <div className={classes.legalLinksBar}>
+                        {legalLinks.map((link, idx) => (
+                            <React.Fragment key={idx}>
+                                <a href="#" className={classes.bottomLegalLink}>{link}</a>
+                                {idx < legalLinks.length - 1 && (
+                                    <span className={classes.legalSeparator}>•</span>
+                                )}
+                            </React.Fragment>
+                        ))}
                     </div>
 
                     <div className={classes.copyright}>
