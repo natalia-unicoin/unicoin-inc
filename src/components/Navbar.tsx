@@ -58,12 +58,13 @@ const Navbar = () => {
     };
 
     const menuLinks = [
-        { title: "Home", href: "/" },
-        { title: "Transition", href: "#story" },
-        { title: "Different", href: "#how-it-works" },
-        { title: "Comparison", href: "#comparison" },
-        { title: "Media", href: "#media" },
-        { title: "Contact", href: "#footer" },
+        { title: "About", href: "#about" },
+        { title: "Digital Asset Treasury", href: "#treasury" },
+        { title: "Financials", href: "#financials" },
+        { title: "Strategy", href: "#strategy" },
+        { title: "News & Press", href: "#media" },
+        { title: "Investor Relations", href: "#investors" },
+        { title: "Legal", href: "#legal" },
     ];
 
     return (
