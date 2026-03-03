@@ -5,7 +5,7 @@ export const useStyles = makeStyles()((theme) => ({
         paddingTop: theme.spacing(12),
         paddingBottom: theme.spacing(12),
         backgroundColor: theme.palette.info.main,
-        color: theme.palette.text.primary,
+        color: '#FFFFFF',
         position: 'relative',
         overflow: 'hidden',
         minHeight: '150vh', // Extend height to allow long scroll interactions
@@ -41,7 +41,7 @@ export const useStyles = makeStyles()((theme) => ({
         textAlign: 'center',
         fontSize: '24px',
         textTransform: 'uppercase',
-        color: 'rgba(250, 251, 252, 0.6)',
+        color: 'rgba(255, 255, 255, 0.8)', // Improved contrast
         position: 'sticky', // Ensure title stays visible
         top: '100px',
         zIndex: 20,
@@ -94,12 +94,12 @@ export const useStyles = makeStyles()((theme) => ({
         }
     },
     accent: {
-        color: '#bbff71', // Highlight color
+        color: theme.palette.secondary.main, // Dynamic Highlight color
     },
     supportingText: {
         fontSize: '1rem',
         lineHeight: 1.6,
-        color: 'rgba(250, 251, 252, 0.8)',
+        color: 'rgba(255, 255, 255, 0.9)', // Improved contrast
         fontWeight: 400,
         maxWidth: '800px',
         margin: '0 auto',
@@ -144,7 +144,7 @@ export const useStyles = makeStyles()((theme) => ({
     metricValue: {
         fontSize: '3rem', // Scaled down for mobile stack
         fontWeight: 700,
-        color: theme.palette.text.primary,
+        color: '#FFFFFF',
         lineHeight: 1,
         letterSpacing: '-0.04em',
         [theme.breakpoints.up('md')]: {
