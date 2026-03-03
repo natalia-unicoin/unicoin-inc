@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import { getImagePath } from '@/utils/image';
 import { useStyles } from './FinalCTA.styles';
 
 const FinalCTA = () => {
@@ -9,7 +10,8 @@ const FinalCTA = () => {
 
     return (
         <section className={classes.section} id="transition">
-            <div className={classes.bgAccent} />
+            <img src={getImagePath('assets/final-cta-bg.jpg')} alt="Corporate Background" className={classes.bgImage} />
+            <div className={classes.overlay} />
             <div className={classes.container}>
                 <motion.h2
                     className={classes.title}

@@ -4,12 +4,26 @@ export const useStyles = makeStyles()((theme) => ({
     section: {
         paddingTop: '160px',
         paddingBottom: '160px',
-        backgroundColor: theme.palette.primary.main, // Institutional Deep Black
-        color: '#FFFFFF',
         textAlign: 'center',
         position: 'relative',
         overflow: 'hidden',
-        borderTop: '1px solid #333333', // Subtle separator for dark section
+        borderTop: '1px solid rgba(255,255,255,0.1)', // Subtler border
+        backgroundColor: theme.palette.primary.main, // Fallback if image fails
+    },
+    bgImage: {
+        position: 'absolute',
+        inset: 0,
+        zIndex: 0,
+        width: '100%',
+        height: '100%',
+        objectFit: 'cover',
+        objectPosition: 'center',
+    },
+    overlay: {
+        position: 'absolute',
+        inset: 0,
+        zIndex: 1,
+        backgroundColor: 'rgba(14, 26, 43, 0.75)', // Deep corporate overlay to guarantee text legibility
     },
     container: {
         maxWidth: '100%',
@@ -35,12 +49,13 @@ export const useStyles = makeStyles()((theme) => ({
         },
         [theme.breakpoints.up('lg')]: {
             fontSize: '72px',
-        }
+        },
+        color: '#FFFFFF',
     },
     subtitle: {
         fontSize: '18px',
         lineHeight: '1.6',
-        color: '#FFFFFF', // Apple Secondary Gray equivalent in white
+        color: 'rgba(255, 255, 255, 0.9)', // Clean white with slight transparency
         maxWidth: '700px',
         margin: '0 auto',
         marginBottom: theme.spacing(8),
@@ -67,13 +82,6 @@ export const useStyles = makeStyles()((theme) => ({
         }
     },
     bgAccent: {
-        position: 'absolute',
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
-        width: '100%',
-        height: '100%',
-        background: 'radial-gradient(circle at center, rgba(255,255,255,0.05) 0%, transparent 70%)',
-        zIndex: 1,
+        display: 'none', // Hide radial gradient since we are using image + overlay
     }
 }));
