@@ -27,8 +27,8 @@ const TransparentBusiness = () => {
             <InvestorRelations />
             <LeadershipPositioning />
             <InTheMedia />
-            <LegalCompliance />
             <FinalCTA />
+            <LegalCompliance />
         </>
     );
 };
