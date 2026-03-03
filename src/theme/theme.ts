@@ -17,16 +17,16 @@ import { ThemeMode } from '@/context/ThemeContext';
 
 const getPalette = (mode: ThemeMode) => {
     switch (mode) {
-        case 'safebets':
+        case 'safebets': // This acts as TBIZ 2 now
             return {
                 mode: 'light' as const,
-                primary: { main: '#232733' }, // Dark Navy
-                secondary: { main: '#BBFF71' }, // Lime Green
-                success: { main: '#232733' },
-                info: { main: '#0966FF' }, // Bright Blue
-                warning: { main: '#BBFF71' },
-                background: { default: '#FFFFFF', paper: '#FAFBFC' },
-                text: { primary: '#232733', secondary: '#575A65' },
+                primary: { main: '#10141E' }, // Darkest Navy/Black
+                secondary: { main: '#009EE3' }, // Bright Azure
+                success: { main: '#10141E' },
+                info: { main: '#0A337C' }, // Deep Blue
+                warning: { main: '#F7D046' }, // Gold/Yellow
+                background: { default: '#FFFFFF', paper: '#E6E7E8' }, // Light Gray from palette
+                text: { primary: '#10141E', secondary: '#0A337C' },
             };
         case 'glass':
             return {
