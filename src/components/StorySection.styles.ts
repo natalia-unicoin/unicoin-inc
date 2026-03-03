@@ -5,7 +5,7 @@ export const useStyles = makeStyles()((theme) => ({
         paddingTop: theme.spacing(12),
         paddingBottom: theme.spacing(12),
         backgroundColor: theme.palette.background.paper,
-        color: '#111111',
+        color: theme.palette.text.primary,
         [theme.breakpoints.up('lg')]: {
             paddingTop: '160px',
             paddingBottom: '160px',
@@ -88,7 +88,7 @@ export const useStyles = makeStyles()((theme) => ({
         }
     },
     storyBlock: {
-        backgroundColor: '#F5F5F7', // Neutro Medio
+        backgroundColor: theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.05)' : '#F5F5F7', // Adapt to light/dark
         borderRadius: '32px',
         padding: '32px 20px', // Even tighter padding for iPhones
         display: 'flex',
