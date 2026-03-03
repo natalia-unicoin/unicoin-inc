@@ -20,13 +20,13 @@ const getPalette = (mode: ThemeMode) => {
         case 'safebets': // This acts as TBIZ 2 now
             return {
                 mode: 'light' as const,
-                primary: { main: '#10141E' }, // Darkest Navy/Black
-                secondary: { main: '#009EE3' }, // Bright Azure
+                primary: { main: '#10141E' }, // Darkest Navy/Black from image
+                secondary: { main: '#BBFF71' }, // Restored Lime Green for high-contrast accents
                 success: { main: '#10141E' },
-                info: { main: '#0A337C' }, // Deep Blue
-                warning: { main: '#F7D046' }, // Gold/Yellow
+                info: { main: '#009EE3' }, // Bright Azure from image
+                warning: { main: '#F7D046' }, // Gold/Yellow from image
                 background: { default: '#FFFFFF', paper: '#E6E7E8' }, // Light Gray from palette
-                text: { primary: '#10141E', secondary: '#0A337C' },
+                text: { primary: '#10141E', secondary: '#0A337C' }, // Deep blue for secondary text
             };
         case 'glass':
             return {
