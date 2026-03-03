@@ -2,8 +2,8 @@ import { makeStyles } from 'tss-react/mui';
 
 export const useStyles = makeStyles()((theme) => ({
     section: {
-        backgroundColor: '#FFFFFF', // Clean institutional white
-        color: '#232733',
+        backgroundColor: '#1D1D1F', // Deep corporate dark
+        color: '#FFFFFF',
         padding: theme.spacing(12, 0),
         width: '100%',
         [theme.breakpoints.up('md')]: {
@@ -34,7 +34,7 @@ export const useStyles = makeStyles()((theme) => ({
         fontWeight: 700,
         letterSpacing: '-0.03em',
         lineHeight: 1.1,
-        color: '#232733',
+        color: '#FFFFFF',
         [theme.breakpoints.up('md')]: {
             fontSize: '3.5rem',
         },
@@ -43,51 +43,71 @@ export const useStyles = makeStyles()((theme) => ({
         }
     },
     grid: {
-        display: 'flex',
-        flexDirection: 'column',
-        gap: 0,
-        maxWidth: '1000px',
-        margin: '0 auto',
+        display: 'grid',
+        gridTemplateColumns: '1fr',
+        gap: theme.spacing(3),
+        [theme.breakpoints.up('md')]: {
+            gridTemplateColumns: 'repeat(2, 1fr)',
+            gap: theme.spacing(4),
+        }
     },
     card: {
-        backgroundColor: 'transparent',
-        borderBottom: `1px solid ${theme.palette.grey[200]}`,
-        padding: theme.spacing(4, 2),
+        backgroundColor: '#232733', // Slightly lighter dark for contrast against #1D1D1F
+        border: `1px solid rgba(255, 255, 255, 0.08)`, // Extremely subtle stroke
+        borderRadius: '24px',
+        padding: theme.spacing(5),
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-between',
         alignItems: 'flex-start',
-        transition: 'background-color 0.2s ease, padding-left 0.2s ease',
-        '&:first-of-type': {
-            borderTop: `1px solid ${theme.palette.grey[200]}`,
-        },
-        [theme.breakpoints.up('sm')]: {
-            flexDirection: 'row',
-            alignItems: 'center',
-            padding: theme.spacing(5, 4),
+        position: 'relative',
+        overflow: 'hidden',
+        minHeight: '280px',
+        transition: 'transform 0.3s ease, border-color 0.3s ease',
+        [theme.breakpoints.up('md')]: {
+            padding: theme.spacing(6),
         },
         '&:hover': {
-            backgroundColor: '#FAFBFC',
-            paddingLeft: theme.spacing(6),
+            transform: 'translateY(-4px)',
+            borderColor: 'rgba(255, 255, 255, 0.2)',
         }
+    },
+    statValue: {
+        fontSize: '3rem',
+        fontWeight: 800,
+        color: '#FFFFFF',
+        fontFamily: theme.typography.h1.fontFamily,
+        lineHeight: 1,
+        marginBottom: theme.spacing(1),
+        letterSpacing: '-0.03em',
+        [theme.breakpoints.up('md')]: {
+            fontSize: '4rem',
+        }
+    },
+    statLabel: {
+        fontSize: '0.875rem',
+        fontWeight: 500,
+        textTransform: 'uppercase',
+        letterSpacing: '0.1em',
+        color: '#BBFF71', // Brand accent for data label
+        marginBottom: theme.spacing(4),
     },
     cardTitle: {
         fontSize: '1.25rem',
         fontWeight: 600,
-        color: '#232733',
+        color: '#FFFFFF',
         fontFamily: theme.typography.h1.fontFamily,
-        lineHeight: 1.3,
-        letterSpacing: '-0.01em',
-        marginBottom: theme.spacing(2),
-        [theme.breakpoints.up('sm')]: {
-            marginBottom: 0,
+        lineHeight: 1.4,
+        marginBottom: theme.spacing(4),
+        maxWidth: '80%',
+        [theme.breakpoints.up('md')]: {
             fontSize: '1.5rem',
         }
     },
     cardAction: {
         fontSize: '0.875rem',
         fontWeight: 600,
-        color: '#0966FF', // Action blue
+        color: '#FFFFFF',
         textTransform: 'uppercase',
         letterSpacing: '0.05em',
         display: 'flex',
@@ -95,9 +115,15 @@ export const useStyles = makeStyles()((theme) => ({
         gap: theme.spacing(1),
         textDecoration: 'none',
         whiteSpace: 'nowrap',
+        opacity: 0.8,
+        transition: 'opacity 0.2s, color 0.2s',
         '&::after': {
             content: '"→"',
             transition: 'transform 0.2s',
+        },
+        '&:hover': {
+            opacity: 1,
+            color: '#BBFF71',
         },
         '&:hover::after': {
             transform: 'translateX(4px)',
