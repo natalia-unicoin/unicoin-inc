@@ -159,14 +159,14 @@ export const useStyles = makeStyles<{ isScrolled: boolean }>()((theme, { isScrol
         height: '100%',
         backgroundColor: theme.palette.common.white,
         zIndex: 60,
-        padding: theme.spacing(4), // p-8
+        padding: theme.spacing(3), // slightly reduced padding
         display: 'flex',
         flexDirection: 'column',
         boxShadow: theme.shadows[24],
         overflowY: 'auto',
         [theme.breakpoints.up('md')]: {
             width: '500px',
-            padding: theme.spacing(6), // p-12
+            padding: theme.spacing(4), // reduced padding
         }
     },
     closeButtonWrapper: {
@@ -186,10 +186,15 @@ export const useStyles = makeStyles<{ isScrolled: boolean }>()((theme, { isScrol
         }
     },
     menuLogo: {
-        marginBottom: theme.spacing(4),
+        marginBottom: theme.spacing(2), // reduced from 4
         [theme.breakpoints.up('md')]: {
-            marginBottom: theme.spacing(5),
+            marginBottom: theme.spacing(4),
         }
+    },
+    menuLinkItem: {
+        display: 'block',
+        width: 'fit-content',
+        textDecoration: 'none !important', // Force removal of underline
     },
     isotypeImageMobile: {
         height: '64px',

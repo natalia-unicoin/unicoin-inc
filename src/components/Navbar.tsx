@@ -166,7 +166,7 @@ const Navbar = () => {
                                         <Link
                                             href={link.href}
                                             onClick={() => setIsMenuOpen(false)}
-                                            className="block w-fit"
+                                            className={classes.menuLinkItem}
                                         >
                                             <motion.div
                                                 initial={{ opacity: 0, x: 50 }}
