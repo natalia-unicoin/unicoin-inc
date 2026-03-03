@@ -56,7 +56,7 @@ const WarOnInnovation = () => {
                         }}
                     >
                         <p className={classes.statement}>
-                            The <span className={classes.accent}>regulatory environment</span> created significant volatility across the global digital asset ecosystem, contributing to trillions in market value disruption and heightened uncertainty for investors and emerging companies alike.
+                            <span className={classes.accent}>Regulatory volatility</span> stress-tested our institutional framework, reinforcing structural discipline across the global digital asset ecosystem while preserving strategic momentum for stakeholders.
                         </p>
                     </motion.div>
 
@@ -69,7 +69,7 @@ const WarOnInnovation = () => {
                         }}
                     >
                         <p className={classes.supportingText}>
-                            For many participants, this period represented not only financial instability but also a loss of strategic momentum. Our response was guided by one priority: protecting stakeholders while preserving long-term institutional viability.
+                            For many participants, this period represented not only financial instability but also a loss of strategic momentum. Our response was guided by one priority: protecting stakeholders while preserving long-term institutional viability through a debt-free model.
                         </p>
                     </motion.div>
 
