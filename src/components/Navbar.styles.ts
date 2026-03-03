@@ -63,7 +63,7 @@ export const useStyles = makeStyles<{ isScrolled: boolean }>()((theme, { isScrol
     joinButton: {
         backgroundColor: theme.palette.secondary.main,
         backdropFilter: 'blur(5px)',
-        color: theme.palette.secondary.contrastText || '#FFFFFF',
+        color: theme.palette.getContrastText(theme.palette.secondary.main), // True responsive text color based on background luminance
         padding: '8px 20px',
         borderRadius: '9999px', // Pill shape
         fontSize: '0.75rem',

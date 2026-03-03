@@ -21,7 +21,7 @@ const getPalette = (mode: ThemeMode) => {
             return {
                 mode: 'light' as const,
                 primary: { main: '#10141E' }, // Darkest Navy/Black from image
-                secondary: { main: '#009EE3', contrastText: '#FFFFFF' }, // Azure CTA with forced white text
+                secondary: { main: '#009EE3' }, // Azure CTA
                 success: { main: '#10141E' },
                 info: { main: '#FCD144' }, // Requested Gold/Yellow mapped to UI accents
                 warning: { main: '#0A337C' }, // Deep Blue from image
