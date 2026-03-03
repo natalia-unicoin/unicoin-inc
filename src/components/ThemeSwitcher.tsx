@@ -8,9 +8,9 @@ const ThemeSwitcher = () => {
     const { activeTheme, setTheme } = useThemeContext();
 
     const themes: { id: ThemeMode; label: string; color: string }[] = [
-        { id: 'tbiz', label: 'PALETA 1', color: '#FCD144' },
-        { id: 'safebets', label: 'PALETA 3', color: '#BBFF71' },
-        { id: 'glass', label: 'APPLE GLASS', color: '#06b6d4' } // Cyan dot
+        { id: 'tbiz', label: 'TBIZ 1', color: '#FCD144' },
+        { id: 'safebets', label: 'TBIZ 2', color: '#BBFF71' },
+        { id: 'glass', label: 'TBIZ LIQUID GLASS', color: '#06b6d4' } // Cyan dot
     ];
 
     return (
