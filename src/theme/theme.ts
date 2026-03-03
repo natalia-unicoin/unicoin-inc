@@ -24,7 +24,7 @@ const getPalette = (mode: ThemeMode) => {
                 secondary: { main: '#009EE3' }, // Bright Azure from image replaces Lime Green
                 success: { main: '#10141E' },
                 info: { main: '#0A337C' }, // Deep Blue from image
-                warning: { main: '#F7D046' }, // Gold/Yellow from image
+                warning: { main: '#FCD144' }, // Requested Gold/Yellow from brand manual
                 background: { default: '#FFFFFF', paper: '#E6E7E8' }, // Light Gray from palette
                 text: { primary: '#10141E', secondary: '#0A337C' }, // Deep blue for secondary text
             };

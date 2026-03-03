@@ -95,8 +95,8 @@ export const useStyles = makeStyles()((theme) => ({
         }
     },
     ctaButton: {
-        backgroundColor: theme.palette.secondary.main, // Brand Yellow
-        color: theme.palette.primary.main,
+        backgroundColor: theme.palette.secondary.main, // Brand Yellow or Azure
+        color: theme.palette.getContrastText(theme.palette.secondary.main), // Responsive text color
         padding: '16px 32px', // px-8 py-4
         borderRadius: '9999px', // Pill shape
         fontSize: '0.875rem', // text-sm
