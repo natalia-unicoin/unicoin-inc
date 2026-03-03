@@ -2,8 +2,8 @@ import { makeStyles } from 'tss-react/mui';
 
 export const useStyles = makeStyles()((theme) => ({
     section: {
-        paddingTop: theme.spacing(12),
-        paddingBottom: theme.spacing(12),
+        paddingTop: theme.spacing(8),
+        paddingBottom: theme.spacing(8),
         backgroundColor: theme.palette.background.paper,
         color: theme.palette.text.primary,
         [theme.breakpoints.up('lg')]: {

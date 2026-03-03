@@ -52,7 +52,7 @@ export const useStyles = makeStyles()((theme) => ({
         letterSpacing: '-0.03em',
         marginBottom: theme.spacing(1),
         color: '#FFFFFF', // White for video
-        fontSize: '48px', // Increased per user request
+        fontSize: '40px', // Reverted to 40px for mobile safety
         lineHeight: '1',
         [theme.breakpoints.up('md')]: {
             fontSize: '64px',
@@ -62,7 +62,7 @@ export const useStyles = makeStyles()((theme) => ({
         }
     },
     subtitle: {
-        fontSize: '1.25rem',
+        fontSize: '1.125rem', // Reduced from 1.25rem for mobile
         fontWeight: 600,
         letterSpacing: '0',
         color: '#FFFFFF', // White for video

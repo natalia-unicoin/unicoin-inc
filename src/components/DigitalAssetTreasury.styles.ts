@@ -4,7 +4,7 @@ export const useStyles = makeStyles()((theme) => ({
     section: {
         backgroundColor: theme.palette.background.paper, // Clean institutional white
         color: theme.palette.text.primary, // Dark text for contrast
-        padding: theme.spacing(12, 0),
+        padding: theme.spacing(8, 0),
         width: '100%',
         [theme.breakpoints.up('md')]: {
             padding: theme.spacing(16, 0),

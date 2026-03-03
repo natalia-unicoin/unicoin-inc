@@ -17,8 +17,8 @@ export const useStyles = makeStyles()((theme) => ({
         height: '100vh',
         display: 'flex',
         alignItems: 'center',
-        paddingTop: theme.spacing(12),
-        paddingBottom: theme.spacing(12),
+        paddingTop: theme.spacing(8),
+        paddingBottom: theme.spacing(8),
         overflow: 'hidden',
     },
     container: {

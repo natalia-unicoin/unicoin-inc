@@ -4,7 +4,7 @@ export const useStyles = makeStyles()((theme) => ({
     section: {
         backgroundColor: '#F5F5F7', // Slightly gray background to distinguish from Financials
         color: theme.palette.text.primary,
-        padding: theme.spacing(12, 0),
+        padding: theme.spacing(8, 0),
         width: '100%',
         [theme.breakpoints.up('md')]: {
             padding: theme.spacing(16, 0),

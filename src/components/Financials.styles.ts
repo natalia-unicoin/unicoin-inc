@@ -4,10 +4,10 @@ export const useStyles = makeStyles()((theme) => ({
     section: {
         backgroundColor: theme.palette.primary.main, // Deep corporate dark
         color: '#FFFFFF',
-        padding: theme.spacing(12, 0),
+        padding: theme.spacing(8, 0), // Mobile 64px
         width: '100%',
         [theme.breakpoints.up('md')]: {
-            padding: theme.spacing(16, 0),
+            padding: theme.spacing(16, 0), // Desktop 128px
         }
     },
     container: {
@@ -55,14 +55,14 @@ export const useStyles = makeStyles()((theme) => ({
         backgroundColor: theme.palette.primary.main, // Slightly lighter dark for contrast against #1D1D1F
         border: `1px solid rgba(255, 255, 255, 0.08)`, // Extremely subtle stroke
         borderRadius: '24px',
-        padding: theme.spacing(5),
+        padding: theme.spacing(4), // Slightly tighter on mobile
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-between',
         alignItems: 'flex-start',
         position: 'relative',
         overflow: 'hidden',
-        minHeight: '280px',
+        minHeight: '260px', // slightly smaller
         transition: 'transform 0.3s ease, border-color 0.3s ease',
         [theme.breakpoints.up('md')]: {
             padding: theme.spacing(6),
@@ -73,7 +73,7 @@ export const useStyles = makeStyles()((theme) => ({
         }
     },
     statValue: {
-        fontSize: '3rem',
+        fontSize: '2.5rem', // Adjusted for mobile
         fontWeight: 800,
         color: '#FFFFFF',
         fontFamily: theme.typography.h1.fontFamily,

@@ -2,8 +2,8 @@ import { makeStyles } from 'tss-react/mui';
 
 export const useStyles = makeStyles()((theme) => ({
     section: {
-        paddingTop: theme.spacing(12),
-        paddingBottom: theme.spacing(12),
+        paddingTop: theme.spacing(8),
+        paddingBottom: theme.spacing(8),
         backgroundColor: theme.palette.info.main,
         color: '#FFFFFF',
         position: 'relative',
@@ -39,7 +39,7 @@ export const useStyles = makeStyles()((theme) => ({
         marginBottom: theme.spacing(12),
         lineHeight: 1.1,
         textAlign: 'center',
-        fontSize: '24px',
+        fontSize: '20px', // Reduced for mobile
         textTransform: 'uppercase',
         color: 'rgba(255, 255, 255, 0.8)', // Improved contrast
         position: 'sticky', // Ensure title stays visible
@@ -142,7 +142,7 @@ export const useStyles = makeStyles()((theme) => ({
         }
     },
     metricValue: {
-        fontSize: '3rem', // Scaled down for mobile stack
+        fontSize: '2.5rem', // Scaled down further for mobile stack
         fontWeight: 700,
         color: '#FFFFFF',
         lineHeight: 1,

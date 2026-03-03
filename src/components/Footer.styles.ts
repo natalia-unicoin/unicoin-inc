@@ -186,11 +186,11 @@ export const useStyles = makeStyles()((theme) => ({
         fontSize: '0.75rem',
     },
     copyright: {
-        marginTop: theme.spacing(4),
+        marginTop: theme.spacing(8),
         display: 'flex',
         justifyContent: 'center',
-        fontSize: '10px',
-        color: theme.palette.grey[300],
+        fontSize: '0.75rem',
+        color: theme.palette.grey[400],
     },
     copyrightBrand: {
         whiteSpace: 'nowrap',
