@@ -77,14 +77,6 @@ const Footer = () => {
 
                 {/* Brand Strip / Bottom Bar */}
                 <div className={classes.bottomBar}>
-                    <div className={classes.tagline}>
-                        <span>Built on Stability</span>
-                        <span className={classes.separator}>|</span>
-                        <span>Powered by Innovation</span>
-                        <span className={classes.separator}>|</span>
-                        <span>Designed for the Modern Investor</span>
-                    </div>
-
                     <div className={classes.legalLinksBar}>
                         {legalLinks.map((link, idx) => (
                             <React.Fragment key={idx}>
@@ -98,6 +90,14 @@ const Footer = () => {
 
                     <div className={classes.copyright}>
                         &copy; 2026 <span className={classes.copyrightBrand}>TransparentBusiness Inc.</span> All rights reserved.
+                    </div>
+
+                    <div className={classes.tagline}>
+                        <span>Built on Stability</span>
+                        <span className={classes.separator}>|</span>
+                        <span>Powered by Innovation</span>
+                        <span className={classes.separator}>|</span>
+                        <span>Designed for the Modern Investor</span>
                     </div>
                 </div>
             </div>

@@ -142,6 +142,7 @@ export const useStyles = makeStyles()((theme) => ({
         flexDirection: 'column',
         justifyContent: 'space-between',
         alignItems: 'center',
+        marginTop: theme.spacing(6),
         gap: theme.spacing(3),
         fontSize: '10px', // text-[10px]
         fontWeight: 700,
@@ -166,7 +167,7 @@ export const useStyles = makeStyles()((theme) => ({
         justifyContent: 'center',
         alignItems: 'center',
         gap: theme.spacing(2),
-        marginTop: theme.spacing(6),
+        marginTop: 0,
         [theme.breakpoints.up('md')]: {
             gap: theme.spacing(3),
         }
