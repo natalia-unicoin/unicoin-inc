@@ -220,9 +220,10 @@ export const useStyles = makeStyles<{ isScrolled: boolean }>()((theme, { isScrol
         alignItems: 'center',
         gap: theme.spacing(2),
         width: '100%',
+        textDecoration: 'none',
         fontSize: '1.125rem', // text-lg
         [theme.breakpoints.up('md')]: {
-            fontSize: '1.5rem', // text-2xl
+            fontSize: '1.25rem', // text-xl (was 1.5rem/2xl)
         },
         transition: 'color 0.2s',
         '&:hover': {
