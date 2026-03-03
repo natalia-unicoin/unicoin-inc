@@ -13,33 +13,49 @@ const montserrat = Montserrat({
     display: 'swap',
 });
 
-const theme = createTheme({
-    palette: {
-        mode: 'light',
-        primary: {
-            main: '#232733', // Neutro 3 (Oscuro)
-        },
-        secondary: {
-            main: '#BBFF71', // Acento (Amarillo)
-        },
-        success: {
-            main: '#232733', // Neutro 3
-        },
-        info: {
-            main: '#0966FF', // Complemento (Azul Naval)
-        },
-        warning: {
-            main: '#BBFF71', // Acento
-        },
-        background: {
-            default: '#FFFFFF', // Neutro 1 (Claro - Blanco Humo)
-            paper: '#F5F5F7', // Neutro 2 (Medio / Gris Tenue)
-        },
-        text: {
-            primary: '#232733', // Neutro 3
-            secondary: '#0966FF', // Complemento
-        }
-    },
+import { ThemeMode } from '@/context/ThemeContext';
+
+const getPalette = (mode: ThemeMode) => {
+    switch (mode) {
+        case 'light':
+            return {
+                mode: 'light' as const,
+                primary: { main: '#000000' }, // Apple black
+                secondary: { main: '#0071E3' }, // Apple blue
+                success: { main: '#000000' },
+                info: { main: '#0071E3' },
+                warning: { main: '#F56300' },
+                background: { default: '#FFFFFF', paper: '#F5F5F7' },
+                text: { primary: '#1D1D1F', secondary: '#86868B' },
+            };
+        case 'safebets':
+            return {
+                mode: 'dark' as const,
+                primary: { main: '#1D1D1F' },
+                secondary: { main: '#BBFF71' }, // Neon accent
+                success: { main: '#1D1D1F' },
+                info: { main: '#FFFFFF' },
+                warning: { main: '#BBFF71' },
+                background: { default: '#111111', paper: '#1D1D1F' },
+                text: { primary: '#FFFFFF', secondary: '#A1A1A6' },
+            };
+        case 'tbiz':
+        default:
+            return {
+                mode: 'light' as const,
+                primary: { main: '#232733' }, // Neutro 3 (Oscuro)
+                secondary: { main: '#BBFF71' }, // Acento (Amarillo)
+                success: { main: '#232733' },
+                info: { main: '#0966FF' }, // Complemento (Azul Naval)
+                warning: { main: '#BBFF71' },
+                background: { default: '#FFFFFF', paper: '#F5F5F7' },
+                text: { primary: '#232733', secondary: '#0966FF' },
+            };
+    }
+};
+
+const getTheme = (mode: ThemeMode) => createTheme({
+    palette: getPalette(mode),
     typography: {
         fontFamily: inter.style.fontFamily,
         h1: {
@@ -103,4 +119,4 @@ const theme = createTheme({
     },
 });
 
-export default theme;
+export default getTheme;
