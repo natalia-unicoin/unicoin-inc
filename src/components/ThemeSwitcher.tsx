@@ -8,7 +8,7 @@ const ThemeSwitcher = () => {
     const { activeTheme, setTheme } = useThemeContext();
 
     const themes: { id: ThemeMode; label: string; color: string }[] = [
-        { id: 'tbiz', label: 'TBIZ Original', color: '#BBFF71' },
+        { id: 'tbiz', label: 'TBIZ Revamp Original', color: '#FCD144' },
         { id: 'light', label: 'Apple Light', color: '#0071E3' },
         { id: 'safebets', label: 'SafeBets Dark', color: '#111111' },
     ];

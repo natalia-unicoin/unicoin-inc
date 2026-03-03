@@ -43,13 +43,13 @@ const getPalette = (mode: ThemeMode) => {
         default:
             return {
                 mode: 'light' as const,
-                primary: { main: '#232733' }, // Neutro 3 (Oscuro)
-                secondary: { main: '#BBFF71' }, // Acento (Amarillo)
-                success: { main: '#232733' },
-                info: { main: '#0966FF' }, // Complemento (Azul Naval)
-                warning: { main: '#BBFF71' },
-                background: { default: '#FFFFFF', paper: '#F5F5F7' },
-                text: { primary: '#232733', secondary: '#0966FF' },
+                primary: { main: '#0E1A2B' }, // Darkest Blue/Black (assumed from first card background)
+                secondary: { main: '#FCD144' }, // Yellow Accent
+                success: { main: '#0E1A2B' },
+                info: { main: '#2A4B6A' }, // Dark Blue Complement
+                warning: { main: '#FCD144' },
+                background: { default: '#FFFFFF', paper: '#FAFBFC' }, // Off-white for paper
+                text: { primary: '#0E1A2B', secondary: '#2A4B6A' },
             };
     }
 };
