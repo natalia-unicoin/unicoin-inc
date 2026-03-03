@@ -90,20 +90,20 @@ export const useStyles = makeStyles<{ isScrolled: boolean }>()((theme, { isScrol
             gap: theme.spacing(1),
             fontSize: '0.875rem',
             fontWeight: 500,
-            color: isScrolled ? theme.palette.text.primary : theme.palette.background.paper,
+            color: theme.palette.mode === 'dark' ? '#FFFFFF' : (isScrolled ? theme.palette.text.primary : '#FFFFFF'),
         },
     },
     langActive: {
-        color: isScrolled ? '#FFFFFF' : theme.palette.background.paper,
+        color: theme.palette.mode === 'dark' ? '#FFFFFF' : (isScrolled ? theme.palette.text.primary : '#FFFFFF'),
         fontWeight: 700,
         cursor: 'pointer',
     },
     langInactive: {
-        color: isScrolled ? 'rgba(255,255,255,0.7)' : 'rgba(255,255,255,0.7)',
+        color: theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.7)' : (isScrolled ? 'rgba(0,0,0,0.5)' : 'rgba(255,255,255,0.7)'),
         cursor: 'pointer',
         transition: 'color 0.2s',
         '&:hover': {
-            color: isScrolled ? '#FFFFFF' : theme.palette.background.paper,
+            color: theme.palette.mode === 'dark' ? '#FFFFFF' : (isScrolled ? theme.palette.text.primary : '#FFFFFF'),
         }
     },
     menuButtonWrapper: {
@@ -114,7 +114,7 @@ export const useStyles = makeStyles<{ isScrolled: boolean }>()((theme, { isScrol
         background: 'none',
         border: 'none',
         cursor: 'pointer',
-        color: isScrolled ? '#FFFFFF' : theme.palette.background.paper,
+        color: theme.palette.mode === 'dark' ? '#FFFFFF' : (isScrolled ? theme.palette.text.primary : '#FFFFFF'),
         fontSize: '0.75rem',
         fontWeight: 700,
         letterSpacing: '0.1em',
@@ -124,7 +124,7 @@ export const useStyles = makeStyles<{ isScrolled: boolean }>()((theme, { isScrol
         gap: theme.spacing(1),
         transition: 'color 0.2s',
         '&:hover': {
-            color: isScrolled ? theme.palette.text.secondary : 'rgba(255,255,255,0.7)',
+            color: theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.7)' : (isScrolled ? theme.palette.text.secondary : 'rgba(255,255,255,0.7)'),
         },
         [theme.breakpoints.up('md')]: {
             fontSize: '0.875rem',
@@ -141,7 +141,7 @@ export const useStyles = makeStyles<{ isScrolled: boolean }>()((theme, { isScrol
         [theme.breakpoints.up('md')]: {
             display: 'none',
         },
-        fill: isScrolled ? '#FFFFFF' : theme.palette.background.paper,
+        fill: theme.palette.mode === 'dark' ? '#FFFFFF' : (isScrolled ? theme.palette.text.primary : '#FFFFFF'),
     },
     // DRAWER STYLES
     backdrop: {
