@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import { getImagePath } from '@/utils/image';
 import { useStyles } from './DigitalAssetTreasury.styles';
 
 const DigitalAssetTreasury = () => {
@@ -48,6 +49,7 @@ const DigitalAssetTreasury = () => {
 
     return (
         <section id="treasury" className={classes.section}>
+            <img src={getImagePath('assets/bg-white.png')} alt="Treasury Texture Background" className={classes.bgImage} />
             <div className={classes.container}>
                 <motion.div
                     className={classes.header}

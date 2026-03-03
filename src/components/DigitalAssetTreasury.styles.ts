@@ -2,7 +2,9 @@ import { makeStyles } from 'tss-react/mui';
 
 export const useStyles = makeStyles()((theme) => ({
     section: {
-        backgroundColor: theme.palette.background.paper, // Clean institutional white
+        position: 'relative',
+        overflow: 'hidden',
+        backgroundColor: theme.palette.background.paper, // Fallback color
         color: theme.palette.text.primary, // Dark text for contrast
         padding: theme.spacing(8, 0),
         width: '100%',
@@ -10,7 +12,19 @@ export const useStyles = makeStyles()((theme) => ({
             padding: theme.spacing(16, 0),
         }
     },
+    bgImage: {
+        position: 'absolute',
+        inset: 0,
+        zIndex: 0,
+        width: '100%',
+        height: '100%',
+        objectFit: 'cover',
+        objectPosition: 'center',
+        pointerEvents: 'none',
+    },
     container: {
+        position: 'relative',
+        zIndex: 1,
         maxWidth: '1200px',
         margin: '0 auto',
         padding: theme.spacing(0, 3),
