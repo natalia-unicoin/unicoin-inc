@@ -4,7 +4,7 @@ export const useStyles = makeStyles()((theme) => ({
     section: {
         paddingTop: '160px',
         paddingBottom: '80px',
-        backgroundColor: '#FFFFFF',
+        backgroundColor: theme.palette.background.paper,
         borderTop: '1px solid #E5E5E7',
     },
     container: {
@@ -29,7 +29,7 @@ export const useStyles = makeStyles()((theme) => ({
         marginBottom: '60px',
         letterSpacing: '-0.03em',
         fontFamily: theme.typography.h1.fontFamily,
-        color: '#1D1D1F',
+        color: theme.palette.text.primary,
         textAlign: 'center',
         textTransform: 'none',
         [theme.breakpoints.up('md')]: {
@@ -71,7 +71,7 @@ export const useStyles = makeStyles()((theme) => ({
         fontWeight: 700,
         lineHeight: '1',
         marginBottom: '8px',
-        color: '#1D1D1F',
+        color: theme.palette.text.primary,
         fontFamily: theme.typography.h1.fontFamily,
         [theme.breakpoints.up('md')]: {
             fontSize: '48px',
@@ -80,7 +80,7 @@ export const useStyles = makeStyles()((theme) => ({
     statLabel: {
         fontSize: '12px',
         fontWeight: 700,
-        color: '#1D1D1F', // High contrast
+        color: theme.palette.text.primary, // High contrast
         textTransform: 'uppercase',
         letterSpacing: '0.05em', // Reduced from 0.1em
         lineHeight: '1.4',

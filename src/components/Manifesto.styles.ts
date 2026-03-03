@@ -7,7 +7,7 @@ export const useStyles = makeStyles()((theme) => ({
         paddingTop: theme.spacing(6), // py-12
         paddingBottom: theme.spacing(6),
         backgroundColor: '#f9f9f9',
-        color: theme.palette.common.black,
+        color: theme.palette.text.primary,
         [theme.breakpoints.up('md')]: {
             paddingTop: theme.spacing(10), // py-20
             paddingBottom: theme.spacing(10),
@@ -79,8 +79,8 @@ export const useStyles = makeStyles()((theme) => ({
         marginTop: theme.spacing(6), // mt-12
     },
     readButton: {
-        backgroundColor: theme.palette.common.black,
-        color: theme.palette.common.white,
+        backgroundColor: theme.palette.text.primary,
+        color: theme.palette.background.paper,
         padding: '12px 32px', // px-8 py-3
         borderRadius: '9999px',
         fontWeight: 700,
@@ -92,7 +92,7 @@ export const useStyles = makeStyles()((theme) => ({
         transition: 'background-color 0.2s, color 0.2s',
         '&:hover': {
             backgroundColor: theme.palette.secondary.main, // Neon Yellow
-            color: theme.palette.common.black,
+            color: theme.palette.text.primary,
         }
     }
 }));

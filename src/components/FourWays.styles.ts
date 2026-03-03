@@ -4,8 +4,8 @@ export const useStyles = makeStyles()((theme) => ({
     section: {
         paddingTop: theme.spacing(6), // py-12
         paddingBottom: theme.spacing(6),
-        backgroundColor: theme.palette.common.white,
-        color: theme.palette.common.black,
+        backgroundColor: theme.palette.background.paper,
+        color: theme.palette.text.primary,
         [theme.breakpoints.up('md')]: {
             paddingTop: theme.spacing(10), // py-20
             paddingBottom: theme.spacing(10),
@@ -155,7 +155,7 @@ export const useStyles = makeStyles()((theme) => ({
         fontSize: '3.75rem', // text-6xl
         fontFamily: "'Caveat', cursive", // Explicit Hand font
         fontWeight: 700,
-        color: theme.palette.common.white,
+        color: theme.palette.background.paper,
         marginBottom: theme.spacing(2), // mb-4
         letterSpacing: 'normal', // Caveat doesn't need tight tracking
         lineHeight: 1,

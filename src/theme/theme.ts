@@ -31,12 +31,12 @@ const getPalette = (mode: ThemeMode) => {
         case 'safebets':
             return {
                 mode: 'dark' as const,
-                primary: { main: '#1D1D1F' },
-                secondary: { main: '#BBFF71' }, // Neon accent
-                success: { main: '#1D1D1F' },
-                info: { main: '#FFFFFF' },
+                primary: { main: '#232733' }, // Dark Navy
+                secondary: { main: '#BBFF71' }, // Lime Green
+                success: { main: '#232733' },
+                info: { main: '#0966FF' }, // Bright Blue
                 warning: { main: '#BBFF71' },
-                background: { default: '#111111', paper: '#1D1D1F' },
+                background: { default: '#232733', paper: '#1D1D1F' },
                 text: { primary: '#FFFFFF', secondary: '#A1A1A6' },
             };
         case 'tbiz':

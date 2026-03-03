@@ -50,7 +50,7 @@ export const useStyles = makeStyles()((theme) => ({
         paddingBottom: '4px',
         transition: 'all 0.3s ease',
         '&:hover': {
-            color: '#BBFF71',
+            color: theme.palette.secondary.main,
         }
     },
     meshGrid: {

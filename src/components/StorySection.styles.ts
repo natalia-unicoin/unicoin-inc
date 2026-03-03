@@ -4,7 +4,7 @@ export const useStyles = makeStyles()((theme) => ({
     section: {
         paddingTop: theme.spacing(12),
         paddingBottom: theme.spacing(12),
-        backgroundColor: '#FFFFFF',
+        backgroundColor: theme.palette.background.paper,
         color: '#111111',
         [theme.breakpoints.up('lg')]: {
             paddingTop: '160px',
@@ -81,7 +81,7 @@ export const useStyles = makeStyles()((theme) => ({
     subtitle: {
         fontSize: '1.25rem',
         fontWeight: 700,
-        color: '#232733', // Dark Navy
+        color: theme.palette.primary.main, // Dark Navy
         lineHeight: 1.5,
         [theme.breakpoints.up('md')]: {
             fontSize: '1.5rem',
@@ -113,7 +113,7 @@ export const useStyles = makeStyles()((theme) => ({
         fontWeight: 700,
         textTransform: 'uppercase',
         letterSpacing: '0.2em',
-        color: '#0966FF', // Complementary Blue
+        color: theme.palette.info.main, // Complementary Blue
         marginBottom: theme.spacing(3),
         display: 'block',
     },
@@ -122,7 +122,7 @@ export const useStyles = makeStyles()((theme) => ({
         fontWeight: 700,
         marginBottom: theme.spacing(3),
         letterSpacing: '-0.03em',
-        color: '#232733',
+        color: theme.palette.primary.main,
         [theme.breakpoints.up('md')]: {
             fontSize: '2.5rem',
         }
@@ -130,22 +130,22 @@ export const useStyles = makeStyles()((theme) => ({
     cardText: {
         fontSize: '1.125rem',
         lineHeight: 1.7,
-        color: '#232733',
+        color: theme.palette.primary.main,
         fontWeight: 400,
         [theme.breakpoints.up('md')]: {
             fontSize: '1.25rem',
         }
     },
     highlightBlock: {
-        backgroundColor: '#232733', // Neutro Oscuro
-        color: '#FFFFFF', // Neutro Claro
+        backgroundColor: theme.palette.primary.main, // Neutro Oscuro
+        color: theme.palette.text.primary, // Neutro Claro
     },
     imperativeLabel: {
         fontSize: '0.875rem',
         fontWeight: 700,
         textTransform: 'uppercase',
         letterSpacing: '0.2em',
-        color: '#BBFF71', // Brand Accent Yellow
+        color: theme.palette.secondary.main, // Brand Accent Yellow
         marginBottom: theme.spacing(3),
         display: 'block',
     },
@@ -154,14 +154,14 @@ export const useStyles = makeStyles()((theme) => ({
         fontWeight: 700,
         marginBottom: theme.spacing(3),
         letterSpacing: '-0.03em',
-        color: '#FFFFFF',
+        color: theme.palette.text.primary,
         [theme.breakpoints.up('md')]: {
             fontSize: '2.5rem',
         }
     },
     imperativeDescription: {
         fontSize: '1.125rem',
-        color: '#FFFFFF',
+        color: theme.palette.text.primary,
         lineHeight: 1.7,
         fontWeight: 400,
         [theme.breakpoints.up('md')]: {
@@ -187,6 +187,6 @@ export const useStyles = makeStyles()((theme) => ({
     },
     activeDot: {
         width: '32px', // Elongated for active
-        backgroundColor: '#232733', // Dark for active
+        backgroundColor: theme.palette.primary.main, // Dark for active
     }
 }));

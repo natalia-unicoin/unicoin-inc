@@ -4,8 +4,8 @@ export const useStyles = makeStyles()((theme) => ({
     section: {
         paddingTop: theme.spacing(12),
         paddingBottom: theme.spacing(12),
-        backgroundColor: '#0966FF',
-        color: '#FFFFFF',
+        backgroundColor: theme.palette.info.main,
+        color: theme.palette.text.primary,
         position: 'relative',
         overflow: 'hidden',
         minHeight: '150vh', // Extend height to allow long scroll interactions
@@ -120,7 +120,7 @@ export const useStyles = makeStyles()((theme) => ({
         justifyContent: 'center',
         gap: theme.spacing(8),
         width: '100%',
-        backgroundColor: '#0966FF', // Ensure it obscures elements behind it if needed
+        backgroundColor: theme.palette.info.main, // Ensure it obscures elements behind it if needed
         padding: '40px 0',
         [theme.breakpoints.up('md')]: {
             flexDirection: 'row',
@@ -144,7 +144,7 @@ export const useStyles = makeStyles()((theme) => ({
     metricValue: {
         fontSize: '3rem', // Scaled down for mobile stack
         fontWeight: 700,
-        color: '#FFFFFF',
+        color: theme.palette.text.primary,
         lineHeight: 1,
         letterSpacing: '-0.04em',
         [theme.breakpoints.up('md')]: {
@@ -158,7 +158,7 @@ export const useStyles = makeStyles()((theme) => ({
         fontSize: '1rem',
         textTransform: 'uppercase',
         letterSpacing: '0.2em',
-        color: '#BBFF71', // Accent yellow for labels
+        color: theme.palette.secondary.main, // Accent yellow for labels
         marginTop: theme.spacing(3),
         fontWeight: 600,
     }

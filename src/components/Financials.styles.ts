@@ -2,8 +2,8 @@ import { makeStyles } from 'tss-react/mui';
 
 export const useStyles = makeStyles()((theme) => ({
     section: {
-        backgroundColor: '#1D1D1F', // Deep corporate dark
-        color: '#FFFFFF',
+        backgroundColor: theme.palette.primary.main, // Deep corporate dark
+        color: theme.palette.text.primary,
         padding: theme.spacing(12, 0),
         width: '100%',
         [theme.breakpoints.up('md')]: {
@@ -34,7 +34,7 @@ export const useStyles = makeStyles()((theme) => ({
         fontWeight: 700,
         letterSpacing: '-0.03em',
         lineHeight: 1.1,
-        color: '#FFFFFF',
+        color: theme.palette.text.primary,
         [theme.breakpoints.up('md')]: {
             fontSize: '3.5rem',
         },
@@ -52,7 +52,7 @@ export const useStyles = makeStyles()((theme) => ({
         }
     },
     card: {
-        backgroundColor: '#232733', // Slightly lighter dark for contrast against #1D1D1F
+        backgroundColor: theme.palette.primary.main, // Slightly lighter dark for contrast against #1D1D1F
         border: `1px solid rgba(255, 255, 255, 0.08)`, // Extremely subtle stroke
         borderRadius: '24px',
         padding: theme.spacing(5),
@@ -75,7 +75,7 @@ export const useStyles = makeStyles()((theme) => ({
     statValue: {
         fontSize: '3rem',
         fontWeight: 800,
-        color: '#FFFFFF',
+        color: theme.palette.text.primary,
         fontFamily: theme.typography.h1.fontFamily,
         lineHeight: 1,
         marginBottom: theme.spacing(2),
@@ -89,13 +89,13 @@ export const useStyles = makeStyles()((theme) => ({
         fontWeight: 500,
         textTransform: 'uppercase',
         letterSpacing: '0.1em',
-        color: '#BBFF71', // Brand accent for data label
+        color: theme.palette.secondary.main, // Brand accent for data label
         marginBottom: theme.spacing(4),
     },
     cardTitle: {
         fontSize: '1.25rem',
         fontWeight: 600,
-        color: '#FFFFFF',
+        color: theme.palette.text.primary,
         fontFamily: theme.typography.h1.fontFamily,
         lineHeight: 1.4,
         marginBottom: theme.spacing(4),
@@ -107,7 +107,7 @@ export const useStyles = makeStyles()((theme) => ({
     cardAction: {
         fontSize: '0.875rem',
         fontWeight: 600,
-        color: '#FFFFFF',
+        color: theme.palette.text.primary,
         textTransform: 'uppercase',
         letterSpacing: '0.05em',
         display: 'flex',
@@ -123,7 +123,7 @@ export const useStyles = makeStyles()((theme) => ({
         },
         '&:hover': {
             opacity: 1,
-            color: '#BBFF71',
+            color: theme.palette.secondary.main,
         },
         '&:hover::after': {
             transform: 'translateX(4px)',

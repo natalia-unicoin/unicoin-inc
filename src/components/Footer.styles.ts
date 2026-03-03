@@ -2,8 +2,8 @@ import { makeStyles } from 'tss-react/mui';
 
 export const useStyles = makeStyles()((theme) => ({
     footer: {
-        backgroundColor: '#FFFFFF',
-        color: '#232733',
+        backgroundColor: theme.palette.background.paper,
+        color: theme.palette.primary.main,
         paddingTop: theme.spacing(10), // py-20 (approx 80px)
         paddingBottom: theme.spacing(10),
         borderTop: `1px solid ${theme.palette.grey[100]}`,
@@ -49,7 +49,7 @@ export const useStyles = makeStyles()((theme) => ({
         objectFit: 'contain',
     },
     description: {
-        color: '#232733', // Changed from gray-500
+        color: theme.palette.primary.main, // Changed from gray-500
         lineHeight: 1.625, // leading-relaxed
         maxWidth: '24rem', // max-w-sm
         marginBottom: theme.spacing(4), // mb-8
@@ -67,11 +67,11 @@ export const useStyles = makeStyles()((theme) => ({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        color: '#232733',
+        color: theme.palette.primary.main,
         transition: 'all 0.3s',
         '&:hover': {
-            backgroundColor: '#232733',
-            color: '#FFFFFF',
+            backgroundColor: theme.palette.primary.main,
+            color: theme.palette.text.primary,
         }
     },
     socialSvg: {
@@ -122,14 +122,14 @@ export const useStyles = makeStyles()((theme) => ({
         display: 'flex',
         flexDirection: 'column',
         gap: theme.spacing(2), // space-y-4
-        color: '#232733', // Changed from gray-500
+        color: theme.palette.primary.main, // Changed from gray-500
     },
     linkItem: {
         color: 'inherit',
         textDecoration: 'none',
         transition: 'color 0.2s',
         '&:hover': {
-            color: '#232733',
+            color: theme.palette.primary.main,
         }
     },
     // Bottom Bar
@@ -178,7 +178,7 @@ export const useStyles = makeStyles()((theme) => ({
         textDecoration: 'none',
         transition: 'color 0.2s',
         '&:hover': {
-            color: '#232733',
+            color: theme.palette.primary.main,
         }
     },
     legalSeparator: {

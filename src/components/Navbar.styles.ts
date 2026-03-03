@@ -7,9 +7,9 @@ export const useStyles = makeStyles<{ isScrolled: boolean }>()((theme, { isScrol
         left: 0,
         right: 0,
         zIndex: 50,
-        backgroundColor: isScrolled ? 'rgba(255, 255, 255, 0.9)' : 'transparent',
+        backgroundColor: isScrolled ? (theme.palette.mode === 'dark' ? 'rgba(0, 0, 0, 0.8)' : 'rgba(255, 255, 255, 0.9)') : 'transparent',
         backdropFilter: isScrolled ? 'blur(10px)' : 'none',
-        borderBottom: isScrolled ? `1px solid ${theme.palette.grey[100]}` : 'none',
+        borderBottom: isScrolled ? `1px solid ${theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.05)' : theme.palette.grey[100]}` : 'none',
         transition: 'all 0.3s ease-in-out',
     },
     container: {
@@ -61,9 +61,9 @@ export const useStyles = makeStyles<{ isScrolled: boolean }>()((theme, { isScrol
         },
     },
     joinButton: {
-        backgroundColor: '#BBFF71',
+        backgroundColor: theme.palette.secondary.main,
         backdropFilter: 'blur(5px)',
-        color: '#232733',
+        color: theme.palette.primary.main,
         padding: '8px 20px',
         borderRadius: '9999px', // Pill shape
         fontSize: '0.75rem',
@@ -89,11 +89,11 @@ export const useStyles = makeStyles<{ isScrolled: boolean }>()((theme, { isScrol
             gap: theme.spacing(1),
             fontSize: '0.875rem',
             fontWeight: 500,
-            color: isScrolled ? theme.palette.text.primary : '#FFFFFF',
+            color: isScrolled ? theme.palette.text.primary : theme.palette.background.paper,
         },
     },
     langActive: {
-        color: isScrolled ? theme.palette.common.black : '#FFFFFF',
+        color: isScrolled ? theme.palette.text.primary : theme.palette.background.paper,
         fontWeight: 700,
         cursor: 'pointer',
     },
@@ -102,7 +102,7 @@ export const useStyles = makeStyles<{ isScrolled: boolean }>()((theme, { isScrol
         cursor: 'pointer',
         transition: 'color 0.2s',
         '&:hover': {
-            color: isScrolled ? theme.palette.common.black : '#FFFFFF',
+            color: isScrolled ? theme.palette.text.primary : theme.palette.background.paper,
         }
     },
     menuButtonWrapper: {
@@ -113,7 +113,7 @@ export const useStyles = makeStyles<{ isScrolled: boolean }>()((theme, { isScrol
         background: 'none',
         border: 'none',
         cursor: 'pointer',
-        color: isScrolled ? theme.palette.common.black : '#FFFFFF',
+        color: isScrolled ? theme.palette.text.primary : theme.palette.background.paper,
         fontSize: '0.75rem',
         fontWeight: 700,
         letterSpacing: '0.1em',
@@ -123,7 +123,7 @@ export const useStyles = makeStyles<{ isScrolled: boolean }>()((theme, { isScrol
         gap: theme.spacing(1),
         transition: 'color 0.2s',
         '&:hover': {
-            color: isScrolled ? theme.palette.grey[600] : 'rgba(255,255,255,0.7)',
+            color: isScrolled ? theme.palette.text.secondary : 'rgba(255,255,255,0.7)',
         },
         [theme.breakpoints.up('md')]: {
             fontSize: '0.875rem',
@@ -140,7 +140,7 @@ export const useStyles = makeStyles<{ isScrolled: boolean }>()((theme, { isScrol
         [theme.breakpoints.up('md')]: {
             display: 'none',
         },
-        fill: isScrolled ? '#232733' : '#FFFFFF',
+        fill: isScrolled ? theme.palette.text.primary : theme.palette.background.paper,
     },
     // DRAWER STYLES
     backdrop: {
@@ -156,7 +156,7 @@ export const useStyles = makeStyles<{ isScrolled: boolean }>()((theme, { isScrol
         right: 0,
         width: '100%',
         height: '100%',
-        backgroundColor: theme.palette.common.white,
+        backgroundColor: theme.palette.background.default,
         zIndex: 60,
         paddingTop: theme.spacing(3),
         paddingBottom: theme.spacing(3),
@@ -222,7 +222,7 @@ export const useStyles = makeStyles<{ isScrolled: boolean }>()((theme, { isScrol
         fontWeight: 700, // bold
         textTransform: 'uppercase',
         letterSpacing: '-0.05em', // tracking-tighter
-        color: theme.palette.common.black,
+        color: theme.palette.text.primary,
         lineHeight: 0.9,
         display: 'flex',
         alignItems: 'center',
@@ -295,10 +295,10 @@ export const useStyles = makeStyles<{ isScrolled: boolean }>()((theme, { isScrol
         fontWeight: 700,
         textTransform: 'uppercase',
         letterSpacing: '0.1em',
-        color: theme.palette.grey[500],
+        color: theme.palette.text.secondary,
         textDecoration: 'none',
         '&:hover': {
-            color: theme.palette.common.black,
+            color: theme.palette.text.primary,
         }
     },
     socialIcons: {
@@ -309,15 +309,15 @@ export const useStyles = makeStyles<{ isScrolled: boolean }>()((theme, { isScrol
         width: '40px',
         height: '40px',
         borderRadius: '50%',
-        backgroundColor: theme.palette.grey[50], // gray-50
+        backgroundColor: theme.palette.background.paper,
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        color: theme.palette.common.black,
+        color: theme.palette.text.primary,
         transition: 'all 0.3s',
         '&:hover': {
-            backgroundColor: theme.palette.common.black,
-            color: theme.palette.common.white,
+            backgroundColor: theme.palette.text.primary,
+            color: theme.palette.background.default,
         }
     }
 }));

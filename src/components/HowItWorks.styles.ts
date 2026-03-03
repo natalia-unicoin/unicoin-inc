@@ -5,7 +5,7 @@ export const useStyles = makeStyles()((theme) => ({
         paddingTop: theme.spacing(10),
         paddingBottom: theme.spacing(10),
         backgroundColor: '#F5F5F7', // Apple Light Gray background
-        color: theme.palette.common.black,
+        color: theme.palette.text.primary,
         overflow: 'hidden',
         [theme.breakpoints.up('md')]: {
             paddingTop: theme.spacing(15),
@@ -61,7 +61,7 @@ export const useStyles = makeStyles()((theme) => ({
         margin: '0 auto 60px auto',
         fontSize: '17px', // Apple body
         lineHeight: '25px',
-        color: '#232733', // Black
+        color: theme.palette.primary.main, // Black
     },
     bentoGrid: {
         display: 'flex',
@@ -74,7 +74,7 @@ export const useStyles = makeStyles()((theme) => ({
         }
     },
     bentoItem: {
-        backgroundColor: '#FFFFFF',
+        backgroundColor: theme.palette.background.paper,
         borderRadius: '32px',
         padding: theme.spacing(4),
         display: 'flex',
@@ -124,14 +124,14 @@ export const useStyles = makeStyles()((theme) => ({
         fontFamily: theme.typography.h1.fontFamily,
         letterSpacing: '-0.03em',
         marginBottom: theme.spacing(2),
-        color: '#232733',
+        color: theme.palette.primary.main,
         [theme.breakpoints.up('md')]: {
             fontSize: '1.75rem',
         }
     },
     itemDescription: {
         fontSize: '1rem',
-        color: '#232733',
+        color: theme.palette.primary.main,
         lineHeight: 1.6,
         fontWeight: 400,
         [theme.breakpoints.up('md')]: {

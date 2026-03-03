@@ -4,8 +4,8 @@ export const useStyles = makeStyles()((theme) => ({
     section: {
         paddingTop: theme.spacing(10), // py-20
         paddingBottom: theme.spacing(10),
-        backgroundColor: theme.palette.common.white,
-        color: theme.palette.common.black,
+        backgroundColor: theme.palette.background.paper,
+        color: theme.palette.text.primary,
         overflow: 'hidden',
         [theme.breakpoints.up('md')]: {
             paddingTop: theme.spacing(16), // py-32
@@ -105,7 +105,7 @@ export const useStyles = makeStyles()((theme) => ({
     },
     button: {
         backgroundColor: '#EBE563', // Neon Yellow
-        color: theme.palette.common.black,
+        color: theme.palette.text.primary,
         padding: '16px 32px', // px-8 py-4
         fontSize: '0.875rem', // text-sm
         fontWeight: 700,

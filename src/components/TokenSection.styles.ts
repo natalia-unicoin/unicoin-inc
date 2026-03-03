@@ -8,7 +8,7 @@ export const useStyles = makeStyles()((theme) => ({
         paddingTop: theme.spacing(10),
         paddingBottom: theme.spacing(10),
         backgroundColor: theme.palette.background.default, // White
-        color: theme.palette.common.black,
+        color: theme.palette.text.primary,
         overflow: 'hidden',
         [theme.breakpoints.up('md')]: {
             paddingTop: theme.spacing(15), // 120px
@@ -80,7 +80,7 @@ export const useStyles = makeStyles()((theme) => ({
         }
     },
     card: {
-        backgroundColor: theme.palette.common.white,
+        backgroundColor: theme.palette.background.paper,
         padding: theme.spacing(3),
         borderRadius: '20px',
         border: `1px solid ${theme.palette.grey[100]}`,
@@ -178,7 +178,7 @@ export const useStyles = makeStyles()((theme) => ({
         width: '100%',
         display: 'block',
         textAlign: 'center',
-        color: theme.palette.common.white,
+        color: theme.palette.background.paper,
         paddingTop: theme.spacing(2),
         paddingBottom: theme.spacing(2),
         borderRadius: '0.75rem',

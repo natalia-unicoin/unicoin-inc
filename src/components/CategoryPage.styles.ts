@@ -3,12 +3,12 @@ import { makeStyles } from 'tss-react/mui';
 export const useStyles = makeStyles()((theme) => ({
     pageContainer: {
         minHeight: '100vh',
-        backgroundColor: theme.palette.common.white,
-        color: theme.palette.common.black,
+        backgroundColor: theme.palette.background.paper,
+        color: theme.palette.text.primary,
         fontFamily: theme.typography.fontFamily,
         '::selection': {
             backgroundColor: '#EBE563',
-            color: theme.palette.common.black,
+            color: theme.palette.text.primary,
         }
     },
     container: {
@@ -79,7 +79,7 @@ export const useStyles = makeStyles()((theme) => ({
         fontFamily: theme.typography.h1.fontFamily,
         fontWeight: 700,
         letterSpacing: '-0.05em', // tracking-tighter
-        color: theme.palette.common.black,
+        color: theme.palette.text.primary,
         lineHeight: 0.9,
         marginBottom: theme.spacing(4), // mb-8
         [theme.breakpoints.up('md')]: {
@@ -90,7 +90,7 @@ export const useStyles = makeStyles()((theme) => ({
         }
     },
     ctaButton: {
-        color: theme.palette.common.black,
+        color: theme.palette.text.primary,
         padding: '16px 40px', // px-10 py-4
         borderRadius: '9999px',
         fontWeight: 700,
@@ -111,7 +111,7 @@ export const useStyles = makeStyles()((theme) => ({
     scrollTextSection: {
         position: 'relative',
         zIndex: 10,
-        backgroundColor: theme.palette.common.white,
+        backgroundColor: theme.palette.background.paper,
         paddingTop: theme.spacing(16), // py-32
         paddingBottom: theme.spacing(16),
         paddingLeft: theme.spacing(3), // px-6
@@ -133,7 +133,7 @@ export const useStyles = makeStyles()((theme) => ({
         letterSpacing: '-0.05em', // tracking-tighter
         marginBottom: theme.spacing(6), // mb-12
         lineHeight: 1.25,
-        color: theme.palette.common.black,
+        color: theme.palette.text.primary,
         [theme.breakpoints.up('md')]: {
             fontSize: '3.75rem', // text-6xl
         },
@@ -172,7 +172,7 @@ export const useStyles = makeStyles()((theme) => ({
         fontWeight: 700,
         letterSpacing: '-0.05em', // tracking-tighter
         marginBottom: theme.spacing(3), // mb-6
-        color: theme.palette.common.black,
+        color: theme.palette.text.primary,
         [theme.breakpoints.up('md')]: {
             fontSize: '3.75rem', // text-6xl
         }
@@ -224,7 +224,7 @@ export const useStyles = makeStyles()((theme) => ({
     storiesSection: {
         position: 'relative',
         zIndex: 10,
-        backgroundColor: theme.palette.common.white,
+        backgroundColor: theme.palette.background.paper,
         paddingTop: theme.spacing(16), // py-32
         paddingBottom: theme.spacing(16),
         overflow: 'hidden',
@@ -242,7 +242,7 @@ export const useStyles = makeStyles()((theme) => ({
         fontFamily: theme.typography.h1.fontFamily,
         fontWeight: 700,
         letterSpacing: '-0.05em', // tracking-tighter
-        color: theme.palette.common.black,
+        color: theme.palette.text.primary,
         [theme.breakpoints.up('md')]: {
             fontSize: '3rem', // text-5xl
         }
@@ -307,7 +307,7 @@ export const useStyles = makeStyles()((theme) => ({
         }
     },
     tierCard: {
-        backgroundColor: theme.palette.common.white,
+        backgroundColor: theme.palette.background.paper,
         border: `1px solid ${theme.palette.grey[200]}`,
         borderRadius: '1.5rem', // rounded-3xl
         padding: theme.spacing(5), // p-10
@@ -321,7 +321,7 @@ export const useStyles = makeStyles()((theme) => ({
         fontSize: '1.5rem', // text-2xl
         fontWeight: 700,
         marginBottom: theme.spacing(1), // mb-2
-        color: theme.palette.common.black,
+        color: theme.palette.text.primary,
     },
     tierPrice: {
         fontSize: '1.875rem', // text-3xl
@@ -347,7 +347,7 @@ export const useStyles = makeStyles()((theme) => ({
     footerSection: {
         position: 'relative',
         zIndex: 10,
-        backgroundColor: theme.palette.common.white,
+        backgroundColor: theme.palette.background.paper,
         paddingTop: theme.spacing(20), // py-40
         paddingBottom: theme.spacing(20),
         paddingLeft: theme.spacing(3),
@@ -360,14 +360,14 @@ export const useStyles = makeStyles()((theme) => ({
         fontWeight: 700,
         letterSpacing: '-0.05em', // tracking-tighter
         marginBottom: theme.spacing(6), // mb-12
-        color: theme.palette.common.black,
+        color: theme.palette.text.primary,
         [theme.breakpoints.up('md')]: {
             fontSize: '6rem', // text-8xl
         }
     },
     applyButton: {
-        backgroundColor: theme.palette.common.black,
-        color: theme.palette.common.white,
+        backgroundColor: theme.palette.text.primary,
+        color: theme.palette.background.paper,
         padding: '20px 48px', // px-12 py-5
         borderRadius: '9999px',
         fontSize: '1.125rem', // text-lg
@@ -388,7 +388,7 @@ export const useStyles = makeStyles()((theme) => ({
         paddingTop: theme.spacing(10), // py-20
         paddingBottom: theme.spacing(10),
         borderTop: `1px solid ${theme.palette.grey[200]}`,
-        backgroundColor: theme.palette.common.white,
+        backgroundColor: theme.palette.background.paper,
     },
     otherCategoriesTitle: {
         fontSize: '0.875rem', // text-sm
@@ -450,7 +450,7 @@ export const useStyles = makeStyles()((theme) => ({
         fontSize: '1.875rem', // text-3xl
         fontFamily: theme.typography.h1.fontFamily,
         fontWeight: 700,
-        color: theme.palette.common.white,
+        color: theme.palette.background.paper,
         marginBottom: theme.spacing(1), // mb-2
         textShadow: '0 4px 6px rgba(0,0,0,0.1)',
     },
@@ -459,7 +459,7 @@ export const useStyles = makeStyles()((theme) => ({
         fontWeight: 700,
         textTransform: 'uppercase',
         letterSpacing: '0.1em', // tracking-widest
-        color: theme.palette.common.white,
+        color: theme.palette.background.paper,
         opacity: 0,
         transform: 'translateY(8px)',
         transition: 'opacity 0.2s, transform 0.2s',

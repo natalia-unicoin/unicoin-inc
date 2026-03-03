@@ -9,14 +9,14 @@ export const useStyles = makeStyles()((theme) => ({
         alignItems: 'center',
         justifyContent: 'center',
         overflow: 'hidden',
-        backgroundColor: '#232733', // Fallback for video
-        color: '#FFFFFF', // White for video context
+        backgroundColor: theme.palette.primary.main, // Fallback for video
+        color: theme.palette.text.primary, // White for video context
     },
     bgWrapper: {
         position: 'absolute',
         inset: 0,
         zIndex: 0,
-        backgroundColor: '#232733',
+        backgroundColor: theme.palette.primary.main,
     },
     videoBackground: {
         width: '100%',
@@ -51,7 +51,7 @@ export const useStyles = makeStyles()((theme) => ({
         fontWeight: 700,
         letterSpacing: '-0.03em',
         marginBottom: theme.spacing(1),
-        color: '#FFFFFF', // White for video
+        color: theme.palette.text.primary, // White for video
         fontSize: '48px', // Increased per user request
         lineHeight: '1',
         [theme.breakpoints.up('md')]: {
@@ -65,7 +65,7 @@ export const useStyles = makeStyles()((theme) => ({
         fontSize: '1.25rem',
         fontWeight: 600,
         letterSpacing: '0',
-        color: '#FFFFFF', // White for video
+        color: theme.palette.text.primary, // White for video
         marginBottom: theme.spacing(2),
         lineHeight: 1.2,
         [theme.breakpoints.up('md')]: {
@@ -95,8 +95,8 @@ export const useStyles = makeStyles()((theme) => ({
         }
     },
     ctaButton: {
-        backgroundColor: '#BBFF71', // Brand Yellow
-        color: '#232733',
+        backgroundColor: theme.palette.secondary.main, // Brand Yellow
+        color: theme.palette.primary.main,
         padding: '16px 32px', // px-8 py-4
         borderRadius: '9999px', // Pill shape
         fontSize: '0.875rem', // text-sm
@@ -135,7 +135,7 @@ export const useStyles = makeStyles()((theme) => ({
         padding: theme.spacing(3),
     },
     modalContent: {
-        backgroundColor: '#FFFFFF', // High contrast institutional look
+        backgroundColor: theme.palette.background.paper, // Use dynamic paper instead of #FFFFFF
         borderRadius: '30px', // Match the rest of the cards
         padding: theme.spacing(5),
         maxWidth: '700px',
@@ -159,11 +159,11 @@ export const useStyles = makeStyles()((theme) => ({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        color: theme.palette.grey[500],
+        color: theme.palette.text.secondary,
         transition: 'all 0.2s',
         '&:hover': {
-            backgroundColor: theme.palette.grey[100],
-            color: theme.palette.common.black,
+            backgroundColor: theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.1)' : theme.palette.grey[100],
+            color: theme.palette.text.primary,
         },
         [theme.breakpoints.up('md')]: {
             top: theme.spacing(4),
@@ -176,7 +176,7 @@ export const useStyles = makeStyles()((theme) => ({
         fontWeight: 700,
         letterSpacing: '-0.03em', // Typical Apple formatting
         marginBottom: theme.spacing(3),
-        color: theme.palette.common.black,
+        color: theme.palette.text.primary,
         [theme.breakpoints.up('md')]: {
             fontSize: '2rem',
         }
@@ -186,7 +186,7 @@ export const useStyles = makeStyles()((theme) => ({
         fontSize: '1rem',
         lineHeight: 1.8,
         fontWeight: 400,
-        color: theme.palette.grey[800],
+        color: theme.palette.text.secondary,
         [theme.breakpoints.up('md')]: {
             fontSize: '1.125rem',
         }

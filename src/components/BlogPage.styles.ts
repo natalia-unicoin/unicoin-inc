@@ -3,13 +3,13 @@ import { makeStyles } from 'tss-react/mui';
 export const useStyles = makeStyles()((theme) => ({
     pageContainer: {
         minHeight: '100vh',
-        backgroundColor: theme.palette.common.white,
-        color: theme.palette.common.black,
+        backgroundColor: theme.palette.background.paper,
+        color: theme.palette.text.primary,
         paddingTop: theme.spacing(16), // pt-32
         paddingBottom: theme.spacing(10), // pb-20
         '::selection': {
             backgroundColor: '#EBE563',
-            color: theme.palette.common.black,
+            color: theme.palette.text.primary,
         }
     },
     container: {
@@ -93,7 +93,7 @@ export const useStyles = makeStyles()((theme) => ({
         padding: '4px 16px', // px-4 py-1
         borderRadius: '9999px',
         border: '1px solid rgba(255,255,255,0.3)',
-        color: theme.palette.common.white,
+        color: theme.palette.background.paper,
         fontSize: '0.875rem', // text-sm
         fontWeight: 700,
         letterSpacing: '0.1em', // tracking-widest
@@ -105,7 +105,7 @@ export const useStyles = makeStyles()((theme) => ({
         fontSize: '2.25rem', // text-4xl
         fontFamily: theme.typography.h1.fontFamily,
         fontWeight: 700,
-        color: theme.palette.common.white,
+        color: theme.palette.background.paper,
         marginBottom: theme.spacing(3), // mb-6
         lineHeight: 1.25,
         textDecoration: 'none',
@@ -278,7 +278,7 @@ export const useStyles = makeStyles()((theme) => ({
         width: '100%',
         padding: '16px 24px', // px-6 py-4
         borderRadius: '9999px',
-        backgroundColor: theme.palette.common.white,
+        backgroundColor: theme.palette.background.paper,
         border: `1px solid ${theme.palette.grey[200]}`,
         outline: 'none',
         transition: 'all 0.2s',
@@ -292,8 +292,8 @@ export const useStyles = makeStyles()((theme) => ({
         }
     },
     subscribeBtn: {
-        backgroundColor: theme.palette.common.black,
-        color: theme.palette.common.white,
+        backgroundColor: theme.palette.text.primary,
+        color: theme.palette.background.paper,
         padding: '16px 32px', // px-8 py-4
         borderRadius: '9999px',
         fontWeight: 700,
@@ -304,7 +304,7 @@ export const useStyles = makeStyles()((theme) => ({
         transition: 'background-color 0.2s',
         '&:hover': {
             backgroundColor: '#EBE563',
-            color: theme.palette.common.black,
+            color: theme.palette.text.primary,
         }
     }
 }));

@@ -2,8 +2,8 @@ import { makeStyles } from 'tss-react/mui';
 
 export const useStyles = makeStyles()((theme) => ({
     section: {
-        backgroundColor: '#FFFFFF', // Clean institutional white
-        color: '#232733', // Dark text for contrast
+        backgroundColor: theme.palette.background.paper, // Clean institutional white
+        color: theme.palette.primary.main, // Dark text for contrast
         padding: theme.spacing(12, 0),
         width: '100%',
         [theme.breakpoints.up('md')]: {
@@ -35,7 +35,7 @@ export const useStyles = makeStyles()((theme) => ({
         letterSpacing: '-0.03em',
         lineHeight: 1.1,
         marginBottom: theme.spacing(3),
-        color: '#232733',
+        color: theme.palette.primary.main,
         [theme.breakpoints.up('md')]: {
             fontSize: '3.5rem',
         },
@@ -77,7 +77,7 @@ export const useStyles = makeStyles()((theme) => ({
         '&:hover': {
             transform: 'translateY(-4px)',
             boxShadow: '0 20px 40px rgba(0,0,0,0.04)',
-            backgroundColor: '#FFFFFF',
+            backgroundColor: theme.palette.background.paper,
         },
         [theme.breakpoints.up('md')]: {
             padding: theme.spacing(6),
@@ -102,7 +102,7 @@ export const useStyles = makeStyles()((theme) => ({
     colTitle: {
         fontSize: '1.25rem',
         fontWeight: 700,
-        color: '#232733',
+        color: theme.palette.primary.main,
         textTransform: 'capitalize',
         letterSpacing: '0.02em',
         fontFamily: theme.typography.h1.fontFamily,
@@ -121,7 +121,7 @@ export const useStyles = makeStyles()((theme) => ({
     },
     listItem: {
         fontSize: '1rem', // Increased readability
-        color: '#232733',
+        color: theme.palette.primary.main,
         fontWeight: 500, // Medium weight for institutional feel
         lineHeight: 1.5,
         display: 'flex',
@@ -132,7 +132,7 @@ export const useStyles = makeStyles()((theme) => ({
             display: 'inline-block',
             width: '6px',
             height: '6px',
-            backgroundColor: '#0966FF', // Action color dot
+            backgroundColor: theme.palette.info.main, // Action color dot
             borderRadius: '50%',
             flexShrink: 0,
             marginTop: '10px', // Aligns with first line of text

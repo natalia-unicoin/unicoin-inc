@@ -3,7 +3,7 @@ import { makeStyles } from 'tss-react/mui';
 export const useStyles = makeStyles()((theme) => ({
     section: {
         backgroundColor: '#F5F5F7', // Slightly gray background to distinguish from Financials
-        color: '#232733',
+        color: theme.palette.primary.main,
         padding: theme.spacing(12, 0),
         width: '100%',
         [theme.breakpoints.up('md')]: {
@@ -34,7 +34,7 @@ export const useStyles = makeStyles()((theme) => ({
         fontWeight: 700,
         letterSpacing: '-0.03em',
         lineHeight: 1.1,
-        color: '#232733',
+        color: theme.palette.primary.main,
         [theme.breakpoints.up('md')]: {
             fontSize: '3.5rem',
         },
@@ -55,7 +55,7 @@ export const useStyles = makeStyles()((theme) => ({
         }
     },
     card: {
-        backgroundColor: '#FFFFFF', // Clean white card against light gray background
+        backgroundColor: theme.palette.background.paper, // Clean white card against light gray background
         border: `1px solid ${theme.palette.grey[200]}`,
         borderRadius: '16px',
         padding: theme.spacing(4),
@@ -74,7 +74,7 @@ export const useStyles = makeStyles()((theme) => ({
     cardTitle: {
         fontSize: '1.25rem',
         fontWeight: 700,
-        color: '#232733',
+        color: theme.palette.primary.main,
         fontFamily: theme.typography.h1.fontFamily,
         lineHeight: 1.3,
         letterSpacing: '-0.01em',
@@ -83,7 +83,7 @@ export const useStyles = makeStyles()((theme) => ({
     cardAction: {
         fontSize: '0.875rem',
         fontWeight: 600,
-        color: '#0966FF', // Action blue
+        color: theme.palette.info.main, // Action blue
         textTransform: 'uppercase',
         letterSpacing: '0.05em',
         display: 'flex',
