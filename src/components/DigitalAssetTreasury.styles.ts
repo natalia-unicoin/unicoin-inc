@@ -103,22 +103,11 @@ export const useStyles = makeStyles()((theme) => ({
         fontSize: '1.25rem',
         fontWeight: 700,
         color: '#232733',
-        textTransform: 'uppercase',
-        letterSpacing: '0.05em',
+        textTransform: 'capitalize',
+        letterSpacing: '0.02em',
         fontFamily: theme.typography.h1.fontFamily,
         position: 'relative',
         zIndex: 2,
-        display: 'inline-flex',
-        alignItems: 'center',
-        gap: theme.spacing(1.5),
-        '&::before': {
-            content: '""',
-            display: 'block',
-            width: '12px',
-            height: '12px',
-            backgroundColor: '#BBFF71', // Brand accent
-            borderRadius: '2px', // Slight rounding
-        }
     },
     list: {
         listStyle: 'none',
