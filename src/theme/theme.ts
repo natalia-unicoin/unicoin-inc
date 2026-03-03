@@ -21,9 +21,9 @@ const getPalette = (mode: ThemeMode) => {
             return {
                 mode: 'light' as const,
                 primary: { main: '#10141E' }, // Darkest Navy/Black from image
-                secondary: { main: '#BBFF71' }, // Restored Lime Green for high-contrast accents
+                secondary: { main: '#009EE3' }, // Bright Azure from image replaces Lime Green
                 success: { main: '#10141E' },
-                info: { main: '#009EE3' }, // Bright Azure from image
+                info: { main: '#0A337C' }, // Deep Blue from image
                 warning: { main: '#F7D046' }, // Gold/Yellow from image
                 background: { default: '#FFFFFF', paper: '#E6E7E8' }, // Light Gray from palette
                 text: { primary: '#10141E', secondary: '#0A337C' }, // Deep blue for secondary text
