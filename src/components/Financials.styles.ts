@@ -2,13 +2,10 @@ import { makeStyles } from 'tss-react/mui';
 
 export const useStyles = makeStyles()((theme) => ({
     section: {
-        backgroundColor: theme.palette.mode === 'dark' ? 'transparent' : theme.palette.primary.main, // Transparent to show global glass mesh
-        color: '#FFFFFF',
-        padding: theme.spacing(8, 0), // Mobile 64px
+        backgroundColor: 'transparent', // Clean architectural look
+        color: '#111827', // Dark contrast for light mode if applicable, but we'll use white for dark mode context often
+        padding: '120px 0', // Strict 120px padding
         width: '100%',
-        [theme.breakpoints.up('md')]: {
-            padding: theme.spacing(16, 0), // Desktop 128px
-        }
     },
     container: {
         maxWidth: '1200px',
@@ -29,12 +26,12 @@ export const useStyles = makeStyles()((theme) => ({
         }
     },
     title: {
-        fontFamily: theme.typography.h1.fontFamily, // Inter
+        fontFamily: theme.typography.h1.fontFamily, // Montserrat
         fontSize: '2.5rem',
         fontWeight: 700,
-        letterSpacing: '-0.03em',
+        letterSpacing: '-1px', // Updated to -1px as per global rules
         lineHeight: 1.1,
-        color: '#FFFFFF',
+        color: 'inherit',
         [theme.breakpoints.up('md')]: {
             fontSize: '3.5rem',
         },
@@ -45,92 +42,47 @@ export const useStyles = makeStyles()((theme) => ({
     grid: {
         display: 'grid',
         gridTemplateColumns: '1fr',
-        gap: theme.spacing(3),
+        gap: '40px', // Mobile gap
         [theme.breakpoints.up('md')]: {
             gridTemplateColumns: 'repeat(2, 1fr)',
-            gap: theme.spacing(4),
+            gap: '64px', // Required 64px gap
         }
     },
     card: {
-        backgroundColor: theme.palette.mode === 'dark' ? theme.palette.background.paper : theme.palette.primary.main, // Translucent in dark mode
-        border: theme.palette.mode === 'dark' ? '1px solid rgba(255, 255, 255, 0.15)' : `1px solid rgba(255, 255, 255, 0.08)`,
-        backdropFilter: theme.palette.mode === 'dark' ? 'blur(24px) saturate(150%)' : 'none',
-        WebkitBackdropFilter: theme.palette.mode === 'dark' ? 'blur(24px) saturate(150%)' : 'none', // Safari support
-        borderRadius: '24px',
-        padding: theme.spacing(4), // Slightly tighter on mobile
+        backgroundColor: 'transparent',
+        border: 'none',
+        padding: '0', // Let the grid handle spacing, clean architectural look
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'space-between',
-        alignItems: 'flex-start',
+        justifyContent: 'flex-start',
+        alignItems: 'center', // Center content within cell
+        textAlign: 'center',
         position: 'relative',
-        overflow: 'hidden',
-        minHeight: '260px', // slightly smaller
-        transition: 'all 0.4s ease',
-        [theme.breakpoints.up('md')]: {
-            padding: theme.spacing(6),
-        },
-        '&:hover': {
-            transform: 'translateY(-4px)',
-            borderColor: theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.4)' : 'rgba(255, 255, 255, 0.2)',
-            backgroundColor: theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.08)' : undefined,
-            boxShadow: theme.palette.mode === 'dark' ? '0 0 30px rgba(6, 182, 212, 0.3)' : 'inherit',
-        }
+        transition: 'none', // Remove animations
     },
     statValue: {
-        fontSize: '2.5rem', // Adjusted for mobile
-        fontWeight: 800,
-        color: '#FFFFFF',
-        fontFamily: theme.typography.h1.fontFamily,
+        fontSize: '56px', // Mobile size
+        fontWeight: 700, // Bold Montserrat
+        color: 'inherit', // Let theme dictate color (usually white due to glass, but explicitly clean)
+        fontFamily: theme.typography.h1.fontFamily, // Montserrat
         lineHeight: 1,
-        marginBottom: theme.spacing(2),
-        letterSpacing: '-0.03em',
+        marginBottom: '24px', // Generous spacing
+        letterSpacing: '-2px', // Required -2px spacing
         [theme.breakpoints.up('md')]: {
-            fontSize: '4rem',
-        }
-    },
-    statLabel: {
-        fontSize: '0.875rem',
-        fontWeight: 500,
-        textTransform: 'uppercase',
-        letterSpacing: '0.1em',
-        color: theme.palette.secondary.main, // Brand accent for data label
-        marginBottom: theme.spacing(4),
-    },
-    cardTitle: {
-        fontSize: '1.25rem',
-        fontWeight: 600,
-        color: '#FFFFFF',
-        fontFamily: theme.typography.h1.fontFamily,
-        lineHeight: 1.4,
-        marginBottom: theme.spacing(4),
-        maxWidth: '80%',
-        [theme.breakpoints.up('md')]: {
-            fontSize: '1.5rem',
-        }
-    },
-    cardAction: {
-        fontSize: '0.875rem',
-        fontWeight: 600,
-        color: '#FFFFFF',
-        textTransform: 'uppercase',
-        letterSpacing: '0.05em',
-        display: 'flex',
-        alignItems: 'center',
-        gap: theme.spacing(1),
-        textDecoration: 'none',
-        whiteSpace: 'nowrap',
-        opacity: 0.8,
-        transition: 'opacity 0.3s, color 0.3s',
-        '&::after': {
-            content: '"→"',
-            transition: 'transform 0.3s',
+            fontSize: '88px', // Desktop 88px minimum
         },
-        '&:hover': {
-            opacity: 1,
-            color: theme.palette.mode === 'dark' ? '#06b6d4' : theme.palette.secondary.main,
-        },
-        '&:hover::after': {
-            transform: 'translateX(4px)',
+        [theme.breakpoints.up('lg')]: {
+            fontSize: '104px', // Desktop 104px maximum
         }
+    },
+    statDescription: {
+        fontSize: '18px',
+        fontWeight: 500, // Medium Inter
+        fontFamily: theme.typography.body1.fontFamily, // Inter
+        color: '#374151', // Required institutional gray text
+        lineHeight: 1.5,
+        maxWidth: '320px', // Keep text readable
+        textAlign: 'center',
     }
+
 }));

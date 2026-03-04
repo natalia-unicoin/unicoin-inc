@@ -62,38 +62,53 @@ const getTheme = (mode: ThemeMode) => createTheme({
             fontFamily: montserrat.style.fontFamily,
             fontWeight: 700,
             lineHeight: 1.1,
-            letterSpacing: '-0.03em',
+            letterSpacing: '-1px',
+            textTransform: 'capitalize',
         },
         h2: {
             fontFamily: montserrat.style.fontFamily,
             fontWeight: 700,
-            letterSpacing: '-0.03em',
+            letterSpacing: '-1px',
+            textTransform: 'capitalize',
         },
         h3: {
             fontFamily: montserrat.style.fontFamily,
             fontWeight: 700,
-            letterSpacing: '-0.03em',
+            letterSpacing: '-1px',
+            textTransform: 'capitalize',
         },
         h4: {
             fontFamily: montserrat.style.fontFamily,
             fontWeight: 700,
-            letterSpacing: '-0.03em',
+            letterSpacing: '-1px',
+            textTransform: 'capitalize',
         },
         h5: {
             fontFamily: montserrat.style.fontFamily,
             fontWeight: 700,
-            letterSpacing: '-0.03em',
+            letterSpacing: '-1px',
+            textTransform: 'capitalize',
         },
         h6: {
             fontFamily: montserrat.style.fontFamily,
             fontWeight: 700,
-            letterSpacing: '-0.03em',
+            letterSpacing: '-1px',
+            textTransform: 'capitalize',
         },
         body1: {
             fontFamily: inter.style.fontFamily,
+            fontSize: '18px',
+            lineHeight: 1.6,
+        },
+        body2: {
+            fontFamily: inter.style.fontFamily,
+            fontSize: '18px',
+            lineHeight: 1.6,
         },
         subtitle1: {
             fontFamily: inter.style.fontFamily,
+            fontSize: '18px',
+            lineHeight: 1.6,
         }
     },
     components: {
@@ -102,7 +117,8 @@ const getTheme = (mode: ThemeMode) => createTheme({
                 h1, h2, h3, h4, h5, h6 {
                     font-family: ${montserrat.style.fontFamily} !important;
                     font-weight: 700 !important;
-                    letter-spacing: -0.03em !important;
+                    letter-spacing: -1px !important;
+                    text-transform: capitalize !important;
                 }
             `,
         },

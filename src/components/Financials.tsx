@@ -10,27 +10,19 @@ const Financials = () => {
     const dataCards = [
         {
             value: "$1.2B",
-            label: "Total Assets Value",
-            title: "Treasury Performance Overview",
-            actionText: "Access Data"
+            description: "Total Assets Value in Treasury Performance Overview",
         },
         {
             value: "100%",
-            label: "Debt-Free Ratio",
-            title: "Capital Structure Summary",
-            actionText: "Review Structure"
+            description: "Debt-Free Ratio Capital Structure Summary",
         },
         {
             value: "Q4",
-            label: "FY 2025 Release",
-            title: "Quarterly Reports",
-            actionText: "View Reports"
+            description: "FY 2025 Release Quarterly Reports",
         },
         {
             value: "SEC",
-            label: "Regulatory Alignment",
-            title: "Disclosure Statements",
-            actionText: "Read Statements"
+            description: "Regulatory Alignment Disclosure Statements",
         }
     ];
 
@@ -59,14 +51,10 @@ const Financials = () => {
                             viewport={{ once: true, margin: "-50px" }}
                             transition={{ duration: 0.5, delay: 0.1 * index }}
                         >
-                            <div className="flex flex-col">
+                            <div className="flex flex-col items-center">
                                 <span className={classes.statValue}>{card.value}</span>
-                                <span className={classes.statLabel}>{card.label}</span>
-                                <h3 className={classes.cardTitle}>{card.title}</h3>
+                                <span className={classes.statDescription}>{card.description}</span>
                             </div>
-                            <a href="#" className={classes.cardAction}>
-                                {card.actionText}
-                            </a>
                         </motion.div>
                     ))}
                 </div>

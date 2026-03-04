@@ -40,6 +40,8 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
   font-family: var(--font-main);
+  font-size: 18px;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
@@ -71,13 +73,43 @@ button {
 
 /* Utilities */
 .container {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 40px;
 }
 
+.text-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 .section {
-  padding: 80px 0;
+  padding: 120px 0;
+}
+
+.section-key {
+  padding: 140px 0;
+}
+
+/* Margin Spacing Utilities */
+p {
+  margin-bottom: 24px;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+.spacing-title-mb {
+  margin-bottom: 32px;
+}
+
+.spacing-blocks-mb {
+  margin-bottom: 64px;
+}
+
+.spacing-paragraph-mb {
+  margin-bottom: 24px;
 }
 
 .btn {
