@@ -2,28 +2,25 @@ import { makeStyles } from 'tss-react/mui';
 
 export const useStyles = makeStyles()((theme) => ({
     section: {
-        paddingTop: theme.spacing(8),
-        paddingBottom: theme.spacing(8),
-        backgroundColor: theme.palette.mode === 'dark' ? theme.palette.background.default : '#FBFBFD', // Apple very light gray in light, dark background in dark
-        color: theme.palette.text.primary,
-        [theme.breakpoints.up('lg')]: {
-            paddingTop: '160px',
-            paddingBottom: '160px',
-        }
+        paddingTop: '120px', // Strict 120px top/bottom
+        paddingBottom: '120px',
+        backgroundColor: '#FFFFFF', // Strict White
+        color: '#111827',
+        width: '100%',
     },
     container: {
-        maxWidth: '100%',
+        maxWidth: '1200px', // Maintain 1200px max width container rule
         margin: '0 auto',
         paddingLeft: theme.spacing(3),
         paddingRight: theme.spacing(3),
         [theme.breakpoints.up('lg')]: {
-            paddingLeft: '150px',
-            paddingRight: '150px',
+            paddingLeft: '40px',
+            paddingRight: '40px',
         }
     },
     header: {
         textAlign: 'center',
-        marginBottom: theme.spacing(10),
+        marginBottom: '64px', // Strict 64px from title to table
     },
     title: {
         fontFamily: theme.typography.h1.fontFamily,
@@ -47,59 +44,66 @@ export const useStyles = makeStyles()((theme) => ({
         fontWeight: 700,
     },
     tableContainer: {
-        marginTop: theme.spacing(8),
         overflowX: 'auto',
     },
     table: {
         width: '100%',
-        borderCollapse: 'separate',
-        borderSpacing: '0 12px',
+        borderCollapse: 'collapse', // Executive report lines, not separated cards
+        borderSpacing: '0',
     },
     th: {
         textAlign: 'left',
-        padding: '24px',
-        fontSize: '0.875rem',
-        fontWeight: 700,
-        textTransform: 'uppercase',
-        letterSpacing: '0.1em',
-        color: theme.palette.text.primary,
+        padding: '24px 24px', // Generous header padding
+        fontSize: '18px', // Montserrat 18-20px
+        fontWeight: 700, // Bold
+        fontFamily: theme.typography.h1.fontFamily, // Montserrat
+        textTransform: 'none', // Removed uppercase
+        letterSpacing: '0', // Removed tight tracking
+        color: '#111827', // Institutional dark text
+        backgroundColor: '#F8FAFC', // Very slight distinction
+        borderBottom: '2px solid #E5E7EB', // Stronger division under headers
+        [theme.breakpoints.up('md')]: {
+            fontSize: '20px',
+        }
     },
     thBrand: {
-        color: theme.palette.text.primary,
+        color: '#111827', // Same color constraint, no highlights
     },
     tr: {
-        backgroundColor: theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.05)' : theme.palette.background.paper,
-        backdropFilter: theme.palette.mode === 'dark' ? 'blur(10px)' : 'none',
+        backgroundColor: '#FFFFFF',
+        transition: 'none', // Removed bounce/hover
         '&:hover': {
-            transform: 'scale(1.01)',
-            transition: 'transform 0.3s ease',
+            transform: 'none',
+            backgroundColor: '#F8FAFC', // Extremely subtle line highlight on read
         }
     },
     td: {
-        padding: '32px 24px',
-        fontSize: '1.125rem',
-        borderTop: theme.palette.mode === 'dark' ? '1px solid rgba(255, 255, 255, 0.1)' : '1px solid #F5F5F7',
-        borderBottom: theme.palette.mode === 'dark' ? '1px solid rgba(255, 255, 255, 0.1)' : '1px solid #F5F5F7',
+        padding: '24px', // Huge vertical padding (20-24px)
+        fontSize: '16px', // Inter 16-18px
+        fontFamily: theme.typography.body1.fontFamily,
+        lineHeight: 1.6, // Comfortable reading
+        borderBottom: '1px solid #E5E7EB', // Single subtle divider
+        color: '#374151',
+        verticalAlign: 'top',
         '&:first-of-type': {
-            borderLeft: theme.palette.mode === 'dark' ? '1px solid rgba(255, 255, 255, 0.1)' : '1px solid #F5F5F7',
-            borderRadius: '20px 0 0 20px',
-            fontWeight: 600,
+            fontWeight: 600, // Slightly bolder feature names
             width: '25%',
         },
         '&:last-of-type': {
-            borderRight: theme.palette.mode === 'dark' ? '1px solid rgba(255, 255, 255, 0.1)' : '1px solid #F5F5F7',
-            borderRadius: '0 20px 20px 0',
-            backgroundColor: theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.1)' : '#F5F5F7', // Highlight for the brand
             width: '40%',
+            backgroundColor: 'transparent', // Removed brand highlight
+        },
+        [theme.breakpoints.up('md')]: {
+            fontSize: '18px',
         }
     },
     traditionalValue: {
-        color: theme.palette.text.primary,
+        color: '#6B7280', // Slightly muted for contrast
         width: '35%',
         fontWeight: 400,
     },
     brandValue: {
-        fontWeight: 700,
-        color: theme.palette.text.primary,
+        fontWeight: 500, // Medium emphasis, not overly bold
+        color: '#111827', // Darker text
     }
 }));

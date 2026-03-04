@@ -43,19 +43,33 @@ export const useStyles = makeStyles()((theme) => ({
             marginBottom: theme.spacing(12),
         }
     },
+    eyebrow: {
+        fontFamily: theme.typography.h1.fontFamily, // Montserrat
+        fontWeight: 500, // Medium 
+        fontSize: '14px',
+        letterSpacing: '2px', // +2 letter spacing
+        textTransform: 'uppercase',
+        color: theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.7)' : 'rgba(17, 24, 39, 0.7)', // 70% opacity
+        marginBottom: '24px', // Space below
+        display: 'block', // Ensure it sits on its own line
+        [theme.breakpoints.up('md')]: {
+            fontSize: '16px',
+            marginBottom: '32px', // 24-32px requested
+        }
+    },
     title: {
-        fontFamily: theme.typography.h1.fontFamily, // Inter
-        fontSize: '2.5rem',
-        fontWeight: 700,
-        letterSpacing: '-0.03em',
+        fontFamily: theme.typography.h1.fontFamily, // Montserrat
+        fontSize: '40px', // Fallback constraint, but user requested 56-64px
+        fontWeight: 700, // Bold
+        letterSpacing: '-0.03em', // Typical bold tracking
         lineHeight: 1.1,
         marginBottom: theme.spacing(3),
         color: theme.palette.text.primary,
         [theme.breakpoints.up('md')]: {
-            fontSize: '3.5rem',
+            fontSize: '56px',
         },
         [theme.breakpoints.up('lg')]: {
-            fontSize: '4.5rem',
+            fontSize: '64px', // Reaching the 64px constraint
         }
     },
     subtitle: {
@@ -72,34 +86,29 @@ export const useStyles = makeStyles()((theme) => ({
     grid: {
         display: 'grid',
         gridTemplateColumns: '1fr',
-        gap: theme.spacing(3),
+        gap: theme.spacing(4), // Mobile
         [theme.breakpoints.up('md')]: {
             gridTemplateColumns: 'repeat(2, 1fr)',
-            gap: theme.spacing(4),
+            gap: '64px', // Strict 64px desktop gap
         }
     },
     bentoCard: {
         position: 'relative',
-        backgroundColor: theme.palette.mode === 'dark' ? theme.palette.background.paper : '#FAFBFC', // Translucent in dark mode
-        border: theme.palette.mode === 'dark' ? '1px solid rgba(255, 255, 255, 0.2)' : `1px solid ${theme.palette.grey[200]}`,
-        backdropFilter: theme.palette.mode === 'dark' ? 'blur(30px) saturate(180%)' : 'none',
-        WebkitBackdropFilter: theme.palette.mode === 'dark' ? 'blur(30px) saturate(180%)' : 'none',
-        borderRadius: '24px',
-        padding: theme.spacing(5),
+        backgroundColor: '#FFFFFF', // Strict institutional white
+        border: '1px solid #E5E7EB', // Subtle dividing line
+        borderRadius: '8px', // Max 8px radius
+        padding: '48px', // Strict 48px padding
         display: 'flex',
         flexDirection: 'column',
-        gap: theme.spacing(4),
+        justifyContent: 'flex-start',
+        gap: 0, // We control gap carefully per element now
         overflow: 'hidden',
-        transition: 'all 0.4s ease',
+        transition: 'none', // Removed SaaS hover
         '&:hover': {
-            transform: 'translateY(-4px)',
-            boxShadow: theme.palette.mode === 'dark' ? '0 0 30px rgba(6, 182, 212, 0.4)' : '0 20px 40px rgba(0,0,0,0.04)',
-            backgroundColor: theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.1)' : theme.palette.background.paper,
-            borderColor: theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.5)' : undefined,
+            transform: 'none',
+            boxShadow: 'none',
+            backgroundColor: '#FFFFFF',
         },
-        [theme.breakpoints.up('md')]: {
-            padding: theme.spacing(6),
-        }
     },
     cardNumber: {
         position: 'absolute',
@@ -118,14 +127,17 @@ export const useStyles = makeStyles()((theme) => ({
         }
     },
     colTitle: {
-        fontSize: '1.25rem',
-        fontWeight: 700,
-        color: theme.palette.text.primary,
-        textTransform: 'capitalize',
-        letterSpacing: '0.02em',
-        fontFamily: theme.typography.h1.fontFamily,
+        fontSize: '24px',
+        fontWeight: 600, // SemiBold
+        color: '#111827', // Institutional dark text
+        textTransform: 'none', // Remove capitalize restriction if it was there
+        fontFamily: theme.typography.h1.fontFamily, // Montserrat
+        marginBottom: '24px', // Strict 24px space below
         position: 'relative',
         zIndex: 2,
+        [theme.breakpoints.up('md')]: {
+            fontSize: '28px',
+        }
     },
     list: {
         listStyle: 'none',
@@ -133,27 +145,30 @@ export const useStyles = makeStyles()((theme) => ({
         margin: 0,
         display: 'flex',
         flexDirection: 'column',
-        gap: theme.spacing(2.5),
+        gap: '24px', // Strict 24px gap between bullets
         position: 'relative',
         zIndex: 2,
     },
     listItem: {
-        fontSize: '1rem', // Increased readability
-        color: theme.palette.text.primary,
-        fontWeight: 500, // Medium weight for institutional feel
+        fontSize: '16px', // Inter Regular 16-18px
+        color: '#374151', // Content text color
+        fontFamily: theme.typography.body1.fontFamily, // Inter
+        fontWeight: 400, // Regular
         lineHeight: 1.5,
         display: 'flex',
         alignItems: 'flex-start',
-        gap: theme.spacing(2),
+        gap: '8px', // Slightly tighter gap for arrow
         '&::before': {
-            content: '""',
+            content: '"→"', // Minimal institutional arrow
             display: 'inline-block',
-            width: '6px',
-            height: '6px',
-            backgroundColor: theme.palette.info.main, // Action color dot
-            borderRadius: '50%',
+            color: '#9CA3AF', // Subtle gray arrow, less prominent than text
             flexShrink: 0,
-            marginTop: '10px', // Aligns with first line of text
+            marginTop: '0px', // Align with text baseline naturally
+            fontSize: '18px', // Match or slightly exceed text size
+            fontWeight: 300, // Light/Minimal feel
+        },
+        [theme.breakpoints.up('md')]: {
+            fontSize: '18px',
         }
     }
 }));

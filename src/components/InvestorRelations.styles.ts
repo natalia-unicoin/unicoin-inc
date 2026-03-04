@@ -45,49 +45,53 @@ export const useStyles = makeStyles()((theme) => ({
     grid: {
         display: 'grid',
         gridTemplateColumns: '1fr',
-        gap: theme.spacing(3),
+        gap: theme.spacing(4),
         [theme.breakpoints.up('sm')]: {
             gridTemplateColumns: 'repeat(2, 1fr)',
         },
         [theme.breakpoints.up('md')]: {
             gridTemplateColumns: 'repeat(4, 1fr)',
-            gap: theme.spacing(4),
+            gap: '64px', // Strict 64px gap
         }
     },
     card: {
-        backgroundColor: theme.palette.mode === 'dark' ? 'rgba(30, 41, 59, 0.4)' : theme.palette.background.paper, // Glass translucent
-        border: theme.palette.mode === 'dark' ? '1px solid rgba(255, 255, 255, 0.1)' : `1px solid ${theme.palette.grey[200]}`,
-        backdropFilter: theme.palette.mode === 'dark' ? 'blur(16px) saturate(180%)' : 'none',
-        WebkitBackdropFilter: theme.palette.mode === 'dark' ? 'blur(16px) saturate(180%)' : 'none',
-        borderRadius: '16px',
-        padding: theme.spacing(4),
+        backgroundColor: '#FFFFFF', // Strict solid institutional white
+        border: '1px solid #E5E7EB', // Subtle dividing line
+        borderRadius: '8px', // Maximum 8px radius
+        padding: '32px', // Lots of air (a bit less than 48px if text is short, but 48px preferred. Enforcing 48px)
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'space-between',
+        justifyContent: 'flex-start',
         height: '100%',
         minHeight: '200px',
-        transition: 'transform 0.2s ease, box-shadow 0.2s ease',
+        transition: 'none', // Removed transition
         '&:hover': {
-            transform: 'translateY(-4px)',
-            boxShadow: '0 12px 24px rgba(0,0,0,0.05)',
-            borderColor: '#E6E8EB',
+            transform: 'none',
+            boxShadow: 'none',
+            backgroundColor: '#FFFFFF',
+        },
+        [theme.breakpoints.up('md')]: {
+            padding: '48px', // Strict 48px for desktop per rules
         }
     },
     cardTitle: {
-        fontSize: '1.25rem',
-        fontWeight: 700,
-        color: theme.palette.text.primary,
-        fontFamily: theme.typography.h1.fontFamily,
+        fontSize: '24px',
+        fontWeight: 600, // SemiBold
+        color: '#111827', // Strong institutional dark
+        fontFamily: theme.typography.h1.fontFamily, // Montserrat
         lineHeight: 1.3,
-        letterSpacing: '-0.01em',
-        marginBottom: theme.spacing(4)
+        letterSpacing: '-1px', // Keep strict header tracing
+        marginBottom: '24px', // Enforce 24px space beneath title
+        [theme.breakpoints.up('md')]: {
+            fontSize: '28px',
+        }
     },
     cardAction: {
-        fontSize: '0.875rem',
-        fontWeight: 600,
-        color: theme.palette.info.main, // Action blue
-        textTransform: 'uppercase',
-        letterSpacing: '0.05em',
+        fontSize: '16px', // Inter Regular mapped
+        fontWeight: 600, // Action link remains slightly bolder for affordance but not uppercase
+        color: '#0A337C', // TBIZ Deep blue or strong institutional blue
+        textTransform: 'none',
+        letterSpacing: '0',
         display: 'flex',
         alignItems: 'center',
         gap: theme.spacing(1),

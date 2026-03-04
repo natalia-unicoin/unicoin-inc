@@ -51,7 +51,7 @@ const Financials = () => {
                             viewport={{ once: true, margin: "-50px" }}
                             transition={{ duration: 0.5, delay: 0.1 * index }}
                         >
-                            <div className="flex flex-col items-center">
+                            <div className="flex flex-col items-center justify-center w-full">
                                 <span className={classes.statValue}>{card.value}</span>
                                 <span className={classes.statDescription}>{card.description}</span>
                             </div>

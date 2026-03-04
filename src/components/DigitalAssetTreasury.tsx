@@ -58,6 +58,9 @@ const DigitalAssetTreasury = () => {
                     viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.8 }}
                 >
+                    <span className={classes.eyebrow}>
+                        Institutional Framework
+                    </span>
                     <h2 className={classes.title}>
                         Digital Asset Treasury
                     </h2>

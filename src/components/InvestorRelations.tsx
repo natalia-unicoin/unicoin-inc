@@ -10,18 +10,38 @@ const InvestorRelations = () => {
     const dataCards = [
         {
             title: "Investor Deck",
+            items: [
+                "Comprehensive strategic review",
+                "Financial projections model",
+                "Market positioning analysis"
+            ],
             actionText: "Download Deck"
         },
         {
             title: "Contact IR",
+            items: [
+                "Direct institutional access",
+                "Dedicated relationship manager",
+                "Priority response timeline"
+            ],
             actionText: "Get in Touch"
         },
         {
             title: "Institutional FAQs",
+            items: [
+                "Capital structure methodology",
+                "Risk and governance framework",
+                "Treasury deployment parameters"
+            ],
             actionText: "View FAQs"
         },
         {
-            title: "Analyst Inquiry Form",
+            title: "Analyst Inquiry",
+            items: [
+                "Custom data requests",
+                "Management interview protocol",
+                "Detailed performance metrics"
+            ],
             actionText: "Submit Inquiry"
         }
     ];
@@ -52,6 +72,14 @@ const InvestorRelations = () => {
                             transition={{ duration: 0.5, delay: 0.1 * index }}
                         >
                             <h3 className={classes.cardTitle}>{card.title}</h3>
+                            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '24px', flexGrow: 1, marginBottom: '48px' }}>
+                                {card.items.map((item, idx) => (
+                                    <li key={idx} style={{ fontSize: '16px', color: '#374151', display: 'flex', alignItems: 'flex-start', gap: '8px', lineHeight: 1.5, fontFamily: 'Inter, sans-serif' }}>
+                                        <span style={{ display: 'inline-block', flexShrink: 0, color: '#9CA3AF', fontSize: '18px', fontWeight: 300, marginTop: '0px' }}>→</span>
+                                        {item}
+                                    </li>
+                                ))}
+                            </ul>
                             <a href="#" className={classes.cardAction}>
                                 {card.actionText}
                             </a>

@@ -31,7 +31,7 @@ export const useStyles = makeStyles()((theme) => ({
         fontWeight: 700,
         letterSpacing: '-1px', // Updated to -1px as per global rules
         lineHeight: 1.1,
-        color: 'inherit',
+        color: '#FFFFFF', // Pure white for contrast against liquid glass
         [theme.breakpoints.up('md')]: {
             fontSize: '3.5rem',
         },
@@ -61,9 +61,11 @@ export const useStyles = makeStyles()((theme) => ({
         transition: 'none', // Remove animations
     },
     statValue: {
+        display: 'block', // Force line break
+        width: '100%',
         fontSize: '56px', // Mobile size
         fontWeight: 700, // Bold Montserrat
-        color: 'inherit', // Let theme dictate color (usually white due to glass, but explicitly clean)
+        color: '#FFFFFF', // Pure white for liquid glass contrast
         fontFamily: theme.typography.h1.fontFamily, // Montserrat
         lineHeight: 1,
         marginBottom: '24px', // Generous spacing
@@ -79,7 +81,7 @@ export const useStyles = makeStyles()((theme) => ({
         fontSize: '18px',
         fontWeight: 500, // Medium Inter
         fontFamily: theme.typography.body1.fontFamily, // Inter
-        color: '#374151', // Required institutional gray text
+        color: 'rgba(255, 255, 255, 0.8)', // Light, readable text over dark background
         lineHeight: 1.5,
         maxWidth: '320px', // Keep text readable
         textAlign: 'center',
