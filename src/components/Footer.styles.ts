@@ -2,11 +2,11 @@ import { makeStyles } from 'tss-react/mui';
 
 export const useStyles = makeStyles()((theme) => ({
     footer: {
-        backgroundColor: '#0A0F1C', // Deep dark institutional navy
-        color: '#FFFFFF',
+        backgroundColor: '#FFFFFF', // Forzar siempre blanco
+        color: '#1D1D1F', // Forzar siempre oscuro
         paddingTop: theme.spacing(12), // Huge padding
         paddingBottom: theme.spacing(10),
-        borderTop: '1px solid rgba(255, 255, 255, 0.05)', // Extremely subtle border
+        borderTop: '1px solid #E5E5E7',
     },
     container: {
         maxWidth: '100%',
@@ -47,10 +47,9 @@ export const useStyles = makeStyles()((theme) => ({
         height: '40px',
         width: 'auto',
         objectFit: 'contain',
-        filter: 'brightness(0) invert(1)', // Force white logo
     },
     description: {
-        color: 'rgba(255, 255, 255, 0.7)', // Translucent white
+        color: '#6E6E73', // Apple gray for secondary text
         lineHeight: 1.625,
         maxWidth: '24rem',
         marginBottom: theme.spacing(4),
@@ -66,16 +65,16 @@ export const useStyles = makeStyles()((theme) => ({
         width: '48px',
         height: '48px',
         borderRadius: '50%',
-        backgroundColor: 'transparent', // No solid background
-        border: '1px solid rgba(255, 255, 255, 0.2)', // Wireframe circle
+        backgroundColor: '#F5F5F7', // Always light gray
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        color: '#FFFFFF',
+        color: '#1D1D1F', // Always dark
         transition: 'all 0.3s',
         '&:hover': {
-            backgroundColor: 'rgba(255, 255, 255, 0.1)',
-            borderColor: '#FFFFFF',
+            backgroundColor: '#1D1D1F',
+            color: '#FFFFFF',
+            boxShadow: 'none',
         }
     },
     socialSvg: {
@@ -121,7 +120,7 @@ export const useStyles = makeStyles()((theme) => ({
         fontSize: '18px',
         letterSpacing: '0.05em',
         marginBottom: theme.spacing(3),
-        color: '#FFFFFF',
+        color: '#1D1D1F',
     },
     linkList: {
         listStyle: 'none',
@@ -130,7 +129,7 @@ export const useStyles = makeStyles()((theme) => ({
         display: 'flex',
         flexDirection: 'column',
         gap: theme.spacing(2),
-        color: 'rgba(255, 255, 255, 0.7)', // Translucent white
+        color: '#6E6E73', // Gray text
     },
     linkItem: {
         color: 'inherit',
@@ -139,13 +138,13 @@ export const useStyles = makeStyles()((theme) => ({
         fontSize: '16px',
         transition: 'color 0.2s',
         '&:hover': {
-            color: '#FFFFFF',
+            color: '#1D1D1F',
         }
     },
     // Bottom Bar
     bottomBar: {
         paddingTop: theme.spacing(4),
-        borderTop: '1px solid rgba(255, 255, 255, 0.05)',
+        borderTop: '1px solid #E5E5E7',
     },
     tagline: {
         display: 'flex',
@@ -159,7 +158,7 @@ export const useStyles = makeStyles()((theme) => ({
         fontWeight: 600,
         letterSpacing: '0.2em',
         textTransform: 'uppercase', // Enforce uppercase
-        color: 'rgba(255, 255, 255, 0.5)',
+        color: '#86868B',
         [theme.breakpoints.up('md')]: {
             flexDirection: 'row',
             fontSize: '12px',
@@ -167,7 +166,7 @@ export const useStyles = makeStyles()((theme) => ({
     },
     separator: {
         display: 'none',
-        color: 'rgba(255, 255, 255, 0.2)',
+        color: '#D2D2D7',
         [theme.breakpoints.up('md')]: {
             display: 'block',
         }
@@ -184,17 +183,17 @@ export const useStyles = makeStyles()((theme) => ({
         }
     },
     bottomLegalLink: {
-        color: 'rgba(255, 255, 255, 0.5)',
+        color: '#86868B',
         fontSize: '12px',
         fontFamily: theme.typography.body1.fontFamily,
         textDecoration: 'none',
         transition: 'color 0.2s',
         '&:hover': {
-            color: '#FFFFFF',
+            color: '#1D1D1F',
         }
     },
     legalSeparator: {
-        color: 'rgba(255, 255, 255, 0.2)',
+        color: '#D2D2D7',
         fontSize: '12px',
     },
     copyright: {
@@ -203,7 +202,7 @@ export const useStyles = makeStyles()((theme) => ({
         justifyContent: 'center',
         fontSize: '12px',
         fontFamily: theme.typography.body1.fontFamily,
-        color: 'rgba(255, 255, 255, 0.4)',
+        color: '#86868B',
     },
     copyrightBrand: {
         whiteSpace: 'nowrap',

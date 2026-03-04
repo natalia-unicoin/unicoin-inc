@@ -11,6 +11,23 @@ export const useStyles = makeStyles()((theme) => ({
             minHeight: '200vh',
         }
     },
+    bgImage: {
+        position: 'absolute',
+        inset: 0,
+        zIndex: 0,
+        width: '100%',
+        height: '100%',
+        objectFit: 'cover',
+        objectPosition: 'center',
+        filter: 'blur(16px)', // Heavily blurred per request
+        transform: 'scale(1.05)', // Prevent blurred edges from shrinking
+    },
+    overlay: {
+        position: 'absolute',
+        inset: 0,
+        zIndex: 1,
+        backgroundColor: 'rgba(10, 15, 28, 0.7)', // Dark overlay for text contrast
+    },
     stickyWrapper: {
         position: 'sticky',
         top: 0,
@@ -20,6 +37,7 @@ export const useStyles = makeStyles()((theme) => ({
         paddingTop: theme.spacing(8),
         paddingBottom: theme.spacing(8),
         overflow: 'hidden',
+        zIndex: 2, // Ensure text is above background
     },
     container: {
         maxWidth: '100%',
@@ -38,6 +56,7 @@ export const useStyles = makeStyles()((theme) => ({
         letterSpacing: '-0.03em',
         marginBottom: theme.spacing(4),
         lineHeight: 1.1,
+        color: '#FFFFFF', // Force white text over dark blurred bg
         fontSize: '32px', // Smaller for mobile header
         [theme.breakpoints.up('md')]: {
             fontSize: '64px',
@@ -49,7 +68,7 @@ export const useStyles = makeStyles()((theme) => ({
     description: {
         fontSize: '18px', // Safe size for 100vh mobile sticky containers
         lineHeight: 1.4,
-        color: theme.palette.text.primary,
+        color: '#FFFFFF', // Force white text over dark blurred bg
         maxWidth: '1000px',
         margin: '0 auto',
         fontWeight: 500, // Slightly lighter on mobile

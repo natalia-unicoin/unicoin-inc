@@ -31,7 +31,7 @@ export const useStyles = makeStyles()((theme) => ({
         fontWeight: 700,
         letterSpacing: '-1px', // Updated to -1px as per global rules
         lineHeight: 1.1,
-        color: '#FFFFFF', // Pure white for contrast against liquid glass
+        color: theme.palette.mode === 'dark' ? '#FFFFFF' : theme.palette.text.primary, // Adapt to light/dark palettes
         [theme.breakpoints.up('md')]: {
             fontSize: '3.5rem',
         },
@@ -65,7 +65,7 @@ export const useStyles = makeStyles()((theme) => ({
         width: '100%',
         fontSize: '56px', // Mobile size
         fontWeight: 700, // Bold Montserrat
-        color: '#FFFFFF', // Pure white for liquid glass contrast
+        color: theme.palette.mode === 'dark' ? '#FFFFFF' : theme.palette.text.primary,
         fontFamily: theme.typography.h1.fontFamily, // Montserrat
         lineHeight: 1,
         marginBottom: '24px', // Generous spacing
@@ -81,7 +81,7 @@ export const useStyles = makeStyles()((theme) => ({
         fontSize: '18px',
         fontWeight: 500, // Medium Inter
         fontFamily: theme.typography.body1.fontFamily, // Inter
-        color: 'rgba(255, 255, 255, 0.8)', // Light, readable text over dark background
+        color: theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.8)' : theme.palette.text.secondary,
         lineHeight: 1.5,
         maxWidth: '320px', // Keep text readable
         textAlign: 'center',

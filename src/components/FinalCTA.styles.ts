@@ -67,7 +67,7 @@ export const useStyles = makeStyles()((theme) => ({
     button: {
         display: 'inline-block',
         backgroundColor: theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.1)' : theme.palette.secondary.main,
-        color: theme.palette.mode === 'dark' ? '#FFFFFF' : theme.palette.primary.main,
+        color: theme.palette.mode === 'dark' ? '#FFFFFF' : theme.palette.secondary.contrastText,
         border: theme.palette.mode === 'dark' ? '1px solid rgba(255, 255, 255, 0.3)' : 'none',
         backdropFilter: theme.palette.mode === 'dark' ? 'blur(16px)' : 'none',
         WebkitBackdropFilter: theme.palette.mode === 'dark' ? 'blur(16px)' : 'none',

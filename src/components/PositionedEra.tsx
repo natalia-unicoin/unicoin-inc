@@ -2,6 +2,7 @@
 
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform, MotionValue } from 'framer-motion';
+import { getImagePath } from '@/utils/image';
 import { useStyles } from './PositionedEra.styles';
 
 const text = "The transition to TransparentBusiness marks a deliberate move toward institutional maturity. Built on a debt-free model, strategic asset alignment, and disciplined governance, TransparentBusiness is structured to operate within evolving regulatory frameworks while maintaining strategic independence. This is not a reactionary shift, but a forward-looking institutional recalibration designed for longevity.";
@@ -27,6 +28,8 @@ const PositionedEra = () => {
 
     return (
         <section id="positioned-era" className={classes.section} ref={containerRef}>
+            <img src={getImagePath('assets/poised-bg.jpg')} alt="Cinematic Blurred Background" className={classes.bgImage} />
+            <div className={classes.overlay} />
             <div className={classes.stickyWrapper}>
                 <div className={classes.container}>
                     <motion.h2
