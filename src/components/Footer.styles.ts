@@ -2,11 +2,11 @@ import { makeStyles } from 'tss-react/mui';
 
 export const useStyles = makeStyles()((theme) => ({
     footer: {
-        backgroundColor: '#FFFFFF', // Forzar siempre blanco
-        color: '#1D1D1F', // Forzar siempre oscuro
-        paddingTop: theme.spacing(10), // py-20 (approx 80px)
+        backgroundColor: '#0A0F1C', // Deep dark institutional navy
+        color: '#FFFFFF',
+        paddingTop: theme.spacing(12), // Huge padding
         paddingBottom: theme.spacing(10),
-        borderTop: '1px solid #E5E5E7',
+        borderTop: '1px solid rgba(255, 255, 255, 0.05)', // Extremely subtle border
     },
     container: {
         maxWidth: '100%',
@@ -47,32 +47,35 @@ export const useStyles = makeStyles()((theme) => ({
         height: '40px',
         width: 'auto',
         objectFit: 'contain',
+        filter: 'brightness(0) invert(1)', // Force white logo
     },
     description: {
-        color: '#6E6E73', // Apple gray for secondary text
-        lineHeight: 1.625, // leading-relaxed
-        maxWidth: '24rem', // max-w-sm
-        marginBottom: theme.spacing(4), // mb-8
+        color: 'rgba(255, 255, 255, 0.7)', // Translucent white
+        lineHeight: 1.625,
+        maxWidth: '24rem',
+        marginBottom: theme.spacing(4),
+        fontFamily: theme.typography.body1.fontFamily,
+        fontSize: '16px',
     },
     socialWrapper: {
         display: 'flex',
         alignItems: 'center',
-        gap: theme.spacing(3), // gap-6
+        gap: theme.spacing(3),
     },
     socialIcon: {
-        width: '48px', // w-12
-        height: '48px', // h-12
+        width: '48px',
+        height: '48px',
         borderRadius: '50%',
-        backgroundColor: '#F5F5F7', // Always light gray
+        backgroundColor: 'transparent', // No solid background
+        border: '1px solid rgba(255, 255, 255, 0.2)', // Wireframe circle
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        color: '#1D1D1F', // Always dark
+        color: '#FFFFFF',
         transition: 'all 0.3s',
         '&:hover': {
-            backgroundColor: '#1D1D1F',
-            color: '#FFFFFF',
-            boxShadow: 'none',
+            backgroundColor: 'rgba(255, 255, 255, 0.1)',
+            borderColor: '#FFFFFF',
         }
     },
     socialSvg: {
@@ -113,8 +116,12 @@ export const useStyles = makeStyles()((theme) => ({
         }
     },
     columnTitle: {
-        fontWeight: 700,
-        marginBottom: theme.spacing(3), // mb-6
+        fontFamily: theme.typography.h1.fontFamily,
+        fontWeight: 600,
+        fontSize: '18px',
+        letterSpacing: '0.05em',
+        marginBottom: theme.spacing(3),
+        color: '#FFFFFF',
     },
     linkList: {
         listStyle: 'none',
@@ -122,21 +129,23 @@ export const useStyles = makeStyles()((theme) => ({
         margin: 0,
         display: 'flex',
         flexDirection: 'column',
-        gap: theme.spacing(2), // space-y-4
-        color: '#6E6E73', // Changed from gray-500
+        gap: theme.spacing(2),
+        color: 'rgba(255, 255, 255, 0.7)', // Translucent white
     },
     linkItem: {
         color: 'inherit',
         textDecoration: 'none',
+        fontFamily: theme.typography.body1.fontFamily,
+        fontSize: '16px',
         transition: 'color 0.2s',
         '&:hover': {
-            color: '#1D1D1F',
+            color: '#FFFFFF',
         }
     },
     // Bottom Bar
     bottomBar: {
-        paddingTop: theme.spacing(4), // pt-8
-        borderTop: '1px solid #E5E5E7',
+        paddingTop: theme.spacing(4),
+        borderTop: '1px solid rgba(255, 255, 255, 0.05)',
     },
     tagline: {
         display: 'flex',
@@ -145,19 +154,20 @@ export const useStyles = makeStyles()((theme) => ({
         alignItems: 'center',
         marginTop: theme.spacing(6),
         gap: theme.spacing(3),
-        fontSize: '10px', // text-[10px]
-        fontWeight: 700,
-        letterSpacing: '0.2em', // tracking-[0.2em]
-        textTransform: 'none',
-        color: '#86868B', // gray-400 equivalent for white bg
+        fontSize: '10px',
+        fontFamily: theme.typography.h1.fontFamily, // Montserrat
+        fontWeight: 600,
+        letterSpacing: '0.2em',
+        textTransform: 'uppercase', // Enforce uppercase
+        color: 'rgba(255, 255, 255, 0.5)',
         [theme.breakpoints.up('md')]: {
             flexDirection: 'row',
-            fontSize: '0.75rem', // md:text-xs
+            fontSize: '12px',
         }
     },
     separator: {
         display: 'none',
-        color: '#D2D2D7',
+        color: 'rgba(255, 255, 255, 0.2)',
         [theme.breakpoints.up('md')]: {
             display: 'block',
         }
@@ -174,24 +184,26 @@ export const useStyles = makeStyles()((theme) => ({
         }
     },
     bottomLegalLink: {
-        color: '#86868B',
-        fontSize: '0.75rem', // 12px
+        color: 'rgba(255, 255, 255, 0.5)',
+        fontSize: '12px',
+        fontFamily: theme.typography.body1.fontFamily,
         textDecoration: 'none',
         transition: 'color 0.2s',
         '&:hover': {
-            color: '#1D1D1F',
+            color: '#FFFFFF',
         }
     },
     legalSeparator: {
-        color: '#D2D2D7',
-        fontSize: '0.75rem',
+        color: 'rgba(255, 255, 255, 0.2)',
+        fontSize: '12px',
     },
     copyright: {
         marginTop: theme.spacing(8),
         display: 'flex',
         justifyContent: 'center',
-        fontSize: '0.75rem',
-        color: '#86868B',
+        fontSize: '12px',
+        fontFamily: theme.typography.body1.fontFamily,
+        color: 'rgba(255, 255, 255, 0.4)',
     },
     copyrightBrand: {
         whiteSpace: 'nowrap',
