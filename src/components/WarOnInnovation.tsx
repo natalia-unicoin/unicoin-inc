@@ -21,20 +21,20 @@ const WarOnInnovation = () => {
     const titleOpacity = useTransform(scrollYProgress, [0.1, 0.2, 0.8, 0.9], [0, 1, 1, 0]);
 
     // --- Main Statement Animation ---
-    // Moves down slightly (parallax) and fades out quickly as we reach the middle
-    const statementY = useTransform(scrollYProgress, [0.2, 0.5], [0, 100]);
-    const statementOpacity = useTransform(scrollYProgress, [0.2, 0.4, 0.5], [0, 1, 0]);
+    // Moves down slightly (parallax) and stays opaque longer for readability
+    const statementY = useTransform(scrollYProgress, [0.1, 0.4], [0, 100]);
+    const statementOpacity = useTransform(scrollYProgress, [0.1, 0.2, 0.4, 0.5], [0, 1, 1, 0]);
 
     // --- Supporting Text Animation ---
-    // Appears right after the statement starts fading out
+    // Appears as statement fades, stays on screen longer
     const supportY = useTransform(scrollYProgress, [0.4, 0.6], [50, 0]);
-    const supportOpacity = useTransform(scrollYProgress, [0.3, 0.45, 0.6, 0.7], [0, 1, 1, 0]);
+    const supportOpacity = useTransform(scrollYProgress, [0.4, 0.5, 0.75, 0.85], [0, 1, 1, 0]);
 
     // --- Metrics Grid Animation ---
-    // Surges up from the bottom rapidly in the second half of the section
-    const metricsY = useTransform(scrollYProgress, [0.55, 0.8], [150, 0]);
-    const metricsOpacity = useTransform(scrollYProgress, [0.5, 0.7, 0.9], [0, 1, 1]);
-    const metricsScale = useTransform(scrollYProgress, [0.5, 0.7], [0.8, 1]);
+    // Surges up from the bottom rapidly in the final phase
+    const metricsY = useTransform(scrollYProgress, [0.75, 0.9], [150, 0]);
+    const metricsOpacity = useTransform(scrollYProgress, [0.75, 0.85, 1], [0, 1, 1]);
+    const metricsScale = useTransform(scrollYProgress, [0.75, 0.9], [0.8, 1]);
 
     return (
         <section id="conflict" className={classes.section} ref={containerRef}>

@@ -15,13 +15,13 @@ export const useStyles = makeStyles()((theme) => {
             color: textColor,
             position: 'relative',
             overflow: 'hidden',
-            minHeight: '150vh', // Extend height to allow long scroll interactions
+            minHeight: '300vh', // Greatly extended height to slow down text scroll
             display: 'flex',
             flexDirection: 'column',
             [theme.breakpoints.up('lg')]: {
                 paddingTop: '160px',
                 paddingBottom: '160px',
-                minHeight: '200vh', // Massive scroll area on desktop
+                minHeight: '400vh', // Massive scroll area on desktop
             }
         },
         container: {
