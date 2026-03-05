@@ -21,19 +21,19 @@ const WarOnInnovation = () => {
     const titleOpacity = useTransform(scrollYProgress, [0.1, 0.2, 0.8, 0.9], [0, 1, 1, 0]);
 
     // --- Main Statement Animation ---
-    // Moves down slightly (parallax) and stays opaque longer for readability
+    // Stays completely solid until 0.35, gone by 0.4
     const statementY = useTransform(scrollYProgress, [0.1, 0.4], [0, 100]);
-    const statementOpacity = useTransform(scrollYProgress, [0.1, 0.2, 0.4, 0.5], [0, 1, 1, 0]);
+    const statementOpacity = useTransform(scrollYProgress, [0.1, 0.15, 0.35, 0.4], [0, 1, 1, 0]);
 
     // --- Supporting Text Animation ---
-    // Appears as statement fades, stays on screen longer
-    const supportY = useTransform(scrollYProgress, [0.4, 0.6], [50, 0]);
-    const supportOpacity = useTransform(scrollYProgress, [0.4, 0.5, 0.75, 0.85], [0, 1, 1, 0]);
+    // Starts appearing exactly when statement finishes fading out (seqential flow, zero overlap)
+    const supportY = useTransform(scrollYProgress, [0.4, 0.5], [50, 0]);
+    const supportOpacity = useTransform(scrollYProgress, [0.4, 0.45, 0.7, 0.75], [0, 1, 1, 0]);
 
     // --- Metrics Grid Animation ---
-    // Surges up from the bottom rapidly in the final phase
-    const metricsY = useTransform(scrollYProgress, [0.75, 0.9], [150, 0]);
-    const metricsOpacity = useTransform(scrollYProgress, [0.75, 0.85, 1], [0, 1, 1]);
+    // Starts appearing exactly when support finishes fading out (0.75)
+    const metricsY = useTransform(scrollYProgress, [0.75, 0.85], [150, 0]);
+    const metricsOpacity = useTransform(scrollYProgress, [0.75, 0.8, 1], [0, 1, 1]);
     const metricsScale = useTransform(scrollYProgress, [0.75, 0.9], [0.8, 1]);
 
     return (

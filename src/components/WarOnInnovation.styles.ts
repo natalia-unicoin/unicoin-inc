@@ -80,17 +80,11 @@ export const useStyles = makeStyles()((theme) => {
         },
         supportContainer: {
             position: 'sticky',
-            top: '55vh',
+            top: '30vh', // Clean central replacement
             width: '100%',
             zIndex: 16,
             display: 'flex',
             justifyContent: 'center',
-            [theme.breakpoints.up('md')]: {
-                top: '65vh',
-            },
-            [theme.breakpoints.up('lg')]: {
-                top: '70vh',
-            }
         },
         statement: {
             fontSize: '1.75rem',
