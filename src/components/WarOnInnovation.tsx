@@ -8,12 +8,11 @@ const WarOnInnovation = () => {
     const { classes } = useStyles();
     const containerRef = useRef<HTMLElement>(null);
 
-    // Track scroll progress strictly within this section's bounds
-    // offset "start end" means animation starts when top of container hits bottom of viewport
-    // offset "end start" means animation ends when bottom of container hits top of viewport
+    // offset "start start" means animation starts when top of container hits top of viewport (sticks)
+    // offset "end end" means animation ends when bottom of container hits bottom of viewport (un-sticks)
     const { scrollYProgress } = useScroll({
         target: containerRef,
-        offset: ["start end", "end start"]
+        offset: ["start start", "end end"]
     });
 
     // --- Title Animation ---
@@ -21,20 +20,17 @@ const WarOnInnovation = () => {
     const titleOpacity = useTransform(scrollYProgress, [0.1, 0.2, 0.8, 0.9], [0, 1, 1, 0]);
 
     // --- Main Statement Animation ---
-    // Drifts up and disappears before 0.4
-    const statementY = useTransform(scrollYProgress, [0.1, 0.4], [0, -50]);
-    const statementOpacity = useTransform(scrollYProgress, [0.1, 0.15, 0.35, 0.4], [0, 1, 1, 0]);
+    const statementY = useTransform(scrollYProgress, [0, 0.3], [0, -50]);
+    const statementOpacity = useTransform(scrollYProgress, [0, 0.15, 0.35, 0.45], [0, 1, 1, 0]);
 
     // --- Supporting Text Animation ---
-    // Smoothly rises exactly when statement clears
-    const supportY = useTransform(scrollYProgress, [0.4, 0.5], [50, 0]);
-    const supportOpacity = useTransform(scrollYProgress, [0.4, 0.45, 0.65, 0.7], [0, 1, 1, 0]);
+    const supportY = useTransform(scrollYProgress, [0.45, 0.55], [50, 0]);
+    const supportOpacity = useTransform(scrollYProgress, [0.45, 0.55, 0.75, 0.85], [0, 1, 1, 0]);
 
     // --- Metrics Grid Animation ---
-    // Finally presents the metrics strongly
-    const metricsY = useTransform(scrollYProgress, [0.7, 0.8], [50, 0]);
-    const metricsOpacity = useTransform(scrollYProgress, [0.7, 0.75, 1], [0, 1, 1]);
-    const metricsScale = useTransform(scrollYProgress, [0.7, 0.85], [0.9, 1]);
+    const metricsY = useTransform(scrollYProgress, [0.85, 0.95], [50, 0]);
+    const metricsOpacity = useTransform(scrollYProgress, [0.85, 0.95, 1], [0, 1, 1]);
+    const metricsScale = useTransform(scrollYProgress, [0.85, 0.95], [0.9, 1]);
 
     return (
         <section id="conflict" className={classes.section} ref={containerRef}>

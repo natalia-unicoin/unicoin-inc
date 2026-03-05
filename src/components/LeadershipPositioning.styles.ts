@@ -55,13 +55,14 @@ export const useStyles = makeStyles()((theme) => ({
         alignItems: 'flex-start',
         textAlign: 'left',
         padding: '24px', // Tighter padding on mobile
-        border: theme.palette.mode === 'dark' ? '1px solid rgba(255, 255, 255, 0.1)' : '1px solid #D2D2D7',
+        border: theme.palette.mode === 'dark' ? '1px solid rgba(255, 255, 255, 0.25)' : '1px solid #D2D2D7',
         borderRadius: '24px', // Scaled border radius
-        backgroundColor: theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.05)' : 'transparent',
-        backdropFilter: theme.palette.mode === 'dark' ? 'blur(10px)' : 'none',
+        backgroundColor: theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.15)' : 'transparent',
+        backdropFilter: theme.palette.mode === 'dark' ? 'blur(24px)' : 'none',
+        WebkitBackdropFilter: theme.palette.mode === 'dark' ? 'blur(24px)' : 'none',
         transition: 'all 0.3s ease',
         '&:hover': {
-            backgroundColor: theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.1)' : '#F9F9FB',
+            backgroundColor: theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.25)' : '#F9F9FB',
             boxShadow: theme.palette.mode === 'dark' ? '0 0 30px rgba(6, 182, 212, 0.3)' : 'none',
         },
         [theme.breakpoints.up('md')]: {
