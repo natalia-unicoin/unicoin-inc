@@ -15,13 +15,13 @@ export const useStyles = makeStyles()((theme) => {
             color: textColor,
             position: 'relative',
             overflow: 'hidden',
-            minHeight: '300vh', // Greatly extended height to slow down text scroll
+            minHeight: '200vh', // Balanced height
             display: 'flex',
             flexDirection: 'column',
             [theme.breakpoints.up('lg')]: {
                 paddingTop: '160px',
                 paddingBottom: '160px',
-                minHeight: '400vh', // Massive scroll area on desktop
+                minHeight: '300vh', // Extra reading time on large screens
             }
         },
         container: {
@@ -63,26 +63,23 @@ export const useStyles = makeStyles()((theme) => {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            textAlign: 'center',
+            justifyContent: 'center',
             maxWidth: '1200px',
             margin: '0 auto',
-            position: 'relative',
-            flex: 1, // Take up remaining space
+            position: 'sticky',
+            top: '25vh',
+            height: '50vh', // Centralized stage for absolute elements
             width: '100%',
         },
         statementContainer: {
-            position: 'sticky',
-            top: '25vh', // Lock in upper middle of screen
+            position: 'absolute',
             width: '100%',
-            zIndex: 15,
             display: 'flex',
             justifyContent: 'center',
         },
         supportContainer: {
-            position: 'sticky',
-            top: '30vh', // Clean central replacement
+            position: 'absolute',
             width: '100%',
-            zIndex: 16,
             display: 'flex',
             justifyContent: 'center',
         },
@@ -118,9 +115,7 @@ export const useStyles = makeStyles()((theme) => {
             }
         },
         metricGrid: {
-            position: 'sticky',
-            top: '40vh',
-            zIndex: 17,
+            position: 'absolute',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
