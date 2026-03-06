@@ -4,8 +4,8 @@ export const useStyles = makeStyles()((theme) => ({
     section: {
         paddingTop: theme.spacing(8),
         paddingBottom: theme.spacing(8),
-        backgroundColor: theme.palette.mode === 'dark' ? 'transparent' : theme.palette.background.paper,
-        color: theme.palette.text.primary,
+        backgroundColor: '#FFFFFF', // Forza fondo blanco Apple-style
+        color: '#111827', // Texto oscuro siempre para contrastar con el blanco
         [theme.breakpoints.up('lg')]: {
             paddingTop: '160px',
             paddingBottom: '160px',
@@ -88,10 +88,10 @@ export const useStyles = makeStyles()((theme) => ({
         }
     },
     storyBlock: {
-        backgroundColor: theme.palette.mode === 'dark' ? 'rgba(30, 41, 59, 0.4)' : '#F5F5F7', // Glass translucent
-        border: theme.palette.mode === 'dark' ? '1px solid rgba(255, 255, 255, 0.15)' : '1px solid transparent',
-        backdropFilter: theme.palette.mode === 'dark' ? 'blur(20px) saturate(180%)' : 'none',
-        WebkitBackdropFilter: theme.palette.mode === 'dark' ? 'blur(20px) saturate(180%)' : 'none',
+        backgroundColor: '#F5F5F7', // Apple Light Gray Glass
+        border: '1px solid transparent',
+        backdropFilter: 'none',
+        WebkitBackdropFilter: 'none',
         borderRadius: '32px',
         padding: '32px 20px', // Even tighter padding for iPhones
         display: 'flex',
@@ -104,9 +104,7 @@ export const useStyles = makeStyles()((theme) => ({
         transition: 'all 0.4s ease',
         '&:hover': {
             transform: 'translateY(-4px)',
-            backgroundColor: theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.08)' : undefined,
-            borderColor: theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.3)' : undefined,
-            boxShadow: theme.palette.mode === 'dark' ? '0 0 30px rgba(6, 182, 212, 0.3)' : '0 10px 30px rgba(0,0,0,0.05)',
+            boxShadow: '0 10px 30px rgba(0,0,0,0.05)',
         },
         [theme.breakpoints.up('md')]: {
             padding: '60px 40px',
@@ -146,8 +144,8 @@ export const useStyles = makeStyles()((theme) => ({
         }
     },
     highlightBlock: {
-        backgroundColor: theme.palette.mode === 'dark' ? 'rgba(6, 182, 212, 0.15)' : theme.palette.primary.main, // Cyan tint for dark mode, dark navy for light
-        border: theme.palette.mode === 'dark' ? '1px solid rgba(6, 182, 212, 0.3)' : 'none',
+        backgroundColor: theme.palette.primary.main,
+        border: 'none',
         color: '#FFFFFF', // Always white text
     },
     imperativeLabel: {
