@@ -43,17 +43,17 @@ export const useStyles = makeStyles()((theme) => {
             fontFamily: theme.typography.h1.fontFamily,
             fontWeight: 700,
             letterSpacing: '-0.03em',
-            marginBottom: theme.spacing(12),
+            marginBottom: theme.spacing(16), // More space before the sticky statements
             lineHeight: 1.1,
             textAlign: 'center',
-            fontSize: '20px', // Reduced for mobile
+            fontSize: '20px',
             textTransform: 'uppercase',
-            color: textAlpha80, // Improved contrast
-            position: 'sticky', // Ensure title stays visible
-            top: '100px',
+            color: textAlpha80,
+            position: 'relative', // REMOVED STICKY: This was the main cause of the overlap
             zIndex: 20,
             [theme.breakpoints.up('md')]: {
                 fontSize: '28px',
+                marginBottom: theme.spacing(24),
             },
             [theme.breakpoints.up('lg')]: {
                 fontSize: '32px',
