@@ -21,20 +21,20 @@ const WarOnInnovation = () => {
     const titleOpacity = useTransform(scrollYProgress, [0.1, 0.2, 0.8, 0.9], [0, 1, 1, 0]);
 
     // --- Main Statement Animation ---
-    // Moves down slightly and completely vanishes by 0.35
-    const statementY = useTransform(scrollYProgress, [0.1, 0.4], [0, 50]);
-    const statementOpacity = useTransform(scrollYProgress, [0.1, 0.2, 0.3, 0.35], [0, 1, 1, 0]);
+    // Moves down very slowly and stays completely solid until 0.5 (half the massive section)
+    const statementY = useTransform(scrollYProgress, [0.1, 0.55], [0, 80]);
+    const statementOpacity = useTransform(scrollYProgress, [0.1, 0.15, 0.5, 0.55], [0, 1, 1, 0]);
 
     // --- Supporting Text Animation ---
-    // Strictly starts appearing after statement is gone (seqential)
-    const supportY = useTransform(scrollYProgress, [0.35, 0.6], [50, 0]);
-    const supportOpacity = useTransform(scrollYProgress, [0.36, 0.45, 0.65, 0.75], [0, 1, 1, 0]);
+    // Strictly starts appearing after statement is gone, dominating the second half
+    const supportY = useTransform(scrollYProgress, [0.55, 0.8], [50, 0]);
+    const supportOpacity = useTransform(scrollYProgress, [0.56, 0.6, 0.8, 0.85], [0, 1, 1, 0]);
 
     // --- Metrics Grid Animation ---
-    // Follows strictly after supporting text
-    const metricsY = useTransform(scrollYProgress, [0.75, 0.85], [100, 0]);
-    const metricsOpacity = useTransform(scrollYProgress, [0.76, 0.85, 1], [0, 1, 1]);
-    const metricsScale = useTransform(scrollYProgress, [0.76, 0.9], [0.9, 1]);
+    // Appears at the very end
+    const metricsY = useTransform(scrollYProgress, [0.85, 0.95], [100, 0]);
+    const metricsOpacity = useTransform(scrollYProgress, [0.86, 0.95, 1], [0, 1, 1]);
+    const metricsScale = useTransform(scrollYProgress, [0.86, 0.95], [0.9, 1]);
 
     return (
         <section id="conflict" className={classes.section} ref={containerRef}>

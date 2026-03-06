@@ -15,13 +15,13 @@ export const useStyles = makeStyles()((theme) => {
             color: textColor,
             position: 'relative',
             overflow: 'hidden',
-            minHeight: '150vh', // Extend height to allow long scroll interactions
+            minHeight: '300vh', // Massive height for very slow paced reading
             display: 'flex',
             flexDirection: 'column',
             [theme.breakpoints.up('lg')]: {
                 paddingTop: '160px',
                 paddingBottom: '160px',
-                minHeight: '200vh', // Massive scroll area on desktop
+                minHeight: '400vh', // Extreme scroll timeline to hold text
             }
         },
         container: {
@@ -80,7 +80,7 @@ export const useStyles = makeStyles()((theme) => {
         },
         supportContainer: {
             position: 'sticky',
-            top: '35vh',
+            top: '45vh', // Lower down to avoid the massive text above
             width: '100%',
             zIndex: 16,
             display: 'flex',
@@ -119,7 +119,7 @@ export const useStyles = makeStyles()((theme) => {
         },
         metricGrid: {
             position: 'sticky',
-            top: '40vh',
+            top: '55vh', // Safely below the support text
             zIndex: 17,
             display: 'flex',
             flexDirection: 'column',
