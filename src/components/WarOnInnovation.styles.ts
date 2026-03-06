@@ -11,8 +11,11 @@ export const useStyles = makeStyles()((theme) => {
         section: {
             paddingTop: '80px',
             paddingBottom: '120px',
-            backgroundColor: theme.palette.mode === 'dark' ? 'transparent' : theme.palette.info.main,
-            color: textColor,
+            backgroundColor: theme.palette.mode === 'dark' ? '#F5F5F7' : theme.palette.info.main,
+            backgroundImage: theme.palette.mode === 'dark' ? 'url(/images/liquid-glass-bg-2.jpg)' : 'none',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            color: theme.palette.mode === 'dark' ? '#111827' : textColor, // Force dark text in Liquid Glass
             position: 'relative',
             overflow: 'hidden',
             display: 'flex',
@@ -56,7 +59,7 @@ export const useStyles = makeStyles()((theme) => {
             fontWeight: 700,
             letterSpacing: '-0.03em',
             lineHeight: 1.1,
-            color: textColor,
+            color: theme.palette.mode === 'dark' ? '#111827' : textColor, // Force dark text for Liquid Glass
             marginBottom: theme.spacing(4),
             fontSize: '32px',
             [theme.breakpoints.up('md')]: {
@@ -111,7 +114,7 @@ export const useStyles = makeStyles()((theme) => {
         metricValue: {
             fontSize: '3rem',
             fontWeight: 700,
-            color: textColor,
+            color: theme.palette.mode === 'dark' ? '#111827' : textColor, // Force dark text
             lineHeight: 1,
             letterSpacing: '-0.04em',
             fontFamily: theme.typography.h1.fontFamily,

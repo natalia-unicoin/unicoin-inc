@@ -4,7 +4,10 @@ export const useStyles = makeStyles()((theme) => ({
     section: {
         paddingTop: '160px',
         paddingBottom: '80px',
-        backgroundColor: theme.palette.mode === 'dark' ? '#F5F5F7' : theme.palette.background.paper, // Off-white/light gray in Liquid Glass
+        backgroundColor: theme.palette.mode === 'dark' ? '#F5F5F7' : theme.palette.background.paper, // Off-white/light gray fallback
+        backgroundImage: theme.palette.mode === 'dark' ? 'url(/images/liquid-glass-bg-1.jpg)' : 'none',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
         borderTop: theme.palette.mode === 'dark' ? '1px solid rgba(0,0,0,0.05)' : '1px solid #E5E5E7',
     },
     container: {
