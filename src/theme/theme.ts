@@ -25,7 +25,7 @@ const getPalette = (mode: ThemeMode) => {
                 success: { main: '#10141E' },
                 info: { main: '#FCD144' }, // Requested Gold/Yellow mapped to UI accents
                 warning: { main: '#0A337C' }, // Deep Blue from image
-                background: { default: '#FFFFFF', paper: '#E6E7E8' }, // Light Gray from palette
+                background: { default: '#FFFFFF', paper: '#F9F9F9' }, // Light Gray from palette
                 text: { primary: '#10141E', secondary: '#0A337C' }, // Deep blue for secondary text
             };
         case 'glass':
