@@ -4,8 +4,8 @@ export const useStyles = makeStyles()((theme) => ({
     section: {
         paddingTop: '160px',
         paddingBottom: '80px',
-        backgroundColor: theme.palette.mode === 'dark' ? 'transparent' : theme.palette.background.paper,
-        borderTop: theme.palette.mode === 'dark' ? '1px solid rgba(255,255,255,0.1)' : '1px solid #E5E5E7',
+        backgroundColor: theme.palette.mode === 'dark' ? '#F5F5F7' : theme.palette.background.paper, // Off-white/light gray in Liquid Glass
+        borderTop: theme.palette.mode === 'dark' ? '1px solid rgba(0,0,0,0.05)' : '1px solid #E5E5E7',
     },
     container: {
         maxWidth: '100%',
@@ -29,7 +29,7 @@ export const useStyles = makeStyles()((theme) => ({
         marginBottom: '60px',
         letterSpacing: '-0.03em',
         fontFamily: theme.typography.h1.fontFamily,
-        color: theme.palette.text.primary,
+        color: theme.palette.mode === 'dark' ? '#111827' : theme.palette.text.primary, // Force dark text on new light background in dark mode
         textAlign: 'center',
         textTransform: 'none',
         [theme.breakpoints.up('md')]: {
@@ -75,7 +75,7 @@ export const useStyles = makeStyles()((theme) => ({
         fontWeight: 700,
         lineHeight: '1',
         marginBottom: '8px',
-        color: theme.palette.text.primary,
+        color: theme.palette.mode === 'dark' ? '#111827' : theme.palette.text.primary, // Force dark text
         fontFamily: theme.typography.h1.fontFamily,
         [theme.breakpoints.up('md')]: {
             fontSize: '48px',
@@ -84,7 +84,7 @@ export const useStyles = makeStyles()((theme) => ({
     statLabel: {
         fontSize: '12px',
         fontWeight: 700,
-        color: theme.palette.text.primary, // High contrast
+        color: theme.palette.mode === 'dark' ? '#4B5563' : theme.palette.text.primary, // Dark gray for readability
         textTransform: 'uppercase',
         letterSpacing: '0.05em', // Reduced from 0.1em
         lineHeight: '1.4',
