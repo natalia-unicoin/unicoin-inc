@@ -9,129 +9,89 @@ export const useStyles = makeStyles()((theme) => {
 
     return {
         section: {
-            paddingTop: theme.spacing(8),
-            paddingBottom: theme.spacing(8),
+            paddingTop: '80px',
+            paddingBottom: '120px',
             backgroundColor: theme.palette.mode === 'dark' ? 'transparent' : theme.palette.info.main,
             color: textColor,
             position: 'relative',
             overflow: 'hidden',
-            minHeight: '300vh', // Massive height for very slow paced reading
             display: 'flex',
-            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
             [theme.breakpoints.up('lg')]: {
                 paddingTop: '160px',
-                paddingBottom: '160px',
-                minHeight: '400vh', // Extreme scroll timeline to hold text
+                paddingBottom: '200px',
             }
         },
         container: {
-            maxWidth: '100%',
+            maxWidth: '1200px',
             margin: '0 auto',
             paddingLeft: theme.spacing(3),
             paddingRight: theme.spacing(3),
             position: 'relative',
             zIndex: 10,
-            height: '100%',
             display: 'flex',
             flexDirection: 'column',
+            alignItems: 'center',
+            textAlign: 'center',
             [theme.breakpoints.up('lg')]: {
                 paddingLeft: '150px',
                 paddingRight: '150px',
             }
         },
-        title: {
+        eyebrow: {
+            fontFamily: theme.typography.body1.fontFamily,
+            fontWeight: 600,
+            letterSpacing: '0.05em',
+            marginBottom: theme.spacing(3),
+            fontSize: '14px',
+            textTransform: 'none', // Keep it elegant, not shouting
+            color: textAlpha80,
+            [theme.breakpoints.up('md')]: {
+                fontSize: '16px',
+            }
+        },
+        mainTitle: {
             fontFamily: theme.typography.h1.fontFamily,
             fontWeight: 700,
             letterSpacing: '-0.03em',
-            marginBottom: theme.spacing(16), // More space before the sticky statements
             lineHeight: 1.1,
-            textAlign: 'center',
-            fontSize: '20px',
-            textTransform: 'uppercase',
-            color: textAlpha80,
-            position: 'relative', // REMOVED STICKY: This was the main cause of the overlap
-            zIndex: 20,
+            color: textColor,
+            marginBottom: theme.spacing(4),
+            fontSize: '32px',
             [theme.breakpoints.up('md')]: {
-                fontSize: '28px',
-                marginBottom: theme.spacing(24),
+                fontSize: '56px',
             },
             [theme.breakpoints.up('lg')]: {
-                fontSize: '32px',
-            }
-        },
-        contentWrapper: {
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            textAlign: 'center',
-            maxWidth: '1200px',
-            margin: '0 auto',
-            position: 'relative',
-            flex: 1, // Take up remaining space
-            width: '100%',
-        },
-        statementContainer: {
-            position: 'sticky',
-            top: '25vh', // Lock in upper middle of screen
-            width: '100%',
-            zIndex: 15,
-            display: 'flex',
-            justifyContent: 'center',
-        },
-        supportContainer: {
-            position: 'sticky',
-            top: '45vh', // Lower down to avoid the massive text above
-            width: '100%',
-            zIndex: 16,
-            display: 'flex',
-            justifyContent: 'center',
-        },
-        statement: {
-            fontSize: '1.75rem',
-            fontWeight: 700,
-            lineHeight: 1.1,
-            letterSpacing: '-0.03em',
-            padding: '0 10px',
-            [theme.breakpoints.up('md')]: {
-                fontSize: '4rem',
-                padding: 0,
-            },
-            [theme.breakpoints.up('lg')]: {
-                fontSize: '5rem', // Cinematic size
+                fontSize: '64px',
             }
         },
         accent: {
-            color: accentColor, // Dynamic Highlight color
+            color: accentColor,
         },
-        supportingText: {
-            fontSize: '1rem',
-            lineHeight: 1.6,
-            color: textAlpha90, // Improved contrast
+        description: {
+            fontFamily: theme.typography.body1.fontFamily,
+            fontSize: '16px',
+            lineHeight: 1.5,
+            color: textAlpha90,
             fontWeight: 400,
             maxWidth: '800px',
             margin: '0 auto',
-            padding: '0 10px',
+            marginBottom: theme.spacing(10),
             [theme.breakpoints.up('md')]: {
-                fontSize: '1.5rem',
-                lineHeight: 1.7,
-                padding: 0,
+                fontSize: '20px',
             }
         },
         metricGrid: {
-            position: 'sticky',
-            top: '55vh', // Safely below the support text
-            zIndex: 17,
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'center',
-            gap: theme.spacing(8),
+            gap: theme.spacing(6),
             width: '100%',
-            backgroundColor: theme.palette.mode === 'dark' ? 'transparent' : theme.palette.info.main, // Transparent for mesh
-            padding: '40px 0',
             [theme.breakpoints.up('md')]: {
                 flexDirection: 'row',
-                gap: theme.spacing(16),
+                gap: theme.spacing(12),
             }
         },
         metricItem: {
@@ -144,30 +104,32 @@ export const useStyles = makeStyles()((theme) => {
             [theme.breakpoints.up('md')]: {
                 display: 'block',
                 width: '1px',
-                height: '100px',
+                height: '80px',
                 backgroundColor: 'rgba(250, 251, 252, 0.2)',
             }
         },
         metricValue: {
-            fontSize: '2.5rem', // Scaled down further for mobile stack
+            fontSize: '3rem',
             fontWeight: 700,
             color: textColor,
             lineHeight: 1,
             letterSpacing: '-0.04em',
+            fontFamily: theme.typography.h1.fontFamily,
             [theme.breakpoints.up('md')]: {
-                fontSize: '6rem',
+                fontSize: '5rem',
             },
             [theme.breakpoints.up('lg')]: {
-                fontSize: '7rem',
+                fontSize: '6rem',
             }
         },
         metricLabel: {
-            fontSize: '1rem',
+            fontSize: '14px',
             textTransform: 'uppercase',
-            letterSpacing: '0.2em',
-            color: accentColor, // Accent for labels
-            marginTop: theme.spacing(3),
+            letterSpacing: '0.1em',
+            color: textAlpha80, // Subdued label color
+            marginTop: theme.spacing(2),
             fontWeight: 600,
+            fontFamily: theme.typography.body1.fontFamily,
         }
     };
 });
