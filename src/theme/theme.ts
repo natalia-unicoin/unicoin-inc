@@ -30,14 +30,14 @@ const getPalette = (mode: ThemeMode) => {
             };
         case 'glass':
             return {
-                mode: 'dark' as const,
-                primary: { main: '#FAFBFC' }, // Light primary for dark backgrounds
-                secondary: { main: '#009EE3' }, // TBIZ Azure for active elements
-                success: { main: '#FAFBFC' },
-                info: { main: '#FCD144' }, // TBIZ Yellow
-                warning: { main: '#0A337C' }, // TBIZ Deep Blue
-                background: { default: '#0B1426', paper: 'rgba(14, 26, 43, 0.4)' }, // Translucent TBIZ Dark Navy
-                text: { primary: '#FFFFFF', secondary: '#94a3b8' }, // High contrast text
+                mode: 'light' as const, // Switched to light mode Apple style
+                primary: { main: '#111827' }, // Dark text for primary brand
+                secondary: { main: '#009EE3' },
+                success: { main: '#111827' },
+                info: { main: '#FCD144' },
+                warning: { main: '#0A337C' },
+                background: { default: '#FFFFFF', paper: 'rgba(255, 255, 255, 0.7)' }, // Bright white environments
+                text: { primary: '#111827', secondary: '#4B5563' }, // High contrast dark text
             };
         case 'tbiz':
         default:

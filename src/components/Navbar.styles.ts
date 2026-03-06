@@ -7,9 +7,9 @@ export const useStyles = makeStyles<{ isScrolled: boolean }>()((theme, { isScrol
         left: 0,
         right: 0,
         zIndex: 50,
-        backgroundColor: isScrolled ? (theme.palette.mode === 'dark' ? 'rgba(0, 0, 0, 0.8)' : 'rgba(255, 255, 255, 0.9)') : 'transparent',
-        backdropFilter: isScrolled ? 'blur(10px)' : 'none',
-        borderBottom: isScrolled ? `1px solid ${theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.05)' : theme.palette.grey[100]}` : 'none',
+        backgroundColor: isScrolled ? (theme.palette.mode === 'dark' ? 'rgba(0, 0, 0, 0.8)' : 'rgba(255, 255, 255, 0.85)') : 'transparent',
+        backdropFilter: isScrolled ? 'blur(16px)' : 'none',
+        borderBottom: isScrolled ? `1px solid ${theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.05)' : 'rgba(0,0,0,0.05)'}` : 'none',
         transition: 'all 0.3s ease-in-out',
     },
     container: {
@@ -61,21 +61,22 @@ export const useStyles = makeStyles<{ isScrolled: boolean }>()((theme, { isScrol
         },
     },
     joinButton: {
-        backgroundColor: theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.1)' : theme.palette.secondary.main,
-        backdropFilter: theme.palette.mode === 'dark' ? 'blur(16px)' : 'blur(5px)',
-        WebkitBackdropFilter: theme.palette.mode === 'dark' ? 'blur(16px)' : 'blur(5px)',
-        color: theme.palette.mode === 'dark' ? '#FFFFFF' : theme.palette.secondary.contrastText,
+        backgroundColor: theme.palette.mode === 'light' && theme.palette.primary.main === '#111827' ? 'rgba(17, 24, 39, 0.05)' : theme.palette.secondary.main,
+        backdropFilter: 'blur(16px)',
+        WebkitBackdropFilter: 'blur(16px)',
+        color: theme.palette.mode === 'light' && theme.palette.primary.main === '#111827' ? '#111827' : theme.palette.secondary.contrastText,
         padding: '8px 20px',
         borderRadius: '9999px', // Pill shape
         fontSize: '0.75rem',
         fontWeight: 700,
         letterSpacing: '0.1em',
         textTransform: 'uppercase',
-        border: theme.palette.mode === 'dark' ? '1px solid rgba(255, 255, 255, 0.3)' : (isScrolled ? 'none' : '1px solid rgba(255,255,255,0.3)'),
+        border: theme.palette.mode === 'light' && theme.palette.primary.main === '#111827' ? '1px solid rgba(17, 24, 39, 0.15)' : (isScrolled ? 'none' : '1px solid rgba(255,255,255,0.3)'),
         cursor: 'pointer',
         transition: 'all 0.2s',
         '&:hover': {
             transform: 'translateY(-1px)',
+            backgroundColor: theme.palette.mode === 'light' && theme.palette.primary.main === '#111827' ? 'rgba(17, 24, 39, 0.15)' : theme.palette.secondary.dark,
         },
         [theme.breakpoints.up('md')]: {
             padding: '8px 24px',
@@ -90,20 +91,20 @@ export const useStyles = makeStyles<{ isScrolled: boolean }>()((theme, { isScrol
             gap: theme.spacing(1),
             fontSize: '0.875rem',
             fontWeight: 500,
-            color: theme.palette.mode === 'dark' ? '#FFFFFF' : (isScrolled ? theme.palette.text.primary : '#FFFFFF'),
+            color: isScrolled ? theme.palette.text.primary : (theme.palette.mode === 'light' && theme.palette.primary.main === '#111827' ? '#111827' : '#FFFFFF'), // Default white except Liquid Glass
         },
     },
     langActive: {
-        color: theme.palette.mode === 'dark' ? '#FFFFFF' : (isScrolled ? theme.palette.text.primary : '#FFFFFF'),
+        color: isScrolled ? theme.palette.text.primary : (theme.palette.mode === 'light' && theme.palette.primary.main === '#111827' ? '#111827' : '#FFFFFF'),
         fontWeight: 700,
         cursor: 'pointer',
     },
     langInactive: {
-        color: theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.7)' : (isScrolled ? 'rgba(0,0,0,0.5)' : 'rgba(255,255,255,0.7)'),
+        color: isScrolled ? 'rgba(0,0,0,0.5)' : (theme.palette.mode === 'light' && theme.palette.primary.main === '#111827' ? 'rgba(17,24,39,0.5)' : 'rgba(255,255,255,0.7)'),
         cursor: 'pointer',
         transition: 'color 0.2s',
         '&:hover': {
-            color: theme.palette.mode === 'dark' ? '#FFFFFF' : (isScrolled ? theme.palette.text.primary : '#FFFFFF'),
+            color: isScrolled ? theme.palette.text.primary : (theme.palette.mode === 'light' && theme.palette.primary.main === '#111827' ? '#111827' : '#FFFFFF'),
         }
     },
     menuButtonWrapper: {
@@ -114,7 +115,7 @@ export const useStyles = makeStyles<{ isScrolled: boolean }>()((theme, { isScrol
         background: 'none',
         border: 'none',
         cursor: 'pointer',
-        color: theme.palette.mode === 'dark' ? '#FFFFFF' : (isScrolled ? theme.palette.text.primary : '#FFFFFF'),
+        color: isScrolled ? theme.palette.text.primary : (theme.palette.mode === 'light' && theme.palette.primary.main === '#111827' ? '#111827' : '#FFFFFF'),
         fontSize: '0.75rem',
         fontWeight: 700,
         letterSpacing: '0.1em',
@@ -124,7 +125,7 @@ export const useStyles = makeStyles<{ isScrolled: boolean }>()((theme, { isScrol
         gap: theme.spacing(1),
         transition: 'color 0.2s',
         '&:hover': {
-            color: theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.7)' : (isScrolled ? theme.palette.text.secondary : 'rgba(255,255,255,0.7)'),
+            color: isScrolled ? theme.palette.text.secondary : (theme.palette.mode === 'light' && theme.palette.primary.main === '#111827' ? 'rgba(17,24,39,0.7)' : 'rgba(255,255,255,0.7)'),
         },
         [theme.breakpoints.up('md')]: {
             fontSize: '0.875rem',
@@ -141,15 +142,15 @@ export const useStyles = makeStyles<{ isScrolled: boolean }>()((theme, { isScrol
         [theme.breakpoints.up('md')]: {
             display: 'none',
         },
-        fill: theme.palette.mode === 'dark' ? '#FFFFFF' : (isScrolled ? theme.palette.text.primary : '#FFFFFF'),
+        fill: isScrolled ? theme.palette.text.primary : (theme.palette.mode === 'light' && theme.palette.primary.main === '#111827' ? '#111827' : '#FFFFFF'),
     },
     // DRAWER STYLES
     backdrop: {
         position: 'fixed',
         inset: 0,
-        backgroundColor: 'rgba(0, 0, 0, 0.5)',
+        backgroundColor: theme.palette.mode === 'light' && theme.palette.primary.main === '#111827' ? 'rgba(255, 255, 255, 0.6)' : 'rgba(0, 0, 0, 0.5)',
         zIndex: 55,
-        backdropFilter: 'blur(4px)',
+        backdropFilter: theme.palette.mode === 'light' && theme.palette.primary.main === '#111827' ? 'blur(16px)' : 'blur(4px)',
     },
     drawer: {
         position: 'fixed',

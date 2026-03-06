@@ -2,20 +2,17 @@ import { makeStyles } from 'tss-react/mui';
 
 export const useStyles = makeStyles()((theme) => {
     const isYellowBg = theme.palette.info.main === '#FCD144';
-    const textColor = theme.palette.mode === 'dark' ? '#FFFFFF' : (isYellowBg ? '#10141E' : '#FFFFFF');
-    const textAlpha80 = theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.8)' : (isYellowBg ? 'rgba(16, 20, 30, 0.8)' : 'rgba(255, 255, 255, 0.8)');
-    const textAlpha90 = theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.9)' : (isYellowBg ? 'rgba(16, 20, 30, 0.9)' : 'rgba(255, 255, 255, 0.9)');
+    const textColor = isYellowBg ? '#10141E' : theme.palette.text.primary;
+    const textAlpha80 = isYellowBg ? 'rgba(16, 20, 30, 0.8)' : theme.palette.text.secondary;
+    const textAlpha90 = isYellowBg ? 'rgba(16, 20, 30, 0.9)' : theme.palette.text.primary;
     const accentColor = theme.palette.mode === 'dark' ? theme.palette.secondary.main : (isYellowBg ? theme.palette.primary.main : theme.palette.secondary.main);
 
     return {
         section: {
             paddingTop: '80px',
             paddingBottom: '120px',
-            backgroundColor: theme.palette.mode === 'dark' ? '#F5F5F7' : theme.palette.info.main,
-            backgroundImage: theme.palette.mode === 'dark' ? 'url(/images/liquid-glass-bg-2.jpg)' : 'none',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            color: theme.palette.mode === 'dark' ? '#111827' : textColor, // Force dark text in Liquid Glass
+            backgroundColor: theme.palette.background.default, // Let theme handle it
+            color: textColor,
             position: 'relative',
             overflow: 'hidden',
             display: 'flex',
@@ -59,7 +56,7 @@ export const useStyles = makeStyles()((theme) => {
             fontWeight: 700,
             letterSpacing: '-0.03em',
             lineHeight: 1.1,
-            color: theme.palette.mode === 'dark' ? '#111827' : textColor, // Force dark text for Liquid Glass
+            color: textColor,
             marginBottom: theme.spacing(4),
             fontSize: '32px',
             [theme.breakpoints.up('md')]: {
@@ -114,7 +111,7 @@ export const useStyles = makeStyles()((theme) => {
         metricValue: {
             fontSize: '3rem',
             fontWeight: 700,
-            color: theme.palette.mode === 'dark' ? '#111827' : textColor, // Force dark text
+            color: textColor,
             lineHeight: 1,
             letterSpacing: '-0.04em',
             fontFamily: theme.typography.h1.fontFamily,

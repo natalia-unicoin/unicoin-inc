@@ -4,11 +4,11 @@ export const useStyles = makeStyles()((theme) => ({
     section: {
         paddingTop: '160px',
         paddingBottom: '80px',
-        backgroundColor: theme.palette.mode === 'dark' ? '#F5F5F7' : theme.palette.background.paper, // Off-white/light gray fallback
-        backgroundImage: theme.palette.mode === 'dark' ? 'url(/images/liquid-glass-bg-1.jpg)' : 'none',
+        backgroundColor: theme.palette.background.paper,
+        backgroundImage: 'url(/images/liquid-glass-bg-1.jpg)', // The new Apple texture
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        borderTop: theme.palette.mode === 'dark' ? '1px solid rgba(0,0,0,0.05)' : '1px solid #E5E5E7',
+        borderTop: '1px solid #E5E5E7',
     },
     container: {
         maxWidth: '100%',
@@ -32,7 +32,7 @@ export const useStyles = makeStyles()((theme) => ({
         marginBottom: '60px',
         letterSpacing: '-0.03em',
         fontFamily: theme.typography.h1.fontFamily,
-        color: theme.palette.mode === 'dark' ? '#111827' : theme.palette.text.primary, // Force dark text on new light background in dark mode
+        color: theme.palette.text.primary,
         textAlign: 'center',
         textTransform: 'none',
         [theme.breakpoints.up('md')]: {
@@ -58,15 +58,16 @@ export const useStyles = makeStyles()((theme) => ({
         alignItems: 'flex-start',
         textAlign: 'left',
         padding: '24px', // Tighter padding on mobile
-        border: theme.palette.mode === 'dark' ? '1px solid rgba(255, 255, 255, 0.25)' : '1px solid #D2D2D7',
+        border: '1px solid rgba(255, 255, 255, 0.5)', // Light glass border
         borderRadius: '24px', // Scaled border radius
-        backgroundColor: theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.15)' : 'transparent',
-        backdropFilter: theme.palette.mode === 'dark' ? 'blur(24px)' : 'none',
-        WebkitBackdropFilter: theme.palette.mode === 'dark' ? 'blur(24px)' : 'none',
+        backgroundColor: 'rgba(255, 255, 255, 0.4)', // Frosty white glass
+        backdropFilter: 'blur(24px)',
+        WebkitBackdropFilter: 'blur(24px)',
+        boxShadow: '0 4px 24px rgba(0, 0, 0, 0.05)', // Subtle shadow to lift the white glass
         transition: 'all 0.3s ease',
         '&:hover': {
-            backgroundColor: theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, 0.25)' : '#F9F9FB',
-            boxShadow: theme.palette.mode === 'dark' ? '0 0 30px rgba(6, 182, 212, 0.3)' : 'none',
+            backgroundColor: 'rgba(255, 255, 255, 0.6)',
+            boxShadow: '0 12px 32px rgba(0, 0, 0, 0.08)',
         },
         [theme.breakpoints.up('md')]: {
             padding: '32px',
@@ -78,7 +79,7 @@ export const useStyles = makeStyles()((theme) => ({
         fontWeight: 700,
         lineHeight: '1',
         marginBottom: '8px',
-        color: theme.palette.mode === 'dark' ? '#111827' : theme.palette.text.primary, // Force dark text
+        color: theme.palette.text.primary,
         fontFamily: theme.typography.h1.fontFamily,
         [theme.breakpoints.up('md')]: {
             fontSize: '48px',
@@ -87,9 +88,9 @@ export const useStyles = makeStyles()((theme) => ({
     statLabel: {
         fontSize: '12px',
         fontWeight: 700,
-        color: theme.palette.mode === 'dark' ? '#4B5563' : theme.palette.text.primary, // Dark gray for readability
+        color: theme.palette.text.secondary, // Theme standard secondary
         textTransform: 'uppercase',
-        letterSpacing: '0.05em', // Reduced from 0.1em
+        letterSpacing: '0.05em',
         lineHeight: '1.4',
         fontFamily: theme.typography.body1.fontFamily,
     }
